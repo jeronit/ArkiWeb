@@ -11,13 +11,23 @@
   </welcome-file-list>
   
   <filter>
+  	<!-- iniciando struts 2 interceptor -->
   	<filter-name>struts2</filter-name>
   	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  	
+  	<!-- iniciando internacionalización -->
+  	<init-param>
+	  	<param-name>struts.custom.i18n.resources</param-name>
+	  	<param-value>ApplicationResources</param-value>
+	</init-param>
+  
   </filter>
   
   <filter-mapping>
+  	<!-- mapping struts 2 - url de origen -->
   	<filter-name>struts2</filter-name>
   	<url-pattern>/*</url-pattern>
   </filter-mapping>
+  
   
 </web-app>
