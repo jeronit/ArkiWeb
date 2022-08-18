@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/ArkiWeb/src" modelPluginID="ArkiWeb" modelName="ArkiWeb"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>ArkiWeb.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="ArkiWeb" disposableProviderFactory="true"
+      ecorePackage="ArkiWeb.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListString"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListUsuario"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListPermiso"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListProyecto"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListCertificado"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListVivienda"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListInmueble"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListCertificados_Asignados"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListProyectos_Asignados"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListProyectos_En_Ejecucion"/>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Modelo" disposableProviderFactory="true"
+        ecorePackage="ArkiWeb.ecore#//modelo">
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="ArkiWeb.ecore#//modelo/Tipo_Proyecto">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Proyecto/Residencial_Edificio"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Proyecto/Residencial_Vivienda"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Proyecto/No_Residencial"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Proyecto/Rehabilitacion"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="ArkiWeb.ecore#//modelo/Tipo_Certificado">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Certificado/Habitabilidad"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Certificado/ITE"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Certificado/Efic_Energ"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Certificado/Pericial"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="ArkiWeb.ecore#//modelo/Categoria_Certificado">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Categoria_Certificado/A"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Categoria_Certificado/B"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Categoria_Certificado/C"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Categoria_Certificado/D"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Categoria_Certificado/E"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Categoria_Certificado/F"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Categoria_Certificado/G"/>
+      </genEnums>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Permiso">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Permiso/id_permiso"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Permiso/id_rol"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Permiso/objeto_permiso"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Permiso/lectura_permiso"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Permiso/escritura_permiso"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Permiso/rol"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Rol">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Rol/id_rol"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Rol/descripcion_rol"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Usuario">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/id_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/nombre_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/apellidos_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/dni_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/telefono_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/email_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/domicilio_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/contrasenya_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Usuario/rol_usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Usuario/rol"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Proyecto">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/id_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/descripcion_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/id_cliente_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/id_vivienda_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/id_inmueble_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/tipo_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/fecha_solicitud_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/fecha_entrega_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/duracion_prevista_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyecto/presupuesto_ejecucion_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Proyecto/usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Proyecto/vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Proyecto/inmueble"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Vivienda">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/id_vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/descripcion_vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/direccion_vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/id_inmueble_vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/superficie_terreno_vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/superficie_vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/plantas_vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/habitaciones_vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Vivienda/banyos_vivienda"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Inmueble">
+        <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+            createChild="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Inmueble/vivienda"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Inmueble/id_inmueble"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Inmueble/descripcion_inmueble"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Inmueble/direccion_inmueble"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Inmueble/superficie_terreno_inmueble"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Inmueble/superficie_inmueble"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Certificado">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/id_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/descripcion_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/id_cliente_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/id_vivienda_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/id_inmueble_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/tipo_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/fecha_solicitud_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/fecha_entrega_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/fecha_visita_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/fecha_emision_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/categoria_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/id_arquitecto_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/coste_certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Certificado/inmueble"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Certificado/usuario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Certificado/vivienda"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/HSQLDB">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/nombre_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/apellido_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/dni_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/telefono_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/email_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/domicilio_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/contrasenya_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/nombre_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/apellido_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/dni_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/telefono_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/email_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/domicilio_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/contrasenya_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/bajaUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/bajaUsuario/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/crearPermiso">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearPermiso/descripcion_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearPermiso/objeto_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearPermiso/lectura_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearPermiso/escritura_permiso"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso/id_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso/descripcion_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso/objeto_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso/lectura_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso/escritura_permiso"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/buscarPermiso">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/buscarPermiso/id_permiso"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/descripcion_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/cliente_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/vivienda_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/inmueble_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/tipo_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/fecha_solicitud_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/fecha_entrega_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/fecha_visita_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/fecha_emision_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/categoria_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/arquitecto_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/coste_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/id_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/descripcion_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/cliente_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/vivienda_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/inmueble_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/tipo_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/fecha_solicitud_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/fecha_entrega_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/fecha_visita_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/fecha_emision_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/categoria_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/arquitecto_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarCertificado/coste_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/buscarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/buscarCertificado/id_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/descripcion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/cliente_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/vivienda_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/inmueble_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/tipo_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/fecha_solicitud_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/fecha_entrega_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/duracion_prevista_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/presupuesto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/superficie_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/arquitecto_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearProyecto/coste_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/id_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/descripcion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/cliente_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/vivienda_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/inmueble_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/tipo_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/fecha_solicitud_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/fecha_entrega_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/duracion_prevista_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/presupuesto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/superficie_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/arquitecto_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarProyecto/coste_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/buscarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/buscarProyecto/id_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda/descripcion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda/direccion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda/id_inmueble_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda/superficie_terreno_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda/superficie_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda/plantas_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda/habitaciones_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearVivienda/banyos_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/id_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/descripcion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/direccion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/id_inmueble_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/superficie_terreno_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/superficie_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/plantas_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/habitaciones_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarVivienda/banyos_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/buscarVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/buscarVivienda/id_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/crearInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearInmueble/descripcion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearInmueble/direccion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearInmueble/superficie_terreno_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearInmueble/superficie_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarInmueble/id_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarInmueble/descripcion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarInmueble/direccion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarInmueble/superficie_terreno_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarInmueble/superficie_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/buscarInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/buscarInmueble/id_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/asignarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/asignarCertificado/id_certificado_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/asignarCertificado/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarAsignacionCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarAsignacionCertificado/id_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarAsignacionCertificado/id_certificado_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarAsignacionCertificado/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/asignarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/asignarProyecto/id_proyecto_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/asignarProyecto/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarAsignacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarAsignacionProyecto/id_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarAsignacionProyecto/id_proyecto_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarAsignacionProyecto/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/contratarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/contratarProyecto/id_proyecto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/contratarProyecto/fecha_inicio_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/contratarProyecto/duracion_prevista_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/contratarProyecto/fecha_fin_ejecucion_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarContratacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarContratacionProyecto/id_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarContratacionProyecto/id_proyecto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarContratacionProyecto/fecha_inicio_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarContratacionProyecto/duracion_prevista_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarContratacionProyecto/fecha_fin_ejecucion_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/queryCrear">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryCrear/tabla"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryCrear/columnas"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryCrear/valores_columnas"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/queryEditar">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryEditar/tabla"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryEditar/columnas"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryEditar/valores_columnas"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryEditar/where_clause"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/queryBuscar">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryBuscar/tabla"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryBuscar/columnas"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryBuscar/where_clause_01"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/queryEjecutar">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/queryEjecutar/queryString"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Proyectos_Asignados">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyectos_Asignados/id_proyecto_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyectos_Asignados/id_proyecto_proyecto_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyectos_Asignados/id_arquitecto_proyecto_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Proyectos_Asignados/proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Proyectos_Asignados/usuario"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Certificados_Asignados">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificados_Asignados/id_proyecto_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Certificados_Asignados/id_proyecto_proyecto_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Certificados_Asignados/id_arquitecto_proyecto_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificados_Asignados/id_certificado_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificados_Asignados/id_certificado_certificado_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificados_Asignados/id_arquitecto_certificado_asignado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Certificados_Asignados/certificado"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Certificados_Asignados/usuario"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/Proyectos_En_Ejecucion">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyectos_En_Ejecucion/id_ejecucion_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyectos_En_Ejecucion/id_proyecto_ejecucion_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyectos_En_Ejecucion/fecha_inicio_ejecucion_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyectos_En_Ejecucion/duracion_prevista_ejecucion_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Proyectos_En_Ejecucion/fecha_fin_ejecucion_proyecto"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Proyectos_En_Ejecucion/proyecto"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//modelo/Factory">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/Factory/crearObjeto"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/Factory/crearObjeto.1">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/Factory/crearObjeto.1/tipoObjeto"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//modelo/ConcreteFactory"/>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Vista" disposableProviderFactory="true"
+        ecorePackage="ArkiWeb.ecore#//vista">
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Struts2mvc" disposableProviderFactory="true"
+          ecorePackage="ArkiWeb.ecore#//vista/struts2mvc">
+        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Modelo" disposableProviderFactory="true"
+            ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/modelo">
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/LoginActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/LoginActionSupport/execute"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/AltaUsuarioActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/AltaUsuarioActionSupport/execute"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/AltaUsuarioActionSupport/execute.1"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/PortalClienteActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/PortalClienteActionSupport/execute"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/PortalAdministradorActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/PortalAdministradorActionSupport/execute"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/PortalArquitectoActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/PortalArquitectoActionSupport/execute"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarUsuarioActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarUsuarioActionSupport/execute"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarPermisoActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarPermisoActionSupport/execute"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarCertificadoActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarCertificadoActionSupport/execute"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarProyectoActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarProyectoActionSupport/execute"/>
+          </genClasses>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarEjecucionProyectoActionSupport">
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarEjecucionProyectoActionSupport/execute"/>
+          </genClasses>
+        </nestedGenPackages>
+        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Controlador" disposableProviderFactory="true"
+            ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/controlador"/>
+        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Vista" disposableProviderFactory="true"
+            ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/vista"/>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Controlador" disposableProviderFactory="true"
+        ecorePackage="ArkiWeb.ecore#//controlador">
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Controlador_Modelo">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/nombre_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/apellido_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/dni_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/telefono_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/email_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/domicilio_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/contrasenya_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/nombre_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/apellido_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/dni_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/telefono_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/email_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/domicilio_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/contrasenya_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/bajaUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/bajaUsuario/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearPermiso">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearPermiso/descripcion_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearPermiso/objeto_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearPermiso/lectura_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearPermiso/escritura_permiso"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso/id_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso/descripcion_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso/objeto_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso/lectura_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso/escritura_permiso"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarPermiso">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarPermiso/id_permiso"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/descripcion_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/cliente_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/vivienda_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/inmueble_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/tipo_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/fecha_solicitud_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/fecha_entrega_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/fecha_visita_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/fecha_emision_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/categoria_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/arquitecto_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/coste_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/id_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/descripcion_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/cliente_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/vivienda_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/inmueble_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/tipo_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/fecha_solicitud_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/fecha_entrega_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/fecha_visita_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/fecha_emision_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/categoria_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/arquitecto_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarCertificado/coste_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificado/id_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/descripcion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/cliente_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/vivienda_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/inmueble_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/tipo_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/fecha_solicitud_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/fecha_entrega_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/duracion_prevista_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/presupuesto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/superficie_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/arquitecto_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearProyecto/coste_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/id_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/descripcion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/cliente_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/vivienda_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/inmueble_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/tipo_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/fecha_solicitud_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/fecha_entrega_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/duracion_prevista_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/presupuesto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/superficie_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/arquitecto_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarProyecto/coste_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarProyecto/id_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda/descripcion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda/direccion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda/id_inmueble_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda/superficie_terreno_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda/superficie_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda/plantas_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda/habitaciones_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearVivienda/banyos_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/id_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/descripcion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/direccion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/id_inmueble_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/superficie_terreno_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/superficie_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/plantas_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/habitaciones_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarVivienda/banyos_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarVivienda/id_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearInmueble/descripcion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearInmueble/direccion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearInmueble/superficie_terreno_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearInmueble/superficie_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarInmueble/id_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarInmueble/descripcion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarInmueble/direccion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarInmueble/superficie_terreno_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarInmueble/superficie_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarInmueble/id_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/asignarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/asignarCertificado/id_certificado_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/asignarCertificado/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarAsignacionCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarAsignacionCertificado/id_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarAsignacionCertificado/id_certificado_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarAsignacionCertificado/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/asignarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/asignarProyecto/id_proyecto_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/asignarProyecto/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarAsignacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarAsignacionProyecto/id_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarAsignacionProyecto/id_proyecto_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarAsignacionProyecto/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/contratarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/contratarProyecto/id_proyecto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/contratarProyecto/fecha_inicio_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/contratarProyecto/duracion_prevista_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/contratarProyecto/fecha_fin_ejecucion_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarContratacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarContratacionProyecto/id_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarContratacionProyecto/id_proyecto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarContratacionProyecto/fecha_inicio_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarContratacionProyecto/duracion_prevista_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarContratacionProyecto/fecha_fin_ejecucion_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryCrear">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryCrear/tabla"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryCrear/columnas"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryCrear/valores_columnas"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryEditar">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryEditar/tabla"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryEditar/columnas"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryEditar/valores_columnas"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryEditar/where_clause"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryBuscar">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryBuscar/tabla"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryBuscar/columnas"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/queryBuscar/where_clause_01"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/login">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/login/email"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/login/password"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/cambiarContrasenya">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/cambiarContrasenya/email"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/listarUsuarios"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/listarPermisos"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/listarProyectos"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/listarCertificados"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/listarViviendas"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/listarInmuebles"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarUsuario/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarMisProyectos">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarMisProyectos/id_Usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarProyectosPorUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarProyectosPorUsuario/id_Usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarMisCertificados">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarMisCertificados/id_Usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorUsuario/id_Usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorVivienda/id_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorInmueble/id_Inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorEdadInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorEdadInmueble/edad"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorEdadCertificadoHabitabilidad">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarCertificadosPorEdadCertificadoHabitabilidad/edad"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarAsignacionCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarAsignacionCertificado/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarAsignacionCertificado/id_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarAsignacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarAsignacionProyecto/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarAsignacionProyecto/id_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarContratacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarContratacionProyecto/id_proyecto"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Control_Login">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Login/login">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Login/login/email"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Login/login/contrasenya"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Login/cambiarContrasenya">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Login/cambiarContrasenya/email"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Control_Permisos">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Permisos/concederAcceso"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Permisos/crearPermiso">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/crearPermiso/descripcion_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/crearPermiso/objeto_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/crearPermiso/lectura_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/crearPermiso/escritura_permiso"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Permisos/editarPermiso">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/editarPermiso/id_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/editarPermiso/descripcion_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/editarPermiso/objeto_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/editarPermiso/lectura_permiso"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Permisos/editarPermiso/escritura_permiso"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Control_Usuarios">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Usuarios/crearUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/crearUsuario/nombre_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/crearUsuario/apellido_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/crearUsuario/dni_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/crearUsuario/telefono_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/crearUsuario/email_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/crearUsuario/domicilio_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/crearUsuario/contrasenya_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1/nombre_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1/apellido_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1/dni_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1/telefono_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1/email_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1/domicilio_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/editarUsuario_1/contrasenya_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Usuarios/bajaUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Usuarios/bajaUsuario/id_Usuario"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Control_Certificados">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/id_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/descripcion_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/cliente_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/vivienda_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/inmueble_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/tipo_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/fecha_solicitud_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/fecha_entrega_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/fecha_visita_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/fecha_emision_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/categoria_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/arquitecto_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarCertificado/coste_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Certificados/asignarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/asignarCertificado/id_certificado_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/asignarCertificado/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Certificados/editarAsignacionCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarAsignacionCertificado/id_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarAsignacionCertificado/id_certificado_certificado_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/editarAsignacionCertificado/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/descripcion_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/cliente_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/vivienda_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/inmueble_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/tipo_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/fecha_solicitud_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/fecha_entrega_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/fecha_visita_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/fecha_emision_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/categoria_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/arquitecto_certificado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Certificados/crearCertificado/coste_certificado"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Control_Proyectos">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/id_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/descripcion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/cliente_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/vivienda_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/inmueble_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/tipo_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/fecha_solicitud_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/fecha_entrega_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/duracion_prevista_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/presupuesto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/superficie_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/arquitecto_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarProyecto/coste_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Proyectos/editarContratacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarContratacionProyecto/id_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarContratacionProyecto/id_proyecto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarContratacionProyecto/fecha_inicio_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarContratacionProyecto/duracion_prevista_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarContratacionProyecto/fecha_fin_ejecucion_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Proyectos/asignarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/asignarProyecto/id_proyecto_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/asignarProyecto/arquitecto_certificado_asignado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Proyectos/contratarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/contratarProyecto/id_proyecto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/contratarProyecto/fecha_inicio_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/contratarProyecto/duracion_prevista_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/contratarProyecto/fecha_fin_ejecucion_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/descripcion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/cliente_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/vivienda_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/inmueble_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/tipo_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/fecha_solicitud_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/fecha_entrega_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/duracion_prevista_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/presupuesto_ejecucion_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/superficie_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/arquitecto_proyecto"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/crearProyecto/coste_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Proyectos/editarAsignacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarAsignacionProyecto/id_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarAsignacionProyecto/id_proyecto_proyecto_asignado"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Proyectos/editarAsignacionProyecto/arquitecto_certificado_asignado"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Control_Viviendas">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda/descripcion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda/direccion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda/id_inmueble_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda/superficie_terreno_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda/superficie_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda/plantas_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda/habitaciones_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/crearVivienda/banyos_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/id_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/descripcion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/direccion_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/id_inmueble_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/superficie_terreno_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/superficie_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/plantas_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/habitaciones_vivienda"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Viviendas/editarVivienda/banyos_vivienda"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Control_Inmuebles">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Inmuebles/crearInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/crearInmueble/descripcion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/crearInmueble/direccion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/crearInmueble/superficie_terreno_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/crearInmueble/superficie_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Control_Inmuebles/editarInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/editarInmueble/id_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/editarInmueble/descripcion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/editarInmueble/direccion_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/editarInmueble/superficie_terreno_inmueble"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Control_Inmuebles/editarInmueble/superficie_inmueble"/>
+        </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Gestor_Busquedas">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/listarUsuarios"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarInmueble/id_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/listarPermisos"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/listarProyectos"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/listarCertificados"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/listarViviendas"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/listarInmuebles"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/listarPermisosUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/listarPermisosUsuario/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarUsuario/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarVivienda/id_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarProyecto/id_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificado/id_certificado"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarMisProyectos">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarMisProyectos/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarProyectosPorUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarProyectosPorUsuario/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarMisCertificados">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarMisCertificados/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorUsuario/id_usuario"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorVivienda">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorVivienda/id_vivienda"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorInmueble/id_inmueble"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorEdadInmueble">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorEdadInmueble/edad"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorEdadCertificadoHabitabilidad">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarCertificadosPorEdadCertificadoHabitabilidad/edad"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarAsignacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarAsignacionProyecto/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarAsignacionProyecto/id_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarContratacionProyecto">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarContratacionProyecto/id_proyecto"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarAsignacionCertificado">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarAsignacionCertificado/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Gestor_Busquedas/buscarAsignacionCertificado/id_certificado"/>
+        </genOperations>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
+      disposableProviderFactory="true" ecorePackage="types.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
+  </genPackages>
+</genmodel:GenModel>

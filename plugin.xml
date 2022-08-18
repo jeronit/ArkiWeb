@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ArkiWeb -->
+      <package
+            uri="http:///ArkiWeb.ecore"
+            class="ArkiWeb.ArkiWebPackage"
+            genModel="src/papyrus/ArkiWeb.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ArkiWeb -->
+      <package
+            uri="http:///ArkiWeb/modelo.ecore"
+            class="ArkiWeb.modelo.ModeloPackage"
+            genModel="src/papyrus/ArkiWeb.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ArkiWeb -->
+      <package
+            uri="http:///ArkiWeb/vista/struts2mvc/modelo.ecore"
+            class="ArkiWeb.vista.struts2mvc.modelo.ModeloPackage"
+            genModel="src/papyrus/ArkiWeb.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ArkiWeb -->
+      <package
+            uri="http:///ArkiWeb/controlador.ecore"
+            class="ArkiWeb.controlador.ControladorPackage"
+            genModel="src/papyrus/ArkiWeb.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ArkiWeb -->
+      <package
+            uri="http://www.eclipse.org/uml2/5.0.0/Types"
+            class="org.eclipse.uml2.types.TypesPackage"
+            genModel="src/papyrus/ArkiWeb.genmodel"/>
+   </extension>
+
+</plugin>
