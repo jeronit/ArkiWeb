@@ -31,6 +31,22 @@ public interface Control_Certificados extends EObject {
 	 * @model id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false" descripcion_certificadoDataType="org.eclipse.uml2.types.String" descripcion_certificadoRequired="true" descripcion_certificadoOrdered="false" cliente_certificadoDataType="org.eclipse.uml2.types.Integer" cliente_certificadoRequired="true" cliente_certificadoOrdered="false" vivienda_certificadoDataType="org.eclipse.uml2.types.Integer" vivienda_certificadoRequired="true" vivienda_certificadoOrdered="false" inmueble_certificadoDataType="org.eclipse.uml2.types.Integer" inmueble_certificadoRequired="true" inmueble_certificadoOrdered="false" tipo_certificadoRequired="true" tipo_certificadoOrdered="false" fecha_solicitud_certificadoRequired="true" fecha_solicitud_certificadoOrdered="false" fecha_entrega_certificadoRequired="true" fecha_entrega_certificadoOrdered="false" fecha_visita_certificadoRequired="true" fecha_visita_certificadoOrdered="false" fecha_emision_certificadoRequired="true" fecha_emision_certificadoOrdered="false" categoria_certificadoRequired="true" categoria_certificadoOrdered="false" arquitecto_certificadoDataType="org.eclipse.uml2.types.Integer" arquitecto_certificadoRequired="true" arquitecto_certificadoOrdered="false" coste_certificadoRequired="true" coste_certificadoOrdered="false"
 	 * @generated
 	 */
+	/**
+	 * 
+	 * @param id_certificado
+	 * @param descripcion_certificado
+	 * @param cliente_certificado
+	 * @param vivienda_certificado
+	 * @param inmueble_certificado
+	 * @param tipo_certificado
+	 * @param fecha_solicitud_certificado
+	 * @param fecha_entrega_certificado
+	 * @param fecha_visita_certificado
+	 * @param fecha_emision_certificado
+	 * @param categoria_certificado
+	 * @param arquitecto_certificado
+	 * @param coste_certificado
+	 */
 	void editarCertificado(int id_certificado, String descripcion_certificado, int cliente_certificado, int vivienda_certificado, int inmueble_certificado, Tipo_Certificado tipo_certificado, Date fecha_solicitud_certificado, Date fecha_entrega_certificado, Date fecha_visita_certificado, Date fecha_emision_certificado, Categoria_Certificado categoria_certificado, int arquitecto_certificado, double coste_certificado);
 
 	/**

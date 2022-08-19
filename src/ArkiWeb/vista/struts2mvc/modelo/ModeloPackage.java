@@ -125,7 +125,7 @@ public interface ModeloPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @ordered NOT
+	 * @ordered
 	 */
 	int ALTA_USUARIO_ACTION_SUPPORT___EXECUTE1 = 1;
 

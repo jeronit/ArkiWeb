@@ -841,13 +841,13 @@ public interface ModeloPackage extends EPackage {
 	int HSQLDB___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING = 0;
 
 	/**
-	 * The operation id for the '<em>Editar Usuario 1</em>' operation.
+	 * The operation id for the '<em>Editar Usuario</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___EDITAR_USUARIO_1__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING = 1;
+	int HSQLDB___EDITAR_USUARIO__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Baja Usuario</em>' operation.
@@ -877,22 +877,13 @@ public interface ModeloPackage extends EPackage {
 	int HSQLDB___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN = 4;
 
 	/**
-	 * The operation id for the '<em>Buscar Permiso</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HSQLDB___BUSCAR_PERMISO__INT = 5;
-
-	/**
 	 * The operation id for the '<em>Crear Certificado</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___CREAR_CERTIFICADO__STRING_CERTIFICADO_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = 6;
+	int HSQLDB___CREAR_CERTIFICADO__STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = 5;
 
 	/**
 	 * The operation id for the '<em>Editar Certificado</em>' operation.
@@ -901,7 +892,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = 7;
+	int HSQLDB___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = 6;
 
 	/**
 	 * The operation id for the '<em>Buscar Certificado</em>' operation.
@@ -910,7 +901,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___BUSCAR_CERTIFICADO__INT = 8;
+	int HSQLDB___BUSCAR_CERTIFICADO__INT = 7;
 
 	/**
 	 * The operation id for the '<em>Crear Proyecto</em>' operation.
@@ -919,7 +910,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___CREAR_PROYECTO__STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = 9;
+	int HSQLDB___CREAR_PROYECTO__STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = 8;
 
 	/**
 	 * The operation id for the '<em>Editar Proyecto</em>' operation.
@@ -928,7 +919,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___EDITAR_PROYECTO__INT_STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = 10;
+	int HSQLDB___EDITAR_PROYECTO__INT_STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = 9;
 
 	/**
 	 * The operation id for the '<em>Buscar Proyecto</em>' operation.
@@ -937,7 +928,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___BUSCAR_PROYECTO__INT = 11;
+	int HSQLDB___BUSCAR_PROYECTO__INT = 10;
 
 	/**
 	 * The operation id for the '<em>Crear Vivienda</em>' operation.
@@ -946,7 +937,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = 12;
+	int HSQLDB___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = 11;
 
 	/**
 	 * The operation id for the '<em>Editar Vivienda</em>' operation.
@@ -955,7 +946,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = 13;
+	int HSQLDB___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = 12;
 
 	/**
 	 * The operation id for the '<em>Buscar Vivienda</em>' operation.
@@ -964,7 +955,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___BUSCAR_VIVIENDA__INT = 14;
+	int HSQLDB___BUSCAR_VIVIENDA__INT = 13;
 
 	/**
 	 * The operation id for the '<em>Crear Inmueble</em>' operation.
@@ -973,7 +964,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___CREAR_INMUEBLE__STRING_STRING_DOUBLE_DOUBLE = 15;
+	int HSQLDB___CREAR_INMUEBLE__STRING_STRING_DOUBLE_DOUBLE = 14;
 
 	/**
 	 * The operation id for the '<em>Editar Inmueble</em>' operation.
@@ -982,7 +973,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___EDITAR_INMUEBLE__INT_STRING_STRING_DOUBLE_DOUBLE = 16;
+	int HSQLDB___EDITAR_INMUEBLE__INT_STRING_STRING_DOUBLE_DOUBLE = 15;
 
 	/**
 	 * The operation id for the '<em>Buscar Inmueble</em>' operation.
@@ -991,7 +982,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___BUSCAR_INMUEBLE__INT = 17;
+	int HSQLDB___BUSCAR_INMUEBLE__INT = 16;
 
 	/**
 	 * The operation id for the '<em>Asignar Certificado</em>' operation.
@@ -1000,7 +991,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___ASIGNAR_CERTIFICADO__INT_INT = 18;
+	int HSQLDB___ASIGNAR_CERTIFICADO__INT_INT = 17;
 
 	/**
 	 * The operation id for the '<em>Editar Asignacion Certificado</em>' operation.
@@ -1009,7 +1000,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___EDITAR_ASIGNACION_CERTIFICADO__INT_INT_INT = 19;
+	int HSQLDB___EDITAR_ASIGNACION_CERTIFICADO__INT_INT_INT = 18;
 
 	/**
 	 * The operation id for the '<em>Asignar Proyecto</em>' operation.
@@ -1018,7 +1009,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___ASIGNAR_PROYECTO__INT_INT = 20;
+	int HSQLDB___ASIGNAR_PROYECTO__INT_INT = 19;
 
 	/**
 	 * The operation id for the '<em>Editar Asignacion Proyecto</em>' operation.
@@ -1027,7 +1018,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___EDITAR_ASIGNACION_PROYECTO__INT_INT_INT = 21;
+	int HSQLDB___EDITAR_ASIGNACION_PROYECTO__INT_INT_INT = 20;
 
 	/**
 	 * The operation id for the '<em>Contratar Proyecto</em>' operation.
@@ -1036,7 +1027,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___CONTRATAR_PROYECTO__INT_DATE_INT_DATE = 22;
+	int HSQLDB___CONTRATAR_PROYECTO__INT_DATE_INT_DATE = 21;
 
 	/**
 	 * The operation id for the '<em>Editar Contratacion Proyecto</em>' operation.
@@ -1045,7 +1036,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___EDITAR_CONTRATACION_PROYECTO__INT_INT_DATE_INT_DATE = 23;
+	int HSQLDB___EDITAR_CONTRATACION_PROYECTO__INT_INT_DATE_INT_DATE = 22;
 
 	/**
 	 * The operation id for the '<em>Query Crear</em>' operation.
@@ -1054,7 +1045,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___QUERY_CREAR__STRING_LISTSTRING_LISTSTRING = 24;
+	int HSQLDB___QUERY_CREAR__STRING_LISTSTRING_LISTSTRING = 23;
 
 	/**
 	 * The operation id for the '<em>Query Editar</em>' operation.
@@ -1063,7 +1054,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___QUERY_EDITAR__STRING_LISTSTRING_LISTSTRING_STRING = 25;
+	int HSQLDB___QUERY_EDITAR__STRING_LISTSTRING_LISTSTRING_STRING = 24;
 
 	/**
 	 * The operation id for the '<em>Query Buscar</em>' operation.
@@ -1072,7 +1063,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___QUERY_BUSCAR__STRING_LISTSTRING_STRING = 26;
+	int HSQLDB___QUERY_BUSCAR__STRING_LISTSTRING_STRING = 25;
 
 	/**
 	 * The operation id for the '<em>Query Ejecutar</em>' operation.
@@ -1081,7 +1072,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB___QUERY_EJECUTAR__STRING = 27;
+	int HSQLDB___QUERY_EJECUTAR__STRING = 26;
 
 	/**
 	 * The number of operations of the '<em>HSQLDB</em>' class.
@@ -1090,7 +1081,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HSQLDB_OPERATION_COUNT = 28;
+	int HSQLDB_OPERATION_COUNT = 27;
 
 	/**
 	 * The meta object id for the '{@link ArkiWeb.modelo.Proyectos_Asignados <em>Proyectos Asignados</em>}' class.
@@ -2243,14 +2234,14 @@ public interface ModeloPackage extends EPackage {
 	EOperation getHSQLDB__CrearUsuario__String_String_String_int_String_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#editarUsuario_1(int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String) <em>Editar Usuario 1</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#editarUsuario(int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String) <em>Editar Usuario</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Editar Usuario 1</em>' operation.
-	 * @see ArkiWeb.modelo.HSQLDB#editarUsuario_1(int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Editar Usuario</em>' operation.
+	 * @see ArkiWeb.modelo.HSQLDB#editarUsuario(int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getHSQLDB__EditarUsuario_1__int_String_String_String_int_String_String_String();
+	EOperation getHSQLDB__EditarUsuario__int_String_String_String_int_String_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#bajaUsuario(int) <em>Baja Usuario</em>}' operation.
@@ -2283,24 +2274,14 @@ public interface ModeloPackage extends EPackage {
 	EOperation getHSQLDB__EditarPermiso__int_String_String_boolean_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#buscarPermiso(int) <em>Buscar Permiso</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Buscar Permiso</em>' operation.
-	 * @see ArkiWeb.modelo.HSQLDB#buscarPermiso(int)
-	 * @generated
-	 */
-	EOperation getHSQLDB__BuscarPermiso__int();
-
-	/**
-	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#crearCertificado(java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double) <em>Crear Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#crearCertificado(java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double) <em>Crear Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Certificado</em>' operation.
-	 * @see ArkiWeb.modelo.HSQLDB#crearCertificado(java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double)
+	 * @see ArkiWeb.modelo.HSQLDB#crearCertificado(java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double)
 	 * @generated
 	 */
-	EOperation getHSQLDB__CrearCertificado__String_Certificado_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+	EOperation getHSQLDB__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#editarCertificado(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double) <em>Editar Certificado</em>}' operation.
@@ -2323,24 +2304,24 @@ public interface ModeloPackage extends EPackage {
 	EOperation getHSQLDB__BuscarCertificado__int();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#crearProyecto(java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double) <em>Crear Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#crearProyecto(java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double) <em>Crear Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Proyecto</em>' operation.
-	 * @see ArkiWeb.modelo.HSQLDB#crearProyecto(java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double)
+	 * @see ArkiWeb.modelo.HSQLDB#crearProyecto(java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double)
 	 * @generated
 	 */
-	EOperation getHSQLDB__CrearProyecto__String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+	EOperation getHSQLDB__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#editarProyecto(int, java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double) <em>Editar Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#editarProyecto(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double) <em>Editar Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Proyecto</em>' operation.
-	 * @see ArkiWeb.modelo.HSQLDB#editarProyecto(int, java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double)
+	 * @see ArkiWeb.modelo.HSQLDB#editarProyecto(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double)
 	 * @generated
 	 */
-	EOperation getHSQLDB__EditarProyecto__int_String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+	EOperation getHSQLDB__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.modelo.HSQLDB#buscarProyecto(int) <em>Buscar Proyecto</em>}' operation.
@@ -3429,12 +3410,12 @@ public interface ModeloPackage extends EPackage {
 		EOperation HSQLDB___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING = eINSTANCE.getHSQLDB__CrearUsuario__String_String_String_int_String_String_String();
 
 		/**
-		 * The meta object literal for the '<em><b>Editar Usuario 1</b></em>' operation.
+		 * The meta object literal for the '<em><b>Editar Usuario</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation HSQLDB___EDITAR_USUARIO_1__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING = eINSTANCE.getHSQLDB__EditarUsuario_1__int_String_String_String_int_String_String_String();
+		EOperation HSQLDB___EDITAR_USUARIO__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING = eINSTANCE.getHSQLDB__EditarUsuario__int_String_String_String_int_String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Baja Usuario</b></em>' operation.
@@ -3461,20 +3442,12 @@ public interface ModeloPackage extends EPackage {
 		EOperation HSQLDB___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN = eINSTANCE.getHSQLDB__EditarPermiso__int_String_String_boolean_boolean();
 
 		/**
-		 * The meta object literal for the '<em><b>Buscar Permiso</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation HSQLDB___BUSCAR_PERMISO__INT = eINSTANCE.getHSQLDB__BuscarPermiso__int();
-
-		/**
 		 * The meta object literal for the '<em><b>Crear Certificado</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation HSQLDB___CREAR_CERTIFICADO__STRING_CERTIFICADO_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = eINSTANCE.getHSQLDB__CrearCertificado__String_Certificado_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+		EOperation HSQLDB___CREAR_CERTIFICADO__STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = eINSTANCE.getHSQLDB__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Certificado</b></em>' operation.
@@ -3498,7 +3471,7 @@ public interface ModeloPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation HSQLDB___CREAR_PROYECTO__STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = eINSTANCE.getHSQLDB__CrearProyecto__String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+		EOperation HSQLDB___CREAR_PROYECTO__STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = eINSTANCE.getHSQLDB__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Proyecto</b></em>' operation.
@@ -3506,7 +3479,7 @@ public interface ModeloPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation HSQLDB___EDITAR_PROYECTO__INT_STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = eINSTANCE.getHSQLDB__EditarProyecto__int_String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+		EOperation HSQLDB___EDITAR_PROYECTO__INT_STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = eINSTANCE.getHSQLDB__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Buscar Proyecto</b></em>' operation.

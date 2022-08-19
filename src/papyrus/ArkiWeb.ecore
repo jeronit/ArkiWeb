@@ -221,7 +221,7 @@
         <eParameters name="domicilio_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="contrasenya_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="editarUsuario_1" ordered="false" lowerBound="1">
+      <eOperations name="editarUsuario" ordered="false" lowerBound="1">
         <eParameters name="id_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="nombre_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="apellido_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -247,13 +247,10 @@
         <eParameters name="lectura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
         <eParameters name="escritura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
       </eOperations>
-      <eOperations name="buscarPermiso" ordered="false" lowerBound="1" eType="#//modelo/Permiso">
-        <eParameters name="id_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      </eOperations>
       <eOperations name="crearCertificado" ordered="false" lowerBound="1">
         <eParameters name="descripcion_certificado" ordered="false" lowerBound="1"
             eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
+        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="vivienda_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="inmueble_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="tipo_certificado" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Certificado"/>
@@ -296,7 +293,7 @@
       </eOperations>
       <eOperations name="crearProyecto" ordered="false" lowerBound="1">
         <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
+        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
@@ -315,7 +312,7 @@
       <eOperations name="editarProyecto" ordered="false" lowerBound="1">
         <eParameters name="id_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
+        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
@@ -556,7 +553,7 @@
         <eParameters name="domicilio_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="contrasenya_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="editarUsuario_1" ordered="false" lowerBound="1">
+      <eOperations name="editarUsuario" ordered="false" lowerBound="1">
         <eParameters name="id_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="nombre_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="apellido_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -582,13 +579,10 @@
         <eParameters name="lectura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
         <eParameters name="escritura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
       </eOperations>
-      <eOperations name="buscarPermiso" ordered="false" lowerBound="1" eType="#//modelo/Permiso">
-        <eParameters name="id_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      </eOperations>
       <eOperations name="crearCertificado" ordered="false" lowerBound="1">
         <eParameters name="descripcion_certificado" ordered="false" lowerBound="1"
             eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
+        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="vivienda_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="inmueble_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="tipo_certificado" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Certificado"/>
@@ -631,7 +625,7 @@
       </eOperations>
       <eOperations name="crearProyecto" ordered="false" lowerBound="1">
         <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
+        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
@@ -650,7 +644,7 @@
       <eOperations name="editarProyecto" ordered="false" lowerBound="1">
         <eParameters name="id_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
+        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>

@@ -6,18 +6,20 @@
  */
 package ArkiWeb.controlador;
 
+import ArkiWeb.ListCertificado;
+import ArkiWeb.ListCertificados_Asignados;
+import ArkiWeb.ListInmueble;
+import ArkiWeb.ListPermiso;
+import ArkiWeb.ListProyecto;
+import ArkiWeb.ListUsuario;
+import ArkiWeb.ListVivienda;
 import ArkiWeb.modelo.Certificado;
-import ArkiWeb.modelo.Certificados_Asignados;
 import ArkiWeb.modelo.Inmueble;
-import ArkiWeb.modelo.Permiso;
 import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Proyectos_Asignados;
 import ArkiWeb.modelo.Proyectos_En_Ejecucion;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
-
-import java.util.List;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -37,7 +39,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	List<Usuario> listarUsuarios();
+	ListUsuario listarUsuarios();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -53,7 +55,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	List<Permiso> listarPermisos();
+	ListPermiso listarPermisos();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,7 +63,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	List<Proyecto> listarProyectos();
+	ListProyecto listarProyectos();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +71,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	List<Certificado> listarCertificados();
+	ListCertificado listarCertificados();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,7 +79,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	List<Vivienda> listarViviendas();
+	ListVivienda listarViviendas();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -85,7 +87,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	List<Inmueble> listarInmuebles();
+	ListInmueble listarInmuebles();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,7 +95,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
 	 * @generated
 	 */
-	List<Permiso> listarPermisosUsuario(int id_usuario);
+	ListPermiso listarPermisosUsuario(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,7 +135,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
 	 * @generated
 	 */
-	List<Proyecto> buscarMisProyectos(int id_usuario);
+	ListProyecto buscarMisProyectos(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,7 +143,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
 	 * @generated
 	 */
-	List<Proyecto> buscarProyectosPorUsuario(int id_usuario);
+	ListProyecto buscarProyectosPorUsuario(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,7 +151,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
 	 * @generated
 	 */
-	List<Certificado> buscarMisCertificados(int id_usuario);
+	ListCertificado buscarMisCertificados(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,7 +159,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
 	 * @generated
 	 */
-	List<Certificado> buscarCertificadosPorUsuario(int id_usuario);
+	ListCertificado buscarCertificadosPorUsuario(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,7 +167,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_viviendaDataType="org.eclipse.uml2.types.Integer" id_viviendaRequired="true" id_viviendaOrdered="false"
 	 * @generated
 	 */
-	List<Certificado> buscarCertificadosPorVivienda(int id_vivienda);
+	ListCertificado buscarCertificadosPorVivienda(int id_vivienda);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,7 +175,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_inmuebleDataType="org.eclipse.uml2.types.Integer" id_inmuebleRequired="true" id_inmuebleOrdered="false"
 	 * @generated
 	 */
-	List<Certificado> buscarCertificadosPorInmueble(int id_inmueble);
+	ListCertificado buscarCertificadosPorInmueble(int id_inmueble);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,7 +183,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" edadDataType="org.eclipse.uml2.types.Integer" edadRequired="true" edadOrdered="false"
 	 * @generated
 	 */
-	List<Certificado> buscarCertificadosPorEdadInmueble(int edad);
+	ListCertificado buscarCertificadosPorEdadInmueble(int edad);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -189,7 +191,7 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" edadDataType="org.eclipse.uml2.types.Integer" edadRequired="true" edadOrdered="false"
 	 * @generated
 	 */
-	List<Certificado> buscarCertificadosPorEdadCertificadoHabitabilidad(int edad);
+	ListCertificado buscarCertificadosPorEdadCertificadoHabitabilidad(int edad);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -213,6 +215,6 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
 	 * @generated
 	 */
-	List<Certificados_Asignados> buscarAsignacionCertificado(int id_usuario, int id_certificado);
+	ListCertificados_Asignados buscarAsignacionCertificado(int id_usuario, int id_certificado);
 
 } // Gestor_Busquedas

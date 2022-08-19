@@ -1,0 +1,14 @@
+ArkiWeb
+ArkiWeb.controlador
+ArkiWeb.controlador.impl
+ArkiWeb.controlador.util
+ArkiWeb.impl
+ArkiWeb.modelo
+ArkiWeb.modelo.impl
+ArkiWeb.modelo.util
+ArkiWeb.util
+ArkiWeb.vista.struts2mvc.modelo
+ArkiWeb.vista.struts2mvc.modelo.impl
+ArkiWeb.vista.struts2mvc.modelo.util
+org.eclipse.uml2.types
+org.eclipse.uml2.types.impl

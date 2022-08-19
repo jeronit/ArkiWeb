@@ -955,7 +955,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarUsuario_1__int_String_String_String_int_String_String_String() {
+	public EOperation getHSQLDB__EditarUsuario__int_String_String_String_int_String_String_String() {
 		return hsqldbEClass.getEOperations().get(1);
 	}
 
@@ -995,7 +995,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__BuscarPermiso__int() {
+	public EOperation getHSQLDB__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
 		return hsqldbEClass.getEOperations().get(5);
 	}
 
@@ -1005,7 +1005,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearCertificado__String_Certificado_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
+	public EOperation getHSQLDB__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
 		return hsqldbEClass.getEOperations().get(6);
 	}
 
@@ -1015,7 +1015,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
+	public EOperation getHSQLDB__BuscarCertificado__int() {
 		return hsqldbEClass.getEOperations().get(7);
 	}
 
@@ -1025,7 +1025,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__BuscarCertificado__int() {
+	public EOperation getHSQLDB__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
 		return hsqldbEClass.getEOperations().get(8);
 	}
 
@@ -1035,7 +1035,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearProyecto__String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
+	public EOperation getHSQLDB__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
 		return hsqldbEClass.getEOperations().get(9);
 	}
 
@@ -1045,7 +1045,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarProyecto__int_String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
+	public EOperation getHSQLDB__BuscarProyecto__int() {
 		return hsqldbEClass.getEOperations().get(10);
 	}
 
@@ -1055,7 +1055,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__BuscarProyecto__int() {
+	public EOperation getHSQLDB__CrearVivienda__String_String_int_double_double_int_int_int() {
 		return hsqldbEClass.getEOperations().get(11);
 	}
 
@@ -1065,7 +1065,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearVivienda__String_String_int_double_double_int_int_int() {
+	public EOperation getHSQLDB__EditarVivienda__int_String_String_int_double_double_int_int_int() {
 		return hsqldbEClass.getEOperations().get(12);
 	}
 
@@ -1075,7 +1075,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarVivienda__int_String_String_int_double_double_int_int_int() {
+	public EOperation getHSQLDB__BuscarVivienda__int() {
 		return hsqldbEClass.getEOperations().get(13);
 	}
 
@@ -1085,7 +1085,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__BuscarVivienda__int() {
+	public EOperation getHSQLDB__CrearInmueble__String_String_double_double() {
 		return hsqldbEClass.getEOperations().get(14);
 	}
 
@@ -1095,7 +1095,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearInmueble__String_String_double_double() {
+	public EOperation getHSQLDB__EditarInmueble__int_String_String_double_double() {
 		return hsqldbEClass.getEOperations().get(15);
 	}
 
@@ -1105,7 +1105,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarInmueble__int_String_String_double_double() {
+	public EOperation getHSQLDB__BuscarInmueble__int() {
 		return hsqldbEClass.getEOperations().get(16);
 	}
 
@@ -1115,7 +1115,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__BuscarInmueble__int() {
+	public EOperation getHSQLDB__AsignarCertificado__int_int() {
 		return hsqldbEClass.getEOperations().get(17);
 	}
 
@@ -1125,7 +1125,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__AsignarCertificado__int_int() {
+	public EOperation getHSQLDB__EditarAsignacionCertificado__int_int_int() {
 		return hsqldbEClass.getEOperations().get(18);
 	}
 
@@ -1135,7 +1135,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarAsignacionCertificado__int_int_int() {
+	public EOperation getHSQLDB__AsignarProyecto__int_int() {
 		return hsqldbEClass.getEOperations().get(19);
 	}
 
@@ -1145,7 +1145,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__AsignarProyecto__int_int() {
+	public EOperation getHSQLDB__EditarAsignacionProyecto__int_int_int() {
 		return hsqldbEClass.getEOperations().get(20);
 	}
 
@@ -1155,7 +1155,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarAsignacionProyecto__int_int_int() {
+	public EOperation getHSQLDB__ContratarProyecto__int_Date_int_Date() {
 		return hsqldbEClass.getEOperations().get(21);
 	}
 
@@ -1165,7 +1165,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__ContratarProyecto__int_Date_int_Date() {
+	public EOperation getHSQLDB__EditarContratacionProyecto__int_int_Date_int_Date() {
 		return hsqldbEClass.getEOperations().get(22);
 	}
 
@@ -1175,7 +1175,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarContratacionProyecto__int_int_Date_int_Date() {
+	public EOperation getHSQLDB__QueryCrear__String_ListString_ListString() {
 		return hsqldbEClass.getEOperations().get(23);
 	}
 
@@ -1185,7 +1185,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__QueryCrear__String_ListString_ListString() {
+	public EOperation getHSQLDB__QueryEditar__String_ListString_ListString_String() {
 		return hsqldbEClass.getEOperations().get(24);
 	}
 
@@ -1195,7 +1195,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__QueryEditar__String_ListString_ListString_String() {
+	public EOperation getHSQLDB__QueryBuscar__String_ListString_String() {
 		return hsqldbEClass.getEOperations().get(25);
 	}
 
@@ -1205,18 +1205,8 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__QueryBuscar__String_ListString_String() {
-		return hsqldbEClass.getEOperations().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EOperation getHSQLDB__QueryEjecutar__String() {
-		return hsqldbEClass.getEOperations().get(27);
+		return hsqldbEClass.getEOperations().get(26);
 	}
 
 	/**
@@ -1616,16 +1606,15 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 
 		hsqldbEClass = createEClass(HSQLDB);
 		createEOperation(hsqldbEClass, HSQLDB___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_USUARIO_1__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_USUARIO__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING);
 		createEOperation(hsqldbEClass, HSQLDB___BAJA_USUARIO__INT);
 		createEOperation(hsqldbEClass, HSQLDB___CREAR_PERMISO__STRING_STRING_BOOLEAN_BOOLEAN);
 		createEOperation(hsqldbEClass, HSQLDB___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN);
-		createEOperation(hsqldbEClass, HSQLDB___BUSCAR_PERMISO__INT);
-		createEOperation(hsqldbEClass, HSQLDB___CREAR_CERTIFICADO__STRING_CERTIFICADO_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE);
+		createEOperation(hsqldbEClass, HSQLDB___CREAR_CERTIFICADO__STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE);
 		createEOperation(hsqldbEClass, HSQLDB___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE);
 		createEOperation(hsqldbEClass, HSQLDB___BUSCAR_CERTIFICADO__INT);
-		createEOperation(hsqldbEClass, HSQLDB___CREAR_PROYECTO__STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_PROYECTO__INT_STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
+		createEOperation(hsqldbEClass, HSQLDB___CREAR_PROYECTO__STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_PROYECTO__INT_STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
 		createEOperation(hsqldbEClass, HSQLDB___BUSCAR_PROYECTO__INT);
 		createEOperation(hsqldbEClass, HSQLDB___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT);
 		createEOperation(hsqldbEClass, HSQLDB___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT);
@@ -1803,7 +1792,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		addEParameter(op, theTypesPackage.getString(), "domicilio_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "contrasenya_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarUsuario_1__int_String_String_String_int_String_String_String(), null, "editarUsuario_1", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarUsuario__int_String_String_String_int_String_String_String(), null, "editarUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "nombre_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "apellido_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1829,12 +1818,9 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		addEParameter(op, theTypesPackage.getBoolean(), "lectura_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getBoolean(), "escritura_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__BuscarPermiso__int(), this.getPermiso(), "buscarPermiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getHSQLDB__CrearCertificado__String_Certificado_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double(), null, "crearCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double(), null, "crearCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "descripcion_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getCertificado(), "cliente_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "cliente_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "vivienda_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "inmueble_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getTipo_Certificado(), "tipo_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1864,9 +1850,9 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		op = initEOperation(getHSQLDB__BuscarCertificado__int(), this.getCertificado(), "buscarCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__CrearProyecto__String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "crearProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "crearProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "descripcion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getCertificado(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "vivienda_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "inmueble_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getTipo_Proyecto(), "tipo_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1878,10 +1864,10 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDouble(), "coste_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarProyecto__int_String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "editarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "editarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "descripcion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getCertificado(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "vivienda_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "inmueble_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getTipo_Proyecto(), "tipo_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);

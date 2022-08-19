@@ -207,7 +207,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__EditarUsuario_1__int_String_String_String_int_String_String_String() {
+	public EOperation getControlador_Modelo__EditarUsuario__int_String_String_String_int_String_String_String() {
 		return controlador_ModeloEClass.getEOperations().get(1);
 	}
 
@@ -247,7 +247,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarPermiso__int() {
+	public EOperation getControlador_Modelo__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
 		return controlador_ModeloEClass.getEOperations().get(5);
 	}
 
@@ -257,7 +257,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__CrearCertificado__String_Certificado_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
+	public EOperation getControlador_Modelo__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
 		return controlador_ModeloEClass.getEOperations().get(6);
 	}
 
@@ -267,7 +267,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
+	public EOperation getControlador_Modelo__BuscarCertificado__int() {
 		return controlador_ModeloEClass.getEOperations().get(7);
 	}
 
@@ -277,7 +277,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarCertificado__int() {
+	public EOperation getControlador_Modelo__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
 		return controlador_ModeloEClass.getEOperations().get(8);
 	}
 
@@ -287,7 +287,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__CrearProyecto__String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
+	public EOperation getControlador_Modelo__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
 		return controlador_ModeloEClass.getEOperations().get(9);
 	}
 
@@ -297,7 +297,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__EditarProyecto__int_String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
+	public EOperation getControlador_Modelo__BuscarProyecto__int() {
 		return controlador_ModeloEClass.getEOperations().get(10);
 	}
 
@@ -307,7 +307,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarProyecto__int() {
+	public EOperation getControlador_Modelo__CrearVivienda__String_String_int_double_double_int_int_int() {
 		return controlador_ModeloEClass.getEOperations().get(11);
 	}
 
@@ -317,7 +317,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__CrearVivienda__String_String_int_double_double_int_int_int() {
+	public EOperation getControlador_Modelo__EditarVivienda__int_String_String_int_double_double_int_int_int() {
 		return controlador_ModeloEClass.getEOperations().get(12);
 	}
 
@@ -327,7 +327,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__EditarVivienda__int_String_String_int_double_double_int_int_int() {
+	public EOperation getControlador_Modelo__BuscarVivienda__int() {
 		return controlador_ModeloEClass.getEOperations().get(13);
 	}
 
@@ -337,7 +337,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarVivienda__int() {
+	public EOperation getControlador_Modelo__CrearInmueble__String_String_double_double() {
 		return controlador_ModeloEClass.getEOperations().get(14);
 	}
 
@@ -347,7 +347,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__CrearInmueble__String_String_double_double() {
+	public EOperation getControlador_Modelo__EditarInmueble__int_String_String_double_double() {
 		return controlador_ModeloEClass.getEOperations().get(15);
 	}
 
@@ -357,7 +357,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__EditarInmueble__int_String_String_double_double() {
+	public EOperation getControlador_Modelo__BuscarInmueble__int() {
 		return controlador_ModeloEClass.getEOperations().get(16);
 	}
 
@@ -367,7 +367,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarInmueble__int() {
+	public EOperation getControlador_Modelo__AsignarCertificado__int_int() {
 		return controlador_ModeloEClass.getEOperations().get(17);
 	}
 
@@ -377,7 +377,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__AsignarCertificado__int_int() {
+	public EOperation getControlador_Modelo__EditarAsignacionCertificado__int_int_int() {
 		return controlador_ModeloEClass.getEOperations().get(18);
 	}
 
@@ -387,7 +387,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__EditarAsignacionCertificado__int_int_int() {
+	public EOperation getControlador_Modelo__AsignarProyecto__int_int() {
 		return controlador_ModeloEClass.getEOperations().get(19);
 	}
 
@@ -397,7 +397,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__AsignarProyecto__int_int() {
+	public EOperation getControlador_Modelo__EditarAsignacionProyecto__int_int_int() {
 		return controlador_ModeloEClass.getEOperations().get(20);
 	}
 
@@ -407,7 +407,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__EditarAsignacionProyecto__int_int_int() {
+	public EOperation getControlador_Modelo__ContratarProyecto__int_Date_int_Date() {
 		return controlador_ModeloEClass.getEOperations().get(21);
 	}
 
@@ -417,7 +417,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__ContratarProyecto__int_Date_int_Date() {
+	public EOperation getControlador_Modelo__EditarContratacionProyecto__int_int_Date_int_Date() {
 		return controlador_ModeloEClass.getEOperations().get(22);
 	}
 
@@ -427,7 +427,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__EditarContratacionProyecto__int_int_Date_int_Date() {
+	public EOperation getControlador_Modelo__QueryCrear__String_ListString_ListString() {
 		return controlador_ModeloEClass.getEOperations().get(23);
 	}
 
@@ -437,7 +437,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__QueryCrear__String_ListString_ListString() {
+	public EOperation getControlador_Modelo__QueryEditar__String_ListString_ListString_String() {
 		return controlador_ModeloEClass.getEOperations().get(24);
 	}
 
@@ -447,7 +447,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__QueryEditar__String_ListString_ListString_String() {
+	public EOperation getControlador_Modelo__QueryBuscar__String_ListString_String() {
 		return controlador_ModeloEClass.getEOperations().get(25);
 	}
 
@@ -457,7 +457,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__QueryBuscar__String_ListString_String() {
+	public EOperation getControlador_Modelo__Login__String_String() {
 		return controlador_ModeloEClass.getEOperations().get(26);
 	}
 
@@ -467,7 +467,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__Login__String_String() {
+	public EOperation getControlador_Modelo__CambiarContrasenya__String() {
 		return controlador_ModeloEClass.getEOperations().get(27);
 	}
 
@@ -477,7 +477,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__CambiarContrasenya__String() {
+	public EOperation getControlador_Modelo__ListarUsuarios() {
 		return controlador_ModeloEClass.getEOperations().get(28);
 	}
 
@@ -487,7 +487,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__ListarUsuarios() {
+	public EOperation getControlador_Modelo__ListarPermisos() {
 		return controlador_ModeloEClass.getEOperations().get(29);
 	}
 
@@ -497,7 +497,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__ListarPermisos() {
+	public EOperation getControlador_Modelo__ListarProyectos() {
 		return controlador_ModeloEClass.getEOperations().get(30);
 	}
 
@@ -507,7 +507,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__ListarProyectos() {
+	public EOperation getControlador_Modelo__ListarCertificados() {
 		return controlador_ModeloEClass.getEOperations().get(31);
 	}
 
@@ -517,7 +517,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__ListarCertificados() {
+	public EOperation getControlador_Modelo__ListarViviendas() {
 		return controlador_ModeloEClass.getEOperations().get(32);
 	}
 
@@ -527,7 +527,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__ListarViviendas() {
+	public EOperation getControlador_Modelo__ListarInmuebles() {
 		return controlador_ModeloEClass.getEOperations().get(33);
 	}
 
@@ -537,7 +537,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__ListarInmuebles() {
+	public EOperation getControlador_Modelo__BuscarUsuario__int() {
 		return controlador_ModeloEClass.getEOperations().get(34);
 	}
 
@@ -547,7 +547,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarUsuario__int() {
+	public EOperation getControlador_Modelo__BuscarMisProyectos__int() {
 		return controlador_ModeloEClass.getEOperations().get(35);
 	}
 
@@ -557,7 +557,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarMisProyectos__int() {
+	public EOperation getControlador_Modelo__BuscarProyectosPorUsuario__int() {
 		return controlador_ModeloEClass.getEOperations().get(36);
 	}
 
@@ -567,7 +567,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarProyectosPorUsuario__int() {
+	public EOperation getControlador_Modelo__BuscarMisCertificados__int() {
 		return controlador_ModeloEClass.getEOperations().get(37);
 	}
 
@@ -577,7 +577,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarMisCertificados__int() {
+	public EOperation getControlador_Modelo__BuscarCertificadosPorUsuario__int() {
 		return controlador_ModeloEClass.getEOperations().get(38);
 	}
 
@@ -587,7 +587,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarCertificadosPorUsuario__int() {
+	public EOperation getControlador_Modelo__BuscarCertificadosPorVivienda__int() {
 		return controlador_ModeloEClass.getEOperations().get(39);
 	}
 
@@ -597,7 +597,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarCertificadosPorVivienda__int() {
+	public EOperation getControlador_Modelo__BuscarCertificadosPorInmueble__int() {
 		return controlador_ModeloEClass.getEOperations().get(40);
 	}
 
@@ -607,7 +607,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarCertificadosPorInmueble__int() {
+	public EOperation getControlador_Modelo__BuscarCertificadosPorEdadInmueble__int() {
 		return controlador_ModeloEClass.getEOperations().get(41);
 	}
 
@@ -617,7 +617,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarCertificadosPorEdadInmueble__int() {
+	public EOperation getControlador_Modelo__BuscarCertificadosPorEdadCertificadoHabitabilidad__int() {
 		return controlador_ModeloEClass.getEOperations().get(42);
 	}
 
@@ -627,7 +627,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarCertificadosPorEdadCertificadoHabitabilidad__int() {
+	public EOperation getControlador_Modelo__BuscarAsignacionCertificado__int_int() {
 		return controlador_ModeloEClass.getEOperations().get(43);
 	}
 
@@ -637,7 +637,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarAsignacionCertificado__int_int() {
+	public EOperation getControlador_Modelo__BuscarAsignacionProyecto__int_int() {
 		return controlador_ModeloEClass.getEOperations().get(44);
 	}
 
@@ -647,18 +647,8 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 	 * @generated
 	 */
 	@Override
-	public EOperation getControlador_Modelo__BuscarAsignacionProyecto__int_int() {
-		return controlador_ModeloEClass.getEOperations().get(45);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EOperation getControlador_Modelo__BuscarContratacionProyecto__int() {
-		return controlador_ModeloEClass.getEOperations().get(46);
+		return controlador_ModeloEClass.getEOperations().get(45);
 	}
 
 	/**
@@ -1222,16 +1212,15 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 		// Create classes and their features
 		controlador_ModeloEClass = createEClass(CONTROLADOR_MODELO);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING);
-		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___EDITAR_USUARIO_1__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING);
+		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___EDITAR_USUARIO__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___BAJA_USUARIO__INT);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___CREAR_PERMISO__STRING_STRING_BOOLEAN_BOOLEAN);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN);
-		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___BUSCAR_PERMISO__INT);
-		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___CREAR_CERTIFICADO__STRING_CERTIFICADO_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE);
+		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___CREAR_CERTIFICADO__STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___BUSCAR_CERTIFICADO__INT);
-		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___CREAR_PROYECTO__STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
-		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___EDITAR_PROYECTO__INT_STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
+		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___CREAR_PROYECTO__STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
+		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___EDITAR_PROYECTO__INT_STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___BUSCAR_PROYECTO__INT);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT);
 		createEOperation(controlador_ModeloEClass, CONTROLADOR_MODELO___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT);
@@ -1377,7 +1366,7 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 		addEParameter(op, theTypesPackage.getString(), "domicilio_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "contrasenya_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getControlador_Modelo__EditarUsuario_1__int_String_String_String_int_String_String_String(), null, "editarUsuario_1", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getControlador_Modelo__EditarUsuario__int_String_String_String_int_String_String_String(), null, "editarUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "nombre_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "apellido_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1403,12 +1392,9 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 		addEParameter(op, theTypesPackage.getBoolean(), "lectura_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getBoolean(), "escritura_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getControlador_Modelo__BuscarPermiso__int(), theModeloPackage.getPermiso(), "buscarPermiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getControlador_Modelo__CrearCertificado__String_Certificado_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double(), null, "crearCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getControlador_Modelo__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double(), null, "crearCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "descripcion_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theModeloPackage.getCertificado(), "cliente_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "cliente_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "vivienda_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "inmueble_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theModeloPackage.getTipo_Certificado(), "tipo_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1438,9 +1424,9 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 		op = initEOperation(getControlador_Modelo__BuscarCertificado__int(), theModeloPackage.getCertificado(), "buscarCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getControlador_Modelo__CrearProyecto__String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "crearProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getControlador_Modelo__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "crearProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "descripcion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theModeloPackage.getCertificado(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "vivienda_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "inmueble_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theModeloPackage.getTipo_Proyecto(), "tipo_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1452,10 +1438,10 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDouble(), "coste_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getControlador_Modelo__EditarProyecto__int_String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "editarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getControlador_Modelo__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "editarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "descripcion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theModeloPackage.getCertificado(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "vivienda_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "inmueble_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theModeloPackage.getTipo_Proyecto(), "tipo_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);

@@ -41,8 +41,8 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListCertificados_Asignados"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListProyectos_Asignados"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//ListProyectos_En_Ejecucion"/>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Modelo" disposableProviderFactory="true"
-        ecorePackage="ArkiWeb.ecore#//modelo">
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Modelo" basePackage="ArkiWeb"
+        disposableProviderFactory="true" ecorePackage="ArkiWeb.ecore#//modelo">
       <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="ArkiWeb.ecore#//modelo/Tipo_Proyecto">
         <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Proyecto/Residencial_Edificio"/>
         <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="ArkiWeb.ecore#//modelo/Tipo_Proyecto/Residencial_Vivienda"/>
@@ -159,15 +159,15 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/domicilio_usuario"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/contrasenya_usuario"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/id_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/nombre_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/apellido_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/dni_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/telefono_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/email_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/domicilio_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario_1/contrasenya_usuario"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/nombre_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/apellido_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/dni_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/telefono_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/email_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/domicilio_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/contrasenya_usuario"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/bajaUsuario">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/bajaUsuario/id_usuario"/>
@@ -184,9 +184,6 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso/objeto_permiso"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso/lectura_permiso"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarPermiso/escritura_permiso"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/buscarPermiso">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/buscarPermiso/id_permiso"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearCertificado/descripcion_certificado"/>
@@ -383,12 +380,12 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//modelo/ConcreteFactory"/>
     </nestedGenPackages>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Vista" disposableProviderFactory="true"
-        ecorePackage="ArkiWeb.ecore#//vista">
-      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Struts2mvc" disposableProviderFactory="true"
-          ecorePackage="ArkiWeb.ecore#//vista/struts2mvc">
-        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Modelo" disposableProviderFactory="true"
-            ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/modelo">
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Vista" basePackage="ArkiWeb"
+        disposableProviderFactory="true" ecorePackage="ArkiWeb.ecore#//vista">
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Struts2mvc" basePackage="ArkiWeb.vista"
+          disposableProviderFactory="true" ecorePackage="ArkiWeb.ecore#//vista/struts2mvc">
+        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Modelo" basePackage="ArkiWeb.vista.struts2mvc"
+            disposableProviderFactory="true" ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/modelo">
           <genClasses xsi:type="genmodel:GenClass" ecoreClass="ArkiWeb.ecore#//vista/struts2mvc/modelo/LoginActionSupport">
             <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/LoginActionSupport/execute"/>
           </genClasses>
@@ -421,14 +418,14 @@
             <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//vista/struts2mvc/modelo/EditarEjecucionProyectoActionSupport/execute"/>
           </genClasses>
         </nestedGenPackages>
-        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Controlador" disposableProviderFactory="true"
-            ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/controlador"/>
-        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Vista" disposableProviderFactory="true"
-            ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/vista"/>
+        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Controlador" basePackage="ArkiWeb.vista.struts2mvc"
+            disposableProviderFactory="true" ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/controlador"/>
+        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Vista" basePackage="ArkiWeb.vista.struts2mvc"
+            disposableProviderFactory="true" ecorePackage="ArkiWeb.ecore#//vista/struts2mvc/vista"/>
       </nestedGenPackages>
     </nestedGenPackages>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Controlador" disposableProviderFactory="true"
-        ecorePackage="ArkiWeb.ecore#//controlador">
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Controlador" basePackage="ArkiWeb"
+        disposableProviderFactory="true" ecorePackage="ArkiWeb.ecore#//controlador">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//controlador/Controlador_Modelo">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/nombre_usuario"/>
@@ -439,15 +436,15 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/domicilio_usuario"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearUsuario/contrasenya_usuario"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/id_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/nombre_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/apellido_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/dni_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/telefono_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/email_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/domicilio_usuario"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario_1/contrasenya_usuario"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario/id_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario/nombre_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario/apellido_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario/dni_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario/telefono_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario/email_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario/domicilio_usuario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarUsuario/contrasenya_usuario"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/bajaUsuario">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/bajaUsuario/id_usuario"/>
@@ -464,9 +461,6 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso/objeto_permiso"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso/lectura_permiso"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/editarPermiso/escritura_permiso"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarPermiso">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/buscarPermiso/id_permiso"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//controlador/Controlador_Modelo/crearCertificado/descripcion_certificado"/>

@@ -170,7 +170,7 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	}
 
 	@Override
-	public void editarUsuario_1(int id_usuario, String nombre_usuario, String apellido_usuario, String dni_usuario,
+	public void editarUsuario(int id_usuario, String nombre_usuario, String apellido_usuario, String dni_usuario,
 			int telefono_usuario, String email_usuario, String domicilio_usuario, String contrasenya_usuario) {
 		// TODO Auto-generated method stub
 
@@ -197,13 +197,7 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	}
 
 	@Override
-	public Permiso buscarPermiso(int id_permiso) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void crearCertificado(String descripcion_certificado, Certificado cliente_certificado,
+	public void crearCertificado(String descripcion_certificado, int cliente_certificado,
 			int vivienda_certificado, int inmueble_certificado, Tipo_Certificado tipo_certificado,
 			Date fecha_solicitud_certificado, Date fecha_entrega_certificado, Date fecha_visita_certificado,
 			Date fecha_emision_certificado, Categoria_Certificado categoria_certificado, int arquitecto_certificado,
@@ -229,7 +223,7 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	}
 
 	@Override
-	public void crearProyecto(String descripcion_proyecto, Certificado cliente_proyecto, int vivienda_proyecto,
+	public void crearProyecto(String descripcion_proyecto, int cliente_proyecto, int vivienda_proyecto,
 			int inmueble_proyecto, Tipo_Proyecto tipo_proyecto, Date fecha_solicitud_proyecto,
 			Date fecha_entrega_proyecto, int duracion_prevista_proyecto, double presupuesto_ejecucion_proyecto,
 			double superficie_proyecto, int arquitecto_proyecto, double coste_proyecto) {
@@ -238,7 +232,7 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	}
 
 	@Override
-	public void editarProyecto(int id_proyecto, String descripcion_proyecto, Certificado cliente_proyecto,
+	public void editarProyecto(int id_proyecto, String descripcion_proyecto, int cliente_proyecto,
 			int vivienda_proyecto, int inmueble_proyecto, Tipo_Proyecto tipo_proyecto, Date fecha_solicitud_proyecto,
 			Date fecha_entrega_proyecto, int duracion_prevista_proyecto, double presupuesto_ejecucion_proyecto,
 			double superficie_proyecto, int arquitecto_proyecto, double coste_proyecto) {
