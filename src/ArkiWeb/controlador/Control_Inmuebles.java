@@ -6,6 +6,7 @@
  */
 package ArkiWeb.controlador;
 
+import ArkiWeb.modelo.Inmueble;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,17 +23,17 @@ public interface Control_Inmuebles extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model descripcion_inmuebleDataType="org.eclipse.uml2.types.String" descripcion_inmuebleRequired="true" descripcion_inmuebleOrdered="false" direccion_inmuebleDataType="org.eclipse.uml2.types.String" direccion_inmuebleRequired="true" direccion_inmuebleOrdered="false" superficie_terreno_inmuebleRequired="true" superficie_terreno_inmuebleOrdered="false" superficie_inmuebleRequired="true" superficie_inmuebleOrdered="false"
+	 * @model inmuebleRequired="true" inmuebleOrdered="false"
 	 * @generated
 	 */
-	void crearInmueble(String descripcion_inmueble, String direccion_inmueble, double superficie_terreno_inmueble, double superficie_inmueble);
+	void crearInmueble(Inmueble inmueble);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model id_inmuebleDataType="org.eclipse.uml2.types.Integer" id_inmuebleRequired="true" id_inmuebleOrdered="false" descripcion_inmuebleDataType="org.eclipse.uml2.types.String" descripcion_inmuebleRequired="true" descripcion_inmuebleOrdered="false" direccion_inmuebleDataType="org.eclipse.uml2.types.String" direccion_inmuebleRequired="true" direccion_inmuebleOrdered="false" superficie_terreno_inmuebleRequired="true" superficie_terreno_inmuebleOrdered="false" superficie_inmuebleRequired="true" superficie_inmuebleOrdered="false"
+	 * @model inmuebleRequired="true" inmuebleOrdered="false"
 	 * @generated
 	 */
-	void editarInmueble(int id_inmueble, String descripcion_inmueble, String direccion_inmueble, double superficie_terreno_inmueble, double superficie_inmueble);
+	void editarInmueble(Inmueble inmueble);
 
 } // Control_Inmuebles

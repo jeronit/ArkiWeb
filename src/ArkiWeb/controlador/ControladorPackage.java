@@ -85,7 +85,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING = 0;
+	int CONTROLADOR_MODELO___CREAR_USUARIO__USUARIO = 0;
 
 	/**
 	 * The operation id for the '<em>Editar Usuario</em>' operation.
@@ -94,7 +94,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_USUARIO__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING = 1;
+	int CONTROLADOR_MODELO___EDITAR_USUARIO__USUARIO = 1;
 
 	/**
 	 * The operation id for the '<em>Baja Usuario</em>' operation.
@@ -112,7 +112,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___CREAR_PERMISO__STRING_STRING_BOOLEAN_BOOLEAN = 3;
+	int CONTROLADOR_MODELO___CREAR_PERMISO__PERMISO = 3;
 
 	/**
 	 * The operation id for the '<em>Editar Permiso</em>' operation.
@@ -121,7 +121,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN = 4;
+	int CONTROLADOR_MODELO___EDITAR_PERMISO__PERMISO = 4;
 
 	/**
 	 * The operation id for the '<em>Crear Certificado</em>' operation.
@@ -130,7 +130,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___CREAR_CERTIFICADO__STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = 5;
+	int CONTROLADOR_MODELO___CREAR_CERTIFICADO__CERTIFICADO = 5;
 
 	/**
 	 * The operation id for the '<em>Editar Certificado</em>' operation.
@@ -139,7 +139,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = 6;
+	int CONTROLADOR_MODELO___EDITAR_CERTIFICADO__CERTIFICADO = 6;
 
 	/**
 	 * The operation id for the '<em>Buscar Certificado</em>' operation.
@@ -157,7 +157,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___CREAR_PROYECTO__STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = 8;
+	int CONTROLADOR_MODELO___CREAR_PROYECTO__PROYECTO = 8;
 
 	/**
 	 * The operation id for the '<em>Editar Proyecto</em>' operation.
@@ -166,7 +166,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_PROYECTO__INT_STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = 9;
+	int CONTROLADOR_MODELO___EDITAR_PROYECTO__PROYECTO = 9;
 
 	/**
 	 * The operation id for the '<em>Buscar Proyecto</em>' operation.
@@ -184,7 +184,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = 11;
+	int CONTROLADOR_MODELO___CREAR_VIVIENDA__VIVIENDA = 11;
 
 	/**
 	 * The operation id for the '<em>Editar Vivienda</em>' operation.
@@ -193,7 +193,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = 12;
+	int CONTROLADOR_MODELO___EDITAR_VIVIENDA__VIVIENDA = 12;
 
 	/**
 	 * The operation id for the '<em>Buscar Vivienda</em>' operation.
@@ -211,7 +211,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___CREAR_INMUEBLE__STRING_STRING_DOUBLE_DOUBLE = 14;
+	int CONTROLADOR_MODELO___CREAR_INMUEBLE__INMUEBLE = 14;
 
 	/**
 	 * The operation id for the '<em>Editar Inmueble</em>' operation.
@@ -220,7 +220,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_INMUEBLE__INT_STRING_STRING_DOUBLE_DOUBLE = 15;
+	int CONTROLADOR_MODELO___EDITAR_INMUEBLE__INMUEBLE = 15;
 
 	/**
 	 * The operation id for the '<em>Buscar Inmueble</em>' operation.
@@ -238,7 +238,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___ASIGNAR_CERTIFICADO__INT_INT = 17;
+	int CONTROLADOR_MODELO___ASIGNAR_CERTIFICADO__CERTIFICADOS_ASIGNADOS = 17;
 
 	/**
 	 * The operation id for the '<em>Editar Asignacion Certificado</em>' operation.
@@ -247,7 +247,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_ASIGNACION_CERTIFICADO__INT_INT_INT = 18;
+	int CONTROLADOR_MODELO___EDITAR_ASIGNACION_CERTIFICADO__CERTIFICADOS_ASIGNADOS = 18;
 
 	/**
 	 * The operation id for the '<em>Asignar Proyecto</em>' operation.
@@ -256,7 +256,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___ASIGNAR_PROYECTO__INT_INT = 19;
+	int CONTROLADOR_MODELO___ASIGNAR_PROYECTO__PROYECTOS_ASIGNADOS = 19;
 
 	/**
 	 * The operation id for the '<em>Editar Asignacion Proyecto</em>' operation.
@@ -265,7 +265,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_ASIGNACION_PROYECTO__INT_INT_INT = 20;
+	int CONTROLADOR_MODELO___EDITAR_ASIGNACION_PROYECTO__PROYECTOS_ASIGNADOS = 20;
 
 	/**
 	 * The operation id for the '<em>Contratar Proyecto</em>' operation.
@@ -274,7 +274,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___CONTRATAR_PROYECTO__INT_DATE_INT_DATE = 21;
+	int CONTROLADOR_MODELO___CONTRATAR_PROYECTO__PROYECTOS_EN_EJECUCION = 21;
 
 	/**
 	 * The operation id for the '<em>Editar Contratacion Proyecto</em>' operation.
@@ -283,34 +283,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___EDITAR_CONTRATACION_PROYECTO__INT_INT_DATE_INT_DATE = 22;
-
-	/**
-	 * The operation id for the '<em>Query Crear</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROLADOR_MODELO___QUERY_CREAR__STRING_LISTSTRING_LISTSTRING = 23;
-
-	/**
-	 * The operation id for the '<em>Query Editar</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROLADOR_MODELO___QUERY_EDITAR__STRING_LISTSTRING_LISTSTRING_STRING = 24;
-
-	/**
-	 * The operation id for the '<em>Query Buscar</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROLADOR_MODELO___QUERY_BUSCAR__STRING_LISTSTRING_STRING = 25;
+	int CONTROLADOR_MODELO___EDITAR_CONTRATACION_PROYECTO__PROYECTOS_EN_EJECUCION = 22;
 
 	/**
 	 * The operation id for the '<em>Login</em>' operation.
@@ -319,7 +292,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___LOGIN__STRING_STRING = 26;
+	int CONTROLADOR_MODELO___LOGIN__STRING_STRING = 23;
 
 	/**
 	 * The operation id for the '<em>Cambiar Contrasenya</em>' operation.
@@ -328,7 +301,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___CAMBIAR_CONTRASENYA__STRING = 27;
+	int CONTROLADOR_MODELO___CAMBIAR_CONTRASENYA__STRING = 24;
 
 	/**
 	 * The operation id for the '<em>Listar Usuarios</em>' operation.
@@ -337,7 +310,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___LISTAR_USUARIOS = 28;
+	int CONTROLADOR_MODELO___LISTAR_USUARIOS = 25;
 
 	/**
 	 * The operation id for the '<em>Listar Permisos</em>' operation.
@@ -346,7 +319,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___LISTAR_PERMISOS = 29;
+	int CONTROLADOR_MODELO___LISTAR_PERMISOS = 26;
 
 	/**
 	 * The operation id for the '<em>Listar Proyectos</em>' operation.
@@ -355,7 +328,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___LISTAR_PROYECTOS = 30;
+	int CONTROLADOR_MODELO___LISTAR_PROYECTOS = 27;
 
 	/**
 	 * The operation id for the '<em>Listar Certificados</em>' operation.
@@ -364,7 +337,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___LISTAR_CERTIFICADOS = 31;
+	int CONTROLADOR_MODELO___LISTAR_CERTIFICADOS = 28;
 
 	/**
 	 * The operation id for the '<em>Listar Viviendas</em>' operation.
@@ -373,7 +346,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___LISTAR_VIVIENDAS = 32;
+	int CONTROLADOR_MODELO___LISTAR_VIVIENDAS = 29;
 
 	/**
 	 * The operation id for the '<em>Listar Inmuebles</em>' operation.
@@ -382,7 +355,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___LISTAR_INMUEBLES = 33;
+	int CONTROLADOR_MODELO___LISTAR_INMUEBLES = 30;
 
 	/**
 	 * The operation id for the '<em>Buscar Usuario</em>' operation.
@@ -391,7 +364,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_USUARIO__INT = 34;
+	int CONTROLADOR_MODELO___BUSCAR_USUARIO__INT = 31;
 
 	/**
 	 * The operation id for the '<em>Buscar Mis Proyectos</em>' operation.
@@ -400,7 +373,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_MIS_PROYECTOS__INT = 35;
+	int CONTROLADOR_MODELO___BUSCAR_MIS_PROYECTOS__INT = 32;
 
 	/**
 	 * The operation id for the '<em>Buscar Proyectos Por Usuario</em>' operation.
@@ -409,7 +382,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_PROYECTOS_POR_USUARIO__INT = 36;
+	int CONTROLADOR_MODELO___BUSCAR_PROYECTOS_POR_USUARIO__INT = 33;
 
 	/**
 	 * The operation id for the '<em>Buscar Mis Certificados</em>' operation.
@@ -418,7 +391,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_MIS_CERTIFICADOS__INT = 37;
+	int CONTROLADOR_MODELO___BUSCAR_MIS_CERTIFICADOS__INT = 34;
 
 	/**
 	 * The operation id for the '<em>Buscar Certificados Por Usuario</em>' operation.
@@ -427,7 +400,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_USUARIO__INT = 38;
+	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_USUARIO__INT = 35;
 
 	/**
 	 * The operation id for the '<em>Buscar Certificados Por Vivienda</em>' operation.
@@ -436,7 +409,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_VIVIENDA__INT = 39;
+	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_VIVIENDA__INT = 36;
 
 	/**
 	 * The operation id for the '<em>Buscar Certificados Por Inmueble</em>' operation.
@@ -445,7 +418,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_INMUEBLE__INT = 40;
+	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_INMUEBLE__INT = 37;
 
 	/**
 	 * The operation id for the '<em>Buscar Certificados Por Edad Inmueble</em>' operation.
@@ -454,7 +427,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_EDAD_INMUEBLE__INT = 41;
+	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_EDAD_INMUEBLE__INT = 38;
 
 	/**
 	 * The operation id for the '<em>Buscar Certificados Por Edad Certificado Habitabilidad</em>' operation.
@@ -463,7 +436,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_EDAD_CERTIFICADO_HABITABILIDAD__INT = 42;
+	int CONTROLADOR_MODELO___BUSCAR_CERTIFICADOS_POR_EDAD_CERTIFICADO_HABITABILIDAD__INT = 39;
 
 	/**
 	 * The operation id for the '<em>Buscar Asignacion Certificado</em>' operation.
@@ -472,7 +445,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_ASIGNACION_CERTIFICADO__INT_INT = 43;
+	int CONTROLADOR_MODELO___BUSCAR_ASIGNACION_CERTIFICADO__INT_INT = 40;
 
 	/**
 	 * The operation id for the '<em>Buscar Asignacion Proyecto</em>' operation.
@@ -481,7 +454,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_ASIGNACION_PROYECTO__INT_INT = 44;
+	int CONTROLADOR_MODELO___BUSCAR_ASIGNACION_PROYECTO__INT_INT = 41;
 
 	/**
 	 * The operation id for the '<em>Buscar Contratacion Proyecto</em>' operation.
@@ -490,7 +463,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO___BUSCAR_CONTRATACION_PROYECTO__INT = 45;
+	int CONTROLADOR_MODELO___BUSCAR_CONTRATACION_PROYECTO__INT = 42;
 
 	/**
 	 * The number of operations of the '<em>Controlador Modelo</em>' class.
@@ -499,7 +472,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLADOR_MODELO_OPERATION_COUNT = 46;
+	int CONTROLADOR_MODELO_OPERATION_COUNT = 43;
 
 	/**
 	 * The meta object id for the '{@link ArkiWeb.controlador.Control_Login <em>Control Login</em>}' class.
@@ -582,7 +555,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_PERMISOS___CREAR_PERMISO__STRING_STRING_BOOLEAN_BOOLEAN = 1;
+	int CONTROL_PERMISOS___CREAR_PERMISO__PERMISO = 1;
 
 	/**
 	 * The operation id for the '<em>Editar Permiso</em>' operation.
@@ -591,7 +564,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_PERMISOS___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN = 2;
+	int CONTROL_PERMISOS___EDITAR_PERMISO__PERMISO = 2;
 
 	/**
 	 * The number of operations of the '<em>Control Permisos</em>' class.
@@ -628,7 +601,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_USUARIOS___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING = 0;
+	int CONTROL_USUARIOS___CREAR_USUARIO__USUARIO = 0;
 
 	/**
 	 * The operation id for the '<em>Editar Usuario 1</em>' operation.
@@ -637,7 +610,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_USUARIOS___EDITAR_USUARIO_1__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING = 1;
+	int CONTROL_USUARIOS___EDITAR_USUARIO_1__USUARIO = 1;
 
 	/**
 	 * The operation id for the '<em>Baja Usuario</em>' operation.
@@ -683,7 +656,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_CERTIFICADOS___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = 0;
+	int CONTROL_CERTIFICADOS___EDITAR_CERTIFICADO__CERTIFICADO = 0;
 
 	/**
 	 * The operation id for the '<em>Asignar Certificado</em>' operation.
@@ -692,7 +665,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_CERTIFICADOS___ASIGNAR_CERTIFICADO__INT_INT = 1;
+	int CONTROL_CERTIFICADOS___ASIGNAR_CERTIFICADO__CERTIFICADO = 1;
 
 	/**
 	 * The operation id for the '<em>Editar Asignacion Certificado</em>' operation.
@@ -701,7 +674,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_CERTIFICADOS___EDITAR_ASIGNACION_CERTIFICADO__INT_INT_INT = 2;
+	int CONTROL_CERTIFICADOS___EDITAR_ASIGNACION_CERTIFICADO__CERTIFICADO = 2;
 
 	/**
 	 * The operation id for the '<em>Crear Certificado</em>' operation.
@@ -710,7 +683,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_CERTIFICADOS___CREAR_CERTIFICADO__STRING_CERTIFICADO_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = 3;
+	int CONTROL_CERTIFICADOS___CREAR_CERTIFICADO__CERTIFICADO = 3;
 
 	/**
 	 * The number of operations of the '<em>Control Certificados</em>' class.
@@ -741,22 +714,22 @@ public interface ControladorPackage extends EPackage {
 	int CONTROL_PROYECTOS_FEATURE_COUNT = 0;
 
 	/**
+	 * The operation id for the '<em>Crear Proyecto</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_PROYECTOS___CREAR_PROYECTO__PROYECTO = 0;
+
+	/**
 	 * The operation id for the '<em>Editar Proyecto</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_PROYECTOS___EDITAR_PROYECTO__INT_STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = 0;
-
-	/**
-	 * The operation id for the '<em>Editar Contratacion Proyecto</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_PROYECTOS___EDITAR_CONTRATACION_PROYECTO__INT_INT_DATE_INT_DATE = 1;
+	int CONTROL_PROYECTOS___EDITAR_PROYECTO__PROYECTO = 1;
 
 	/**
 	 * The operation id for the '<em>Asignar Proyecto</em>' operation.
@@ -765,25 +738,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_PROYECTOS___ASIGNAR_PROYECTO__INT_INT = 2;
-
-	/**
-	 * The operation id for the '<em>Contratar Proyecto</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_PROYECTOS___CONTRATAR_PROYECTO__INT_DATE_INT_DATE = 3;
-
-	/**
-	 * The operation id for the '<em>Crear Proyecto</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_PROYECTOS___CREAR_PROYECTO__STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = 4;
+	int CONTROL_PROYECTOS___ASIGNAR_PROYECTO__PROYECTOS_ASIGNADOS = 2;
 
 	/**
 	 * The operation id for the '<em>Editar Asignacion Proyecto</em>' operation.
@@ -792,7 +747,25 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_PROYECTOS___EDITAR_ASIGNACION_PROYECTO__INT_INT_INT = 5;
+	int CONTROL_PROYECTOS___EDITAR_ASIGNACION_PROYECTO__PROYECTOS_ASIGNADOS = 3;
+
+	/**
+	 * The operation id for the '<em>Contratar Proyecto</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_PROYECTOS___CONTRATAR_PROYECTO__PROYECTOS_EN_EJECUCION = 4;
+
+	/**
+	 * The operation id for the '<em>Editar Contratacion Proyecto</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_PROYECTOS___EDITAR_CONTRATACION_PROYECTO__PROYECTOS_EN_EJECUCION = 5;
 
 	/**
 	 * The number of operations of the '<em>Control Proyectos</em>' class.
@@ -829,7 +802,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_VIVIENDAS___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = 0;
+	int CONTROL_VIVIENDAS___CREAR_VIVIENDA__VIVIENDA = 0;
 
 	/**
 	 * The operation id for the '<em>Editar Vivienda</em>' operation.
@@ -838,7 +811,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_VIVIENDAS___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = 1;
+	int CONTROL_VIVIENDAS___EDITAR_VIVIENDA__VIVIENDA = 1;
 
 	/**
 	 * The number of operations of the '<em>Control Viviendas</em>' class.
@@ -875,7 +848,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_INMUEBLES___CREAR_INMUEBLE__STRING_STRING_DOUBLE_DOUBLE = 0;
+	int CONTROL_INMUEBLES___CREAR_INMUEBLE__INMUEBLE = 0;
 
 	/**
 	 * The operation id for the '<em>Editar Inmueble</em>' operation.
@@ -884,7 +857,7 @@ public interface ControladorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_INMUEBLES___EDITAR_INMUEBLE__INT_STRING_STRING_DOUBLE_DOUBLE = 1;
+	int CONTROL_INMUEBLES___EDITAR_INMUEBLE__INMUEBLE = 1;
 
 	/**
 	 * The number of operations of the '<em>Control Inmuebles</em>' class.
@@ -1142,24 +1115,24 @@ public interface ControladorPackage extends EPackage {
 	EClass getControlador_Modelo();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearUsuario(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String) <em>Crear Usuario</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearUsuario(ArkiWeb.modelo.Usuario) <em>Crear Usuario</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Usuario</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#crearUsuario(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#crearUsuario(ArkiWeb.modelo.Usuario)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__CrearUsuario__String_String_String_int_String_String_String();
+	EOperation getControlador_Modelo__CrearUsuario__Usuario();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarUsuario(int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String) <em>Editar Usuario</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarUsuario(ArkiWeb.modelo.Usuario) <em>Editar Usuario</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Usuario</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarUsuario(int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarUsuario(ArkiWeb.modelo.Usuario)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarUsuario__int_String_String_String_int_String_String_String();
+	EOperation getControlador_Modelo__EditarUsuario__Usuario();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#bajaUsuario(int) <em>Baja Usuario</em>}' operation.
@@ -1172,44 +1145,44 @@ public interface ControladorPackage extends EPackage {
 	EOperation getControlador_Modelo__BajaUsuario__int();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearPermiso(java.lang.String, java.lang.String, boolean, boolean) <em>Crear Permiso</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearPermiso(ArkiWeb.modelo.Permiso) <em>Crear Permiso</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Permiso</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#crearPermiso(java.lang.String, java.lang.String, boolean, boolean)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#crearPermiso(ArkiWeb.modelo.Permiso)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__CrearPermiso__String_String_boolean_boolean();
+	EOperation getControlador_Modelo__CrearPermiso__Permiso();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarPermiso(int, java.lang.String, java.lang.String, boolean, boolean) <em>Editar Permiso</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarPermiso(ArkiWeb.modelo.Permiso) <em>Editar Permiso</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Permiso</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarPermiso(int, java.lang.String, java.lang.String, boolean, boolean)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarPermiso(ArkiWeb.modelo.Permiso)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarPermiso__int_String_String_boolean_boolean();
+	EOperation getControlador_Modelo__EditarPermiso__Permiso();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearCertificado(java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double) <em>Crear Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearCertificado(ArkiWeb.modelo.Certificado) <em>Crear Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Certificado</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#crearCertificado(java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#crearCertificado(ArkiWeb.modelo.Certificado)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+	EOperation getControlador_Modelo__CrearCertificado__Certificado();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarCertificado(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double) <em>Editar Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarCertificado(ArkiWeb.modelo.Certificado) <em>Editar Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Certificado</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarCertificado(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarCertificado(ArkiWeb.modelo.Certificado)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+	EOperation getControlador_Modelo__EditarCertificado__Certificado();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#buscarCertificado(int) <em>Buscar Certificado</em>}' operation.
@@ -1222,24 +1195,24 @@ public interface ControladorPackage extends EPackage {
 	EOperation getControlador_Modelo__BuscarCertificado__int();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearProyecto(java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double) <em>Crear Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearProyecto(ArkiWeb.modelo.Proyecto) <em>Crear Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#crearProyecto(java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#crearProyecto(ArkiWeb.modelo.Proyecto)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+	EOperation getControlador_Modelo__CrearProyecto__Proyecto();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarProyecto(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double) <em>Editar Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarProyecto(ArkiWeb.modelo.Proyecto) <em>Editar Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarProyecto(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarProyecto(ArkiWeb.modelo.Proyecto)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+	EOperation getControlador_Modelo__EditarProyecto__Proyecto();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#buscarProyecto(int) <em>Buscar Proyecto</em>}' operation.
@@ -1252,24 +1225,24 @@ public interface ControladorPackage extends EPackage {
 	EOperation getControlador_Modelo__BuscarProyecto__int();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearVivienda(java.lang.String, java.lang.String, int, double, double, int, int, int) <em>Crear Vivienda</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearVivienda(ArkiWeb.modelo.Vivienda) <em>Crear Vivienda</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Vivienda</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#crearVivienda(java.lang.String, java.lang.String, int, double, double, int, int, int)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#crearVivienda(ArkiWeb.modelo.Vivienda)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__CrearVivienda__String_String_int_double_double_int_int_int();
+	EOperation getControlador_Modelo__CrearVivienda__Vivienda();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarVivienda(int, java.lang.String, java.lang.String, int, double, double, int, int, int) <em>Editar Vivienda</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarVivienda(ArkiWeb.modelo.Vivienda) <em>Editar Vivienda</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Vivienda</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarVivienda(int, java.lang.String, java.lang.String, int, double, double, int, int, int)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarVivienda(ArkiWeb.modelo.Vivienda)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarVivienda__int_String_String_int_double_double_int_int_int();
+	EOperation getControlador_Modelo__EditarVivienda__Vivienda();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#buscarVivienda(int) <em>Buscar Vivienda</em>}' operation.
@@ -1282,24 +1255,24 @@ public interface ControladorPackage extends EPackage {
 	EOperation getControlador_Modelo__BuscarVivienda__int();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearInmueble(java.lang.String, java.lang.String, double, double) <em>Crear Inmueble</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#crearInmueble(ArkiWeb.modelo.Inmueble) <em>Crear Inmueble</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Inmueble</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#crearInmueble(java.lang.String, java.lang.String, double, double)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#crearInmueble(ArkiWeb.modelo.Inmueble)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__CrearInmueble__String_String_double_double();
+	EOperation getControlador_Modelo__CrearInmueble__Inmueble();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarInmueble(int, java.lang.String, java.lang.String, double, double) <em>Editar Inmueble</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarInmueble(ArkiWeb.modelo.Inmueble) <em>Editar Inmueble</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Inmueble</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarInmueble(int, java.lang.String, java.lang.String, double, double)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarInmueble(ArkiWeb.modelo.Inmueble)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarInmueble__int_String_String_double_double();
+	EOperation getControlador_Modelo__EditarInmueble__Inmueble();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#buscarInmueble(int) <em>Buscar Inmueble</em>}' operation.
@@ -1312,94 +1285,64 @@ public interface ControladorPackage extends EPackage {
 	EOperation getControlador_Modelo__BuscarInmueble__int();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#asignarCertificado(int, int) <em>Asignar Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#asignarCertificado(ArkiWeb.modelo.Certificados_Asignados) <em>Asignar Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Asignar Certificado</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#asignarCertificado(int, int)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#asignarCertificado(ArkiWeb.modelo.Certificados_Asignados)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__AsignarCertificado__int_int();
+	EOperation getControlador_Modelo__AsignarCertificado__Certificados_Asignados();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarAsignacionCertificado(int, int, int) <em>Editar Asignacion Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarAsignacionCertificado(ArkiWeb.modelo.Certificados_Asignados) <em>Editar Asignacion Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Asignacion Certificado</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarAsignacionCertificado(int, int, int)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarAsignacionCertificado(ArkiWeb.modelo.Certificados_Asignados)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarAsignacionCertificado__int_int_int();
+	EOperation getControlador_Modelo__EditarAsignacionCertificado__Certificados_Asignados();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#asignarProyecto(int, int) <em>Asignar Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#asignarProyecto(ArkiWeb.modelo.Proyectos_Asignados) <em>Asignar Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Asignar Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#asignarProyecto(int, int)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#asignarProyecto(ArkiWeb.modelo.Proyectos_Asignados)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__AsignarProyecto__int_int();
+	EOperation getControlador_Modelo__AsignarProyecto__Proyectos_Asignados();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarAsignacionProyecto(int, int, int) <em>Editar Asignacion Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarAsignacionProyecto(ArkiWeb.modelo.Proyectos_Asignados) <em>Editar Asignacion Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Asignacion Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarAsignacionProyecto(int, int, int)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarAsignacionProyecto(ArkiWeb.modelo.Proyectos_Asignados)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarAsignacionProyecto__int_int_int();
+	EOperation getControlador_Modelo__EditarAsignacionProyecto__Proyectos_Asignados();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#contratarProyecto(int, java.util.Date, int, java.util.Date) <em>Contratar Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#contratarProyecto(ArkiWeb.modelo.Proyectos_En_Ejecucion) <em>Contratar Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Contratar Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#contratarProyecto(int, java.util.Date, int, java.util.Date)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#contratarProyecto(ArkiWeb.modelo.Proyectos_En_Ejecucion)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__ContratarProyecto__int_Date_int_Date();
+	EOperation getControlador_Modelo__ContratarProyecto__Proyectos_En_Ejecucion();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarContratacionProyecto(int, int, java.util.Date, int, java.util.Date) <em>Editar Contratacion Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#editarContratacionProyecto(ArkiWeb.modelo.Proyectos_En_Ejecucion) <em>Editar Contratacion Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Contratacion Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#editarContratacionProyecto(int, int, java.util.Date, int, java.util.Date)
+	 * @see ArkiWeb.controlador.Controlador_Modelo#editarContratacionProyecto(ArkiWeb.modelo.Proyectos_En_Ejecucion)
 	 * @generated
 	 */
-	EOperation getControlador_Modelo__EditarContratacionProyecto__int_int_Date_int_Date();
-
-	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#queryCrear(java.lang.String, ArkiWeb.ListString, ArkiWeb.ListString) <em>Query Crear</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Query Crear</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#queryCrear(java.lang.String, ArkiWeb.ListString, ArkiWeb.ListString)
-	 * @generated
-	 */
-	EOperation getControlador_Modelo__QueryCrear__String_ListString_ListString();
-
-	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#queryEditar(java.lang.String, ArkiWeb.ListString, ArkiWeb.ListString, java.lang.String) <em>Query Editar</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Query Editar</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#queryEditar(java.lang.String, ArkiWeb.ListString, ArkiWeb.ListString, java.lang.String)
-	 * @generated
-	 */
-	EOperation getControlador_Modelo__QueryEditar__String_ListString_ListString_String();
-
-	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#queryBuscar(java.lang.String, ArkiWeb.ListString, java.lang.String) <em>Query Buscar</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Query Buscar</em>' operation.
-	 * @see ArkiWeb.controlador.Controlador_Modelo#queryBuscar(java.lang.String, ArkiWeb.ListString, java.lang.String)
-	 * @generated
-	 */
-	EOperation getControlador_Modelo__QueryBuscar__String_ListString_String();
+	EOperation getControlador_Modelo__EditarContratacionProyecto__Proyectos_En_Ejecucion();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.controlador.Controlador_Modelo#login(java.lang.String, java.lang.String) <em>Login</em>}' operation.
@@ -1652,24 +1595,24 @@ public interface ControladorPackage extends EPackage {
 	EOperation getControl_Permisos__ConcederAcceso();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Permisos#crearPermiso(java.lang.String, java.lang.String, boolean, boolean) <em>Crear Permiso</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Permisos#crearPermiso(ArkiWeb.modelo.Permiso) <em>Crear Permiso</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Permiso</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Permisos#crearPermiso(java.lang.String, java.lang.String, boolean, boolean)
+	 * @see ArkiWeb.controlador.Control_Permisos#crearPermiso(ArkiWeb.modelo.Permiso)
 	 * @generated
 	 */
-	EOperation getControl_Permisos__CrearPermiso__String_String_boolean_boolean();
+	EOperation getControl_Permisos__CrearPermiso__Permiso();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Permisos#editarPermiso(int, java.lang.String, java.lang.String, boolean, boolean) <em>Editar Permiso</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Permisos#editarPermiso(ArkiWeb.modelo.Permiso) <em>Editar Permiso</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Permiso</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Permisos#editarPermiso(int, java.lang.String, java.lang.String, boolean, boolean)
+	 * @see ArkiWeb.controlador.Control_Permisos#editarPermiso(ArkiWeb.modelo.Permiso)
 	 * @generated
 	 */
-	EOperation getControl_Permisos__EditarPermiso__int_String_String_boolean_boolean();
+	EOperation getControl_Permisos__EditarPermiso__Permiso();
 
 	/**
 	 * Returns the meta object for class '{@link ArkiWeb.controlador.Control_Usuarios <em>Control Usuarios</em>}'.
@@ -1682,24 +1625,24 @@ public interface ControladorPackage extends EPackage {
 	EClass getControl_Usuarios();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Usuarios#crearUsuario(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String) <em>Crear Usuario</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Usuarios#crearUsuario(ArkiWeb.modelo.Usuario) <em>Crear Usuario</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Usuario</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Usuarios#crearUsuario(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
+	 * @see ArkiWeb.controlador.Control_Usuarios#crearUsuario(ArkiWeb.modelo.Usuario)
 	 * @generated
 	 */
-	EOperation getControl_Usuarios__CrearUsuario__String_String_String_int_String_String_String();
+	EOperation getControl_Usuarios__CrearUsuario__Usuario();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Usuarios#editarUsuario_1(int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String) <em>Editar Usuario 1</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Usuarios#editarUsuario_1(ArkiWeb.modelo.Usuario) <em>Editar Usuario 1</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Usuario 1</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Usuarios#editarUsuario_1(int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
+	 * @see ArkiWeb.controlador.Control_Usuarios#editarUsuario_1(ArkiWeb.modelo.Usuario)
 	 * @generated
 	 */
-	EOperation getControl_Usuarios__EditarUsuario_1__int_String_String_String_int_String_String_String();
+	EOperation getControl_Usuarios__EditarUsuario_1__Usuario();
 
 	/**
 	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Usuarios#bajaUsuario(int) <em>Baja Usuario</em>}' operation.
@@ -1722,44 +1665,44 @@ public interface ControladorPackage extends EPackage {
 	EClass getControl_Certificados();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Certificados#editarCertificado(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double) <em>Editar Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Certificados#editarCertificado(ArkiWeb.modelo.Certificado) <em>Editar Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Certificado</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Certificados#editarCertificado(int, java.lang.String, int, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double)
+	 * @see ArkiWeb.controlador.Control_Certificados#editarCertificado(ArkiWeb.modelo.Certificado)
 	 * @generated
 	 */
-	EOperation getControl_Certificados__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+	EOperation getControl_Certificados__EditarCertificado__Certificado();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Certificados#asignarCertificado(int, int) <em>Asignar Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Certificados#asignarCertificado(ArkiWeb.modelo.Certificado) <em>Asignar Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Asignar Certificado</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Certificados#asignarCertificado(int, int)
+	 * @see ArkiWeb.controlador.Control_Certificados#asignarCertificado(ArkiWeb.modelo.Certificado)
 	 * @generated
 	 */
-	EOperation getControl_Certificados__AsignarCertificado__int_int();
+	EOperation getControl_Certificados__AsignarCertificado__Certificado();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Certificados#editarAsignacionCertificado(int, int, int) <em>Editar Asignacion Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Certificados#editarAsignacionCertificado(ArkiWeb.modelo.Certificado) <em>Editar Asignacion Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Asignacion Certificado</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Certificados#editarAsignacionCertificado(int, int, int)
+	 * @see ArkiWeb.controlador.Control_Certificados#editarAsignacionCertificado(ArkiWeb.modelo.Certificado)
 	 * @generated
 	 */
-	EOperation getControl_Certificados__EditarAsignacionCertificado__int_int_int();
+	EOperation getControl_Certificados__EditarAsignacionCertificado__Certificado();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Certificados#crearCertificado(java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double) <em>Crear Certificado</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Certificados#crearCertificado(ArkiWeb.modelo.Certificado) <em>Crear Certificado</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Certificado</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Certificados#crearCertificado(java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Certificado, java.util.Date, java.util.Date, java.util.Date, java.util.Date, ArkiWeb.modelo.Categoria_Certificado, int, double)
+	 * @see ArkiWeb.controlador.Control_Certificados#crearCertificado(ArkiWeb.modelo.Certificado)
 	 * @generated
 	 */
-	EOperation getControl_Certificados__CrearCertificado__String_Certificado_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+	EOperation getControl_Certificados__CrearCertificado__Certificado();
 
 	/**
 	 * Returns the meta object for class '{@link ArkiWeb.controlador.Control_Proyectos <em>Control Proyectos</em>}'.
@@ -1772,64 +1715,64 @@ public interface ControladorPackage extends EPackage {
 	EClass getControl_Proyectos();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#editarProyecto(int, java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double) <em>Editar Proyecto</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Editar Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Proyectos#editarProyecto(int, java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double)
-	 * @generated
-	 */
-	EOperation getControl_Proyectos__EditarProyecto__int_String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
-
-	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#editarContratacionProyecto(int, int, java.util.Date, int, java.util.Date) <em>Editar Contratacion Proyecto</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Editar Contratacion Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Proyectos#editarContratacionProyecto(int, int, java.util.Date, int, java.util.Date)
-	 * @generated
-	 */
-	EOperation getControl_Proyectos__EditarContratacionProyecto__int_int_Date_int_Date();
-
-	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#asignarProyecto(int, int) <em>Asignar Proyecto</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Asignar Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Proyectos#asignarProyecto(int, int)
-	 * @generated
-	 */
-	EOperation getControl_Proyectos__AsignarProyecto__int_int();
-
-	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#contratarProyecto(int, java.util.Date, int, java.util.Date) <em>Contratar Proyecto</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Contratar Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Proyectos#contratarProyecto(int, java.util.Date, int, java.util.Date)
-	 * @generated
-	 */
-	EOperation getControl_Proyectos__ContratarProyecto__int_Date_int_Date();
-
-	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#crearProyecto(java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double) <em>Crear Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#crearProyecto(ArkiWeb.modelo.Proyecto) <em>Crear Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Proyectos#crearProyecto(java.lang.String, ArkiWeb.modelo.Certificado, int, int, ArkiWeb.modelo.Tipo_Proyecto, java.util.Date, java.util.Date, int, double, double, int, double)
+	 * @see ArkiWeb.controlador.Control_Proyectos#crearProyecto(ArkiWeb.modelo.Proyecto)
 	 * @generated
 	 */
-	EOperation getControl_Proyectos__CrearProyecto__String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+	EOperation getControl_Proyectos__CrearProyecto__Proyecto();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#editarAsignacionProyecto(int, int, int) <em>Editar Asignacion Proyecto</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#editarProyecto(ArkiWeb.modelo.Proyecto) <em>Editar Proyecto</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Editar Proyecto</em>' operation.
+	 * @see ArkiWeb.controlador.Control_Proyectos#editarProyecto(ArkiWeb.modelo.Proyecto)
+	 * @generated
+	 */
+	EOperation getControl_Proyectos__EditarProyecto__Proyecto();
+
+	/**
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#asignarProyecto(ArkiWeb.modelo.Proyectos_Asignados) <em>Asignar Proyecto</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Asignar Proyecto</em>' operation.
+	 * @see ArkiWeb.controlador.Control_Proyectos#asignarProyecto(ArkiWeb.modelo.Proyectos_Asignados)
+	 * @generated
+	 */
+	EOperation getControl_Proyectos__AsignarProyecto__Proyectos_Asignados();
+
+	/**
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#editarAsignacionProyecto(ArkiWeb.modelo.Proyectos_Asignados) <em>Editar Asignacion Proyecto</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Asignacion Proyecto</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Proyectos#editarAsignacionProyecto(int, int, int)
+	 * @see ArkiWeb.controlador.Control_Proyectos#editarAsignacionProyecto(ArkiWeb.modelo.Proyectos_Asignados)
 	 * @generated
 	 */
-	EOperation getControl_Proyectos__EditarAsignacionProyecto__int_int_int();
+	EOperation getControl_Proyectos__EditarAsignacionProyecto__Proyectos_Asignados();
+
+	/**
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#contratarProyecto(ArkiWeb.modelo.Proyectos_En_Ejecucion) <em>Contratar Proyecto</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Contratar Proyecto</em>' operation.
+	 * @see ArkiWeb.controlador.Control_Proyectos#contratarProyecto(ArkiWeb.modelo.Proyectos_En_Ejecucion)
+	 * @generated
+	 */
+	EOperation getControl_Proyectos__ContratarProyecto__Proyectos_En_Ejecucion();
+
+	/**
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Proyectos#editarContratacionProyecto(ArkiWeb.modelo.Proyectos_En_Ejecucion) <em>Editar Contratacion Proyecto</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Editar Contratacion Proyecto</em>' operation.
+	 * @see ArkiWeb.controlador.Control_Proyectos#editarContratacionProyecto(ArkiWeb.modelo.Proyectos_En_Ejecucion)
+	 * @generated
+	 */
+	EOperation getControl_Proyectos__EditarContratacionProyecto__Proyectos_En_Ejecucion();
 
 	/**
 	 * Returns the meta object for class '{@link ArkiWeb.controlador.Control_Viviendas <em>Control Viviendas</em>}'.
@@ -1842,24 +1785,24 @@ public interface ControladorPackage extends EPackage {
 	EClass getControl_Viviendas();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Viviendas#crearVivienda(java.lang.String, java.lang.String, int, double, double, int, int, int) <em>Crear Vivienda</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Viviendas#crearVivienda(ArkiWeb.modelo.Vivienda) <em>Crear Vivienda</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Vivienda</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Viviendas#crearVivienda(java.lang.String, java.lang.String, int, double, double, int, int, int)
+	 * @see ArkiWeb.controlador.Control_Viviendas#crearVivienda(ArkiWeb.modelo.Vivienda)
 	 * @generated
 	 */
-	EOperation getControl_Viviendas__CrearVivienda__String_String_int_double_double_int_int_int();
+	EOperation getControl_Viviendas__CrearVivienda__Vivienda();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Viviendas#editarVivienda(int, java.lang.String, java.lang.String, int, double, double, int, int, int) <em>Editar Vivienda</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Viviendas#editarVivienda(ArkiWeb.modelo.Vivienda) <em>Editar Vivienda</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Vivienda</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Viviendas#editarVivienda(int, java.lang.String, java.lang.String, int, double, double, int, int, int)
+	 * @see ArkiWeb.controlador.Control_Viviendas#editarVivienda(ArkiWeb.modelo.Vivienda)
 	 * @generated
 	 */
-	EOperation getControl_Viviendas__EditarVivienda__int_String_String_int_double_double_int_int_int();
+	EOperation getControl_Viviendas__EditarVivienda__Vivienda();
 
 	/**
 	 * Returns the meta object for class '{@link ArkiWeb.controlador.Control_Inmuebles <em>Control Inmuebles</em>}'.
@@ -1872,24 +1815,24 @@ public interface ControladorPackage extends EPackage {
 	EClass getControl_Inmuebles();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Inmuebles#crearInmueble(java.lang.String, java.lang.String, double, double) <em>Crear Inmueble</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Inmuebles#crearInmueble(ArkiWeb.modelo.Inmueble) <em>Crear Inmueble</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Crear Inmueble</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Inmuebles#crearInmueble(java.lang.String, java.lang.String, double, double)
+	 * @see ArkiWeb.controlador.Control_Inmuebles#crearInmueble(ArkiWeb.modelo.Inmueble)
 	 * @generated
 	 */
-	EOperation getControl_Inmuebles__CrearInmueble__String_String_double_double();
+	EOperation getControl_Inmuebles__CrearInmueble__Inmueble();
 
 	/**
-	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Inmuebles#editarInmueble(int, java.lang.String, java.lang.String, double, double) <em>Editar Inmueble</em>}' operation.
+	 * Returns the meta object for the '{@link ArkiWeb.controlador.Control_Inmuebles#editarInmueble(ArkiWeb.modelo.Inmueble) <em>Editar Inmueble</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Editar Inmueble</em>' operation.
-	 * @see ArkiWeb.controlador.Control_Inmuebles#editarInmueble(int, java.lang.String, java.lang.String, double, double)
+	 * @see ArkiWeb.controlador.Control_Inmuebles#editarInmueble(ArkiWeb.modelo.Inmueble)
 	 * @generated
 	 */
-	EOperation getControl_Inmuebles__EditarInmueble__int_String_String_double_double();
+	EOperation getControl_Inmuebles__EditarInmueble__Inmueble();
 
 	/**
 	 * Returns the meta object for class '{@link ArkiWeb.controlador.Gestor_Busquedas <em>Gestor Busquedas</em>}'.
@@ -2170,7 +2113,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING = eINSTANCE.getControlador_Modelo__CrearUsuario__String_String_String_int_String_String_String();
+		EOperation CONTROLADOR_MODELO___CREAR_USUARIO__USUARIO = eINSTANCE.getControlador_Modelo__CrearUsuario__Usuario();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Usuario</b></em>' operation.
@@ -2178,7 +2121,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_USUARIO__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING = eINSTANCE.getControlador_Modelo__EditarUsuario__int_String_String_String_int_String_String_String();
+		EOperation CONTROLADOR_MODELO___EDITAR_USUARIO__USUARIO = eINSTANCE.getControlador_Modelo__EditarUsuario__Usuario();
 
 		/**
 		 * The meta object literal for the '<em><b>Baja Usuario</b></em>' operation.
@@ -2194,7 +2137,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___CREAR_PERMISO__STRING_STRING_BOOLEAN_BOOLEAN = eINSTANCE.getControlador_Modelo__CrearPermiso__String_String_boolean_boolean();
+		EOperation CONTROLADOR_MODELO___CREAR_PERMISO__PERMISO = eINSTANCE.getControlador_Modelo__CrearPermiso__Permiso();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Permiso</b></em>' operation.
@@ -2202,7 +2145,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN = eINSTANCE.getControlador_Modelo__EditarPermiso__int_String_String_boolean_boolean();
+		EOperation CONTROLADOR_MODELO___EDITAR_PERMISO__PERMISO = eINSTANCE.getControlador_Modelo__EditarPermiso__Permiso();
 
 		/**
 		 * The meta object literal for the '<em><b>Crear Certificado</b></em>' operation.
@@ -2210,7 +2153,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___CREAR_CERTIFICADO__STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = eINSTANCE.getControlador_Modelo__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+		EOperation CONTROLADOR_MODELO___CREAR_CERTIFICADO__CERTIFICADO = eINSTANCE.getControlador_Modelo__CrearCertificado__Certificado();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Certificado</b></em>' operation.
@@ -2218,7 +2161,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = eINSTANCE.getControlador_Modelo__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+		EOperation CONTROLADOR_MODELO___EDITAR_CERTIFICADO__CERTIFICADO = eINSTANCE.getControlador_Modelo__EditarCertificado__Certificado();
 
 		/**
 		 * The meta object literal for the '<em><b>Buscar Certificado</b></em>' operation.
@@ -2234,7 +2177,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___CREAR_PROYECTO__STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = eINSTANCE.getControlador_Modelo__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+		EOperation CONTROLADOR_MODELO___CREAR_PROYECTO__PROYECTO = eINSTANCE.getControlador_Modelo__CrearProyecto__Proyecto();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Proyecto</b></em>' operation.
@@ -2242,7 +2185,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_PROYECTO__INT_STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = eINSTANCE.getControlador_Modelo__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+		EOperation CONTROLADOR_MODELO___EDITAR_PROYECTO__PROYECTO = eINSTANCE.getControlador_Modelo__EditarProyecto__Proyecto();
 
 		/**
 		 * The meta object literal for the '<em><b>Buscar Proyecto</b></em>' operation.
@@ -2258,7 +2201,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = eINSTANCE.getControlador_Modelo__CrearVivienda__String_String_int_double_double_int_int_int();
+		EOperation CONTROLADOR_MODELO___CREAR_VIVIENDA__VIVIENDA = eINSTANCE.getControlador_Modelo__CrearVivienda__Vivienda();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Vivienda</b></em>' operation.
@@ -2266,7 +2209,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = eINSTANCE.getControlador_Modelo__EditarVivienda__int_String_String_int_double_double_int_int_int();
+		EOperation CONTROLADOR_MODELO___EDITAR_VIVIENDA__VIVIENDA = eINSTANCE.getControlador_Modelo__EditarVivienda__Vivienda();
 
 		/**
 		 * The meta object literal for the '<em><b>Buscar Vivienda</b></em>' operation.
@@ -2282,7 +2225,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___CREAR_INMUEBLE__STRING_STRING_DOUBLE_DOUBLE = eINSTANCE.getControlador_Modelo__CrearInmueble__String_String_double_double();
+		EOperation CONTROLADOR_MODELO___CREAR_INMUEBLE__INMUEBLE = eINSTANCE.getControlador_Modelo__CrearInmueble__Inmueble();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Inmueble</b></em>' operation.
@@ -2290,7 +2233,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_INMUEBLE__INT_STRING_STRING_DOUBLE_DOUBLE = eINSTANCE.getControlador_Modelo__EditarInmueble__int_String_String_double_double();
+		EOperation CONTROLADOR_MODELO___EDITAR_INMUEBLE__INMUEBLE = eINSTANCE.getControlador_Modelo__EditarInmueble__Inmueble();
 
 		/**
 		 * The meta object literal for the '<em><b>Buscar Inmueble</b></em>' operation.
@@ -2306,7 +2249,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___ASIGNAR_CERTIFICADO__INT_INT = eINSTANCE.getControlador_Modelo__AsignarCertificado__int_int();
+		EOperation CONTROLADOR_MODELO___ASIGNAR_CERTIFICADO__CERTIFICADOS_ASIGNADOS = eINSTANCE.getControlador_Modelo__AsignarCertificado__Certificados_Asignados();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Asignacion Certificado</b></em>' operation.
@@ -2314,7 +2257,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_ASIGNACION_CERTIFICADO__INT_INT_INT = eINSTANCE.getControlador_Modelo__EditarAsignacionCertificado__int_int_int();
+		EOperation CONTROLADOR_MODELO___EDITAR_ASIGNACION_CERTIFICADO__CERTIFICADOS_ASIGNADOS = eINSTANCE.getControlador_Modelo__EditarAsignacionCertificado__Certificados_Asignados();
 
 		/**
 		 * The meta object literal for the '<em><b>Asignar Proyecto</b></em>' operation.
@@ -2322,7 +2265,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___ASIGNAR_PROYECTO__INT_INT = eINSTANCE.getControlador_Modelo__AsignarProyecto__int_int();
+		EOperation CONTROLADOR_MODELO___ASIGNAR_PROYECTO__PROYECTOS_ASIGNADOS = eINSTANCE.getControlador_Modelo__AsignarProyecto__Proyectos_Asignados();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Asignacion Proyecto</b></em>' operation.
@@ -2330,7 +2273,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_ASIGNACION_PROYECTO__INT_INT_INT = eINSTANCE.getControlador_Modelo__EditarAsignacionProyecto__int_int_int();
+		EOperation CONTROLADOR_MODELO___EDITAR_ASIGNACION_PROYECTO__PROYECTOS_ASIGNADOS = eINSTANCE.getControlador_Modelo__EditarAsignacionProyecto__Proyectos_Asignados();
 
 		/**
 		 * The meta object literal for the '<em><b>Contratar Proyecto</b></em>' operation.
@@ -2338,7 +2281,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___CONTRATAR_PROYECTO__INT_DATE_INT_DATE = eINSTANCE.getControlador_Modelo__ContratarProyecto__int_Date_int_Date();
+		EOperation CONTROLADOR_MODELO___CONTRATAR_PROYECTO__PROYECTOS_EN_EJECUCION = eINSTANCE.getControlador_Modelo__ContratarProyecto__Proyectos_En_Ejecucion();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Contratacion Proyecto</b></em>' operation.
@@ -2346,31 +2289,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLADOR_MODELO___EDITAR_CONTRATACION_PROYECTO__INT_INT_DATE_INT_DATE = eINSTANCE.getControlador_Modelo__EditarContratacionProyecto__int_int_Date_int_Date();
-
-		/**
-		 * The meta object literal for the '<em><b>Query Crear</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONTROLADOR_MODELO___QUERY_CREAR__STRING_LISTSTRING_LISTSTRING = eINSTANCE.getControlador_Modelo__QueryCrear__String_ListString_ListString();
-
-		/**
-		 * The meta object literal for the '<em><b>Query Editar</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONTROLADOR_MODELO___QUERY_EDITAR__STRING_LISTSTRING_LISTSTRING_STRING = eINSTANCE.getControlador_Modelo__QueryEditar__String_ListString_ListString_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Query Buscar</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONTROLADOR_MODELO___QUERY_BUSCAR__STRING_LISTSTRING_STRING = eINSTANCE.getControlador_Modelo__QueryBuscar__String_ListString_String();
+		EOperation CONTROLADOR_MODELO___EDITAR_CONTRATACION_PROYECTO__PROYECTOS_EN_EJECUCION = eINSTANCE.getControlador_Modelo__EditarContratacionProyecto__Proyectos_En_Ejecucion();
 
 		/**
 		 * The meta object literal for the '<em><b>Login</b></em>' operation.
@@ -2582,7 +2501,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_PERMISOS___CREAR_PERMISO__STRING_STRING_BOOLEAN_BOOLEAN = eINSTANCE.getControl_Permisos__CrearPermiso__String_String_boolean_boolean();
+		EOperation CONTROL_PERMISOS___CREAR_PERMISO__PERMISO = eINSTANCE.getControl_Permisos__CrearPermiso__Permiso();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Permiso</b></em>' operation.
@@ -2590,7 +2509,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_PERMISOS___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN = eINSTANCE.getControl_Permisos__EditarPermiso__int_String_String_boolean_boolean();
+		EOperation CONTROL_PERMISOS___EDITAR_PERMISO__PERMISO = eINSTANCE.getControl_Permisos__EditarPermiso__Permiso();
 
 		/**
 		 * The meta object literal for the '{@link ArkiWeb.controlador.Control_Usuarios <em>Control Usuarios</em>}' class.
@@ -2608,7 +2527,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_USUARIOS___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING = eINSTANCE.getControl_Usuarios__CrearUsuario__String_String_String_int_String_String_String();
+		EOperation CONTROL_USUARIOS___CREAR_USUARIO__USUARIO = eINSTANCE.getControl_Usuarios__CrearUsuario__Usuario();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Usuario 1</b></em>' operation.
@@ -2616,7 +2535,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_USUARIOS___EDITAR_USUARIO_1__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING = eINSTANCE.getControl_Usuarios__EditarUsuario_1__int_String_String_String_int_String_String_String();
+		EOperation CONTROL_USUARIOS___EDITAR_USUARIO_1__USUARIO = eINSTANCE.getControl_Usuarios__EditarUsuario_1__Usuario();
 
 		/**
 		 * The meta object literal for the '<em><b>Baja Usuario</b></em>' operation.
@@ -2642,7 +2561,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_CERTIFICADOS___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = eINSTANCE.getControl_Certificados__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+		EOperation CONTROL_CERTIFICADOS___EDITAR_CERTIFICADO__CERTIFICADO = eINSTANCE.getControl_Certificados__EditarCertificado__Certificado();
 
 		/**
 		 * The meta object literal for the '<em><b>Asignar Certificado</b></em>' operation.
@@ -2650,7 +2569,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_CERTIFICADOS___ASIGNAR_CERTIFICADO__INT_INT = eINSTANCE.getControl_Certificados__AsignarCertificado__int_int();
+		EOperation CONTROL_CERTIFICADOS___ASIGNAR_CERTIFICADO__CERTIFICADO = eINSTANCE.getControl_Certificados__AsignarCertificado__Certificado();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Asignacion Certificado</b></em>' operation.
@@ -2658,7 +2577,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_CERTIFICADOS___EDITAR_ASIGNACION_CERTIFICADO__INT_INT_INT = eINSTANCE.getControl_Certificados__EditarAsignacionCertificado__int_int_int();
+		EOperation CONTROL_CERTIFICADOS___EDITAR_ASIGNACION_CERTIFICADO__CERTIFICADO = eINSTANCE.getControl_Certificados__EditarAsignacionCertificado__Certificado();
 
 		/**
 		 * The meta object literal for the '<em><b>Crear Certificado</b></em>' operation.
@@ -2666,7 +2585,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_CERTIFICADOS___CREAR_CERTIFICADO__STRING_CERTIFICADO_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE = eINSTANCE.getControl_Certificados__CrearCertificado__String_Certificado_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double();
+		EOperation CONTROL_CERTIFICADOS___CREAR_CERTIFICADO__CERTIFICADO = eINSTANCE.getControl_Certificados__CrearCertificado__Certificado();
 
 		/**
 		 * The meta object literal for the '{@link ArkiWeb.controlador.Control_Proyectos <em>Control Proyectos</em>}' class.
@@ -2679,20 +2598,20 @@ public interface ControladorPackage extends EPackage {
 		EClass CONTROL_PROYECTOS = eINSTANCE.getControl_Proyectos();
 
 		/**
+		 * The meta object literal for the '<em><b>Crear Proyecto</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CONTROL_PROYECTOS___CREAR_PROYECTO__PROYECTO = eINSTANCE.getControl_Proyectos__CrearProyecto__Proyecto();
+
+		/**
 		 * The meta object literal for the '<em><b>Editar Proyecto</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_PROYECTOS___EDITAR_PROYECTO__INT_STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = eINSTANCE.getControl_Proyectos__EditarProyecto__int_String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
-
-		/**
-		 * The meta object literal for the '<em><b>Editar Contratacion Proyecto</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONTROL_PROYECTOS___EDITAR_CONTRATACION_PROYECTO__INT_INT_DATE_INT_DATE = eINSTANCE.getControl_Proyectos__EditarContratacionProyecto__int_int_Date_int_Date();
+		EOperation CONTROL_PROYECTOS___EDITAR_PROYECTO__PROYECTO = eINSTANCE.getControl_Proyectos__EditarProyecto__Proyecto();
 
 		/**
 		 * The meta object literal for the '<em><b>Asignar Proyecto</b></em>' operation.
@@ -2700,23 +2619,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_PROYECTOS___ASIGNAR_PROYECTO__INT_INT = eINSTANCE.getControl_Proyectos__AsignarProyecto__int_int();
-
-		/**
-		 * The meta object literal for the '<em><b>Contratar Proyecto</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONTROL_PROYECTOS___CONTRATAR_PROYECTO__INT_DATE_INT_DATE = eINSTANCE.getControl_Proyectos__ContratarProyecto__int_Date_int_Date();
-
-		/**
-		 * The meta object literal for the '<em><b>Crear Proyecto</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONTROL_PROYECTOS___CREAR_PROYECTO__STRING_CERTIFICADO_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE = eINSTANCE.getControl_Proyectos__CrearProyecto__String_Certificado_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double();
+		EOperation CONTROL_PROYECTOS___ASIGNAR_PROYECTO__PROYECTOS_ASIGNADOS = eINSTANCE.getControl_Proyectos__AsignarProyecto__Proyectos_Asignados();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Asignacion Proyecto</b></em>' operation.
@@ -2724,7 +2627,23 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_PROYECTOS___EDITAR_ASIGNACION_PROYECTO__INT_INT_INT = eINSTANCE.getControl_Proyectos__EditarAsignacionProyecto__int_int_int();
+		EOperation CONTROL_PROYECTOS___EDITAR_ASIGNACION_PROYECTO__PROYECTOS_ASIGNADOS = eINSTANCE.getControl_Proyectos__EditarAsignacionProyecto__Proyectos_Asignados();
+
+		/**
+		 * The meta object literal for the '<em><b>Contratar Proyecto</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CONTROL_PROYECTOS___CONTRATAR_PROYECTO__PROYECTOS_EN_EJECUCION = eINSTANCE.getControl_Proyectos__ContratarProyecto__Proyectos_En_Ejecucion();
+
+		/**
+		 * The meta object literal for the '<em><b>Editar Contratacion Proyecto</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CONTROL_PROYECTOS___EDITAR_CONTRATACION_PROYECTO__PROYECTOS_EN_EJECUCION = eINSTANCE.getControl_Proyectos__EditarContratacionProyecto__Proyectos_En_Ejecucion();
 
 		/**
 		 * The meta object literal for the '{@link ArkiWeb.controlador.Control_Viviendas <em>Control Viviendas</em>}' class.
@@ -2742,7 +2661,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_VIVIENDAS___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = eINSTANCE.getControl_Viviendas__CrearVivienda__String_String_int_double_double_int_int_int();
+		EOperation CONTROL_VIVIENDAS___CREAR_VIVIENDA__VIVIENDA = eINSTANCE.getControl_Viviendas__CrearVivienda__Vivienda();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Vivienda</b></em>' operation.
@@ -2750,7 +2669,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_VIVIENDAS___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT = eINSTANCE.getControl_Viviendas__EditarVivienda__int_String_String_int_double_double_int_int_int();
+		EOperation CONTROL_VIVIENDAS___EDITAR_VIVIENDA__VIVIENDA = eINSTANCE.getControl_Viviendas__EditarVivienda__Vivienda();
 
 		/**
 		 * The meta object literal for the '{@link ArkiWeb.controlador.Control_Inmuebles <em>Control Inmuebles</em>}' class.
@@ -2768,7 +2687,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_INMUEBLES___CREAR_INMUEBLE__STRING_STRING_DOUBLE_DOUBLE = eINSTANCE.getControl_Inmuebles__CrearInmueble__String_String_double_double();
+		EOperation CONTROL_INMUEBLES___CREAR_INMUEBLE__INMUEBLE = eINSTANCE.getControl_Inmuebles__CrearInmueble__Inmueble();
 
 		/**
 		 * The meta object literal for the '<em><b>Editar Inmueble</b></em>' operation.
@@ -2776,7 +2695,7 @@ public interface ControladorPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROL_INMUEBLES___EDITAR_INMUEBLE__INT_STRING_STRING_DOUBLE_DOUBLE = eINSTANCE.getControl_Inmuebles__EditarInmueble__int_String_String_double_double();
+		EOperation CONTROL_INMUEBLES___EDITAR_INMUEBLE__INMUEBLE = eINSTANCE.getControl_Inmuebles__EditarInmueble__Inmueble();
 
 		/**
 		 * The meta object literal for the '{@link ArkiWeb.controlador.Gestor_Busquedas <em>Gestor Busquedas</em>}' class.

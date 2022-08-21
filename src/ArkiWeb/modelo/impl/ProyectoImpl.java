@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	
+ * 	@purpose:	Implementación de la Interface Proyecto
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17
@@ -42,6 +42,8 @@ public class ProyectoImpl implements Proyecto {
 	private Date fecha_entrega_proyecto;
 	private int duracion_prevista_proyecto;
 	private double presupuesto_ejecucion_proyecto;
+	private double superficie_proyecto;
+	private double coste_proyecto;
 	
 	/**
 	 * 
@@ -358,6 +360,34 @@ public class ProyectoImpl implements Proyecto {
 	@Override
 	public void setPresupuesto_ejecucion_proyecto(double presupuesto_ejecucion_proyecto) {
 		this.presupuesto_ejecucion_proyecto = presupuesto_ejecucion_proyecto;
+	}
+
+	/**
+	 * @return the superficie_proyecto
+	 */
+	public double getSuperficie_proyecto() {
+		return superficie_proyecto;
+	}
+
+	/**
+	 * @param superficie_proyecto the superficie_proyecto to set
+	 */
+	public void setSuperficie_proyecto(double superficie_proyecto) {
+		this.superficie_proyecto = superficie_proyecto;
+	}
+
+	/**
+	 * @return the coste_proyecto
+	 */
+	public double getCoste_proyecto() {
+		return coste_proyecto;
+	}
+
+	/**
+	 * @param coste_proyecto the coste_proyecto to set
+	 */
+	public void setCoste_proyecto(double coste_proyecto) {
+		this.coste_proyecto = coste_proyecto;
 	}
 
 }

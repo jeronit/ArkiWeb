@@ -127,7 +127,34 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALTA_USUARIO_ACTION_SUPPORT___EXECUTE1 = 1;
+	int ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = 1;
+
+	/**
+	 * The operation id for the '<em>Execute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = 1;
+
+	/**
+	 * The operation id for the '<em>Execute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = 1;
+
+	/**
+	 * The operation id for the '<em>Execute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = 1;
 
 	/**
 	 * The number of operations of the '<em>Alta Usuario Action Support</em>' class.
@@ -703,6 +730,38 @@ public interface ModeloPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = eINSTANCE.getAltaUsuarioActionSupport__Execute();
+
+		/**
+		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = eINSTANCE.getAltaUsuarioActionSupport__Execute_1();
+
+		/**
+		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = eINSTANCE.getAltaUsuarioActionSupport__Execute_1();
+
+		/**
+		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = eINSTANCE.getAltaUsuarioActionSupport__Execute_1();
+
+		/**
+		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ALTA_USUARIO_ACTION_SUPPORT___EXECUTE = eINSTANCE.getAltaUsuarioActionSupport__Execute_1();
 
 		/**
 		 * The meta object literal for the '<em><b>Execute</b></em>' operation.

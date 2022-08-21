@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	
+ * 	@purpose:	Interface para gestionar la instanciación objeto
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17

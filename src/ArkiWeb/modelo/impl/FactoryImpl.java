@@ -1,4 +1,8 @@
 /**
+ * 	@purpose:	Implementación de la Interface Factory
+ *  @author:	Jero Torralba
+ *  @version:	1.0
+ *	@date:		2022/08/17
  */
 package ArkiWeb.modelo.impl;
 
@@ -45,7 +49,7 @@ public class FactoryImpl extends MinimalEObjectImpl.Container implements Factory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void crearObjeto() {
+	public void crearObjeto(String tipoObjeto, Object _) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -54,9 +58,9 @@ public class FactoryImpl extends MinimalEObjectImpl.Container implements Factory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated 
 	 */
-	public void crearObjeto(String tipoObjeto) {
+	public Object crearObjeto(String tipoObjeto) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -70,11 +74,8 @@ public class FactoryImpl extends MinimalEObjectImpl.Container implements Factory
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ModeloPackage.FACTORY___CREAR_OBJETO:
-				crearObjeto();
-				return null;
-			case ModeloPackage.FACTORY___CREAR_OBJETO__STRING:
-				crearObjeto((String)arguments.get(0));
+			case ModeloPackage.FACTORY___CREAR_OBJETO__STRING_OBJECT:
+				crearObjeto((String)arguments.get(0), arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

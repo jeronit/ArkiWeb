@@ -330,24 +330,6 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	}
 
 	@Override
-	public void queryCrear(String tabla, List<String> columnas, List<String> valores_columnas) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void queryEditar(String tabla, List<String> columnas, List<String> valores_columnas, String where_clause) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void queryBuscar(String tabla, List<String> columnas, String where_clause_01) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public boolean login(String email, String password) {
 		// TODO Auto-generated method stub
 		return false;

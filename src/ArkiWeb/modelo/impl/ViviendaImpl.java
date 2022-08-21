@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	
+ * 	@purpose:	Implementación de la Interface Vivienda
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17

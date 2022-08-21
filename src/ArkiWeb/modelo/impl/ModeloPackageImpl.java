@@ -595,6 +595,26 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getProyecto_Superficie_proyecto() {
+		return (EAttribute)proyectoEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProyecto_Coste_proyecto() {
+		return (EAttribute)proyectoEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getVivienda() {
 		return viviendaEClass;
 	}
@@ -945,7 +965,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearUsuario__String_String_String_int_String_String_String() {
+	public EOperation getHSQLDB__CrearUsuario__Usuario() {
 		return hsqldbEClass.getEOperations().get(0);
 	}
 
@@ -955,7 +975,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarUsuario__int_String_String_String_int_String_String_String() {
+	public EOperation getHSQLDB__EditarUsuario__Usuario() {
 		return hsqldbEClass.getEOperations().get(1);
 	}
 
@@ -975,7 +995,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearPermiso__String_String_boolean_boolean() {
+	public EOperation getHSQLDB__CrearPermiso__Permiso() {
 		return hsqldbEClass.getEOperations().get(3);
 	}
 
@@ -985,7 +1005,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarPermiso__int_String_String_boolean_boolean() {
+	public EOperation getHSQLDB__EditarPermiso__Permiso() {
 		return hsqldbEClass.getEOperations().get(4);
 	}
 
@@ -995,7 +1015,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
+	public EOperation getHSQLDB__CrearCertificado__Certificado() {
 		return hsqldbEClass.getEOperations().get(5);
 	}
 
@@ -1005,7 +1025,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double() {
+	public EOperation getHSQLDB__EditarCertificado__Certificado() {
 		return hsqldbEClass.getEOperations().get(6);
 	}
 
@@ -1025,7 +1045,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
+	public EOperation getHSQLDB__CrearProyecto__Proyecto() {
 		return hsqldbEClass.getEOperations().get(8);
 	}
 
@@ -1035,7 +1055,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double() {
+	public EOperation getHSQLDB__EditarProyecto__Proyecto() {
 		return hsqldbEClass.getEOperations().get(9);
 	}
 
@@ -1055,7 +1075,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearVivienda__String_String_int_double_double_int_int_int() {
+	public EOperation getHSQLDB__CrearVivienda__Vivienda() {
 		return hsqldbEClass.getEOperations().get(11);
 	}
 
@@ -1065,7 +1085,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarVivienda__int_String_String_int_double_double_int_int_int() {
+	public EOperation getHSQLDB__EditarVivienda__Vivienda() {
 		return hsqldbEClass.getEOperations().get(12);
 	}
 
@@ -1085,7 +1105,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__CrearInmueble__String_String_double_double() {
+	public EOperation getHSQLDB__CrearInmueble__Inmueble() {
 		return hsqldbEClass.getEOperations().get(14);
 	}
 
@@ -1095,7 +1115,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarInmueble__int_String_String_double_double() {
+	public EOperation getHSQLDB__EditarInmueble__Inmueble() {
 		return hsqldbEClass.getEOperations().get(15);
 	}
 
@@ -1115,7 +1135,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__AsignarCertificado__int_int() {
+	public EOperation getHSQLDB__AsignarCertificado__Certificados_Asignados() {
 		return hsqldbEClass.getEOperations().get(17);
 	}
 
@@ -1125,7 +1145,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarAsignacionCertificado__int_int_int() {
+	public EOperation getHSQLDB__EditarAsignacionCertificado__Certificados_Asignados() {
 		return hsqldbEClass.getEOperations().get(18);
 	}
 
@@ -1135,7 +1155,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__AsignarProyecto__int_int() {
+	public EOperation getHSQLDB__AsignarProyecto__Proyectos_Asignados() {
 		return hsqldbEClass.getEOperations().get(19);
 	}
 
@@ -1145,7 +1165,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarAsignacionProyecto__int_int_int() {
+	public EOperation getHSQLDB__EditarAsignacionProyecto__Proyectos_Asignados() {
 		return hsqldbEClass.getEOperations().get(20);
 	}
 
@@ -1155,7 +1175,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__ContratarProyecto__int_Date_int_Date() {
+	public EOperation getHSQLDB__ContratarProyecto__Proyectos_En_Ejecucion() {
 		return hsqldbEClass.getEOperations().get(21);
 	}
 
@@ -1165,7 +1185,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getHSQLDB__EditarContratacionProyecto__int_int_Date_int_Date() {
+	public EOperation getHSQLDB__EditarContratacionProyecto__Proyectos_En_Ejecucion() {
 		return hsqldbEClass.getEOperations().get(22);
 	}
 
@@ -1445,18 +1465,8 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getFactory__CrearObjeto() {
+	public EOperation getFactory__CrearObjeto__String_Object() {
 		return factoryEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getFactory__CrearObjeto__String() {
-		return factoryEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1566,6 +1576,8 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		createEReference(proyectoEClass, PROYECTO__USUARIO);
 		createEReference(proyectoEClass, PROYECTO__VIVIENDA);
 		createEReference(proyectoEClass, PROYECTO__INMUEBLE);
+		createEAttribute(proyectoEClass, PROYECTO__SUPERFICIE_PROYECTO);
+		createEAttribute(proyectoEClass, PROYECTO__COSTE_PROYECTO);
 
 		viviendaEClass = createEClass(VIVIENDA);
 		createEAttribute(viviendaEClass, VIVIENDA__ID_VIVIENDA);
@@ -1605,40 +1617,33 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		createEReference(certificadoEClass, CERTIFICADO__VIVIENDA);
 
 		hsqldbEClass = createEClass(HSQLDB);
-		createEOperation(hsqldbEClass, HSQLDB___CREAR_USUARIO__STRING_STRING_STRING_INT_STRING_STRING_STRING);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_USUARIO__INT_STRING_STRING_STRING_INT_STRING_STRING_STRING);
+		createEOperation(hsqldbEClass, HSQLDB___CREAR_USUARIO__USUARIO);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_USUARIO__USUARIO);
 		createEOperation(hsqldbEClass, HSQLDB___BAJA_USUARIO__INT);
-		createEOperation(hsqldbEClass, HSQLDB___CREAR_PERMISO__STRING_STRING_BOOLEAN_BOOLEAN);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_PERMISO__INT_STRING_STRING_BOOLEAN_BOOLEAN);
-		createEOperation(hsqldbEClass, HSQLDB___CREAR_CERTIFICADO__STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_CERTIFICADO__INT_STRING_INT_INT_INT_TIPO_CERTIFICADO_DATE_DATE_DATE_DATE_CATEGORIA_CERTIFICADO_INT_DOUBLE);
+		createEOperation(hsqldbEClass, HSQLDB___CREAR_PERMISO__PERMISO);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_PERMISO__PERMISO);
+		createEOperation(hsqldbEClass, HSQLDB___CREAR_CERTIFICADO__CERTIFICADO);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_CERTIFICADO__CERTIFICADO);
 		createEOperation(hsqldbEClass, HSQLDB___BUSCAR_CERTIFICADO__INT);
-		createEOperation(hsqldbEClass, HSQLDB___CREAR_PROYECTO__STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_PROYECTO__INT_STRING_INT_INT_INT_TIPO_PROYECTO_DATE_DATE_INT_DOUBLE_DOUBLE_INT_DOUBLE);
+		createEOperation(hsqldbEClass, HSQLDB___CREAR_PROYECTO__PROYECTO);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_PROYECTO__PROYECTO);
 		createEOperation(hsqldbEClass, HSQLDB___BUSCAR_PROYECTO__INT);
-		createEOperation(hsqldbEClass, HSQLDB___CREAR_VIVIENDA__STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_VIVIENDA__INT_STRING_STRING_INT_DOUBLE_DOUBLE_INT_INT_INT);
+		createEOperation(hsqldbEClass, HSQLDB___CREAR_VIVIENDA__VIVIENDA);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_VIVIENDA__VIVIENDA);
 		createEOperation(hsqldbEClass, HSQLDB___BUSCAR_VIVIENDA__INT);
-		createEOperation(hsqldbEClass, HSQLDB___CREAR_INMUEBLE__STRING_STRING_DOUBLE_DOUBLE);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_INMUEBLE__INT_STRING_STRING_DOUBLE_DOUBLE);
+		createEOperation(hsqldbEClass, HSQLDB___CREAR_INMUEBLE__INMUEBLE);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_INMUEBLE__INMUEBLE);
 		createEOperation(hsqldbEClass, HSQLDB___BUSCAR_INMUEBLE__INT);
-		createEOperation(hsqldbEClass, HSQLDB___ASIGNAR_CERTIFICADO__INT_INT);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_ASIGNACION_CERTIFICADO__INT_INT_INT);
-		createEOperation(hsqldbEClass, HSQLDB___ASIGNAR_PROYECTO__INT_INT);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_ASIGNACION_PROYECTO__INT_INT_INT);
-		createEOperation(hsqldbEClass, HSQLDB___CONTRATAR_PROYECTO__INT_DATE_INT_DATE);
-		createEOperation(hsqldbEClass, HSQLDB___EDITAR_CONTRATACION_PROYECTO__INT_INT_DATE_INT_DATE);
+		createEOperation(hsqldbEClass, HSQLDB___ASIGNAR_CERTIFICADO__CERTIFICADOS_ASIGNADOS);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_ASIGNACION_CERTIFICADO__CERTIFICADOS_ASIGNADOS);
+		createEOperation(hsqldbEClass, HSQLDB___ASIGNAR_PROYECTO__PROYECTOS_ASIGNADOS);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_ASIGNACION_PROYECTO__PROYECTOS_ASIGNADOS);
+		createEOperation(hsqldbEClass, HSQLDB___CONTRATAR_PROYECTO__PROYECTOS_EN_EJECUCION);
+		createEOperation(hsqldbEClass, HSQLDB___EDITAR_CONTRATACION_PROYECTO__PROYECTOS_EN_EJECUCION);
 		createEOperation(hsqldbEClass, HSQLDB___QUERY_CREAR__STRING_LISTSTRING_LISTSTRING);
 		createEOperation(hsqldbEClass, HSQLDB___QUERY_EDITAR__STRING_LISTSTRING_LISTSTRING_STRING);
 		createEOperation(hsqldbEClass, HSQLDB___QUERY_BUSCAR__STRING_LISTSTRING_STRING);
 		createEOperation(hsqldbEClass, HSQLDB___QUERY_EJECUTAR__STRING);
-
-		proyectos_AsignadosEClass = createEClass(PROYECTOS_ASIGNADOS);
-		createEAttribute(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__ID_PROYECTO_ASIGNADO);
-		createEAttribute(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__ID_PROYECTO_PROYECTO_ASIGNADO);
-		createEAttribute(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__ID_ARQUITECTO_PROYECTO_ASIGNADO);
-		createEReference(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__PROYECTO);
-		createEReference(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__USUARIO);
 
 		certificados_AsignadosEClass = createEClass(CERTIFICADOS_ASIGNADOS);
 		createEAttribute(certificados_AsignadosEClass, CERTIFICADOS_ASIGNADOS__ID_PROYECTO_ASIGNADO);
@@ -1650,6 +1655,13 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		createEReference(certificados_AsignadosEClass, CERTIFICADOS_ASIGNADOS__CERTIFICADO);
 		createEReference(certificados_AsignadosEClass, CERTIFICADOS_ASIGNADOS__USUARIO);
 
+		proyectos_AsignadosEClass = createEClass(PROYECTOS_ASIGNADOS);
+		createEAttribute(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__ID_PROYECTO_ASIGNADO);
+		createEAttribute(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__ID_PROYECTO_PROYECTO_ASIGNADO);
+		createEAttribute(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__ID_ARQUITECTO_PROYECTO_ASIGNADO);
+		createEReference(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__PROYECTO);
+		createEReference(proyectos_AsignadosEClass, PROYECTOS_ASIGNADOS__USUARIO);
+
 		proyectos_En_EjecucionEClass = createEClass(PROYECTOS_EN_EJECUCION);
 		createEAttribute(proyectos_En_EjecucionEClass, PROYECTOS_EN_EJECUCION__ID_EJECUCION_PROYECTO);
 		createEAttribute(proyectos_En_EjecucionEClass, PROYECTOS_EN_EJECUCION__ID_PROYECTO_EJECUCION_PROYECTO);
@@ -1659,8 +1671,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		createEReference(proyectos_En_EjecucionEClass, PROYECTOS_EN_EJECUCION__PROYECTO);
 
 		factoryEClass = createEClass(FACTORY);
-		createEOperation(factoryEClass, FACTORY___CREAR_OBJETO);
-		createEOperation(factoryEClass, FACTORY___CREAR_OBJETO__STRING);
+		createEOperation(factoryEClass, FACTORY___CREAR_OBJETO__STRING_OBJECT);
 
 		concreteFactoryEClass = createEClass(CONCRETE_FACTORY);
 
@@ -1743,6 +1754,8 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		initEReference(getProyecto_Usuario(), this.getUsuario(), null, "usuario", null, 0, 1, Proyecto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getProyecto_Vivienda(), this.getVivienda(), null, "vivienda", null, 0, 1, Proyecto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getProyecto_Inmueble(), this.getInmueble(), null, "inmueble", null, 0, 1, Proyecto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProyecto_Superficie_proyecto(), ecorePackage.getEDouble(), "superficie_proyecto", null, 1, 1, Proyecto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProyecto_Coste_proyecto(), ecorePackage.getEDouble(), "coste_proyecto", null, 1, 1, Proyecto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(viviendaEClass, Vivienda.class, "Vivienda", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVivienda_Id_vivienda(), theTypesPackage.getInteger(), "id_vivienda", null, 1, 1, Vivienda.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1783,201 +1796,93 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 
 		initEClass(hsqldbEClass, ArkiWeb.modelo.HSQLDB.class, "HSQLDB", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getHSQLDB__CrearUsuario__String_String_String_int_String_String_String(), null, "crearUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "nombre_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "apellido_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "dni_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "telefono_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "email_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "domicilio_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "contrasenya_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getHSQLDB__CrearUsuario__Usuario(), null, "crearUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getUsuario(), "ususario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarUsuario__int_String_String_String_int_String_String_String(), null, "editarUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "nombre_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "apellido_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "dni_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "telefono_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "email_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "domicilio_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "contrasenya_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarUsuario__Usuario(), null, "editarUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getUsuario(), "usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__BajaUsuario__int(), this.getUsuario(), "bajaUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__BajaUsuario__int(), null, "bajaUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__CrearPermiso__String_String_boolean_boolean(), null, "crearPermiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "objeto_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "lectura_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "escritura_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__CrearPermiso__Permiso(), null, "crearPermiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getPermiso(), "permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarPermiso__int_String_String_boolean_boolean(), null, "editarPermiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "objeto_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "lectura_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "escritura_permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarPermiso__Permiso(), null, "editarPermiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getPermiso(), "permiso", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__CrearCertificado__String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double(), null, "crearCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "cliente_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "vivienda_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "inmueble_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getTipo_Certificado(), "tipo_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_solicitud_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_entrega_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_visita_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_emision_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getCategoria_Certificado(), "categoria_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "coste_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__CrearCertificado__Certificado(), null, "crearCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getCertificado(), "certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarCertificado__int_String_int_int_int_Tipo_Certificado_Date_Date_Date_Date_Categoria_Certificado_int_double(), null, "editarCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "cliente_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "vivienda_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "inmueble_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getTipo_Certificado(), "tipo_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_solicitud_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_entrega_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_visita_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_emision_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getCategoria_Certificado(), "categoria_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "coste_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarCertificado__Certificado(), null, "editarCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getCertificado(), "certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getHSQLDB__BuscarCertificado__int(), this.getCertificado(), "buscarCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_certificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__CrearProyecto__String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "crearProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "vivienda_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "inmueble_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getTipo_Proyecto(), "tipo_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_solicitud_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_entrega_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "duracion_prevista_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "presupuesto_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "coste_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__CrearProyecto__Proyecto(), null, "crearProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getProyecto(), "proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarProyecto__int_String_int_int_int_Tipo_Proyecto_Date_Date_int_double_double_int_double(), null, "editarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "cliente_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "vivienda_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "inmueble_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getTipo_Proyecto(), "tipo_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_solicitud_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_entrega_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "duracion_prevista_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "presupuesto_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "coste_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarProyecto__Proyecto(), null, "editarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getProyecto(), "proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getHSQLDB__BuscarProyecto__int(), this.getProyecto(), "buscarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__CrearVivienda__String_String_int_double_double_int_int_int(), null, "crearVivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "direccion_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_inmueble_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_terreno_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "plantas_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "habitaciones_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "banyos_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__CrearVivienda__Vivienda(), null, "crearVivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getVivienda(), "vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarVivienda__int_String_String_int_double_double_int_int_int(), null, "editarVivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "direccion_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_inmueble_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_terreno_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "plantas_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "habitaciones_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "banyos_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarVivienda__Vivienda(), null, "editarVivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getVivienda(), "vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getHSQLDB__BuscarVivienda__int(), this.getVivienda(), "buscarVivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_vivienda", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__CrearInmueble__String_String_double_double(), null, "crearInmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "direccion_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_terreno_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__CrearInmueble__Inmueble(), null, "crearInmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getInmueble(), "inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarInmueble__int_String_String_double_double(), null, "editarInmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "descripcion_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "direccion_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_terreno_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "superficie_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarInmueble__Inmueble(), null, "editarInmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getInmueble(), "inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getHSQLDB__BuscarInmueble__int(), this.getInmueble(), "buscarInmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "id_inmueble", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__AsignarCertificado__int_int(), null, "asignarCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_certificado_certificado_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_certificado_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__AsignarCertificado__Certificados_Asignados(), null, "asignarCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getCertificados_Asignados(), "asignacionCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarAsignacionCertificado__int_int_int(), null, "editarAsignacionCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_certificado_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_certificado_certificado_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_certificado_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarAsignacionCertificado__Certificados_Asignados(), null, "editarAsignacionCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getCertificados_Asignados(), "asignacionCertificado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__AsignarProyecto__int_int(), null, "asignarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto_proyecto_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_certificado_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__AsignarProyecto__Proyectos_Asignados(), null, "asignarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getProyectos_Asignados(), "proyectoAsignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarAsignacionProyecto__int_int_int(), null, "editarAsignacionProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto_proyecto_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "arquitecto_certificado_asignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarAsignacionProyecto__Proyectos_Asignados(), null, "editarAsignacionProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getProyectos_Asignados(), "proyectoAsignado", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__ContratarProyecto__int_Date_int_Date(), null, "contratarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_inicio_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "duracion_prevista_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_fin_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__ContratarProyecto__Proyectos_En_Ejecucion(), null, "contratarProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getProyectos_En_Ejecucion(), "contratacionProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__EditarContratacionProyecto__int_int_Date_int_Date(), null, "editarContratacionProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "id_proyecto_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_inicio_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "duracion_prevista_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "fecha_fin_ejecucion_proyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__EditarContratacionProyecto__Proyectos_En_Ejecucion(), null, "editarContratacionProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getProyectos_En_Ejecucion(), "contratacionProyecto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__QueryCrear__String_ListString_ListString(), null, "queryCrear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__QueryCrear__String_ListString_ListString(), theTypesPackage.getString(), "queryCrear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "tabla", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theArkiWebPackage.getListString(), "columnas", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theArkiWebPackage.getListString(), "valores_columnas", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__QueryEditar__String_ListString_ListString_String(), null, "queryEditar", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__QueryEditar__String_ListString_ListString_String(), theTypesPackage.getString(), "queryEditar", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "tabla", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theArkiWebPackage.getListString(), "columnas", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theArkiWebPackage.getListString(), "valores_columnas", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "where_clause", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getHSQLDB__QueryBuscar__String_ListString_String(), null, "queryBuscar", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getHSQLDB__QueryBuscar__String_ListString_String(), theTypesPackage.getString(), "queryBuscar", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "tabla", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theArkiWebPackage.getListString(), "columnas", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "where_clause_01", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getHSQLDB__QueryEjecutar__String(), ecorePackage.getEJavaObject(), "queryEjecutar", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "queryString", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(proyectos_AsignadosEClass, Proyectos_Asignados.class, "Proyectos_Asignados", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProyectos_Asignados_Id_proyecto_asignado(), theTypesPackage.getInteger(), "id_proyecto_asignado", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getProyectos_Asignados_Id_proyecto_proyecto_asignado(), theTypesPackage.getInteger(), "id_proyecto_proyecto_asignado", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getProyectos_Asignados_Id_arquitecto_proyecto_asignado(), theTypesPackage.getInteger(), "id_arquitecto_proyecto_asignado", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProyectos_Asignados_Proyecto(), this.getProyecto(), null, "proyecto", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProyectos_Asignados_Usuario(), this.getUsuario(), null, "usuario", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(certificados_AsignadosEClass, Certificados_Asignados.class, "Certificados_Asignados", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCertificados_Asignados_Id_proyecto_asignado(), theTypesPackage.getInteger(), "id_proyecto_asignado", null, 1, 1, Certificados_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1989,6 +1894,13 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		initEReference(getCertificados_Asignados_Certificado(), this.getCertificado(), null, "certificado", null, 1, 1, Certificados_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCertificados_Asignados_Usuario(), this.getUsuario(), null, "usuario", null, 1, 1, Certificados_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		initEClass(proyectos_AsignadosEClass, Proyectos_Asignados.class, "Proyectos_Asignados", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProyectos_Asignados_Id_proyecto_asignado(), theTypesPackage.getInteger(), "id_proyecto_asignado", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProyectos_Asignados_Id_proyecto_proyecto_asignado(), theTypesPackage.getInteger(), "id_proyecto_proyecto_asignado", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProyectos_Asignados_Id_arquitecto_proyecto_asignado(), theTypesPackage.getInteger(), "id_arquitecto_proyecto_asignado", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getProyectos_Asignados_Proyecto(), this.getProyecto(), null, "proyecto", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getProyectos_Asignados_Usuario(), this.getUsuario(), null, "usuario", null, 1, 1, Proyectos_Asignados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		initEClass(proyectos_En_EjecucionEClass, Proyectos_En_Ejecucion.class, "Proyectos_En_Ejecucion", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProyectos_En_Ejecucion_Id_ejecucion_proyecto(), theTypesPackage.getInteger(), "id_ejecucion_proyecto", null, 1, 1, Proyectos_En_Ejecucion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getProyectos_En_Ejecucion_Id_proyecto_ejecucion_proyecto(), theTypesPackage.getInteger(), "id_proyecto_ejecucion_proyecto", null, 1, 1, Proyectos_En_Ejecucion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1999,10 +1911,9 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 
 		initEClass(factoryEClass, Factory.class, "Factory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getFactory__CrearObjeto(), null, "crearObjeto", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getFactory__CrearObjeto__String(), null, "crearObjeto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getFactory__CrearObjeto__String_Object(), null, "crearObjeto", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "tipoObjeto", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEJavaObject(), "_", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(concreteFactoryEClass, ConcreteFactory.class, "ConcreteFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

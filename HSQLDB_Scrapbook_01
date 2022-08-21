@@ -1,0 +1,7 @@
+CREATE TABLE USUARIOS (id_usuario IDENTITY PRIMARY KEY, nombre_usuario varchar(20))
+INSERT INTO USUARIOS (nombre_usuario) VALUES ('LUIS')
+INSERT INTO USUARIOS (nombre_usuario) VALUES ('LEO')
+INSERT INTO USUARIOS (nombre_usuario) VALUES ('OLIVIA')
+INSERT INTO USUARIOS (nombre_usuario) VALUES ('LUCIA')
+CALL IDENTITY()
+SELECT MAX(id_usuario) AS id_usuario FROM USUARIOS GROUP BY id_usuario

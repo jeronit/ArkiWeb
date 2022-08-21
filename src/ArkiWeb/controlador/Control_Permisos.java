@@ -6,6 +6,7 @@
  */
 package ArkiWeb.controlador;
 
+import ArkiWeb.modelo.Permiso;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -30,17 +31,17 @@ public interface Control_Permisos extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model descripcion_permisoDataType="org.eclipse.uml2.types.String" descripcion_permisoRequired="true" descripcion_permisoOrdered="false" objeto_permisoDataType="org.eclipse.uml2.types.String" objeto_permisoRequired="true" objeto_permisoOrdered="false" lectura_permisoDataType="org.eclipse.uml2.types.Boolean" lectura_permisoRequired="true" lectura_permisoOrdered="false" escritura_permisoDataType="org.eclipse.uml2.types.Boolean" escritura_permisoRequired="true" escritura_permisoOrdered="false"
+	 * @model permisoRequired="true" permisoOrdered="false"
 	 * @generated
 	 */
-	void crearPermiso(String descripcion_permiso, String objeto_permiso, boolean lectura_permiso, boolean escritura_permiso);
+	void crearPermiso(Permiso permiso);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model id_permisoDataType="org.eclipse.uml2.types.Integer" id_permisoRequired="true" id_permisoOrdered="false" descripcion_permisoDataType="org.eclipse.uml2.types.String" descripcion_permisoRequired="true" descripcion_permisoOrdered="false" objeto_permisoDataType="org.eclipse.uml2.types.String" objeto_permisoRequired="true" objeto_permisoOrdered="false" lectura_permisoDataType="org.eclipse.uml2.types.Boolean" lectura_permisoRequired="true" lectura_permisoOrdered="false" escritura_permisoDataType="org.eclipse.uml2.types.Boolean" escritura_permisoRequired="true" escritura_permisoOrdered="false"
+	 * @model permisoRequired="true" permisoOrdered="false"
 	 * @generated
 	 */
-	void editarPermiso(int id_permiso, String descripcion_permiso, String objeto_permiso, boolean lectura_permiso, boolean escritura_permiso);
+	void editarPermiso(Permiso permiso);
 
 } // Control_Permisos

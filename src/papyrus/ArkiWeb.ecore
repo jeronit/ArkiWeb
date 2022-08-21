@@ -121,6 +121,10 @@
           eType="#//modelo/Vivienda"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="inmueble" ordered="false"
           eType="#//modelo/Inmueble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="superficie_proyecto"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="coste_proyecto" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="Tipo_Proyecto">
       <eLiterals name="Residencial_Edificio"/>
@@ -213,228 +217,86 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HSQLDB" abstract="true" interface="true">
       <eOperations name="crearUsuario" ordered="false" lowerBound="1">
-        <eParameters name="nombre_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="apellido_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="dni_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="telefono_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="email_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="domicilio_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="contrasenya_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="ususario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>
       </eOperations>
       <eOperations name="editarUsuario" ordered="false" lowerBound="1">
-        <eParameters name="id_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="nombre_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="apellido_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="dni_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="telefono_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="email_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="domicilio_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="contrasenya_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="usuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>
       </eOperations>
-      <eOperations name="bajaUsuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario">
+      <eOperations name="bajaUsuario" ordered="false" lowerBound="1">
         <eParameters name="id_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="crearPermiso" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="objeto_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="lectura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-        <eParameters name="escritura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+        <eParameters name="permiso" ordered="false" lowerBound="1" eType="#//modelo/Permiso"/>
       </eOperations>
       <eOperations name="editarPermiso" ordered="false" lowerBound="1">
-        <eParameters name="id_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="objeto_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="lectura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-        <eParameters name="escritura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+        <eParameters name="permiso" ordered="false" lowerBound="1" eType="#//modelo/Permiso"/>
       </eOperations>
       <eOperations name="crearCertificado" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_certificado" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Certificado"/>
-        <eParameters name="fecha_solicitud_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_visita_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_emision_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="categoria_certificado" ordered="false" lowerBound="1" eType="#//modelo/Categoria_Certificado"/>
-        <eParameters name="arquitecto_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
       </eOperations>
       <eOperations name="editarCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_certificado" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Certificado"/>
-        <eParameters name="fecha_solicitud_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_visita_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_emision_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="categoria_certificado" ordered="false" lowerBound="1" eType="#//modelo/Categoria_Certificado"/>
-        <eParameters name="arquitecto_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
       </eOperations>
       <eOperations name="buscarCertificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado">
         <eParameters name="id_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="crearProyecto" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
-        <eParameters name="fecha_solicitud_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="presupuesto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="arquitecto_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="proyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyecto"/>
       </eOperations>
       <eOperations name="editarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
-        <eParameters name="fecha_solicitud_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="presupuesto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="arquitecto_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="proyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyecto"/>
       </eOperations>
       <eOperations name="buscarProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyecto">
         <eParameters name="id_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="crearVivienda" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="id_inmueble_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="superficie_terreno_vivienda" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="plantas_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="habitaciones_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="banyos_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="vivienda" ordered="false" lowerBound="1" eType="#//modelo/Vivienda"/>
       </eOperations>
       <eOperations name="editarVivienda" ordered="false" lowerBound="1">
-        <eParameters name="id_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="id_inmueble_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="superficie_terreno_vivienda" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="plantas_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="habitaciones_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="banyos_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="vivienda" ordered="false" lowerBound="1" eType="#//modelo/Vivienda"/>
       </eOperations>
       <eOperations name="buscarVivienda" ordered="false" lowerBound="1" eType="#//modelo/Vivienda">
         <eParameters name="id_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="crearInmueble" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="superficie_terreno_inmueble" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="inmueble" ordered="false" lowerBound="1" eType="#//modelo/Inmueble"/>
       </eOperations>
       <eOperations name="editarInmueble" ordered="false" lowerBound="1">
-        <eParameters name="id_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="superficie_terreno_inmueble" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="inmueble" ordered="false" lowerBound="1" eType="#//modelo/Inmueble"/>
       </eOperations>
       <eOperations name="buscarInmueble" ordered="false" lowerBound="1" eType="#//modelo/Inmueble">
         <eParameters name="id_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="asignarCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="asignacionCertificado" ordered="false" lowerBound="1" eType="#//modelo/Certificados_Asignados"/>
       </eOperations>
       <eOperations name="editarAsignacionCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_certificado_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="asignacionCertificado" ordered="false" lowerBound="1" eType="#//modelo/Certificados_Asignados"/>
       </eOperations>
       <eOperations name="asignarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_proyecto_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="proyectoAsignado" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_Asignados"/>
       </eOperations>
       <eOperations name="editarAsignacionProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_asignado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_proyecto_proyecto_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="proyectoAsignado" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_Asignados"/>
       </eOperations>
       <eOperations name="contratarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_inicio_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_fin_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="contratacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_En_Ejecucion"/>
       </eOperations>
       <eOperations name="editarContratacionProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_ejecucion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_proyecto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_inicio_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_fin_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="contratacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_En_Ejecucion"/>
       </eOperations>
-      <eOperations name="queryCrear" ordered="false" lowerBound="1">
+      <eOperations name="queryCrear" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="tabla" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
         <eParameters name="valores_columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
       </eOperations>
-      <eOperations name="queryEditar" ordered="false" lowerBound="1">
+      <eOperations name="queryEditar" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="tabla" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
         <eParameters name="valores_columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
         <eParameters name="where_clause" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="queryBuscar" ordered="false" lowerBound="1">
+      <eOperations name="queryBuscar" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
         <eParameters name="tabla" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
         <eParameters name="columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
         <eParameters name="where_clause_01" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -442,19 +304,6 @@
       <eOperations name="queryEjecutar" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject">
         <eParameters name="queryString" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Proyectos_Asignados" abstract="true"
-        interface="true">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id_proyecto_asignado"
-          ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id_proyecto_proyecto_asignado"
-          ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id_arquitecto_proyecto_asignado"
-          ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="proyecto" ordered="false"
-          lowerBound="1" eType="#//modelo/Proyecto"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="usuario" ordered="false"
-          lowerBound="1" eType="#//modelo/Usuario"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Certificados_Asignados" abstract="true"
         interface="true">
@@ -475,6 +324,19 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="usuario" ordered="false"
           lowerBound="1" eType="#//modelo/Usuario"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Proyectos_Asignados" abstract="true"
+        interface="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id_proyecto_asignado"
+          ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id_proyecto_proyecto_asignado"
+          ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id_arquitecto_proyecto_asignado"
+          ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="proyecto" ordered="false"
+          lowerBound="1" eType="#//modelo/Proyecto"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="usuario" ordered="false"
+          lowerBound="1" eType="#//modelo/Usuario"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Proyectos_En_Ejecucion" abstract="true"
         interface="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id_ejecucion_proyecto"
@@ -491,9 +353,9 @@
           lowerBound="1" eType="#//modelo/Proyecto"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Factory">
-      <eOperations name="crearObjeto" ordered="false" lowerBound="1"/>
       <eOperations name="crearObjeto" ordered="false" lowerBound="1">
         <eParameters name="tipoObjeto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="_" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ConcreteFactory" eSuperTypes="#//modelo/Factory"/>
@@ -545,231 +407,73 @@
     <eClassifiers xsi:type="ecore:EClass" name="Controlador_Modelo" abstract="true"
         interface="true">
       <eOperations name="crearUsuario" ordered="false" lowerBound="1">
-        <eParameters name="nombre_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="apellido_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="dni_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="telefono_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="email_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="domicilio_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="contrasenya_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="usuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>
       </eOperations>
       <eOperations name="editarUsuario" ordered="false" lowerBound="1">
-        <eParameters name="id_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="nombre_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="apellido_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="dni_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="telefono_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="email_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="domicilio_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="contrasenya_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="usuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>
       </eOperations>
       <eOperations name="bajaUsuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario">
         <eParameters name="id_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="crearPermiso" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="objeto_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="lectura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-        <eParameters name="escritura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+        <eParameters name="permiso" ordered="false" lowerBound="1" eType="#//modelo/Permiso"/>
       </eOperations>
       <eOperations name="editarPermiso" ordered="false" lowerBound="1">
-        <eParameters name="id_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="objeto_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="lectura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-        <eParameters name="escritura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+        <eParameters name="permiso" ordered="false" lowerBound="1" eType="#//modelo/Permiso"/>
       </eOperations>
       <eOperations name="crearCertificado" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_certificado" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Certificado"/>
-        <eParameters name="fecha_solicitud_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_visita_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_emision_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="categoria_certificado" ordered="false" lowerBound="1" eType="#//modelo/Categoria_Certificado"/>
-        <eParameters name="arquitecto_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
       </eOperations>
       <eOperations name="editarCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_certificado" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Certificado"/>
-        <eParameters name="fecha_solicitud_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_visita_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_emision_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="categoria_certificado" ordered="false" lowerBound="1" eType="#//modelo/Categoria_Certificado"/>
-        <eParameters name="arquitecto_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
       </eOperations>
       <eOperations name="buscarCertificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado">
         <eParameters name="id_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="crearProyecto" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
-        <eParameters name="fecha_solicitud_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="presupuesto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="arquitecto_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="proyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyecto"/>
       </eOperations>
       <eOperations name="editarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
-        <eParameters name="fecha_solicitud_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="presupuesto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="arquitecto_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="proyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyecto"/>
       </eOperations>
       <eOperations name="buscarProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyecto">
         <eParameters name="id_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="crearVivienda" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="id_inmueble_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="superficie_terreno_vivienda" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="plantas_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="habitaciones_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="banyos_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="vivienda" ordered="false" lowerBound="1" eType="#//modelo/Vivienda"/>
       </eOperations>
       <eOperations name="editarVivienda" ordered="false" lowerBound="1">
-        <eParameters name="id_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="id_inmueble_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="superficie_terreno_vivienda" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="plantas_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="habitaciones_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="banyos_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="vivienda" ordered="false" lowerBound="1" eType="#//modelo/Vivienda"/>
       </eOperations>
       <eOperations name="buscarVivienda" ordered="false" lowerBound="1" eType="#//modelo/Vivienda">
         <eParameters name="id_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="crearInmueble" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="superficie_terreno_inmueble" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="inmueble" ordered="false" lowerBound="1" eType="#//modelo/Inmueble"/>
       </eOperations>
       <eOperations name="editarInmueble" ordered="false" lowerBound="1">
-        <eParameters name="id_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="superficie_terreno_inmueble" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="inmueble" ordered="false" lowerBound="1" eType="#//modelo/Inmueble"/>
       </eOperations>
       <eOperations name="buscarInmueble" ordered="false" lowerBound="1" eType="#//modelo/Inmueble">
         <eParameters name="id_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       </eOperations>
       <eOperations name="asignarCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="asignacionCertificado" ordered="false" lowerBound="1" eType="#//modelo/Certificados_Asignados"/>
       </eOperations>
       <eOperations name="editarAsignacionCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_certificado_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="asignacionCertificado" ordered="false" lowerBound="1" eType="#//modelo/Certificados_Asignados"/>
       </eOperations>
       <eOperations name="asignarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_proyecto_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="asignacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_Asignados"/>
       </eOperations>
       <eOperations name="editarAsignacionProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_asignado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_proyecto_proyecto_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="asignacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_Asignados"/>
       </eOperations>
       <eOperations name="contratarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_inicio_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_fin_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        <eParameters name="contratacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_En_Ejecucion"/>
       </eOperations>
       <eOperations name="editarContratacionProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_ejecucion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_proyecto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_inicio_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_fin_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      </eOperations>
-      <eOperations name="queryCrear" ordered="false" lowerBound="1">
-        <eParameters name="tabla" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
-        <eParameters name="valores_columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
-      </eOperations>
-      <eOperations name="queryEditar" ordered="false" lowerBound="1">
-        <eParameters name="tabla" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
-        <eParameters name="valores_columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
-        <eParameters name="where_clause" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      </eOperations>
-      <eOperations name="queryBuscar" ordered="false" lowerBound="1">
-        <eParameters name="tabla" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="columnas" ordered="false" lowerBound="1" eType="#//ListString"/>
-        <eParameters name="where_clause_01" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="contratacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_En_Ejecucion"/>
       </eOperations>
       <eOperations name="login" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
         <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -845,39 +549,19 @@
         interface="true">
       <eOperations name="concederAcceso" ordered="false" lowerBound="1"/>
       <eOperations name="crearPermiso" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="objeto_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="lectura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-        <eParameters name="escritura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+        <eParameters name="permiso" ordered="false" lowerBound="1" eType="#//modelo/Permiso"/>
       </eOperations>
       <eOperations name="editarPermiso" ordered="false" lowerBound="1">
-        <eParameters name="id_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="objeto_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="lectura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-        <eParameters name="escritura_permiso" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+        <eParameters name="permiso" ordered="false" lowerBound="1" eType="#//modelo/Permiso"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Control_Usuarios" abstract="true"
         interface="true">
       <eOperations name="crearUsuario" ordered="false" lowerBound="1">
-        <eParameters name="nombre_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="apellido_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="dni_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="telefono_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="email_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="domicilio_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="contrasenya_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="usuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>
       </eOperations>
       <eOperations name="editarUsuario_1" ordered="false" lowerBound="1">
-        <eParameters name="id_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="nombre_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="apellido_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="dni_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="telefono_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="email_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="domicilio_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="contrasenya_usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        <eParameters name="usuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>
       </eOperations>
       <eOperations name="bajaUsuario" ordered="false" lowerBound="1">
         <eParameters name="id_Usuario" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
@@ -886,177 +570,55 @@
     <eClassifiers xsi:type="ecore:EClass" name="Control_Certificados" abstract="true"
         interface="true">
       <eOperations name="editarCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="vivienda_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_certificado" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Certificado"/>
-        <eParameters name="fecha_solicitud_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_visita_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_emision_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="categoria_certificado" ordered="false" lowerBound="1" eType="#//modelo/Categoria_Certificado"/>
-        <eParameters name="arquitecto_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
       </eOperations>
       <eOperations name="asignarCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
       </eOperations>
       <eOperations name="editarAsignacionCertificado" ordered="false" lowerBound="1">
-        <eParameters name="id_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_certificado_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
       </eOperations>
       <eOperations name="crearCertificado" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
-        <eParameters name="vivienda_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_certificado" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Certificado"/>
-        <eParameters name="fecha_solicitud_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_visita_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_emision_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="categoria_certificado" ordered="false" lowerBound="1" eType="#//modelo/Categoria_Certificado"/>
-        <eParameters name="arquitecto_certificado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_certificado" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="certificado" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Control_Proyectos" abstract="true"
         interface="true">
-      <eOperations name="editarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
-        <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
-        <eParameters name="fecha_solicitud_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="presupuesto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="arquitecto_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eOperations name="crearProyecto" ordered="false" lowerBound="1">
+        <eParameters name="proyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyecto"/>
       </eOperations>
-      <eOperations name="editarContratacionProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_ejecucion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_proyecto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_inicio_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_fin_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eOperations name="editarProyecto" ordered="false" lowerBound="1">
+        <eParameters name="proyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyecto"/>
       </eOperations>
       <eOperations name="asignarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_proyecto_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-      </eOperations>
-      <eOperations name="contratarProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_inicio_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="fecha_fin_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      </eOperations>
-      <eOperations name="crearProyecto" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="cliente_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Certificado"/>
-        <eParameters name="vivienda_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="inmueble_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="tipo_proyecto" ordered="false" lowerBound="1" eType="#//modelo/Tipo_Proyecto"/>
-        <eParameters name="fecha_solicitud_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="fecha_entrega_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-        <eParameters name="duracion_prevista_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="presupuesto_ejecucion_proyecto" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="arquitecto_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="coste_proyecto" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="asignacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_Asignados"/>
       </eOperations>
       <eOperations name="editarAsignacionProyecto" ordered="false" lowerBound="1">
-        <eParameters name="id_proyecto_asignado" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="id_proyecto_proyecto_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="arquitecto_certificado_asignado" ordered="false" lowerBound="1"
-            eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="asignacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_Asignados"/>
+      </eOperations>
+      <eOperations name="contratarProyecto" ordered="false" lowerBound="1">
+        <eParameters name="contratacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_En_Ejecucion"/>
+      </eOperations>
+      <eOperations name="editarContratacionProyecto" ordered="false" lowerBound="1">
+        <eParameters name="contratacionProyecto" ordered="false" lowerBound="1" eType="#//modelo/Proyectos_En_Ejecucion"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Control_Viviendas" abstract="true"
         interface="true">
       <eOperations name="crearVivienda" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="id_inmueble_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="superficie_terreno_vivienda" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="plantas_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="habitaciones_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="banyos_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="vivienda" ordered="false" lowerBound="1" eType="#//modelo/Vivienda"/>
       </eOperations>
       <eOperations name="editarVivienda" ordered="false" lowerBound="1">
-        <eParameters name="id_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="id_inmueble_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="superficie_terreno_vivienda" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="plantas_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="habitaciones_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="banyos_vivienda" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+        <eParameters name="vivienda" ordered="false" lowerBound="1" eType="#//modelo/Vivienda"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Control_Inmuebles" abstract="true"
         interface="true">
       <eOperations name="crearInmueble" ordered="false" lowerBound="1">
-        <eParameters name="descripcion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="superficie_terreno_inmueble" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="inmueble" ordered="false" lowerBound="1" eType="#//modelo/Inmueble"/>
       </eOperations>
       <eOperations name="editarInmueble" ordered="false" lowerBound="1">
-        <eParameters name="id_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-        <eParameters name="descripcion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="direccion_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-        <eParameters name="superficie_terreno_inmueble" ordered="false" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-        <eParameters name="superficie_inmueble" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+        <eParameters name="inmueble" ordered="false" lowerBound="1" eType="#//modelo/Inmueble"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Gestor_Busquedas" abstract="true"

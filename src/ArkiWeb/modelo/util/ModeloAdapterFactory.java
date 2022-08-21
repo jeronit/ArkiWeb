@@ -100,12 +100,12 @@ public class ModeloAdapterFactory extends AdapterFactoryImpl {
 				return createHSQLDBAdapter();
 			}
 			@Override
-			public Adapter caseProyectos_Asignados(Proyectos_Asignados object) {
-				return createProyectos_AsignadosAdapter();
-			}
-			@Override
 			public Adapter caseCertificados_Asignados(Certificados_Asignados object) {
 				return createCertificados_AsignadosAdapter();
+			}
+			@Override
+			public Adapter caseProyectos_Asignados(Proyectos_Asignados object) {
+				return createProyectos_AsignadosAdapter();
 			}
 			@Override
 			public Adapter caseProyectos_En_Ejecucion(Proyectos_En_Ejecucion object) {

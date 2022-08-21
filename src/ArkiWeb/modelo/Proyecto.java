@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	
+ * 	@purpose:	Interface para gestionar el objeto
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17
@@ -32,6 +32,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ArkiWeb.modelo.Proyecto#getUsuario <em>Usuario</em>}</li>
  *   <li>{@link ArkiWeb.modelo.Proyecto#getVivienda <em>Vivienda</em>}</li>
  *   <li>{@link ArkiWeb.modelo.Proyecto#getInmueble <em>Inmueble</em>}</li>
+ *   <li>{@link ArkiWeb.modelo.Proyecto#getSuperficie_proyecto <em>Superficie proyecto</em>}</li>
+ *   <li>{@link ArkiWeb.modelo.Proyecto#getCoste_proyecto <em>Coste proyecto</em>}</li>
  * </ul>
  *
  * @see ArkiWeb.modelo.ModeloPackage#getProyecto()
@@ -379,5 +381,57 @@ public interface Proyecto extends EObject {
 	 * @generated
 	 */
 	void setInmueble(Inmueble value);
+
+	/**
+	 * Returns the value of the '<em><b>Superficie proyecto</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Superficie proyecto</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Superficie proyecto</em>' attribute.
+	 * @see #setSuperficie_proyecto(double)
+	 * @see ArkiWeb.modelo.ModeloPackage#getProyecto_Superficie_proyecto()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	double getSuperficie_proyecto();
+
+	/**
+	 * Sets the value of the '{@link ArkiWeb.modelo.Proyecto#getSuperficie_proyecto <em>Superficie proyecto</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Superficie proyecto</em>' attribute.
+	 * @see #getSuperficie_proyecto()
+	 * @generated
+	 */
+	void setSuperficie_proyecto(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Coste proyecto</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Coste proyecto</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Coste proyecto</em>' attribute.
+	 * @see #setCoste_proyecto(double)
+	 * @see ArkiWeb.modelo.ModeloPackage#getProyecto_Coste_proyecto()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	double getCoste_proyecto();
+
+	/**
+	 * Sets the value of the '{@link ArkiWeb.modelo.Proyecto#getCoste_proyecto <em>Coste proyecto</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Coste proyecto</em>' attribute.
+	 * @see #getCoste_proyecto()
+	 * @generated
+	 */
+	void setCoste_proyecto(double value);
 
 } // Proyecto

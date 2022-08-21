@@ -114,15 +114,15 @@ public class ModeloSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModeloPackage.PROYECTOS_ASIGNADOS: {
-				Proyectos_Asignados proyectos_Asignados = (Proyectos_Asignados)theEObject;
-				T result = caseProyectos_Asignados(proyectos_Asignados);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ModeloPackage.CERTIFICADOS_ASIGNADOS: {
 				Certificados_Asignados certificados_Asignados = (Certificados_Asignados)theEObject;
 				T result = caseCertificados_Asignados(certificados_Asignados);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloPackage.PROYECTOS_ASIGNADOS: {
+				Proyectos_Asignados proyectos_Asignados = (Proyectos_Asignados)theEObject;
+				T result = caseProyectos_Asignados(proyectos_Asignados);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

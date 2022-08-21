@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	
+ * 	@purpose:	Interface para gestionar la instanciación de objetos
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17
@@ -22,17 +22,19 @@ public interface Factory extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model tipoObjetoDataType="org.eclipse.uml2.types.String" tipoObjetoRequired="true" tipoObjetoOrdered="false" _Required="true" _Ordered="false"
 	 * @generated
 	 */
-	void crearObjeto();
+	void crearObjeto(String tipoObjeto, Object _);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Se encarga de la instanciación de los distintos objetos
 	 * <!-- end-user-doc -->
+	 * @param			tipoObjeto			String			Objeto a crear
 	 * @model tipoObjetoDataType="org.eclipse.uml2.types.String" tipoObjetoRequired="true" tipoObjetoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void crearObjeto(String tipoObjeto);
+	Object crearObjeto(String tipoObjeto);
 
 } // Factory
