@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
 import ArkiWeb.controlador.Control_Inmuebles;
+import ArkiWeb.modelo.Inmueble;
 
 /**
  * @author JTE
@@ -148,18 +149,34 @@ public class Control_InmueblesImpl implements Control_Inmuebles {
 
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Registra un nuevo inmueble.
+	 * <!-- end-user-doc -->
+	 * @param		inmueble			Inmueble			Inmueble
+	 * @model inmuebleRequired="true" inmuebleOrdered="false"
+	 */
 	@Override
-	public void crearInmueble(String descripcion_inmueble, String direccion_inmueble,
-			double superficie_terreno_inmueble, double superficie_inmueble) {
-		// TODO Auto-generated method stub
+	public void crearInmueble(Inmueble inmueble) {
 
+		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Edita un registro de un inmueble.
+	 * <!-- end-user-doc -->
+	 * @param		inmueble			Inmueble			Inmueble
+	 * @model inmuebleRequired="true" inmuebleOrdered="false"
+	 */
 	@Override
-	public void editarInmueble(int id_inmueble, String descripcion_inmueble, String direccion_inmueble,
-			double superficie_terreno_inmueble, double superficie_inmueble) {
-		// TODO Auto-generated method stub
-
+	public void editarInmueble(Inmueble inmueble) {
+		
+		ArkiWeb.controlador.Borrar.db.editarInmueble(inmueble);
+		
 	}
+
+	
 
 }

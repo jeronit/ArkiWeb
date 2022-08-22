@@ -905,7 +905,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCertificado_Id_arquitecto_certificado() {
+	public EAttribute getCertificado_Coste_certificado() {
 		return (EAttribute)certificadoEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -915,18 +915,8 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCertificado_Coste_certificado() {
-		return (EAttribute)certificadoEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getCertificado_Inmueble() {
-		return (EReference)certificadoEClass.getEStructuralFeatures().get(13);
+		return (EReference)certificadoEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -936,7 +926,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 */
 	@Override
 	public EReference getCertificado_Usuario() {
-		return (EReference)certificadoEClass.getEStructuralFeatures().get(14);
+		return (EReference)certificadoEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -946,7 +936,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 	 */
 	@Override
 	public EReference getCertificado_Vivienda() {
-		return (EReference)certificadoEClass.getEStructuralFeatures().get(15);
+		return (EReference)certificadoEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -1610,7 +1600,6 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		createEAttribute(certificadoEClass, CERTIFICADO__FECHA_VISITA_CERTIFICADO);
 		createEAttribute(certificadoEClass, CERTIFICADO__FECHA_EMISION_CERTIFICADO);
 		createEAttribute(certificadoEClass, CERTIFICADO__CATEGORIA_CERTIFICADO);
-		createEAttribute(certificadoEClass, CERTIFICADO__ID_ARQUITECTO_CERTIFICADO);
 		createEAttribute(certificadoEClass, CERTIFICADO__COSTE_CERTIFICADO);
 		createEReference(certificadoEClass, CERTIFICADO__INMUEBLE);
 		createEReference(certificadoEClass, CERTIFICADO__USUARIO);
@@ -1788,7 +1777,6 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		initEAttribute(getCertificado_Fecha_visita_certificado(), ecorePackage.getEDate(), "fecha_visita_certificado", null, 1, 1, Certificado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCertificado_Fecha_emision_certificado(), ecorePackage.getEDate(), "fecha_emision_certificado", null, 1, 1, Certificado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCertificado_Categoria_certificado(), this.getCategoria_Certificado(), "categoria_certificado", null, 1, 1, Certificado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCertificado_Id_arquitecto_certificado(), theTypesPackage.getInteger(), "id_arquitecto_certificado", null, 1, 1, Certificado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCertificado_Coste_certificado(), ecorePackage.getEDouble(), "coste_certificado", null, 1, 1, Certificado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCertificado_Inmueble(), this.getInmueble(), null, "inmueble", null, 1, 1, Certificado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCertificado_Usuario(), this.getUsuario(), null, "usuario", null, 0, 1, Certificado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1797,7 +1785,7 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		initEClass(hsqldbEClass, ArkiWeb.modelo.HSQLDB.class, "HSQLDB", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getHSQLDB__CrearUsuario__Usuario(), null, "crearUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getUsuario(), "ususario", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getUsuario(), "usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getHSQLDB__EditarUsuario__Usuario(), null, "editarUsuario", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getUsuario(), "usuario", 1, 1, IS_UNIQUE, !IS_ORDERED);

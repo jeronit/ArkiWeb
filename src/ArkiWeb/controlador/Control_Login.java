@@ -6,7 +6,11 @@
  */
 package ArkiWeb.controlador;
 
+import java.sql.SQLException;
+
 import org.eclipse.emf.ecore.EObject;
+
+import ArkiWeb.modelo.Usuario;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,18 +25,38 @@ import org.eclipse.emf.ecore.EObject;
 public interface Control_Login extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
+	 * Comprueba si el usuario puede acceder a la aplicación
 	 * <!-- end-user-doc -->
+	 * @param		email				String			Email
+	 * @param		contrasenya			String			Contraseña
+	 * @return							Boolean			Login success
+	 * @throws SQLException
 	 * @model emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" contrasenyaDataType="org.eclipse.uml2.types.String" contrasenyaRequired="true" contrasenyaOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void login(String email, String contrasenya);
+	boolean login(String email, String contrasenya) throws SQLException;
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Cambia la contraseña del usuario
 	 * <!-- end-user-doc -->
+	 * @param		usuario				Usuario 		Usuario
+	 * @param		contrasenya			String			Contraseña nueva
 	 * @model emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	void cambiarContrasenya(String email);
+	void cambiarContrasenya(Usuario usuario, String contrasenya);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Busca un usuario por email
+	 * <!-- end-user-doc -->
+	 * @param		email				String			Email
+	 * @return							Usuario			Usuario
+	 * @throws SQLException 
+	 * @model emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false"
+	 * @generated NOT
+	 */
+	Usuario buscarUsuarioPorEmail(String email) throws SQLException;
 
 } // Control_Login

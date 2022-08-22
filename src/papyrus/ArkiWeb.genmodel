@@ -142,7 +142,6 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/fecha_visita_certificado"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/fecha_emision_certificado"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/categoria_certificado"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/id_arquitecto_certificado"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ArkiWeb.ecore#//modelo/Certificado/coste_certificado"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference ArkiWeb.ecore#//modelo/Certificado/inmueble"/>
@@ -153,7 +152,7 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ArkiWeb.ecore#//modelo/HSQLDB">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/ususario"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/crearUsuario/usuario"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ArkiWeb.ecore#//modelo/HSQLDB/editarUsuario/usuario"/>

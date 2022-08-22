@@ -463,16 +463,6 @@
             <element xmi:type="uml:Property" href="ArkiWeb.uml#_EMigIBySEe2LbNhGgE9n_g"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_EMkVURySEe2LbNhGgE9n_g"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_GIDxoBySEe2LbNhGgE9n_g" type="Property_InterfaceAttributeLabel">
-            <styles xmi:type="notation:StringListValueStyle" xmi:id="_IzSBwBySEe2LbNhGgE9n_g" name="maskLabel">
-              <stringListValue>visibility</stringListValue>
-              <stringListValue>name</stringListValue>
-              <stringListValue>type</stringListValue>
-              <stringListValue>derived</stringListValue>
-            </styles>
-            <element xmi:type="uml:Property" href="ArkiWeb.uml#_GIB8cBySEe2LbNhGgE9n_g"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_GIEYsBySEe2LbNhGgE9n_g"/>
-          </children>
           <children xmi:type="notation:Shape" xmi:id="_G75CUBySEe2LbNhGgE9n_g" type="Property_InterfaceAttributeLabel">
             <styles xmi:type="notation:StringListValueStyle" xmi:id="_J9z7MBySEe2LbNhGgE9n_g" name="maskLabel">
               <stringListValue>visibility</stringListValue>
@@ -1031,7 +1021,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fSQ61RyTEe2LbNhGgE9n_g"/>
         </children>
         <element xmi:type="uml:Enumeration" href="ArkiWeb.uml#_fRoosByTEe2LbNhGgE9n_g"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fSQTwRyTEe2LbNhGgE9n_g" x="514" y="1343" height="160"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fSQTwRyTEe2LbNhGgE9n_g" x="514" y="1323" height="160"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_w7XOkByKEe2LbNhGgE9n_g" type="Interface_Shape_CN">
         <children xmi:type="notation:DecorationNode" xmi:id="_w7X1oByKEe2LbNhGgE9n_g" type="Interface_NameLabel_CN"/>
@@ -1739,6 +1729,10 @@
             <element xmi:type="uml:Operation" href="ArkiWeb.uml#_y7yMUB2JEe2w1qkOeL6yDg"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_y-rIQR2JEe2w1qkOeL6yDg"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_6SMdMCI_Ee2xFKkUcarVNQ" type="Operation_InterfaceOperationLabel">
+            <element xmi:type="uml:Operation" href="ArkiWeb.uml#_6OlvkCI_Ee2xFKkUcarVNQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_6SMdMSI_Ee2xFKkUcarVNQ"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_sxemNh2JEe2w1qkOeL6yDg"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_sxemNx2JEe2w1qkOeL6yDg"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_sxemOB2JEe2w1qkOeL6yDg"/>
@@ -2353,7 +2347,7 @@
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_WotZIByVEe2LbNhGgE9n_g" type="Usage_StereotypeLabel">
       <styles xmi:type="notation:BooleanValueStyle" xmi:id="_dK560ByVEe2LbNhGgE9n_g" name="IS_UPDATED_POSITION" booleanValue="true"/>
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_WotZIRyVEe2LbNhGgE9n_g" x="-50" y="-12"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WotZIRyVEe2LbNhGgE9n_g" x="-44" y="-25"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_WosyERyVEe2LbNhGgE9n_g"/>
     <element xmi:type="uml:Usage" href="ArkiWeb.uml#_WoBcoByVEe2LbNhGgE9n_g"/>

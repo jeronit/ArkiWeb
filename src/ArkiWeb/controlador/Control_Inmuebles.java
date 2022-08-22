@@ -22,17 +22,21 @@ import org.eclipse.emf.ecore.EObject;
 public interface Control_Inmuebles extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
+	 * Registra un nuevo inmueble.
 	 * <!-- end-user-doc -->
+	 * @param		inmueble			Inmueble			Inmueble
 	 * @model inmuebleRequired="true" inmuebleOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void crearInmueble(Inmueble inmueble);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Edita un registro de un inmueble.
 	 * <!-- end-user-doc -->
+	 * @param		inmueble			Inmueble			Inmueble
 	 * @model inmuebleRequired="true" inmuebleOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void editarInmueble(Inmueble inmueble);
 

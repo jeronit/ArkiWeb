@@ -6,6 +6,7 @@
  */
 package ArkiWeb.modelo;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
@@ -96,9 +97,9 @@ public interface Proyectos_En_Ejecucion extends EObject {
 	 * @see #setFecha_inicio_ejecucion_proyecto(Date)
 	 * @see ArkiWeb.modelo.ModeloPackage#getProyectos_En_Ejecucion_Fecha_inicio_ejecucion_proyecto()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getFecha_inicio_ejecucion_proyecto();
+	LocalDateTime getFecha_inicio_ejecucion_proyecto();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Proyectos_En_Ejecucion#getFecha_inicio_ejecucion_proyecto <em>Fecha inicio ejecucion proyecto</em>}' attribute.
@@ -106,9 +107,9 @@ public interface Proyectos_En_Ejecucion extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fecha inicio ejecucion proyecto</em>' attribute.
 	 * @see #getFecha_inicio_ejecucion_proyecto()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setFecha_inicio_ejecucion_proyecto(Date value);
+	void setFecha_inicio_ejecucion_proyecto(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Duracion prevista ejecucion proyecto</b></em>' attribute.
@@ -148,9 +149,9 @@ public interface Proyectos_En_Ejecucion extends EObject {
 	 * @see #setFecha_fin_ejecucion_proyecto(Date)
 	 * @see ArkiWeb.modelo.ModeloPackage#getProyectos_En_Ejecucion_Fecha_fin_ejecucion_proyecto()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getFecha_fin_ejecucion_proyecto();
+	LocalDateTime getFecha_fin_ejecucion_proyecto();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Proyectos_En_Ejecucion#getFecha_fin_ejecucion_proyecto <em>Fecha fin ejecucion proyecto</em>}' attribute.
@@ -158,9 +159,9 @@ public interface Proyectos_En_Ejecucion extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fecha fin ejecucion proyecto</em>' attribute.
 	 * @see #getFecha_fin_ejecucion_proyecto()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setFecha_fin_ejecucion_proyecto(Date value);
+	void setFecha_fin_ejecucion_proyecto(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Proyecto</b></em>' reference.

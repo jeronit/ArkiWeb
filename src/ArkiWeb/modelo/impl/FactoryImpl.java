@@ -58,17 +58,6 @@ public class FactoryImpl extends MinimalEObjectImpl.Container implements Factory
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated 
-	 */
-	public Object crearObjeto(String tipoObjeto) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -79,6 +68,12 @@ public class FactoryImpl extends MinimalEObjectImpl.Container implements Factory
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	@Override
+	public Object crearObjeto(String tipoObjeto) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 } //FactoryImpl

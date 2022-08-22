@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
+import ArkiWeb.modelo.Usuario;
+
 /**
  * @author JTE
  *
@@ -146,24 +148,47 @@ public class Control_UsuariosImpl implements ArkiWeb.controlador.Control_Usuario
 
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Registra un nuevo usuario
+	 * <!-- end-user-doc -->
+	 * @param		usuario			Usuario			Usuario
+	 * @model usuarioRequired="true" usuarioOrdered="false"
+	 */
 	@Override
-	public void crearUsuario(String nombre_usuario, String apellido_usuario, String dni_usuario, int telefono_usuario,
-			String email_usuario, String domicilio_usuario, String contrasenya_usuario) {
-		// TODO Auto-generated method stub
-
+	public void crearUsuario(Usuario usuario) {
+		
+		ArkiWeb.controlador.Borrar.db.crearUsuario(usuario);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Edita los datos de un usuario
+	 * <!-- end-user-doc -->
+	 * @param		usuario			Usuario			Usuario
+	 * @model usuarioRequired="true" usuarioOrdered="false"
+	 */
 	@Override
-	public void editarUsuario_1(int id_usuario, String nombre_usuario, String apellido_usuario, String dni_usuario,
-			int telefono_usuario, String email_usuario, String domicilio_usuario, String contrasenya_usuario) {
-		// TODO Auto-generated method stub
-
+	public void editarUsuario(Usuario usuario) {
+		
+		ArkiWeb.controlador.Borrar.db.editarUsuario(usuario);
+		
 	}
-
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Elimina los datos de un usuario (manteniendo el id para no crear problemas de integridad referencial)
+	 * <!-- end-user-doc -->
+	 * @param		id_Usuario			int			Id de usuario
+	 * @model id_UsuarioDataType="org.eclipse.uml2.types.Integer" id_UsuarioRequired="true" id_UsuarioOrdered="false"
+	 */
 	@Override
 	public void bajaUsuario(int id_Usuario) {
-		// TODO Auto-generated method stub
+		
+		ArkiWeb.controlador.Borrar.db.bajaUsuario(id_Usuario);
 
 	}
+
 
 }

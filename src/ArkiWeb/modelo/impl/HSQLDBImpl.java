@@ -13,7 +13,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -27,8 +26,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
-import ArkiWeb.ListString;
-import ArkiWeb.modelo.Categoria_Certificado;
 import ArkiWeb.modelo.Certificado;
 import ArkiWeb.modelo.Certificados_Asignados;
 import ArkiWeb.modelo.HSQLDB;
@@ -38,8 +35,6 @@ import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Proyectos_Asignados;
 import ArkiWeb.modelo.Proyectos_En_Ejecucion;
 import ArkiWeb.modelo.Rol;
-import ArkiWeb.modelo.Tipo_Certificado;
-import ArkiWeb.modelo.Tipo_Proyecto;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
 import ArkiWeb.modelo.util.Utils;
@@ -462,7 +457,6 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("fecha_visita_certificado");
 		columnas.add("fecha_emision_certificado");
 		columnas.add("categoria_certificado");
-		columnas.add("arquitecto_certificado");
 		columnas.add("coste_certificado");
 		
 		// Añadiendo valores
@@ -476,7 +470,6 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(certificado.getFecha_visita_certificado()));
 		valores_columnas.add(String.valueOf(certificado.getFecha_emision_certificado()));
 		valores_columnas.add(String.valueOf(certificado.getCategoria_certificado()));
-		valores_columnas.add(String.valueOf(certificado.getId_arquitecto_certificado()));
 		valores_columnas.add(String.valueOf(certificado.getCoste_certificado()));
 		
 		// Creando query para obtener objeto
@@ -523,7 +516,6 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("fecha_visita_certificado");
 		columnas.add("fecha_emision_certificado");
 		columnas.add("categoria_certificado");
-		columnas.add("arquitecto_certificado");
 		columnas.add("coste_certificado");
 		
 		// Añadiendo valores
@@ -537,7 +529,6 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(certificado.getFecha_visita_certificado()));
 		valores_columnas.add(String.valueOf(certificado.getFecha_emision_certificado()));
 		valores_columnas.add(String.valueOf(certificado.getCategoria_certificado()));
-		valores_columnas.add(String.valueOf(certificado.getId_arquitecto_certificado()));
 		valores_columnas.add(String.valueOf(certificado.getCoste_certificado()));
 		
 		// Creando query para obtener objeto
@@ -1185,7 +1176,10 @@ public class HSQLDBImpl implements HSQLDB {
 			}
 		}
 		queryString += " FROM " + tabla;
-		queryString += " WHERE " + where_clause;
+		if(where_clause != null || !where_clause.isEmpty()) {
+			queryString += " WHERE " + where_clause;
+		}
+		
 		return queryString;
 	}
 

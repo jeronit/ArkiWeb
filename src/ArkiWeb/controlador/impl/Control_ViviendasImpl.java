@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
+import ArkiWeb.modelo.Vivienda;
+
 /**
  * @author JTE
  *
@@ -146,20 +148,32 @@ public class Control_ViviendasImpl implements ArkiWeb.controlador.Control_Vivien
 
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Registra una nueva vivienda
+	 * <!-- end-user-doc -->
+	 * @param		vivienda			Vivienda			Vivienda
+	 * @model viviendaRequired="true" viviendaOrdered="false"
+	 */
 	@Override
-	public void crearVivienda(String descripcion_vivienda, String direccion_vivienda, int id_inmueble_vivienda,
-			double superficie_terreno_vivienda, double superficie_vivienda, int plantas_vivienda,
-			int habitaciones_vivienda, int banyos_vivienda) {
-		// TODO Auto-generated method stub
-
+	public void crearVivienda(Vivienda vivienda) {
+		
+		ArkiWeb.controlador.Borrar.db.crearVivienda(vivienda);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Edita los datos de una vivienda
+	 * <!-- end-user-doc -->
+	 * @param		vivienda			Vivienda			Vivienda
+	 * @model viviendaRequired="true" viviendaOrdered="false"
+	 */
 	@Override
-	public void editarVivienda(int id_vivienda, String descripcion_vivienda, String direccion_vivienda,
-			int id_inmueble_vivienda, double superficie_terreno_vivienda, double superficie_vivienda,
-			int plantas_vivienda, int habitaciones_vivienda, int banyos_vivienda) {
-		// TODO Auto-generated method stub
-
+	public void editarVivienda(Vivienda vivienda) {
+		
+		ArkiWeb.controlador.Borrar.db.editarVivienda(vivienda);
+		
 	}
 
 }

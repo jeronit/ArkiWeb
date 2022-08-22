@@ -14,12 +14,17 @@ import ArkiWeb.ListProyecto;
 import ArkiWeb.ListUsuario;
 import ArkiWeb.ListVivienda;
 import ArkiWeb.modelo.Certificado;
+import ArkiWeb.modelo.Certificados_Asignados;
 import ArkiWeb.modelo.Inmueble;
+import ArkiWeb.modelo.Permiso;
 import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Proyectos_Asignados;
 import ArkiWeb.modelo.Proyectos_En_Ejecucion;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
+
+import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -35,186 +40,250 @@ import org.eclipse.emf.ecore.EObject;
 public interface Gestor_Busquedas extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de usuarios.
 	 * <!-- end-user-doc -->
+	 * @return			List<Usuario>		Listado de usuarios
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListUsuario listarUsuarios();
+	List<Usuario> listarUsuarios();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un inmueble.
 	 * <!-- end-user-doc -->
+	 * @return			Inmueble			Inmueble
 	 * @model required="true" ordered="false" id_inmuebleDataType="org.eclipse.uml2.types.Integer" id_inmuebleRequired="true" id_inmuebleOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Inmueble buscarInmueble(int id_inmueble);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de permisos.
 	 * <!-- end-user-doc -->
+	 * @return			List<Permiso>		Listado de permisos
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListPermiso listarPermisos();
+	List<Permiso> listarPermisos();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de proyectos.
 	 * <!-- end-user-doc -->
+	 * @return			List<Proyecto>			Listado de proyectos
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListProyecto listarProyectos();
+	List<Proyecto> listarProyectos();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de certificados.
 	 * <!-- end-user-doc -->
+	 * @return			List<Certificado>			Listado de certificados
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListCertificado listarCertificados();
+	List<Certificado> listarCertificados();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de viviendas.
 	 * <!-- end-user-doc -->
+	 * @return			List<Vivienda>		Listado de viviendas
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListVivienda listarViviendas();
+	List<Vivienda> listarViviendas();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de inmuebles.
 	 * <!-- end-user-doc -->
+	 * @return			List<Inmueble>		Listado de inmuebles
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListInmueble listarInmuebles();
+	List<Inmueble> listarInmuebles();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de permisos concedidos al usuario.
 	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id	
+	 * @return					List<Permiso>		Listado de permisos concedidos al usuario
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListPermiso listarPermisosUsuario(int id_usuario);
+	List<Permiso> listarPermisosUsuario(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve una usuario.
 	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return			Usuario			Usuario
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Usuario buscarUsuario(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve una vivienda.
 	 * <!-- end-user-doc -->
+	 * @param	id_vivienda		int					Id
+	 * @return			Vivienda			Vivienda
 	 * @model required="true" ordered="false" id_viviendaDataType="org.eclipse.uml2.types.Integer" id_viviendaRequired="true" id_viviendaOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Vivienda buscarVivienda(int id_vivienda);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un proyecto.
 	 * <!-- end-user-doc -->
+	 * @param	id_proyecto		int					Id
+	 * @return			Proyecto			Proyecto
 	 * @model required="true" ordered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Proyecto buscarProyecto(int id_proyecto);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve un certificado.
 	 * <!-- end-user-doc -->
+	 * @param	id_certificado		int					Id
+	 * @return			Certificado			Certificado
 	 * @model required="true" ordered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Certificado buscarCertificado(int id_certificado);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve los proyectos asignados a un usuario. 
 	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return			List<Proyecto>		Listado de proyectos asignados a un usuario
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListProyecto buscarMisProyectos(int id_usuario);
+	List<Proyecto> buscarMisProyectos(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve los proyectos asignados a un usuario.
 	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return		List<Proyecto>			Listado de proyectos asignados a un usuario
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListProyecto buscarProyectosPorUsuario(int id_usuario);
+	List<Proyecto> buscarProyectosPorUsuario(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a un usuario.
 	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return		List<Certificado>			Listado de certificados asignados a un usuario
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListCertificado buscarMisCertificados(int id_usuario);
+	List<Certificado> buscarMisCertificados(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a un usuario.
 	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return		List<Certificado>			Listado de certificados asignados a un usuario
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListCertificado buscarCertificadosPorUsuario(int id_usuario);
+	List<Certificado> buscarCertificadosPorUsuario(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a una vivienda.
 	 * <!-- end-user-doc -->
+	 * @param	id_vivienda		int					Id
+	 * @return		List<Certificado>			Listado de certificados asignados a una vivienda
 	 * @model required="true" ordered="false" id_viviendaDataType="org.eclipse.uml2.types.Integer" id_viviendaRequired="true" id_viviendaOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListCertificado buscarCertificadosPorVivienda(int id_vivienda);
+	List<Certificado> buscarCertificadosPorVivienda(int id_vivienda);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a un inmueble.
 	 * <!-- end-user-doc -->
+	 * @param	id_inmueble		int					Id
+	 * @return		List<Certificado>			Listado de certificados asignados a un inmueble
 	 * @model required="true" ordered="false" id_inmuebleDataType="org.eclipse.uml2.types.Integer" id_inmuebleRequired="true" id_inmuebleOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListCertificado buscarCertificadosPorInmueble(int id_inmueble);
+	List<Certificado> buscarCertificadosPorInmueble(int id_inmueble);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a un inmueble con una edad igual o superior a la indicada en la entrada.
 	 * <!-- end-user-doc -->
+	 * @param	edad		int					Edad inmueble
+	 * @return		List<Certificado>			Listado de certificados asignados a un inmueble con una edad igual o superior a la indicada en la entrada
 	 * @model required="true" ordered="false" edadDataType="org.eclipse.uml2.types.Integer" edadRequired="true" edadOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListCertificado buscarCertificadosPorEdadInmueble(int edad);
+	List<Certificado> buscarCertificadosPorEdadInmueble(int edad);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados de un inmueble con una edad del certificado de habitabilidad igual o superior a la indicada en la entrada.
 	 * <!-- end-user-doc -->
+	 * @param	edad		int					Edad certificados de habitabilidad
+	 * @return		List<Certificado>			Listado de certificados asignados a un inmueble con una edad del certificado de habitabilidad igual o superior a la indicada en la entrada
 	 * @model required="true" ordered="false" edadDataType="org.eclipse.uml2.types.Integer" edadRequired="true" edadOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListCertificado buscarCertificadosPorEdadCertificadoHabitabilidad(int edad);
+	List<Certificado> buscarCertificadosPorEdadCertificadoHabitabilidad(int edad);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Busca la asignación de un arquitecto a un proyecto.
 	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @param	id_proyecto		int					Id
+	 * @return			Proyectos_Asignados			Asignación de un arquitecto a un proyecto
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Proyectos_Asignados buscarAsignacionProyecto(int id_usuario, int id_proyecto);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Busca la contratación de un proyecto.
 	 * <!-- end-user-doc -->
+	 * @param	id_proyecto		int					Id
+	 * @return			Proyectos_En_Ejecucion		Contratación de un proyecto
 	 * @model required="true" ordered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Proyectos_En_Ejecucion buscarContratacionProyecto(int id_proyecto);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Busca la asignación de un arquitecto a un certificado.
 	 * <!-- end-user-doc -->
+	 * @param	id_usuario			int					Id
+	 * @param	id_certificado		int					Id
+	 * @return			List<Certificados_Asignados>		Asignación de un arquitecto a un certificado
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	ListCertificados_Asignados buscarAsignacionCertificado(int id_usuario, int id_certificado);
+	List<Certificados_Asignados> buscarAsignacionCertificado(int id_usuario, int id_certificado);
 
 } // Gestor_Busquedas

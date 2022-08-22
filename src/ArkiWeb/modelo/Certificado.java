@@ -6,6 +6,7 @@
  */
 package ArkiWeb.modelo;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
@@ -30,7 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ArkiWeb.modelo.Certificado#getFecha_visita_certificado <em>Fecha visita certificado</em>}</li>
  *   <li>{@link ArkiWeb.modelo.Certificado#getFecha_emision_certificado <em>Fecha emision certificado</em>}</li>
  *   <li>{@link ArkiWeb.modelo.Certificado#getCategoria_certificado <em>Categoria certificado</em>}</li>
- *   <li>{@link ArkiWeb.modelo.Certificado#getId_arquitecto_certificado <em>Id arquitecto certificado</em>}</li>
  *   <li>{@link ArkiWeb.modelo.Certificado#getCoste_certificado <em>Coste certificado</em>}</li>
  *   <li>{@link ArkiWeb.modelo.Certificado#getInmueble <em>Inmueble</em>}</li>
  *   <li>{@link ArkiWeb.modelo.Certificado#getUsuario <em>Usuario</em>}</li>
@@ -213,9 +213,9 @@ public interface Certificado extends EObject {
 	 * @see #setFecha_solicitud_certificado(Date)
 	 * @see ArkiWeb.modelo.ModeloPackage#getCertificado_Fecha_solicitud_certificado()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getFecha_solicitud_certificado();
+	LocalDateTime getFecha_solicitud_certificado();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getFecha_solicitud_certificado <em>Fecha solicitud certificado</em>}' attribute.
@@ -223,9 +223,9 @@ public interface Certificado extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fecha solicitud certificado</em>' attribute.
 	 * @see #getFecha_solicitud_certificado()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setFecha_solicitud_certificado(Date value);
+	void setFecha_solicitud_certificado(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Fecha entrega certificado</b></em>' attribute.
@@ -239,9 +239,9 @@ public interface Certificado extends EObject {
 	 * @see #setFecha_entrega_certificado(Date)
 	 * @see ArkiWeb.modelo.ModeloPackage#getCertificado_Fecha_entrega_certificado()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getFecha_entrega_certificado();
+	LocalDateTime getFecha_entrega_certificado();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getFecha_entrega_certificado <em>Fecha entrega certificado</em>}' attribute.
@@ -249,9 +249,9 @@ public interface Certificado extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fecha entrega certificado</em>' attribute.
 	 * @see #getFecha_entrega_certificado()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setFecha_entrega_certificado(Date value);
+	void setFecha_entrega_certificado(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Fecha visita certificado</b></em>' attribute.
@@ -265,9 +265,9 @@ public interface Certificado extends EObject {
 	 * @see #setFecha_visita_certificado(Date)
 	 * @see ArkiWeb.modelo.ModeloPackage#getCertificado_Fecha_visita_certificado()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getFecha_visita_certificado();
+	LocalDateTime getFecha_visita_certificado();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getFecha_visita_certificado <em>Fecha visita certificado</em>}' attribute.
@@ -275,9 +275,9 @@ public interface Certificado extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fecha visita certificado</em>' attribute.
 	 * @see #getFecha_visita_certificado()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setFecha_visita_certificado(Date value);
+	void setFecha_visita_certificado(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Fecha emision certificado</b></em>' attribute.
@@ -291,19 +291,19 @@ public interface Certificado extends EObject {
 	 * @see #setFecha_emision_certificado(Date)
 	 * @see ArkiWeb.modelo.ModeloPackage#getCertificado_Fecha_emision_certificado()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getFecha_emision_certificado();
+	LocalDateTime getFecha_emision_certificado();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getFecha_emision_certificado <em>Fecha emision certificado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fecha emision certificado</em>' attribute.
+	 * @param now the new value of the '<em>Fecha emision certificado</em>' attribute.
 	 * @see #getFecha_emision_certificado()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setFecha_emision_certificado(Date value);
+	void setFecha_emision_certificado(LocalDateTime now);
 
 	/**
 	 * Returns the value of the '<em><b>Categoria certificado</b></em>' attribute.
@@ -333,32 +333,6 @@ public interface Certificado extends EObject {
 	 * @generated
 	 */
 	void setCategoria_certificado(Categoria_Certificado value);
-
-	/**
-	 * Returns the value of the '<em><b>Id arquitecto certificado</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id arquitecto certificado</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id arquitecto certificado</em>' attribute.
-	 * @see #setId_arquitecto_certificado(int)
-	 * @see ArkiWeb.modelo.ModeloPackage#getCertificado_Id_arquitecto_certificado()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
-	 * @generated
-	 */
-	int getId_arquitecto_certificado();
-
-	/**
-	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getId_arquitecto_certificado <em>Id arquitecto certificado</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id arquitecto certificado</em>' attribute.
-	 * @see #getId_arquitecto_certificado()
-	 * @generated
-	 */
-	void setId_arquitecto_certificado(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Coste certificado</b></em>' attribute.

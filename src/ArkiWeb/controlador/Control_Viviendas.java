@@ -22,17 +22,21 @@ import org.eclipse.emf.ecore.EObject;
 public interface Control_Viviendas extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
+	 * Registra una nueva vivienda
 	 * <!-- end-user-doc -->
+	 * @param		vivienda			Vivienda			Vivienda
 	 * @model viviendaRequired="true" viviendaOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void crearVivienda(Vivienda vivienda);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Edita los datos de una vivienda
 	 * <!-- end-user-doc -->
+	 * @param		vivienda			Vivienda			Vivienda
 	 * @model viviendaRequired="true" viviendaOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void editarVivienda(Vivienda vivienda);
 

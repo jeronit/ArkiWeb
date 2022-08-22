@@ -24,49 +24,61 @@ import org.eclipse.emf.ecore.EObject;
 public interface Control_Proyectos extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
+	 * Registra un nuevo proyecto
 	 * <!-- end-user-doc -->
+	 * @param		proyecto		Proyecto		Proyecto
 	 * @model proyectoRequired="true" proyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void crearProyecto(Proyecto proyecto);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Edita un proyecto
 	 * <!-- end-user-doc -->
+	 * @param		proyecto		Proyecto		Proyecto
 	 * @model proyectoRequired="true" proyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void editarProyecto(Proyecto proyecto);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Registra un nueva asignación de un proyecto
 	 * <!-- end-user-doc -->
+	 * @param		asignacionProyecto			Proyectos_Asignados					Asignación de un proyecto
 	 * @model asignacionProyectoRequired="true" asignacionProyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void asignarProyecto(Proyectos_Asignados asignacionProyecto);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Edita la asignación de un proyecto
 	 * <!-- end-user-doc -->
+	 * @param		asignacionProyecto			Proyectos_Asignados					Asignación de un proyecto
 	 * @model asignacionProyectoRequired="true" asignacionProyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void editarAsignacionProyecto(Proyectos_Asignados asignacionProyecto);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Registra un nueva contratación de un proyecto
 	 * <!-- end-user-doc -->
+	 * @param		contratacionProyecto			Proyectos_En_Ejecucion			Contratación de un proyecto
 	 * @model contratacionProyectoRequired="true" contratacionProyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void contratarProyecto(Proyectos_En_Ejecucion contratacionProyecto);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Edita la contratación de un proyecto
 	 * <!-- end-user-doc -->
+	 * @param		contratacionProyecto			Proyectos_En_Ejecucion			Contratación de un proyecto
 	 * @model contratacionProyectoRequired="true" contratacionProyectoOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	void editarContratacionProyecto(Proyectos_En_Ejecucion contratacionProyecto);
 

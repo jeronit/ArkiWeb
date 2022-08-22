@@ -189,8 +189,6 @@
           ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="categoria_certificado"
           ordered="false" lowerBound="1" eType="#//modelo/Categoria_Certificado"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id_arquitecto_certificado"
-          ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="coste_certificado" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="inmueble" ordered="false"
@@ -217,7 +215,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HSQLDB" abstract="true" interface="true">
       <eOperations name="crearUsuario" ordered="false" lowerBound="1">
-        <eParameters name="ususario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>
+        <eParameters name="usuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>
       </eOperations>
       <eOperations name="editarUsuario" ordered="false" lowerBound="1">
         <eParameters name="usuario" ordered="false" lowerBound="1" eType="#//modelo/Usuario"/>

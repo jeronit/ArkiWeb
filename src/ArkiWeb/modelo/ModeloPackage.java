@@ -768,22 +768,13 @@ public interface ModeloPackage extends EPackage {
 	int CERTIFICADO__CATEGORIA_CERTIFICADO = 10;
 
 	/**
-	 * The feature id for the '<em><b>Id arquitecto certificado</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CERTIFICADO__ID_ARQUITECTO_CERTIFICADO = 11;
-
-	/**
 	 * The feature id for the '<em><b>Coste certificado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CERTIFICADO__COSTE_CERTIFICADO = 12;
+	int CERTIFICADO__COSTE_CERTIFICADO = 11;
 
 	/**
 	 * The feature id for the '<em><b>Inmueble</b></em>' reference.
@@ -792,7 +783,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CERTIFICADO__INMUEBLE = 13;
+	int CERTIFICADO__INMUEBLE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Usuario</b></em>' reference.
@@ -801,7 +792,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CERTIFICADO__USUARIO = 14;
+	int CERTIFICADO__USUARIO = 13;
 
 	/**
 	 * The feature id for the '<em><b>Vivienda</b></em>' reference.
@@ -810,7 +801,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CERTIFICADO__VIVIENDA = 15;
+	int CERTIFICADO__VIVIENDA = 14;
 
 	/**
 	 * The number of structural features of the '<em>Certificado</em>' class.
@@ -819,7 +810,7 @@ public interface ModeloPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CERTIFICADO_FEATURE_COUNT = 16;
+	int CERTIFICADO_FEATURE_COUNT = 15;
 
 	/**
 	 * The number of operations of the '<em>Certificado</em>' class.
@@ -2181,17 +2172,6 @@ public interface ModeloPackage extends EPackage {
 	EAttribute getCertificado_Categoria_certificado();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ArkiWeb.modelo.Certificado#getId_arquitecto_certificado <em>Id arquitecto certificado</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id arquitecto certificado</em>'.
-	 * @see ArkiWeb.modelo.Certificado#getId_arquitecto_certificado()
-	 * @see #getCertificado()
-	 * @generated
-	 */
-	EAttribute getCertificado_Id_arquitecto_certificado();
-
-	/**
 	 * Returns the meta object for the attribute '{@link ArkiWeb.modelo.Certificado#getCoste_certificado <em>Coste certificado</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3378,14 +3358,6 @@ public interface ModeloPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CERTIFICADO__CATEGORIA_CERTIFICADO = eINSTANCE.getCertificado_Categoria_certificado();
-
-		/**
-		 * The meta object literal for the '<em><b>Id arquitecto certificado</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CERTIFICADO__ID_ARQUITECTO_CERTIFICADO = eINSTANCE.getCertificado_Id_arquitecto_certificado();
 
 		/**
 		 * The meta object literal for the '<em><b>Coste certificado</b></em>' attribute feature.

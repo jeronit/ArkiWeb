@@ -7,6 +7,9 @@
 package ArkiWeb.controlador.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -158,142 +161,417 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de usuarios.
+	 * <!-- end-user-doc -->
+	 * @return			List<Usuario>		Listado de usuarios
+	 * @model required="true" ordered="false"
+	 */
 	@Override
 	public List<Usuario> listarUsuarios() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un inmueble.
+	 * <!-- end-user-doc -->
+	 * @return			Inmueble			Inmueble
+	 * @model required="true" ordered="false" id_inmuebleDataType="org.eclipse.uml2.types.Integer" id_inmuebleRequired="true" id_inmuebleOrdered="false"
+	 */
 	@Override
 	public Inmueble buscarInmueble(int id_inmueble) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return ArkiWeb.controlador.Borrar.db.buscarInmueble(id_inmueble);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de permisos.
+	 * <!-- end-user-doc -->
+	 * @return			List<Permiso>		Listado de permisos
+	 * @model required="true" ordered="false"
+	 */
 	@Override
 	public List<Permiso> listarPermisos() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Permiso> resultado = new ArrayList<Permiso>();
+		String tabla = "PERMISOS";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Permiso) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de proyectos.
+	 * <!-- end-user-doc -->
+	 * @return			List<Proyecto>			Listado de proyectos
+	 * @model required="true" ordered="false"
+	 */
 	@Override
 	public List<Proyecto> listarProyectos() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Proyecto> resultado = new ArrayList<Proyecto>();
+		String tabla = "PROYECTOS";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Proyecto) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de certificados.
+	 * <!-- end-user-doc -->
+	 * @return			List<Certificado>			Listado de certificados
+	 * @model required="true" ordered="false"
+	 */
 	@Override
 	public List<Certificado> listarCertificados() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Certificado> resultado = new ArrayList<Certificado>();
+		String tabla = "CERTIFICADOS";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Certificado) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de viviendas.
+	 * <!-- end-user-doc -->
+	 * @return			List<Vivienda>		Listado de viviendas
+	 * @model required="true" ordered="false"
+	 */
 	@Override
 	public List<Vivienda> listarViviendas() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Vivienda> resultado = new ArrayList<Vivienda>();
+		String tabla = "VIVIENDAS";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Vivienda) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de inmuebles.
+	 * <!-- end-user-doc -->
+	 * @return			List<Inmueble>		Listado de inmuebles
+	 * @model required="true" ordered="false"
+	 */
 	@Override
 	public List<Inmueble> listarInmuebles() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Inmueble> resultado = new ArrayList<Inmueble>();
+		String tabla = "INMUEBLES";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Inmueble) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de permisos concedidos al usuario.
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id	
+	 * @return					List<Permiso>		Listado de permisos concedidos al usuario
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
+	 */
 	@Override
 	public List<Permiso> listarPermisosUsuario(int id_usuario) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Inmueble> resultado = new ArrayList<Inmueble>();
+		String tabla = "PERMISOS";
+		String where_clause = "id_usuario";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Inmueble) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve una usuario.
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return			Usuario			Usuario
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
+	 */
 	@Override
 	public Usuario buscarUsuario(int id_usuario) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve una vivienda.
+	 * <!-- end-user-doc -->
+	 * @param	id_vivienda		int					Id
+	 * @return			Vivienda			Vivienda
+	 * @model required="true" ordered="false" id_viviendaDataType="org.eclipse.uml2.types.Integer" id_viviendaRequired="true" id_viviendaOrdered="false"
+	 */
 	@Override
 	public Vivienda buscarVivienda(int id_vivienda) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un proyecto.
+	 * <!-- end-user-doc -->
+	 * @param	id_proyecto		int					Id
+	 * @return			Proyecto			Proyecto
+	 * @model required="true" ordered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
+	 */
 	@Override
 	public Proyecto buscarProyecto(int id_proyecto) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un certificado.
+	 * <!-- end-user-doc -->
+	 * @param	id_certificado		int					Id
+	 * @return			Certificado			Certificado
+	 * @model required="true" ordered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
+	 */
 	@Override
 	public Certificado buscarCertificado(int id_certificado) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve los proyectos asignados a un usuario. 
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return			List<Proyecto>		Listado de proyectos asignados a un usuario
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
+	 */
 	@Override
 	public List<Proyecto> buscarMisProyectos(int id_usuario) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Inmueble> resultado = new ArrayList<Inmueble>();
+		String tabla = "PROYECTOS";
+		String where_clause = "id_usuario";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Inmueble) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve los proyectos asignados a un usuario.
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return		List<Proyecto>			Listado de proyectos asignados a un usuario
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
+	 */
 	@Override
 	public List<Proyecto> buscarProyectosPorUsuario(int id_usuario) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a un usuario.
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return		List<Certificado>			Listado de certificados asignados a un usuario
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
+	 */
 	@Override
 	public List<Certificado> buscarMisCertificados(int id_usuario) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a un usuario.
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @return		List<Certificado>			Listado de certificados asignados a un usuario
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
+	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorUsuario(int id_usuario) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a una vivienda.
+	 * <!-- end-user-doc -->
+	 * @param	id_vivienda		int					Id
+	 * @return		List<Certificado>			Listado de certificados asignados a una vivienda
+	 * @model required="true" ordered="false" id_viviendaDataType="org.eclipse.uml2.types.Integer" id_viviendaRequired="true" id_viviendaOrdered="false"
+	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorVivienda(int id_vivienda) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a un inmueble.
+	 * <!-- end-user-doc -->
+	 * @param	id_inmueble		int					Id
+	 * @return		List<Certificado>			Listado de certificados asignados a un inmueble
+	 * @model required="true" ordered="false" id_inmuebleDataType="org.eclipse.uml2.types.Integer" id_inmuebleRequired="true" id_inmuebleOrdered="false"
+	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorInmueble(int id_inmueble) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados asignados a un inmueble con una edad igual o superior a la indicada en la entrada.
+	 * <!-- end-user-doc -->
+	 * @param	edad		int					Edad inmueble
+	 * @return		List<Certificado>			Listado de certificados asignados a un inmueble con una edad igual o superior a la indicada en la entrada
+	 * @model required="true" ordered="false" edadDataType="org.eclipse.uml2.types.Integer" edadRequired="true" edadOrdered="false"
+	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorEdadInmueble(int edad) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve los certificados de un inmueble con una edad del certificado de habitabilidad igual o superior a la indicada en la entrada.
+	 * <!-- end-user-doc -->
+	 * @param	edad		int					Edad certificados de habitabilidad
+	 * @return		List<Certificado>			Listado de certificados asignados a un inmueble con una edad del certificado de habitabilidad igual o superior a la indicada en la entrada
+	 * @model required="true" ordered="false" edadDataType="org.eclipse.uml2.types.Integer" edadRequired="true" edadOrdered="false"
+	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorEdadCertificadoHabitabilidad(int edad) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Busca la asignación de un arquitecto a un proyecto.
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario		int					Id
+	 * @param	id_proyecto		int					Id
+	 * @return			Proyectos_Asignados			Asignación de un arquitecto a un proyecto
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
+	 */
 	@Override
 	public Proyectos_Asignados buscarAsignacionProyecto(int id_usuario, int id_proyecto) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Busca la contratación de un proyecto.
+	 * <!-- end-user-doc -->
+	 * @param	id_proyecto		int					Id
+	 * @return			Proyectos_En_Ejecucion		Contratación de un proyecto
+	 * @model required="true" ordered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
+	 */
 	@Override
 	public Proyectos_En_Ejecucion buscarContratacionProyecto(int id_proyecto) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Busca la asignación de un arquitecto a un certificado.
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario			int					Id
+	 * @param	id_certificado		int					Id
+	 * @return			List<Certificados_Asignados>		Asignación de un arquitecto a un certificado
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
+	 */
 	@Override
 	public List<Certificados_Asignados> buscarAsignacionCertificado(int id_usuario, int id_certificado) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

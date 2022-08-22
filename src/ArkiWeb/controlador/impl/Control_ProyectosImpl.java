@@ -21,179 +21,326 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
 import ArkiWeb.modelo.Certificado;
+import ArkiWeb.modelo.Proyecto;
+import ArkiWeb.modelo.Proyectos_Asignados;
+import ArkiWeb.modelo.Proyectos_En_Ejecucion;
 import ArkiWeb.modelo.Tipo_Proyecto;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author JTE
+ * The Class Control_ProyectosImpl.
  *
+ * @author JTE
  */
 public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyectos {
 
 	/**
-	 * 
+	 * Instantiates a new control proyectos impl.
 	 */
 	public Control_ProyectosImpl() {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * E all contents.
+	 *
+	 * @return the tree iterator
+	 */
 	@Override
 	public TreeIterator<EObject> eAllContents() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E class.
+	 *
+	 * @return the e class
+	 */
 	@Override
 	public EClass eClass() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E container.
+	 *
+	 * @return the e object
+	 */
 	@Override
 	public EObject eContainer() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E containing feature.
+	 *
+	 * @return the e structural feature
+	 */
 	@Override
 	public EStructuralFeature eContainingFeature() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E containment feature.
+	 *
+	 * @return the e reference
+	 */
 	@Override
 	public EReference eContainmentFeature() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E contents.
+	 *
+	 * @return the e list
+	 */
 	@Override
 	public EList<EObject> eContents() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E cross references.
+	 *
+	 * @return the e list
+	 */
 	@Override
 	public EList<EObject> eCrossReferences() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E get.
+	 *
+	 * @param arg0 the arg 0
+	 * @return the object
+	 */
 	@Override
 	public Object eGet(EStructuralFeature arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E get.
+	 *
+	 * @param arg0 the arg 0
+	 * @param arg1 the arg 1
+	 * @return the object
+	 */
 	@Override
 	public Object eGet(EStructuralFeature arg0, boolean arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E invoke.
+	 *
+	 * @param arg0 the arg 0
+	 * @param arg1 the arg 1
+	 * @return the object
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	@Override
 	public Object eInvoke(EOperation arg0, EList<?> arg1) throws InvocationTargetException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E is proxy.
+	 *
+	 * @return true, if successful
+	 */
 	@Override
 	public boolean eIsProxy() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/**
+	 * E is set.
+	 *
+	 * @param arg0 the arg 0
+	 * @return true, if successful
+	 */
 	@Override
 	public boolean eIsSet(EStructuralFeature arg0) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/**
+	 * E resource.
+	 *
+	 * @return the resource
+	 */
 	@Override
 	public Resource eResource() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E set.
+	 *
+	 * @param arg0 the arg 0
+	 * @param arg1 the arg 1
+	 */
 	@Override
 	public void eSet(EStructuralFeature arg0, Object arg1) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * E unset.
+	 *
+	 * @param arg0 the arg 0
+	 */
 	@Override
 	public void eUnset(EStructuralFeature arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * E adapters.
+	 *
+	 * @return the e list
+	 */
 	@Override
 	public EList<Adapter> eAdapters() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E deliver.
+	 *
+	 * @return true, if successful
+	 */
 	@Override
 	public boolean eDeliver() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/**
+	 * E notify.
+	 *
+	 * @param arg0 the arg 0
+	 */
 	@Override
 	public void eNotify(Notification arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * E set deliver.
+	 *
+	 * @param arg0 the arg 0
+	 */
 	@Override
 	public void eSetDeliver(boolean arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Registra un nuevo proyecto
+	 * <!-- end-user-doc -->
+	 * @param		proyecto		Proyecto		Proyecto
+	 * @model proyectoRequired="true" proyectoOrdered="false"
+	 */
 	@Override
-	public void editarProyecto(int id_proyecto, String descripcion_proyecto, Certificado cliente_proyecto,
-			int vivienda_proyecto, int inmueble_proyecto, Tipo_Proyecto tipo_proyecto, Date fecha_solicitud_proyecto,
-			Date fecha_entrega_proyecto, int duracion_prevista_proyecto, double presupuesto_ejecucion_proyecto,
-			double superficie_proyecto, int arquitecto_proyecto, double coste_proyecto) {
-		// TODO Auto-generated method stub
-
+	public void crearProyecto(Proyecto proyecto) {
+		
+		ArkiWeb.controlador.Borrar.db.crearProyecto(proyecto);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Edita un proyecto
+	 * <!-- end-user-doc -->
+	 * @param		proyecto		Proyecto		Proyecto
+	 * @model proyectoRequired="true" proyectoOrdered="false"
+	 */
 	@Override
-	public void editarContratacionProyecto(int id_ejecucion_proyecto, int id_proyecto_ejecucion_proyecto,
-			Date fecha_inicio_ejecucion_proyecto, int duracion_prevista_ejecucion_proyecto,
-			Date fecha_fin_ejecucion_proyecto) {
-		// TODO Auto-generated method stub
-
+	public void editarProyecto(Proyecto proyecto) {
+		
+		ArkiWeb.controlador.Borrar.db.editarProyecto(proyecto);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Registra un nueva asignación de un proyecto
+	 * <!-- end-user-doc -->
+	 * @param		asignacionProyecto			Proyectos_Asignados					Asignación de un proyecto
+	 * @model asignacionProyectoRequired="true" asignacionProyectoOrdered="false"
+	 */
 	@Override
-	public void asignarProyecto(int id_proyecto_proyecto_asignado, int arquitecto_certificado_asignado) {
-		// TODO Auto-generated method stub
-
+	public void asignarProyecto(Proyectos_Asignados asignacionProyecto) {
+		
+		ArkiWeb.controlador.Borrar.db.asignarProyecto(asignacionProyecto);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Edita la asignación de un proyecto
+	 * <!-- end-user-doc -->
+	 * @param		asignacionProyecto			Proyectos_Asignados					Asignación de un proyecto
+	 * @model asignacionProyectoRequired="true" asignacionProyectoOrdered="false"
+	 */
 	@Override
-	public void contratarProyecto(int id_proyecto_ejecucion_proyecto, Date fecha_inicio_ejecucion_proyecto,
-			int duracion_prevista_ejecucion_proyecto, Date fecha_fin_ejecucion_proyecto) {
-		// TODO Auto-generated method stub
+	public void editarAsignacionProyecto(Proyectos_Asignados asignacionProyecto) {
 
+		ArkiWeb.controlador.Borrar.db.editarAsignacionProyecto(asignacionProyecto);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Registra un nueva contratación de un proyecto
+	 * <!-- end-user-doc -->
+	 * @param		contratacionProyecto			Proyectos_En_Ejecucion			Contratación de un proyecto
+	 * @model contratacionProyectoRequired="true" contratacionProyectoOrdered="false"
+	 */
 	@Override
-	public void crearProyecto(String descripcion_proyecto, Certificado cliente_proyecto, int vivienda_proyecto,
-			int inmueble_proyecto, Tipo_Proyecto tipo_proyecto, Date fecha_solicitud_proyecto,
-			Date fecha_entrega_proyecto, int duracion_prevista_proyecto, double presupuesto_ejecucion_proyecto,
-			double superficie_proyecto, int arquitecto_proyecto, double coste_proyecto) {
-		// TODO Auto-generated method stub
-
+	public void contratarProyecto(Proyectos_En_Ejecucion contratacionProyecto) {
+		
+		ArkiWeb.controlador.Borrar.db.contratarProyecto(contratacionProyecto);
+		
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * Edita la contratación de un proyecto
+	 * <!-- end-user-doc -->
+	 * @param		contratacionProyecto			Proyectos_En_Ejecucion			Contratación de un proyecto
+	 * @model contratacionProyectoRequired="true" contratacionProyectoOrdered="false"
+	 */
 	@Override
-	public void editarAsignacionProyecto(int id_proyecto_asignado, int id_proyecto_proyecto_asignado,
-			int arquitecto_certificado_asignado) {
-		// TODO Auto-generated method stub
+	public void editarContratacionProyecto(Proyectos_En_Ejecucion contratacionProyecto) {
 
+		ArkiWeb.controlador.Borrar.db.editarContratacionProyecto(contratacionProyecto);
+		
 	}
 
+	
 }

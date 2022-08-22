@@ -6,6 +6,7 @@
  */
 package ArkiWeb.modelo;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
@@ -212,9 +213,9 @@ public interface Proyecto extends EObject {
 	 * @see #setFecha_solicitud_proyecto(Date)
 	 * @see ArkiWeb.modelo.ModeloPackage#getProyecto_Fecha_solicitud_proyecto()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getFecha_solicitud_proyecto();
+	LocalDateTime getFecha_solicitud_proyecto();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Proyecto#getFecha_solicitud_proyecto <em>Fecha solicitud proyecto</em>}' attribute.
@@ -222,9 +223,9 @@ public interface Proyecto extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fecha solicitud proyecto</em>' attribute.
 	 * @see #getFecha_solicitud_proyecto()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setFecha_solicitud_proyecto(Date value);
+	void setFecha_solicitud_proyecto(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Fecha entrega proyecto</b></em>' attribute.
@@ -238,9 +239,9 @@ public interface Proyecto extends EObject {
 	 * @see #setFecha_entrega_proyecto(Date)
 	 * @see ArkiWeb.modelo.ModeloPackage#getProyecto_Fecha_entrega_proyecto()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	Date getFecha_entrega_proyecto();
+	LocalDateTime getFecha_entrega_proyecto();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Proyecto#getFecha_entrega_proyecto <em>Fecha entrega proyecto</em>}' attribute.
@@ -248,9 +249,9 @@ public interface Proyecto extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fecha entrega proyecto</em>' attribute.
 	 * @see #getFecha_entrega_proyecto()
-	 * @generated
+	 * @generated NOT
 	 */
-	void setFecha_entrega_proyecto(Date value);
+	void setFecha_entrega_proyecto(LocalDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Duracion prevista proyecto</b></em>' attribute.

@@ -6,10 +6,24 @@
  */
 package ArkiWeb.controlador.impl;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 import ArkiWeb.controlador.BBDD_Generar_Datos_Demo;
 import ArkiWeb.controlador.Borrar;
+import ArkiWeb.modelo.Categoria_Certificado;
+import ArkiWeb.modelo.Certificado;
+import ArkiWeb.modelo.Certificados_Asignados;
+import ArkiWeb.modelo.Inmueble;
+import ArkiWeb.modelo.Proyecto;
+import ArkiWeb.modelo.Proyectos_Asignados;
+import ArkiWeb.modelo.Proyectos_En_Ejecucion;
 import ArkiWeb.modelo.Rol;
+import ArkiWeb.modelo.Tipo_Certificado;
+import ArkiWeb.modelo.Tipo_Proyecto;
 import ArkiWeb.modelo.Usuario;
+import ArkiWeb.modelo.Vivienda;
 
 /**
  * @author JTE
@@ -121,44 +135,129 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 
 	@Override
 	public void insertarInmuebles() {
-		// TODO Auto-generated method stub
+		Inmueble inmueble1 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
+		Inmueble inmueble2 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
+		Inmueble inmueble3 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
+		
+		inmueble1.setDescripcion_inmueble("inmueble1");
+		inmueble1.setDireccion_inmueble("Dirección inmueble1");
+		inmueble1.setSuperficie_inmueble(537.5);
+		inmueble1.setSuperficie_terreno_inmueble(1537.25);
+		
+		inmueble2.setDescripcion_inmueble("inmueble2");
+		inmueble2.setDireccion_inmueble("Dirección inmueble2");
+		inmueble2.setSuperficie_inmueble(137.5);
+		inmueble2.setSuperficie_terreno_inmueble(137.5);
+		
+		inmueble3.setDescripcion_inmueble("inmueble3");
+		inmueble3.setDireccion_inmueble("Dirección inmueble3");
+		inmueble3.setSuperficie_inmueble(257.55);
+		inmueble3.setSuperficie_terreno_inmueble(257.55);
+		
+		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble1);
+		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble2);
+		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble3);
 
 	}
 
 	@Override
 	public void insertarViviendas() {
-		// TODO Auto-generated method stub
+		Vivienda vivienda1 = (Vivienda) ArkiWeb.controlador.Borrar.factory.crearObjeto("Vivienda");
+		Vivienda vivienda2 = (Vivienda) ArkiWeb.controlador.Borrar.factory.crearObjeto("Vivienda");
+		
+		vivienda1.setDescripcion_vivienda("vivienda1");
+		vivienda1.setDescripcion_vivienda("Direccion vivienda1");
+		vivienda1.setId_inmueble_vivienda(1);
+		vivienda1.setSuperficie_vivienda(137.5);
+		vivienda1.setSuperficie_terreno_vivienda(137.5);
+		vivienda1.setPlantas_vivienda(1);
+		vivienda1.setHabitaciones_vivienda(3);
+		vivienda1.setBanyos_vivienda(2);
+		
+		vivienda2.setDescripcion_vivienda("vivienda2");
+		vivienda2.setDescripcion_vivienda("Direccion vivienda2");
+		vivienda2.setId_inmueble_vivienda(2);
+		vivienda2.setSuperficie_vivienda(257.55);
+		vivienda2.setSuperficie_terreno_vivienda(257.55);
+		vivienda2.setPlantas_vivienda(2);
+		vivienda2.setHabitaciones_vivienda(4);
+		vivienda2.setBanyos_vivienda(3);
+		
+		ArkiWeb.controlador.Borrar.db.crearVivienda(vivienda1);
+		ArkiWeb.controlador.Borrar.db.crearVivienda(vivienda2);
 
 	}
 
 	@Override
 	public void insertarCertificados() {
-		// TODO Auto-generated method stub
-
+		Certificado certificado1 = (Certificado) ArkiWeb.controlador.Borrar.factory.crearObjeto("Certificado");
+		Certificado certificado2 = (Certificado) ArkiWeb.controlador.Borrar.factory.crearObjeto("Certificado");
+		
+		certificado1.setDescripcion_certificado("certificado1");
+		certificado1.setId_cliente_certificado(3);
+		certificado1.setId_vivienda_certificado(0);
+		certificado1.setTipo_certificado(Tipo_Certificado.EFIC_ENERG);
+		certificado1.setFecha_solicitud_certificado(LocalDateTime.now());
+		certificado1.setFecha_visita_certificado(LocalDateTime.now());
+		certificado1.setCategoria_certificado(Categoria_Certificado.B);
+//		certificado1.setId_arquitecto_certificado(0);
+		certificado1.setCoste_certificado(120.0);
+		
+		certificado2.setDescripcion_certificado("certificado1");
+		certificado2.setId_cliente_certificado(4);
+		certificado2.setId_vivienda_certificado(1);
+		certificado2.setTipo_certificado(Tipo_Certificado.ITE);
+		certificado2.setFecha_solicitud_certificado(LocalDateTime.now());
+		
+		ArkiWeb.controlador.Borrar.db.crearCertificado(certificado1);
+		ArkiWeb.controlador.Borrar.db.crearCertificado(certificado2);
 	}
 
 	@Override
 	public void insertarCertificados_Asignados() {
-		// TODO Auto-generated method stub
+		Certificados_Asignados certificado_Asignado = (Certificados_Asignados) ArkiWeb.controlador.Borrar.factory.crearObjeto("Certificados_Asignados");
+		
+		certificado_Asignado.setId_arquitecto_certificado_asignado(0);
+		certificado_Asignado.setId_certificado_certificado_asignado(0);
+		
+		ArkiWeb.controlador.Borrar.db.asignarCertificado(certificado_Asignado);
 
 	}
 
 	@Override
 	public void insertarProyectos() {
-		// TODO Auto-generated method stub
+		Proyecto proyecto = (Proyecto) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyecto");
+		
+		proyecto.setId_cliente_proyecto(5);
+		proyecto.setDescripcion_proyecto("proyecto1");
+		proyecto.setFecha_solicitud_proyecto(LocalDateTime.now());
+		proyecto.setId_vivienda_proyecto(1);
+		proyecto.setTipo_proyecto(Tipo_Proyecto.REHABILITACION);
+		proyecto.setSuperficie_proyecto(125.58);
+		proyecto.setPresupuesto_ejecucion_proyecto(50000.00);
+		proyecto.setDuracion_prevista_proyecto(8);
+		
+		ArkiWeb.controlador.Borrar.db.crearProyecto(proyecto);
 
 	}
 
 	@Override
 	public void insertarProyectos_Asignados() {
-		// TODO Auto-generated method stub
+		Proyectos_Asignados proyecto_Asignado = (Proyectos_Asignados) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_Asignados");
 
+		proyecto_Asignado.setId_arquitecto_proyecto_asignado(1);
+		proyecto_Asignado.setId_proyecto_proyecto_asignado(0);
+		
+		ArkiWeb.controlador.Borrar.db.asignarProyecto(proyecto_Asignado);
 	}
 
 	@Override
 	public void insertarProyectos_Contratados() {
-		// TODO Auto-generated method stub
+		Proyectos_En_Ejecucion proyecto_Contratado = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_Contratados");
 
+		proyecto_Contratado.setId_proyecto_ejecucion_proyecto(1);
+		proyecto_Contratado.setFecha_inicio_ejecucion_proyecto(LocalDateTime.now());
+		proyecto_Contratado.setDuracion_prevista_ejecucion_proyecto(9);
 	}
 
 }
