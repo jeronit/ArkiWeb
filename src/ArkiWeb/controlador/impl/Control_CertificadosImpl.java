@@ -301,14 +301,11 @@ public class Control_CertificadosImpl implements Control_Certificados {
 	 * @model certificadoRequired="true" certificadoOrdered="false"
 	 */
 	@Override
-	public void editarAsignacionCertificado(Certificado certificado, Integer id_arquitecto) {
+	public void editarAsignacionCertificado(Certificados_Asignados certificado_Asignado, Integer id_arquitecto) {
 
-		Certificados_Asignados certificado_Asignado = (Certificados_Asignados) ArkiWeb.controlador.Borrar.factory.crearObjeto("Certificados_Asignados");
-		
 		certificado_Asignado.setId_arquitecto_certificado_asignado(id_arquitecto);
-		certificado_Asignado.setId_certificado_certificado_asignado(certificado.getId_certificado());
 		
-		ArkiWeb.controlador.Borrar.db.editarCertificado(certificado);
+		ArkiWeb.controlador.Borrar.db.editarAsignacionCertificado(certificado_Asignado);
 		
 	}
 

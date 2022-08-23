@@ -19,12 +19,21 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
+import ArkiWeb.controlador.Control_Certificados;
+import ArkiWeb.controlador.Control_Inmuebles;
+import ArkiWeb.controlador.Control_Login;
+import ArkiWeb.controlador.Control_Permisos;
+import ArkiWeb.controlador.Control_Proyectos;
+import ArkiWeb.controlador.Control_Usuarios;
+import ArkiWeb.controlador.Control_Viviendas;
+import ArkiWeb.controlador.Gestor_Busquedas;
+
 /**
  * @author JTE
  *
  */
 public class Control_PermisosImpl implements ArkiWeb.controlador.Control_Permisos {
-
+	
 	/**
 	 * 
 	 */
@@ -146,24 +155,5 @@ public class Control_PermisosImpl implements ArkiWeb.controlador.Control_Permiso
 
 	}
 
-	@Override
-	public void concederAcceso() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void crearPermiso(String descripcion_permiso, String objeto_permiso, boolean lectura_permiso,
-			boolean escritura_permiso) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void editarPermiso(int id_permiso, String descripcion_permiso, String objeto_permiso,
-			boolean lectura_permiso, boolean escritura_permiso) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
 }

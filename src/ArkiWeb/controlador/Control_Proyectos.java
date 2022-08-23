@@ -70,7 +70,7 @@ public interface Control_Proyectos extends EObject {
 	 * @model contratacionProyectoRequired="true" contratacionProyectoOrdered="false"
 	 * @generated NOT
 	 */
-	void contratarProyecto(Proyectos_En_Ejecucion contratacionProyecto);
+	void contratarProyecto(Proyecto proyecto);
 
 	/**
 	 * <!-- begin-user-doc -->

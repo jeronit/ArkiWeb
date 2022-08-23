@@ -9,7 +9,11 @@ package ArkiWeb.controlador.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -31,8 +35,12 @@ import ArkiWeb.modelo.Permiso;
 import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Proyectos_Asignados;
 import ArkiWeb.modelo.Proyectos_En_Ejecucion;
+import ArkiWeb.modelo.Tipo_Certificado;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
+import ArkiWeb.modelo.impl.Certificados_AsignadosImpl;
+import ArkiWeb.modelo.impl.Proyectos_AsignadosImpl;
+import ArkiWeb.modelo.impl.Proyectos_En_EjecucionImpl;
 
 /**
  * @author JTE
@@ -170,8 +178,21 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public List<Usuario> listarUsuarios() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Usuario> resultado = new ArrayList<Usuario>();
+		String tabla = "USUARIOS";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Usuario) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -329,15 +350,18 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	@Override
 	public List<Permiso> listarPermisosUsuario(int id_usuario) {
 		
-		List<Inmueble> resultado = new ArrayList<Inmueble>();
+		List<Permiso> resultado = new ArrayList<Permiso>();
+		// Obteniendo usuario
+		Usuario usuario = buscarUsuario(id_usuario);
+		
 		String tabla = "PERMISOS";
-		String where_clause = "id_usuario";
+		String where_clause = "id_rol_permiso = " + usuario.getRol_usuario();
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
 		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
 		
 		try {
 			while(results.next()) {
-				resultado.add((Inmueble) results);
+				resultado.add((Permiso) results);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -356,8 +380,22 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public Usuario buscarUsuario(int id_usuario) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Usuario resultado = null;
+		String tabla = "USUARIOS";
+		String where_clause = "id_usuario = " + id_usuario;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado = (Usuario) results;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -370,8 +408,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public Vivienda buscarVivienda(int id_vivienda) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return ArkiWeb.controlador.Borrar.db.buscarVivienda(id_vivienda);
+		
 	}
 
 	/**
@@ -384,8 +423,22 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public Proyecto buscarProyecto(int id_proyecto) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Proyecto resultado = null;
+		String tabla = "PROYECTOS";
+		String where_clause = "id_proyecto = " + id_proyecto;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado = (Proyecto) results;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -398,8 +451,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public Certificado buscarCertificado(int id_certificado) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return ArkiWeb.controlador.Borrar.db.buscarCertificado(id_certificado);
+
 	}
 
 	/**
@@ -413,21 +467,7 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	@Override
 	public List<Proyecto> buscarMisProyectos(int id_usuario) {
 		
-		List<Inmueble> resultado = new ArrayList<Inmueble>();
-		String tabla = "PROYECTOS";
-		String where_clause = "id_usuario";
-		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
-		
-		try {
-			while(results.next()) {
-				resultado.add((Inmueble) results);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return resultado;
+		return buscarProyectosPorUsuario(id_usuario);
 	}
 
 	/**
@@ -440,8 +480,23 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public List<Proyecto> buscarProyectosPorUsuario(int id_usuario) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Proyecto> resultado = new ArrayList<Proyecto>();
+		
+		String tabla = "PROYECTOS";
+		String where_clause = "cliente_proyecto = " + id_usuario;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Proyecto) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -454,8 +509,8 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public List<Certificado> buscarMisCertificados(int id_usuario) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return buscarCertificadosPorUsuario(id_usuario);
 	}
 
 	/**
@@ -468,8 +523,23 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorUsuario(int id_usuario) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Certificado> resultado = new ArrayList<Certificado>();
+		
+		String tabla = "CERTIFICADOS";
+		String where_clause = "cliente_certificado = " + id_usuario;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Certificado) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -482,8 +552,23 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorVivienda(int id_vivienda) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Certificado> resultado = new ArrayList<Certificado>();
+		
+		String tabla = "CERTIFICADOS";
+		String where_clause = "vivienda_certificado = " + id_vivienda;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Certificado) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -496,8 +581,23 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorInmueble(int id_inmueble) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Certificado> resultado = new ArrayList<Certificado>();
+		
+		String tabla = "CERTIFICADOS";
+		String where_clause = "inmueble_certificado = " + id_inmueble;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Certificado) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -510,8 +610,34 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorEdadInmueble(int edad) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Certificado> resultado = new ArrayList<Certificado>();
+		
+		Calendar c = Calendar.getInstance();
+		Date date = new Date();
+		c.setTime(date);
+		c.add(date.getYear(), -edad);
+		
+		String tablaInnerQuery = "INMUEBLES";
+		List<String> columnasInnerQuery = new ArrayList<String>();
+		columnasInnerQuery.add("id_inmueble");
+		String where_clauseInnerQuery = "fecha_construccion_inmueble <= " + c;
+		String innerQueryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tablaInnerQuery, columnasInnerQuery, where_clauseInnerQuery);
+		
+		String tabla = "CERTIFICADOS";
+		String where_clause = "inmueble_certificado IN (" + innerQueryString + ")";
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Certificado) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -524,8 +650,28 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public List<Certificado> buscarCertificadosPorEdadCertificadoHabitabilidad(int edad) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Certificado> resultado = new ArrayList<Certificado>();
+		
+		Calendar c = Calendar.getInstance();
+		Date date = new Date();
+		c.setTime(date);
+		c.add(date.getYear(), -edad);
+		
+		String tabla = "CERTIFICADOS";
+		String where_clause = "tipo_certificado = " + Tipo_Certificado.HABITABILIDAD_VALUE + " AND fecha_emision_certificado <= " + edad;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add((Certificado) results);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -539,8 +685,23 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public Proyectos_Asignados buscarAsignacionProyecto(int id_usuario, int id_proyecto) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Proyectos_Asignados resultado = new Proyectos_AsignadosImpl();
+		
+		String tabla = "ASIGNACION_PROYECTOS";
+		String where_clause = "id_proyecto_proyecto_asignado = " + id_proyecto + " AND arquitecto_proyecto_asignado = " + id_usuario;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado = (Proyectos_Asignados) results;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -553,8 +714,23 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 */
 	@Override
 	public Proyectos_En_Ejecucion buscarContratacionProyecto(int id_proyecto) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Proyectos_En_Ejecucion resultado = new Proyectos_En_EjecucionImpl();
+		
+		String tabla = "PROYECTOS_CONTRATADOS";
+		String where_clause = "id_proyecto_ejecucion_proyecto = " + id_proyecto;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado = (Proyectos_En_Ejecucion) results;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	/**
@@ -567,9 +743,24 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
 	 */
 	@Override
-	public List<Certificados_Asignados> buscarAsignacionCertificado(int id_usuario, int id_certificado) {
-		// TODO Auto-generated method stub
-		return null;
+	public Certificados_Asignados buscarAsignacionCertificado(int id_usuario, int id_certificado) {
+		
+		Certificados_Asignados resultado = new Certificados_AsignadosImpl();
+		
+		String tabla = "ASIGNACION_CERTIFICADOS";
+		String where_clause = "id_certificado_certificado_asignado = " + id_certificado + " AND arquitecto_certificado_asignado = " + id_usuario;
+		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		
+		try {
+			while(results.next()) {
+				resultado = (Certificados_Asignados) results;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultado;
 	}
 
 	

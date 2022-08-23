@@ -24,7 +24,7 @@ public class ConcreteFactoryImpl extends FactoryImpl implements ConcreteFactory 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConcreteFactoryImpl() {
+	public ConcreteFactoryImpl() {
 		super();
 	}
 

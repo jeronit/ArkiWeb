@@ -284,6 +284,6 @@ public interface Gestor_Busquedas extends EObject {
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
 	 * @generated NOT
 	 */
-	List<Certificados_Asignados> buscarAsignacionCertificado(int id_usuario, int id_certificado);
+	Certificados_Asignados buscarAsignacionCertificado(int id_usuario, int id_certificado);
 
 } // Gestor_Busquedas

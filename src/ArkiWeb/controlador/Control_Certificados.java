@@ -8,6 +8,7 @@ package ArkiWeb.controlador;
 
 import ArkiWeb.modelo.Categoria_Certificado;
 import ArkiWeb.modelo.Certificado;
+import ArkiWeb.modelo.Certificados_Asignados;
 import ArkiWeb.modelo.Tipo_Certificado;
 
 import java.util.Date;
@@ -50,12 +51,12 @@ public interface Control_Certificados extends EObject {
 	 * <!-- begin-user-doc -->
 	 * Edita la asignación de un arquitecto a un certificado
 	 * <!-- end-user-doc -->
-	 * @param 		certificado			Certificado			Certificado
-	 * @param		id_arquitecto		Integer				Id arquitecto
+	 * @param 		certificado_Asignado			Certificados_Asignados			Certificados Asignados 
+	 * @param		id_arquitecto					Integer							Id arquitecto
 	 * @model certificadoRequired="true" certificadoOrdered="false"
 	 * @generated NOT
 	 */
-	void editarAsignacionCertificado(Certificado certificado, Integer id_arquitecto);
+	void editarAsignacionCertificado(Certificados_Asignados certificado_Asignado, Integer id_arquitecto);
 
 	/**
 	 * <!-- begin-user-doc -->

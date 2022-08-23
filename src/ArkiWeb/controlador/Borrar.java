@@ -19,6 +19,7 @@ public class Borrar {
 
 	public static HSQLDB db;
 	public static ConcreteFactory factory;
+	public Launch_Server launchServer;
 	
 	/**
 	 * 
@@ -26,13 +27,14 @@ public class Borrar {
 	public Borrar() {
 		db = HSQLDBImpl.getInstance();
 		factory = new ConcreteFactoryImpl();
+		launchServer = new Launch_Server("run_hsqldb.bat");
 	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+		Borrar borrar = new Borrar();
 	}
 
 }

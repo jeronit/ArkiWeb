@@ -666,6 +666,16 @@
             <element xmi:type="uml:Property" href="ArkiWeb.uml#_89JZ4ByUEe2LbNhGgE9n_g"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_89OSYRyUEe2LbNhGgE9n_g"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_H29t4CL9Ee2Fma8983oqLg" type="Property_InterfaceAttributeLabel">
+            <styles xmi:type="notation:StringListValueStyle" xmi:id="_bHUkQCL9Ee2Fma8983oqLg" name="maskLabel">
+              <stringListValue>visibility</stringListValue>
+              <stringListValue>name</stringListValue>
+              <stringListValue>type</stringListValue>
+              <stringListValue>derived</stringListValue>
+            </styles>
+            <element xmi:type="uml:Property" href="ArkiWeb.uml#_Hl_SoCL9Ee2Fma8983oqLg"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_H29t4SL9Ee2Fma8983oqLg"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_fqxUtByDEe2LbNhGgE9n_g"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_fqxUtRyDEe2LbNhGgE9n_g"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_fqxUthyDEe2LbNhGgE9n_g"/>

@@ -810,12 +810,14 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("direccion_inmueble");
 		columnas.add("superficie_terreno_inmueble");
 		columnas.add("superficie_inmueble");
+		columnas.add("fecha_construccion_inmueble");
 		
 		// Añadiendo valores
 		valores_columnas.add(inmueble.getDescripcion_inmueble());
 		valores_columnas.add(inmueble.getDireccion_inmueble());
 		valores_columnas.add(String.valueOf(inmueble.getSuperficie_terreno_inmueble()));
 		valores_columnas.add(String.valueOf(inmueble.getSuperficie_inmueble()));
+		valores_columnas.add(String.valueOf(inmueble.getFecha_construccion_inmueble()));
 		
 		// Creando query para obtener objeto
 		String queryString = queryCrear(tabla, columnas, valores_columnas);
