@@ -73,41 +73,41 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		usuario1.setRol_usuario(2);
 		usuario1.setTelefono_usuario("012345678");
 		
-		usuario1.setNombre_usuario("Arquitecto Usuario 02");
-		usuario1.setApellidos_usuario("Apellidos Usuario 02");
-		usuario1.setDomicilio_usuario("Casa Usuario 02");
-		usuario1.setDni_usuario("DNI Usuario 02");
-		usuario1.setContrasenya_usuario("1234");
-		usuario1.setEmail_usuario("emailusuario02@usuario.com");
-		usuario1.setRol_usuario(2);
-		usuario1.setTelefono_usuario("123456789");
+		usuario2.setNombre_usuario("Arquitecto Usuario 02");
+		usuario2.setApellidos_usuario("Apellidos Usuario 02");
+		usuario2.setDomicilio_usuario("Casa Usuario 02");
+		usuario2.setDni_usuario("DNI Usuario 02");
+		usuario2.setContrasenya_usuario("1234");
+		usuario2.setEmail_usuario("emailusuario02@usuario.com");
+		usuario2.setRol_usuario(2);
+		usuario2.setTelefono_usuario("123456789");
 		
-		usuario1.setNombre_usuario("Administrador Usuario 03");
-		usuario1.setApellidos_usuario("Apellidos Usuario 03");
-		usuario1.setDomicilio_usuario("Casa Usuario 03");
-		usuario1.setDni_usuario("DNI Usuario 03");
-		usuario1.setContrasenya_usuario("2345");
-		usuario1.setEmail_usuario("emailusuario03@usuario.com");
-		usuario1.setRol_usuario(3);
-		usuario1.setTelefono_usuario("234567890");
+		usuario3.setNombre_usuario("Administrador Usuario 03");
+		usuario3.setApellidos_usuario("Apellidos Usuario 03");
+		usuario3.setDomicilio_usuario("Casa Usuario 03");
+		usuario3.setDni_usuario("DNI Usuario 03");
+		usuario3.setContrasenya_usuario("2345");
+		usuario3.setEmail_usuario("emailusuario03@usuario.com");
+		usuario3.setRol_usuario(3);
+		usuario3.setTelefono_usuario("234567890");
 		
-		usuario1.setNombre_usuario("Cliente Usuario 04");
-		usuario1.setApellidos_usuario("Apellidos Usuario 04");
-		usuario1.setDomicilio_usuario("Casa Usuario 04");
-		usuario1.setDni_usuario("DNI Usuario 04");
-		usuario1.setContrasenya_usuario("3456");
-		usuario1.setEmail_usuario("emailusuario04@usuario.com");
-		usuario1.setRol_usuario(1);
-		usuario1.setTelefono_usuario("345678901");
+		usuario4.setNombre_usuario("Cliente Usuario 04");
+		usuario4.setApellidos_usuario("Apellidos Usuario 04");
+		usuario4.setDomicilio_usuario("Casa Usuario 04");
+		usuario4.setDni_usuario("DNI Usuario 04");
+		usuario4.setContrasenya_usuario("3456");
+		usuario4.setEmail_usuario("emailusuario04@usuario.com");
+		usuario4.setRol_usuario(1);
+		usuario4.setTelefono_usuario("345678901");
 		
-		usuario1.setNombre_usuario("Cliente Usuario 05");
-		usuario1.setApellidos_usuario("Apellidos Usuario 05");
-		usuario1.setDomicilio_usuario("Casa Usuario 05");
-		usuario1.setDni_usuario("DNI Usuario 05");
-		usuario1.setContrasenya_usuario("4567");
-		usuario1.setEmail_usuario("emailusuario05@usuario.com");
-		usuario1.setRol_usuario(1);
-		usuario1.setTelefono_usuario("987654321");
+		usuario5.setNombre_usuario("Cliente Usuario 05");
+		usuario5.setApellidos_usuario("Apellidos Usuario 05");
+		usuario5.setDomicilio_usuario("Casa Usuario 05");
+		usuario5.setDni_usuario("DNI Usuario 05");
+		usuario5.setContrasenya_usuario("4567");
+		usuario5.setEmail_usuario("emailusuario05@usuario.com");
+		usuario5.setRol_usuario(1);
+		usuario5.setTelefono_usuario("987654321");
 		
 		usuario6.setNombre_usuario("Cliente Usuario 06");
 		usuario6.setApellidos_usuario("Apellidos Usuario 06");
@@ -200,7 +200,6 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		certificado1.setFecha_solicitud_certificado(LocalDateTime.now());
 		certificado1.setFecha_visita_certificado(LocalDateTime.now());
 		certificado1.setCategoria_certificado(Categoria_Certificado.B);
-//		certificado1.setId_arquitecto_certificado(0);
 		certificado1.setCoste_certificado(120.0);
 		
 		certificado2.setDescripcion_certificado("certificado1");

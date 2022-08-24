@@ -38,6 +38,8 @@ import ArkiWeb.modelo.Rol;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
 import ArkiWeb.modelo.util.Utils;
+import ArkiWeb.server.Server_Connection;
+import ArkiWeb.server.impl.Server_ConnectionImpl;
 
 /**
  * @author JTE
@@ -47,12 +49,18 @@ public class HSQLDBImpl implements HSQLDB {
 
 	private static HSQLDBImpl firstInstance = null;
 	Utils utils;
+	private String url;
+	private String user;
+	private String password;
 	
 	/**
 	 * SINGLETON Constructor
 	 */
 	private HSQLDBImpl() {
 		this.utils = new Utils();
+		this.url = "jdbc:hsqldb:hsql://localhost:9011/xdb";
+		this.user = "sa";
+		this.password = "";
 	}
 	
 	/**
@@ -180,6 +188,56 @@ public class HSQLDBImpl implements HSQLDB {
 		// TODO Auto-generated method stub
 
 	}
+	
+	
+
+	/**
+	 * @return the url
+	 */
+	@Override
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * @param url the url to set
+	 */
+	@Override
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	/**
+	 * @return the user
+	 */
+	@Override
+	public String getUser() {
+		return user;
+	}
+
+	/**
+	 * @param user the user to set
+	 */
+	@Override
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+	/**
+	 * @return the password
+	 */
+	@Override
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password the password to set
+	 */
+	@Override
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -215,21 +273,29 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(usuario.getEmail_usuario());
 		valores_columnas.add(usuario.getDomicilio_usuario());
 		valores_columnas.add(String.valueOf(usuario.getRol_usuario()));
-		valores_columnas.add(String.valueOf(this.utils.hashEncodedString(usuario.getContrasenya_usuario())));
+		if(usuario.getContrasenya_usuario() != null) {
+			String contrasenya_usuario = usuario.getContrasenya_usuario();
+			valores_columnas.add(String.valueOf(this.utils.hashEncodedString(contrasenya_usuario)));
+		}		
 		
 		// Creando query para obtener objeto
 		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewUser = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
 		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
-			ResultSet resultsNewUserId = (ResultSet) queryEjecutar(queryStringId);
-			usuario.setId_usuario(resultsNewUserId.getInt(columna_ID));
+			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+			while(resultsNewObjectId.next()) {
+				usuario.setId_usuario(resultsNewObjectId.getInt(columna_ID));
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -267,12 +333,17 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(usuario.getEmail_usuario());
 		valores_columnas.add(usuario.getDomicilio_usuario());
 		valores_columnas.add(String.valueOf(usuario.getRol_usuario()));
-		valores_columnas.add(String.valueOf(this.utils.hashEncodedString(usuario.getContrasenya_usuario())));
+		if(usuario.getContrasenya_usuario() != null) {
+			String contrasenya_usuario = usuario.getContrasenya_usuario();
+			valores_columnas.add(String.valueOf(this.utils.hashEncodedString(contrasenya_usuario)));
+		}
 		
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + usuario.getId_usuario();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -315,7 +386,9 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + id_usuario;
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -329,7 +402,7 @@ public class HSQLDBImpl implements HSQLDB {
 		String tabla = "ROL";
 		List<String> columnas = new ArrayList<String>();
 		List<String> valores_columnas = new ArrayList<String>();
-		String columna_ID = "id_rol int";
+		String columna_ID = "id_rol";
 	
 		// Añadiendo columnas
 		columnas.add("descripcion_rol");
@@ -338,18 +411,24 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(rol.getDescripcion_rol());
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
-		String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			rol.setId_rol(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryStringId = queryLastTableId(tabla, columna_ID);
+				ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+				try {
+					while(resultsNewObjectId.next()){
+						rol.setId_rol(resultsNewObjectId.getInt(columna_ID));
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 	}
 	
 	/**
@@ -381,18 +460,24 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(permiso.isEscritura_permiso()));
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
-		String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			permiso.setId_permiso(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryStringId = queryLastTableId(tabla, columna_ID);
+				try {
+					ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+					while(resultsNewObjectId.next()){
+						permiso.setId_permiso(resultsNewObjectId.getInt(columna_ID));
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -427,7 +512,9 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + permiso.getId_permiso();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -473,18 +560,23 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(certificado.getCoste_certificado()));
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
-		String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			certificado.setId_certificado(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryStringId = queryLastTableId(tabla, columna_ID);
+				try {
+					ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+					while(resultsNewObjectId.next()) {
+						certificado.setId_certificado(resultsNewObjectId.getInt(columna_ID));
+					}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -534,7 +626,9 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + certificado.getId_certificado();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -549,7 +643,10 @@ public class HSQLDBImpl implements HSQLDB {
 		String tabla = "CERTIFICADOS";
 		String where_clause = "id_certificado = " + id_certificado;
 		String queryString = queryBuscar(tabla, null, where_clause);
-		Certificado certificado = (Certificado) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		Certificado certificado = (Certificado) resultsNewObject;
+		this.queryCerrar(server_connection);
 		return certificado;
 	}
 
@@ -596,18 +693,24 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(proyecto.getCoste_proyecto()));
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
-		String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			proyecto.setId_proyecto(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryStringId = queryLastTableId(tabla, columna_ID);
+				try {
+					ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+					while(resultsNewObjectId.next()) {
+						proyecto.setId_proyecto(resultsNewObjectId.getInt(columna_ID));
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -656,7 +759,9 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + proyecto.getId_proyecto();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -673,7 +778,10 @@ public class HSQLDBImpl implements HSQLDB {
 		String tabla = "PROYECTOS";
 		String where_clause = "id_proyecto = " + id_proyecto;
 		String queryString = queryBuscar(tabla, null, where_clause);
-		Proyecto proyecto = (Proyecto) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		Proyecto proyecto = (Proyecto) resultsNewObject;
+		this.queryCerrar(server_connection);
 		return proyecto;
 	}
 
@@ -714,18 +822,24 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(vivienda.getBanyos_vivienda()));
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
-		String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			vivienda.setId_vivienda(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryStringId = queryLastTableId(tabla, columna_ID);
+				try {
+					ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+					while(resultsNewObjectId.next()) {
+						vivienda.setId_vivienda(resultsNewObjectId.getInt(columna_ID));
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -769,7 +883,9 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + vivienda.getId_vivienda();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 	
 	/**
@@ -785,7 +901,10 @@ public class HSQLDBImpl implements HSQLDB {
 		String tabla = "VIVIENDAS";
 		String where_clause = "id_vivienda = " + id_vivienda;
 		String queryString = queryBuscar(tabla, null, where_clause);
-		Vivienda vivienda = (Vivienda) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		Vivienda vivienda = (Vivienda) resultsNewObject;
+		this.queryCerrar(server_connection);
 		return vivienda;
 	}
 
@@ -820,18 +939,24 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(inmueble.getFecha_construccion_inmueble()));
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
 				String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			inmueble.setId_inmueble(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				try {
+					ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+					while(resultsNewObjectId.next()) {
+						inmueble.setId_inmueble(resultsNewObjectId.getInt(columna_ID));
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -866,7 +991,9 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + inmueble.getId_inmueble();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -881,7 +1008,10 @@ public class HSQLDBImpl implements HSQLDB {
 		String tabla = "INMUEBLES";
 		String where_clause = "id_inmueble = " + id_inmueble;
 		String queryString = queryBuscar(tabla, null, where_clause);
-		Inmueble inmueble = (Inmueble) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		Inmueble inmueble = (Inmueble) resultsNewObject;
+		this.queryCerrar(server_connection);
 		return inmueble;
 	}
 
@@ -911,18 +1041,24 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(asignacionCertificado.getId_arquitecto_certificado_asignado()));
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
-		String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			asignacionCertificado.setId_certificado_asignado(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryStringId = queryLastTableId(tabla, columna_ID);
+				try {
+					ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+					while(resultsNewObjectId.next()) {
+						asignacionCertificado.setId_certificado_asignado(resultsNewObjectId.getInt(columna_ID));
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -954,7 +1090,9 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + asignacionCertificado.getId_certificado_asignado();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -983,18 +1121,24 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(proyectoAsignado.getId_arquitecto_proyecto_asignado()));
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
 				String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			proyectoAsignado.setId_proyecto_asignado(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				try {
+					ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+					while(resultsNewObjectId.next()) {
+						proyectoAsignado.setId_proyecto_asignado(resultsNewObjectId.getInt(columna_ID));
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 
 	}
 
@@ -1027,7 +1171,9 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + proyectoAsignado.getId_proyecto_asignado();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -1059,20 +1205,26 @@ public class HSQLDBImpl implements HSQLDB {
 		valores_columnas.add(String.valueOf(contratacionProyecto.getFecha_fin_ejecucion_proyecto()));
 		
 		// Creando query para obtener objeto
-		String queryString = queryCrear(tabla, columnas, valores_columnas);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
-		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+				String queryString = queryCrear(tabla, columnas, valores_columnas);
+				Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+				
+				ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+				
+				// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
 				String queryStringId = queryLastTableId(tabla, columna_ID);
-		try {
-			ResultSet resultsNewObjectId = (ResultSet) queryEjecutar(queryStringId);
-			contratacionProyecto.setId_proyecto_ejecucion_proyecto(resultsNewObjectId.getInt(columna_ID));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+				try {
+					ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
+					while(resultsNewObjectId.next()) {
+						contratacionProyecto.setId_proyecto_ejecucion_proyecto(resultsNewObjectId.getInt(columna_ID));
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				this.queryCerrar(server_connection);
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * Edita la gestión sobre la contratación de un proyecto.
@@ -1105,7 +1257,10 @@ public class HSQLDBImpl implements HSQLDB {
 		// Creando query para obtener objeto
 		where_clause += columna_ID + " = " + contratacionProyecto.getId_ejecucion_proyecto();
 		String queryString = queryEditar(tabla, columnas, valores_columnas, where_clause);
-		ResultSet resultsNewObject = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
+
 	}
 
 	/**
@@ -1125,12 +1280,12 @@ public class HSQLDBImpl implements HSQLDB {
 			queryString += columnas.get(i);
 			if(i != columnas.size() - 1)  queryString += ",";
 		}
-		queryString = ") VALUES (";
+		queryString += ") VALUES (";
 		for(Integer i = 0; i < valores_columnas.size(); i++) {
-			queryString += valores_columnas.get(i);
+			queryString += "'" + valores_columnas.get(i) + "'";
 			if(i != valores_columnas.size() - 1)  queryString += ",";
 		}
-		queryString = ")";
+		queryString += ")";
 		return queryString;
 	}
 
@@ -1149,7 +1304,7 @@ public class HSQLDBImpl implements HSQLDB {
 	public String queryEditar(String tabla, List<String> columnas, List<String> valores_columnas, String where_clause) {
 		String queryString = "UPDATE " + tabla + " SET ";
 		for(Integer i = 0; i < columnas.size(); i++) {
-			queryString += columnas.get(i) + " = " + valores_columnas.get(i);
+			queryString += columnas.get(i) + " = '" + valores_columnas.get(i) + "'";
 			if(i != columnas.size() - 1)  queryString += ",";
 		}
 		queryString += " WHERE " + where_clause;
@@ -1214,19 +1369,21 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaUsuario() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_usuario IDENTITY PRIMARY KEY,");
-		columnas.add("nombre_usuario varchar(20),");
-		columnas.add("apellidos_usuario varchar(60),");
-		columnas.add("dni_usuario varchar(15),");
-		columnas.add("telefono_usuario int,");
-		columnas.add("email_usuario varchar(20),");
-		columnas.add("domicilio_usuario varchar(60),");
-		columnas.add("rol_usuario int,");
+		columnas.add("id_usuario IDENTITY PRIMARY KEY");
+		columnas.add("nombre_usuario varchar(30)");
+		columnas.add("apellidos_usuario varchar(120)");
+		columnas.add("dni_usuario varchar(15)");
+		columnas.add("telefono_usuario int");
+		columnas.add("email_usuario varchar(50)");
+		columnas.add("domicilio_usuario varchar(120)");
+		columnas.add("rol_usuario int");
 		columnas.add("contrasenya_usuario varchar(64)");
 		
 		String queryString = queryCrearTabla("USUARIOS", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 
 	}
 
@@ -1240,12 +1397,14 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaRol() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_rol IDENTITY PRIMARY KEY,");
+		columnas.add("id_rol IDENTITY PRIMARY KEY");
 		columnas.add("descripcion_rol varchar(20)");
 		
 		String queryString = queryCrearTabla("ROL", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 	
 	/**
@@ -1262,16 +1421,18 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaPermiso() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_permiso IDENTITY PRIMARY KEY,");
-		columnas.add("id_rol_permiso int,");
-		columnas.add("descripcion_permiso varchar(20),");
-		columnas.add("objeto_permiso varchar(20),");
-		columnas.add("lectura_permiso bit(1),");
+		columnas.add("id_permiso IDENTITY PRIMARY KEY");
+		columnas.add("id_rol_permiso int");
+		columnas.add("descripcion_permiso varchar(20)");
+		columnas.add("objeto_permiso varchar(20)");
+		columnas.add("lectura_permiso bit(1)");
 		columnas.add("escritura_permiso bit(1)");
 		
 		String queryString = queryCrearTabla("PERMISOS", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -1283,23 +1444,25 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaCertificado() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_certificado IDENTITY PRIMARY KEY,");
-		columnas.add("descripcion_certificado varchar(20),");
-		columnas.add("cliente_certificado int,");
-		columnas.add("vivienda_certificado int,");
-		columnas.add("inmueble_certificado int,");
-		columnas.add("tipo_certificado int,");
-		columnas.add("fecha_solicitud_certificado date),");
-		columnas.add("fecha_entrega_certificado date),");
-		columnas.add("fecha_visita_certificado date),");
-		columnas.add("fecha_emision_certificado date),");
-		columnas.add("categoria_certificado int,");
-		columnas.add("arquitecto_certificado int,");
-		columnas.add("coste_certificado double(4,2)");
+		columnas.add("id_certificado IDENTITY PRIMARY KEY");
+		columnas.add("descripcion_certificado varchar(20)");
+		columnas.add("cliente_certificado int");
+		columnas.add("vivienda_certificado int");
+		columnas.add("inmueble_certificado int");
+		columnas.add("tipo_certificado int");
+		columnas.add("fecha_solicitud_certificado date");
+		columnas.add("fecha_entrega_certificado date");
+		columnas.add("fecha_visita_certificado date");
+		columnas.add("fecha_emision_certificado date");
+		columnas.add("categoria_certificado int");
+		columnas.add("arquitecto_certificado int");
+		columnas.add("coste_certificado double");
 		
 		String queryString = queryCrearTabla("CERTIFICADOS", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -1311,22 +1474,24 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaProyecto() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_proyecto IDENTITY PRIMARY KEY,");
-		columnas.add("descripcion_proyecto varchar(20),");
-		columnas.add("cliente_proyecto int,");
-		columnas.add("vivienda_proyecto int,");
-		columnas.add("inmueble_proyecto int,");
-		columnas.add("tipo_proyecto int,");
-		columnas.add("fecha_solicitud_proyecto date),");
-		columnas.add("fecha_entrega_proyecto date),");
-		columnas.add("duracion_prevista_proyecto int,");
-		columnas.add("presupuesto_ejecucion_proyecto double(8,2),");
-		columnas.add("superficie_proyecto double(8,2),");
-		columnas.add("coste_proyecto double(4,2)");
+		columnas.add("id_proyecto IDENTITY PRIMARY KEY");
+		columnas.add("descripcion_proyecto varchar(20)");
+		columnas.add("cliente_proyecto int");
+		columnas.add("vivienda_proyecto int");
+		columnas.add("inmueble_proyecto int");
+		columnas.add("tipo_proyecto int");
+		columnas.add("fecha_solicitud_proyecto date");
+		columnas.add("fecha_entrega_proyecto date");
+		columnas.add("duracion_prevista_proyecto int");
+		columnas.add("presupuesto_ejecucion_proyecto double");
+		columnas.add("superficie_proyecto double");
+		columnas.add("coste_proyecto double");
 		
 		String queryString = queryCrearTabla("PROYECTOS", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -1338,19 +1503,21 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaVivienda() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_vivienda IDENTITY PRIMARY KEY,");
-		columnas.add("descripcion_vivienda varchar(20),");
-		columnas.add("direccion_vivienda varchar(60),");
+		columnas.add("id_vivienda IDENTITY PRIMARY KEY");
+		columnas.add("descripcion_vivienda varchar(20)");
+		columnas.add("direccion_vivienda varchar(60)");
 		columnas.add("id_inmueble_vivienda int");
-		columnas.add("superficie_terreno_vivienda double(5,2),");
-		columnas.add("superficie_vivienda double(5,2),");
-		columnas.add("plantas_vivienda int,");
-		columnas.add("habitaciones_vivienda int,");
+		columnas.add("superficie_terreno_vivienda double");
+		columnas.add("superficie_vivienda double");
+		columnas.add("plantas_vivienda int");
+		columnas.add("habitaciones_vivienda int");
 		columnas.add("banyos_vivienda int");
 		
 		String queryString = queryCrearTabla("VIVIENDAS", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -1362,15 +1529,18 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaInmueble() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_inmueble IDENTITY PRIMARY KEY,");
-		columnas.add("descripcion_inmueble varchar(20),");
-		columnas.add("direccion_inmueble varchar(60),");
-		columnas.add("superficie_terreno_inmueble double(5,2),");
-		columnas.add("superficie_inmueble double(5,2),");
+		columnas.add("id_inmueble IDENTITY PRIMARY KEY");
+		columnas.add("descripcion_inmueble varchar(20)");
+		columnas.add("direccion_inmueble varchar(60)");
+		columnas.add("superficie_terreno_inmueble double");
+		columnas.add("superficie_inmueble double");
+		columnas.add("fecha_construccion_inmueble date");
 				
 		String queryString = queryCrearTabla("INMUEBLES", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -1382,13 +1552,15 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaAsignarCertificado() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_certificado_asignado IDENTITY PRIMARY KEY,");
-		columnas.add("id_certificado_certificado_asignado int,");
-		columnas.add("arquitecto_certificado_asignado int,");
+		columnas.add("id_certificado_asignado IDENTITY PRIMARY KEY");
+		columnas.add("id_certificado_certificado_asignado int");
+		columnas.add("arquitecto_certificado_asignado int");
 		
 		String queryString = queryCrearTabla("ASIGNACION_CERTIFICADOS", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -1400,13 +1572,15 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaAsignarProyecto() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_proyecto_asignado IDENTITY PRIMARY KEY,");
-		columnas.add("id_proyecto_proyecto_asignado int,");
-		columnas.add("arquitecto_proyecto_asignado int,");
+		columnas.add("id_proyecto_asignado IDENTITY PRIMARY KEY");
+		columnas.add("id_proyecto_proyecto_asignado int");
+		columnas.add("arquitecto_proyecto_asignado int");
 		
 		String queryString = queryCrearTabla("ASIGNACION_PROYECTOS", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
 	}
 
 	/**
@@ -1418,38 +1592,56 @@ public class HSQLDBImpl implements HSQLDB {
 	@Override
 	public void crearTablaContratarProyecto() {
 		List<String> columnas = new ArrayList<String>();
-		columnas.add("id_ejecucion_proyecto IDENTITY PRIMARY KEY,");
-		columnas.add("id_proyecto_ejecucion_proyecto int,");
-		columnas.add("fecha_inicio_ejecucion_proyecto date),");
-		columnas.add("duracion_prevista_ejecucion_proyecto int,");
-		columnas.add("fecha_fin_ejecucion_proyecto date,");
+		columnas.add("id_ejecucion_proyecto IDENTITY PRIMARY KEY");
+		columnas.add("id_proyecto_ejecucion_proyecto int");
+		columnas.add("fecha_inicio_ejecucion_proyecto date");
+		columnas.add("duracion_prevista_ejecucion_proyecto int");
+		columnas.add("fecha_fin_ejecucion_proyecto date");
 				
 		String queryString = queryCrearTabla("PROYECTOS_CONTRATADOS", columnas);
 		
-		ResultSet results = (ResultSet) queryEjecutar(queryString);
-	}
+		Server_ConnectionImpl server_connection = this.connect2Server(this.url, this.user, this.password);
+		ResultSet results = (ResultSet) this.queryEjecutar(server_connection, queryString);
+		this.queryCerrar(server_connection);
+	}	
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Conecta con la BBDD y ejecuta la query que se le pasa como parámetro.
+	 * Conecta con la BBDD.
 	 * <!-- end-user-doc -->
-	 * @param	queryString				String				Cadena con la query SQL
-	 * @return							Object				Objeto de retorno de la BBDD
-	 * @model required="true" ordered="false" queryStringDataType="org.eclipse.uml2.types.String" queryStringRequired="true" queryStringOrdered="false"
+	 *
+	 * @param url the url
+	 * @param user the user
+	 * @param password the password
+	 * @return the server connection
 	 */
 	@Override
-	public Object queryEjecutar(String queryString) {
-		String url = "jdbc:hsqldb:hsql://localhost:9011/xdb";
-		String user = "sa";
-		String password = "";
+	public Server_ConnectionImpl connect2Server(String url, String user, String password) {
 		
+		Server_Connection server_connection = new Server_ConnectionImpl(url, user, password);
+		server_connection.serverConnect();
+		return (Server_ConnectionImpl) server_connection;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Ejecuta la query que se le pasa como parámetro.
+	 * <!-- end-user-doc -->
+	 *
+	 * @param server_connection 	Server_Connection	Conexión al server
+	 * @param queryString 			String				Cadena con la query SQL
+	 * @return 						Object				Objeto de retorno de la BBDD
+	 * @model required="true" ordered="false" queryStringDataType="org.eclipse.uml2.types.String" queryStringRequired="true" queryStringOrdered="false"
+	 * @generated NOT
+	 */
+	@Override
+	public Object queryEjecutar(Server_ConnectionImpl server_connection, String queryString) {
+				
 		try {
 			Connection con = DriverManager.getConnection(url, user, password);
-			Statement stmnt = con.createStatement();
-			ResultSet results = stmnt.executeQuery(queryString);
-			results.close();
-			stmnt.close();
-			con.close();
+			server_connection.serverSetStatement();
+			server_connection.serverResultSet(queryString); 
+			ResultSet results = server_connection.getResults();
 			return results;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -1457,6 +1649,15 @@ public class HSQLDBImpl implements HSQLDB {
 		}
 	}
 	
+	@Override
+	public void queryCerrar(Server_Connection server_connection) {
+		
+		server_connection.serverCloseResultSet();
+		server_connection.serverCloseStatement();
+		server_connection.serverDisconnect();
+		
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * Devuelva el último Id creado en la tabla correspondiente

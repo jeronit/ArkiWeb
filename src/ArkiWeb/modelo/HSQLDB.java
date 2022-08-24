@@ -7,6 +7,9 @@
 package ArkiWeb.modelo;
 
 import ArkiWeb.ListString;
+import ArkiWeb.server.Server_Connection;
+import ArkiWeb.server.impl.Server_ConnectionImpl;
+
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
@@ -401,12 +404,77 @@ public interface HSQLDB extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Conecta con la BBDD y ejecuta la query que se le pasa como parámetro.
+	 * Conecta con la BBDD.
 	 * <!-- end-user-doc -->
 	 *
+	 * @param url the url
+	 * @param user the user
+	 * @param password the password
+	 * @return the server connection
+	 */
+	Server_ConnectionImpl connect2Server(String url, String user, String password);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Ejecuta la query que se le pasa como parámetro.
+	 * <!-- end-user-doc -->
+	 *
+	 * @param server_connection 	Server_Connection	Conexión al server
+	 * @param queryString 			String				Cadena con la query SQL
+	 * @return 						Object				Objeto de retorno de la BBDD
 	 * @model required="true" ordered="false" queryStringDataType="org.eclipse.uml2.types.String" queryStringRequired="true" queryStringOrdered="false"
 	 * @generated NOT
 	 */
-	Object queryEjecutar(String queryString);
-
+	Object queryEjecutar(Server_ConnectionImpl server_connection, String queryString);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Finaliza la query y conexión al server.
+	 * <!-- end-user-doc -->
+	 * @param server_connection the server connection
+	 */
+	void queryCerrar(Server_Connection server_connection);
+	
+	/**
+	 * Gets the url.
+	 *
+	 * @return the url
+	 */
+	String getUrl();
+	
+	/**
+	 * Sets the url.
+	 *
+	 * @param url the new url
+	 */
+	void setUrl(String url);
+	
+	/**
+	 * Gets the user.
+	 *
+	 * @return the user
+	 */
+	String getUser();
+	
+	/**
+	 * Sets the user.
+	 *
+	 * @param url the new user
+	 */
+	void setUser(String url);
+	
+	/**
+	 * Gets the password.
+	 *
+	 * @return the password
+	 */
+	String getPassword();
+	
+	/**
+	 * Sets the password.
+	 *
+	 * @param url the new password
+	 */
+	void setPassword(String url);
+	
 } // HSQLDB

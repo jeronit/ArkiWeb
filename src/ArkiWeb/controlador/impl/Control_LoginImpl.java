@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import ArkiWeb.controlador.Control_Usuarios;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.util.Utils;
+import ArkiWeb.server.impl.Server_ConnectionImpl;
 
 /**
  * @author JTE
@@ -210,7 +211,9 @@ public class Control_LoginImpl implements ArkiWeb.controlador.Control_Login {
 		String tabla = "USUARIOS";
 		String where_clause = "email_usuario = " + email;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			if(results.isFirst() && results.isLast()) {

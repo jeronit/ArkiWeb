@@ -41,6 +41,7 @@ import ArkiWeb.modelo.Vivienda;
 import ArkiWeb.modelo.impl.Certificados_AsignadosImpl;
 import ArkiWeb.modelo.impl.Proyectos_AsignadosImpl;
 import ArkiWeb.modelo.impl.Proyectos_En_EjecucionImpl;
+import ArkiWeb.server.impl.Server_ConnectionImpl;
 
 /**
  * @author JTE
@@ -182,7 +183,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		List<Usuario> resultado = new ArrayList<Usuario>();
 		String tabla = "USUARIOS";
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -222,7 +225,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		List<Permiso> resultado = new ArrayList<Permiso>();
 		String tabla = "PERMISOS";
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -248,7 +253,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		List<Proyecto> resultado = new ArrayList<Proyecto>();
 		String tabla = "PROYECTOS";
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -274,7 +281,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		List<Certificado> resultado = new ArrayList<Certificado>();
 		String tabla = "CERTIFICADOS";
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -300,7 +309,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		List<Vivienda> resultado = new ArrayList<Vivienda>();
 		String tabla = "VIVIENDAS";
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -326,7 +337,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		List<Inmueble> resultado = new ArrayList<Inmueble>();
 		String tabla = "INMUEBLES";
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, null);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -357,7 +370,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "PERMISOS";
 		String where_clause = "id_rol_permiso = " + usuario.getRol_usuario();
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -385,7 +400,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "USUARIOS";
 		String where_clause = "id_usuario = " + id_usuario;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -428,7 +445,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "PROYECTOS";
 		String where_clause = "id_proyecto = " + id_proyecto;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -486,7 +505,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "PROYECTOS";
 		String where_clause = "cliente_proyecto = " + id_usuario;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -529,7 +550,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "CERTIFICADOS";
 		String where_clause = "cliente_certificado = " + id_usuario;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -558,7 +581,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "CERTIFICADOS";
 		String where_clause = "vivienda_certificado = " + id_vivienda;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -587,7 +612,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "CERTIFICADOS";
 		String where_clause = "inmueble_certificado = " + id_inmueble;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -627,7 +654,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "CERTIFICADOS";
 		String where_clause = "inmueble_certificado IN (" + innerQueryString + ")";
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -661,7 +690,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "CERTIFICADOS";
 		String where_clause = "tipo_certificado = " + Tipo_Certificado.HABITABILIDAD_VALUE + " AND fecha_emision_certificado <= " + edad;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -691,7 +722,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "ASIGNACION_PROYECTOS";
 		String where_clause = "id_proyecto_proyecto_asignado = " + id_proyecto + " AND arquitecto_proyecto_asignado = " + id_usuario;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -720,7 +753,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "PROYECTOS_CONTRATADOS";
 		String where_clause = "id_proyecto_ejecucion_proyecto = " + id_proyecto;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -750,7 +785,9 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		String tabla = "ASIGNACION_CERTIFICADOS";
 		String where_clause = "id_certificado_certificado_asignado = " + id_certificado + " AND arquitecto_certificado_asignado = " + id_usuario;
 		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(queryString);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -762,7 +799,5 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		}
 		return resultado;
 	}
-
-	
 
 }
