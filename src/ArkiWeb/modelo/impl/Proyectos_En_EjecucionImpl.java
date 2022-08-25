@@ -7,7 +7,6 @@
 package ArkiWeb.modelo.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -32,9 +31,9 @@ public class Proyectos_En_EjecucionImpl implements Proyectos_En_Ejecucion {
 
 	private int id_ejecucion_proyecto;
 	private int id_proyecto_ejecucion_proyecto;
-	private LocalDateTime fecha_inicio_ejecucion_proyecto;
+	private Date fecha_inicio_ejecucion_proyecto;
 	private int duracion_prevista_ejecucion_proyecto;
-	private LocalDateTime fecha_fin_ejecucion_proyecto;
+	private Date fecha_fin_ejecucion_proyecto;
 	
 	
 	/**
@@ -206,7 +205,7 @@ public class Proyectos_En_EjecucionImpl implements Proyectos_En_Ejecucion {
 	 * @return the fecha_inicio_ejecucion_proyecto
 	 */
 	@Override
-	public LocalDateTime getFecha_inicio_ejecucion_proyecto() {
+	public Date getFecha_inicio_ejecucion_proyecto() {
 		return fecha_inicio_ejecucion_proyecto;
 	}
 
@@ -214,7 +213,7 @@ public class Proyectos_En_EjecucionImpl implements Proyectos_En_Ejecucion {
 	 * @param fecha_inicio_ejecucion_proyecto the fecha_inicio_ejecucion_proyecto to set
 	 */
 	@Override
-	public void setFecha_inicio_ejecucion_proyecto(LocalDateTime fecha_inicio_ejecucion_proyecto) {
+	public void setFecha_inicio_ejecucion_proyecto(Date fecha_inicio_ejecucion_proyecto) {
 		this.fecha_inicio_ejecucion_proyecto = fecha_inicio_ejecucion_proyecto;
 	}
 
@@ -238,7 +237,7 @@ public class Proyectos_En_EjecucionImpl implements Proyectos_En_Ejecucion {
 	 * @return the fecha_fin_ejecucion_proyecto
 	 */
 	@Override
-	public LocalDateTime getFecha_fin_ejecucion_proyecto() {
+	public Date getFecha_fin_ejecucion_proyecto() {
 		return fecha_fin_ejecucion_proyecto;
 	}
 
@@ -246,7 +245,7 @@ public class Proyectos_En_EjecucionImpl implements Proyectos_En_Ejecucion {
 	 * @param fecha_fin_ejecucion_proyecto the fecha_fin_ejecucion_proyecto to set
 	 */
 	@Override
-	public void setFecha_fin_ejecucion_proyecto(LocalDateTime fecha_fin_ejecucion_proyecto) {
+	public void setFecha_fin_ejecucion_proyecto(Date fecha_fin_ejecucion_proyecto) {
 		this.fecha_fin_ejecucion_proyecto = fecha_fin_ejecucion_proyecto;
 	}
 

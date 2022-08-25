@@ -6,7 +6,6 @@
  */
 package ArkiWeb.modelo;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
@@ -99,17 +98,17 @@ public interface Proyectos_En_Ejecucion extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated NOT
 	 */
-	LocalDateTime getFecha_inicio_ejecucion_proyecto();
+	Date getFecha_inicio_ejecucion_proyecto();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Proyectos_En_Ejecucion#getFecha_inicio_ejecucion_proyecto <em>Fecha inicio ejecucion proyecto</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fecha inicio ejecucion proyecto</em>' attribute.
+	 * @param date the new value of the '<em>Fecha inicio ejecucion proyecto</em>' attribute.
 	 * @see #getFecha_inicio_ejecucion_proyecto()
 	 * @generated NOT
 	 */
-	void setFecha_inicio_ejecucion_proyecto(LocalDateTime value);
+	void setFecha_inicio_ejecucion_proyecto(Date date);
 
 	/**
 	 * Returns the value of the '<em><b>Duracion prevista ejecucion proyecto</b></em>' attribute.
@@ -151,7 +150,7 @@ public interface Proyectos_En_Ejecucion extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated NOT
 	 */
-	LocalDateTime getFecha_fin_ejecucion_proyecto();
+	Date getFecha_fin_ejecucion_proyecto();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Proyectos_En_Ejecucion#getFecha_fin_ejecucion_proyecto <em>Fecha fin ejecucion proyecto</em>}' attribute.
@@ -161,7 +160,7 @@ public interface Proyectos_En_Ejecucion extends EObject {
 	 * @see #getFecha_fin_ejecucion_proyecto()
 	 * @generated NOT
 	 */
-	void setFecha_fin_ejecucion_proyecto(LocalDateTime value);
+	void setFecha_fin_ejecucion_proyecto(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Proyecto</b></em>' reference.

@@ -6,7 +6,6 @@
  */
 package ArkiWeb.modelo;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
@@ -215,17 +214,17 @@ public interface Certificado extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated NOT
 	 */
-	LocalDateTime getFecha_solicitud_certificado();
+	Date getFecha_solicitud_certificado();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getFecha_solicitud_certificado <em>Fecha solicitud certificado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fecha solicitud certificado</em>' attribute.
+	 * @param date the new value of the '<em>Fecha solicitud certificado</em>' attribute.
 	 * @see #getFecha_solicitud_certificado()
 	 * @generated NOT
 	 */
-	void setFecha_solicitud_certificado(LocalDateTime value);
+	void setFecha_solicitud_certificado(Date date);
 
 	/**
 	 * Returns the value of the '<em><b>Fecha entrega certificado</b></em>' attribute.
@@ -241,7 +240,7 @@ public interface Certificado extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated NOT
 	 */
-	LocalDateTime getFecha_entrega_certificado();
+	Date getFecha_entrega_certificado();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getFecha_entrega_certificado <em>Fecha entrega certificado</em>}' attribute.
@@ -251,7 +250,7 @@ public interface Certificado extends EObject {
 	 * @see #getFecha_entrega_certificado()
 	 * @generated NOT
 	 */
-	void setFecha_entrega_certificado(LocalDateTime value);
+	void setFecha_entrega_certificado(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Fecha visita certificado</b></em>' attribute.
@@ -267,17 +266,17 @@ public interface Certificado extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated NOT
 	 */
-	LocalDateTime getFecha_visita_certificado();
+	Date getFecha_visita_certificado();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getFecha_visita_certificado <em>Fecha visita certificado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fecha visita certificado</em>' attribute.
+	 * @param date the new value of the '<em>Fecha visita certificado</em>' attribute.
 	 * @see #getFecha_visita_certificado()
 	 * @generated NOT
 	 */
-	void setFecha_visita_certificado(LocalDateTime value);
+	void setFecha_visita_certificado(Date date);
 
 	/**
 	 * Returns the value of the '<em><b>Fecha emision certificado</b></em>' attribute.
@@ -293,7 +292,7 @@ public interface Certificado extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated NOT
 	 */
-	LocalDateTime getFecha_emision_certificado();
+	Date getFecha_emision_certificado();
 
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Certificado#getFecha_emision_certificado <em>Fecha emision certificado</em>}' attribute.
@@ -303,7 +302,7 @@ public interface Certificado extends EObject {
 	 * @see #getFecha_emision_certificado()
 	 * @generated NOT
 	 */
-	void setFecha_emision_certificado(LocalDateTime now);
+	void setFecha_emision_certificado(Date now);
 
 	/**
 	 * Returns the value of the '<em><b>Categoria certificado</b></em>' attribute.

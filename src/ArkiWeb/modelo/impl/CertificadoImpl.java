@@ -41,10 +41,10 @@ public class CertificadoImpl implements Certificado {
 	private int id_vivienda_certificado;
 	private int id_inmueble_certificado;
 	private Tipo_Certificado tipo_certificado;
-	private LocalDateTime fecha_solicitud_certificado;
-	private LocalDateTime fecha_entrega_certificado;
-	private LocalDateTime fecha_visita_certificado;
-	private LocalDateTime fecha_emision_certificado;
+	private Date fecha_solicitud_certificado;
+	private Date fecha_entrega_certificado;
+	private Date fecha_visita_certificado;
+	private Date fecha_emision_certificado;
 	private Categoria_Certificado categoria_certificado;
 	private int id_arquitecto_certificado;
 	private double coste_certificado;
@@ -306,7 +306,7 @@ public class CertificadoImpl implements Certificado {
 	 * @return the fecha_solicitud_certificado
 	 */
 	@Override
-	public LocalDateTime getFecha_solicitud_certificado() {
+	public Date getFecha_solicitud_certificado() {
 		return fecha_solicitud_certificado;
 	}
 
@@ -314,7 +314,7 @@ public class CertificadoImpl implements Certificado {
 	 * @param fecha_solicitud_certificado the fecha_solicitud_certificado to set
 	 */
 	@Override
-	public void setFecha_solicitud_certificado(LocalDateTime fecha_solicitud_certificado) {
+	public void setFecha_solicitud_certificado(Date fecha_solicitud_certificado) {
 		this.fecha_solicitud_certificado = fecha_solicitud_certificado;
 	}
 
@@ -322,7 +322,7 @@ public class CertificadoImpl implements Certificado {
 	 * @return the fecha_entrega_certificado
 	 */
 	@Override
-	public LocalDateTime getFecha_entrega_certificado() {
+	public Date getFecha_entrega_certificado() {
 		return fecha_entrega_certificado;
 	}
 
@@ -330,7 +330,7 @@ public class CertificadoImpl implements Certificado {
 	 * @param fecha_entrega_certificado the fecha_entrega_certificado to set
 	 */
 	@Override
-	public void setFecha_entrega_certificado(LocalDateTime fecha_entrega_certificado) {
+	public void setFecha_entrega_certificado(Date fecha_entrega_certificado) {
 		this.fecha_entrega_certificado = fecha_entrega_certificado;
 	}
 
@@ -338,7 +338,7 @@ public class CertificadoImpl implements Certificado {
 	 * @return the fecha_visita_certificado
 	 */
 	@Override
-	public LocalDateTime getFecha_visita_certificado() {
+	public Date getFecha_visita_certificado() {
 		return fecha_visita_certificado;
 	}
 
@@ -346,7 +346,7 @@ public class CertificadoImpl implements Certificado {
 	 * @param fecha_visita_certificado the fecha_visita_certificado to set
 	 */
 	@Override
-	public void setFecha_visita_certificado(LocalDateTime fecha_visita_certificado) {
+	public void setFecha_visita_certificado(Date fecha_visita_certificado) {
 		this.fecha_visita_certificado = fecha_visita_certificado;
 	}
 
@@ -354,7 +354,7 @@ public class CertificadoImpl implements Certificado {
 	 * @return the fecha_emision_certificado
 	 */
 	@Override
-	public LocalDateTime getFecha_emision_certificado() {
+	public Date getFecha_emision_certificado() {
 		return fecha_emision_certificado;
 	}
 
@@ -362,7 +362,7 @@ public class CertificadoImpl implements Certificado {
 	 * @param fecha_emision_certificado the fecha_emision_certificado to set
 	 */
 	@Override
-	public void setFecha_emision_certificado(LocalDateTime fecha_emision_certificado) {
+	public void setFecha_emision_certificado(Date fecha_emision_certificado) {
 		this.fecha_emision_certificado = fecha_emision_certificado;
 	}
 

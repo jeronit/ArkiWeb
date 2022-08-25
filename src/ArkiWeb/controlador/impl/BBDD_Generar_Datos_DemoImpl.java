@@ -6,8 +6,10 @@
  */
 package ArkiWeb.controlador.impl;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 
 import ArkiWeb.controlador.BBDD_Generar_Datos_Demo;
@@ -138,21 +140,33 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		Inmueble inmueble1 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
 		Inmueble inmueble2 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
 		Inmueble inmueble3 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
+		Calendar calendar1 = Calendar.getInstance();
+		Calendar calendar2 = Calendar.getInstance();
+		calendar1.setTime(new Date());
+		calendar2.setTime(new Date());
+		calendar1.add(calendar1.YEAR, -50);
+		calendar2.add(calendar1.YEAR, -10);
+		Date fechaInmueble1 = calendar1.getTime();
+		Date fechaInmueble2 = calendar2.getTime();
+		Date fechaInmueble3 = new Date();
 		
 		inmueble1.setDescripcion_inmueble("inmueble1");
 		inmueble1.setDireccion_inmueble("Dirección inmueble1");
 		inmueble1.setSuperficie_inmueble(537.5);
 		inmueble1.setSuperficie_terreno_inmueble(1537.25);
+		inmueble1.setFecha_construccion_inmueble(fechaInmueble1);
 		
 		inmueble2.setDescripcion_inmueble("inmueble2");
 		inmueble2.setDireccion_inmueble("Dirección inmueble2");
 		inmueble2.setSuperficie_inmueble(137.5);
 		inmueble2.setSuperficie_terreno_inmueble(137.5);
+		inmueble2.setFecha_construccion_inmueble(fechaInmueble2);
 		
 		inmueble3.setDescripcion_inmueble("inmueble3");
 		inmueble3.setDireccion_inmueble("Dirección inmueble3");
 		inmueble3.setSuperficie_inmueble(257.55);
 		inmueble3.setSuperficie_terreno_inmueble(257.55);
+		inmueble3.setFecha_construccion_inmueble(fechaInmueble3);
 		
 		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble1);
 		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble2);
@@ -197,8 +211,8 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		certificado1.setId_cliente_certificado(3);
 		certificado1.setId_vivienda_certificado(0);
 		certificado1.setTipo_certificado(Tipo_Certificado.EFIC_ENERG);
-		certificado1.setFecha_solicitud_certificado(LocalDateTime.now());
-		certificado1.setFecha_visita_certificado(LocalDateTime.now());
+		certificado1.setFecha_solicitud_certificado(new Date());
+		certificado1.setFecha_visita_certificado(new Date());
 		certificado1.setCategoria_certificado(Categoria_Certificado.B);
 		certificado1.setCoste_certificado(120.0);
 		
@@ -206,7 +220,7 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		certificado2.setId_cliente_certificado(4);
 		certificado2.setId_vivienda_certificado(1);
 		certificado2.setTipo_certificado(Tipo_Certificado.ITE);
-		certificado2.setFecha_solicitud_certificado(LocalDateTime.now());
+		certificado2.setFecha_solicitud_certificado(new Date());
 		
 		ArkiWeb.controlador.Borrar.db.crearCertificado(certificado1);
 		ArkiWeb.controlador.Borrar.db.crearCertificado(certificado2);
@@ -229,7 +243,7 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		
 		proyecto.setId_cliente_proyecto(5);
 		proyecto.setDescripcion_proyecto("proyecto1");
-		proyecto.setFecha_solicitud_proyecto(LocalDateTime.now());
+		proyecto.setFecha_solicitud_proyecto(new Date());
 		proyecto.setId_vivienda_proyecto(1);
 		proyecto.setTipo_proyecto(Tipo_Proyecto.REHABILITACION);
 		proyecto.setSuperficie_proyecto(125.58);
@@ -252,11 +266,12 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 
 	@Override
 	public void insertarProyectos_Contratados() {
-		Proyectos_En_Ejecucion proyecto_Contratado = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_Contratados");
+		Proyectos_En_Ejecucion proyecto_Contratado = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_En_Ejecucion");
 
 		proyecto_Contratado.setId_proyecto_ejecucion_proyecto(1);
-		proyecto_Contratado.setFecha_inicio_ejecucion_proyecto(LocalDateTime.now());
+		proyecto_Contratado.setFecha_inicio_ejecucion_proyecto(new Date());
 		proyecto_Contratado.setDuracion_prevista_ejecucion_proyecto(9);
+		ArkiWeb.controlador.Borrar.db.contratarProyecto(proyecto_Contratado);
 	}
 
 }

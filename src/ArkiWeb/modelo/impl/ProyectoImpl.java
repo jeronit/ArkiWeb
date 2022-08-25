@@ -7,7 +7,6 @@
 package ArkiWeb.modelo.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -39,8 +38,8 @@ public class ProyectoImpl implements Proyecto {
 	private int id_vivienda_proyecto;
 	private int id_inmueble_proyecto;
 	private Tipo_Proyecto tipo_proyecto;
-	private LocalDateTime fecha_solicitud_proyecto;
-	private LocalDateTime fecha_entrega_proyecto;
+	private Date fecha_solicitud_proyecto;
+	private Date fecha_entrega_proyecto;
 	private int duracion_prevista_proyecto;
 	private double presupuesto_ejecucion_proyecto;
 	private double superficie_proyecto;
@@ -303,7 +302,7 @@ public class ProyectoImpl implements Proyecto {
 	 * @return the fecha_solicitud_proyecto
 	 */
 	@Override
-	public LocalDateTime getFecha_solicitud_proyecto() {
+	public Date getFecha_solicitud_proyecto() {
 		return fecha_solicitud_proyecto;
 	}
 
@@ -311,7 +310,7 @@ public class ProyectoImpl implements Proyecto {
 	 * @param fecha_solicitud_proyecto the fecha_solicitud_proyecto to set
 	 */
 	@Override
-	public void setFecha_solicitud_proyecto(LocalDateTime fecha_solicitud_proyecto) {
+	public void setFecha_solicitud_proyecto(Date fecha_solicitud_proyecto) {
 		this.fecha_solicitud_proyecto = fecha_solicitud_proyecto;
 	}
 
@@ -319,7 +318,7 @@ public class ProyectoImpl implements Proyecto {
 	 * @return the fecha_entregad_proyecto
 	 */
 	@Override
-	public LocalDateTime getFecha_entrega_proyecto() {
+	public Date getFecha_entrega_proyecto() {
 		return fecha_entrega_proyecto;
 	}
 
@@ -327,7 +326,7 @@ public class ProyectoImpl implements Proyecto {
 	 * @param fecha_entregad_proyecto the fecha_entregad_proyecto to set
 	 */
 	@Override
-	public void setFecha_entrega_proyecto(LocalDateTime fecha_entrega_proyecto) {
+	public void setFecha_entrega_proyecto(Date fecha_entrega_proyecto) {
 		this.fecha_entrega_proyecto = fecha_entrega_proyecto;
 	}
 

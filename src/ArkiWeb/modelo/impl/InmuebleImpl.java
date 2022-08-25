@@ -8,6 +8,7 @@ package ArkiWeb.modelo.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -45,6 +46,9 @@ public class InmuebleImpl implements Inmueble {
 	
 	/** The superficie terreno inmueble. */
 	private double superficie_terreno_inmueble;
+	
+	/** The fecha construccion inmueble. */
+	private Date fecha_construccion_inmueble;
 		
 	/**
 	 * Instantiates a new inmueble impl.
@@ -387,9 +391,8 @@ public class InmuebleImpl implements Inmueble {
 	 * @return the fecha construccion inmueble
 	 */
 	@Override
-	public LocalDateTime getFecha_construccion_inmueble() {
-		// TODO Auto-generated method stub
-		return null;
+	public Date getFecha_construccion_inmueble() {
+		return this.fecha_construccion_inmueble;
 	}
 
 	/**
@@ -398,9 +401,8 @@ public class InmuebleImpl implements Inmueble {
 	 * @param fecha_construccion_inmueble the new fecha construccion inmueble
 	 */
 	@Override
-	public void setFecha_construccion_inmueble(LocalDateTime fecha_construccion_inmueble) {
-		// TODO Auto-generated method stub
-		
+	public void setFecha_construccion_inmueble(Date fecha_construccion_inmueble) {
+		this.fecha_construccion_inmueble = fecha_construccion_inmueble;
 	}
 
 	

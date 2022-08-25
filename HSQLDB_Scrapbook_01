@@ -1,11 +1,11 @@
-SELECT * FROM USUARIOS
-DROP DATABASE ArkiWeb
 DROP SCHEMA PUBLIC CASCADE
 INSERT INTO ROL (descripcion_rol) VALUES ('Cliente')
 SELECT descripcion_rol, MAX(id_rol) AS id_rol FROM ROL GROUP BY id_rol
 SELECT MAX(id_rol) AS id_rol FROM ROL GROUP BY id_rol
-SELECT * FROM PROYECTOS_CONTRATADOS
+INSERT INTO CERTIFICADOS (descripcion_certificado, cliente_certificado, inmueble_certificado, tipo_certificado, fecha_solicitud_certificado) VALUES ('Query manual','0','0','0',TO_DATE('17/12/2015', 'DD/MM/YYYY'))
+INSERT INTO INMUEBLES (descripcion_inmueble,direccion_inmueble,superficie_terreno_inmueble,superficie_inmueble,fecha_construccion_inmueble) VALUES ('inmueble2','Dirección inmueble2','137.5','137.5',TO_DATE('25-08-2012', 'DD-MM-YYYY'))
 SELECT * FROM ROL
+SELECT * FROM USUARIOS
 SELECT * FROM PERMISOS
 SELECT * FROM CERTIFICADOS
 SELECT * FROM PROYECTOS
@@ -14,4 +14,3 @@ SELECT * FROM INMUEBLES
 SELECT * FROM ASIGNACION_CERTIFICADOS
 SELECT * FROM ASIGNACION_PROYECTOS
 SELECT * FROM PROYECTOS_CONTRATADOS
-

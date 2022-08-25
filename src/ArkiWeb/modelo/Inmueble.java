@@ -7,6 +7,7 @@
 package ArkiWeb.modelo;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -187,15 +188,15 @@ public interface Inmueble extends EObject {
 	 * @return		LocalDateTime		Fecha construcción inmueble
 	 * @generated NOT
 	 */
-	LocalDateTime getFecha_construccion_inmueble();
+	Date getFecha_construccion_inmueble();
 	
 	/**
 	 * Sets the value of the '{@link ArkiWeb.modelo.Inmueble#getSuperficie_inmueble <em>Superficie inmueble</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param fecha_construccion_inmueble			LocalDateTime		Fecha construcción inmueble
+	 * @param fechaInmueble1			LocalDateTime		Fecha construcción inmueble
 	 * @generated NOT
 	 */
-	void setFecha_construccion_inmueble(LocalDateTime fecha_construccion_inmueble);
+	void setFecha_construccion_inmueble(Date fechaInmueble1);
 
 } // Inmueble

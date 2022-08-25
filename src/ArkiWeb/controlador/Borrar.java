@@ -22,8 +22,6 @@ public class Borrar {
 	public static HSQLDB db;
 	public static ConcreteFactory factory;
 	public Launch_Server launchServer;
-//	public BBDD_Generar_Tablas generarTablas;
-//	public BBDD_Generar_Datos_Demo generarDatos;
 	
 	/**
 	 * 
@@ -32,15 +30,12 @@ public class Borrar {
 		db = HSQLDBImpl.getInstance();
 		factory = new ConcreteFactoryImpl();
 		launchServer = new Launch_Server("run_hsqldb.bat");
-//		generarTablas = new BBDD_Generar_TablasImpl();
-//		generarDatos = new BBDD_Generar_Datos_DemoImpl();
 	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-//		Borrar borrar = new Borrar();
 		BBDD_Generar_Tablas generarTablas = new BBDD_Generar_TablasImpl();
 		BBDD_Generar_Datos_Demo generarDatos = new BBDD_Generar_Datos_DemoImpl();
 		generarTablas.crearTablaCertificado();
