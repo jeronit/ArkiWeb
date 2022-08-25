@@ -6,6 +6,9 @@
  */
 package ArkiWeb.vista.struts2mvc.modelo.impl;
 
+import ArkiWeb.controlador.Controlador_Modelo;
+import ArkiWeb.controlador.impl.Controlador_ModeloImpl;
+import ArkiWeb.vista.struts2mvc.modelo.ActionSupport;
 import ArkiWeb.vista.struts2mvc.modelo.LoginActionSupport;
 import ArkiWeb.vista.struts2mvc.modelo.ModeloPackage;
 
@@ -24,7 +27,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class LoginActionSupportImpl extends MinimalEObjectImpl.Container implements LoginActionSupport {
+public class LoginActionSupportImpl extends ActionSupport implements LoginActionSupport {
+	
+	private String email_usuario;
+	private String contrasenya_usuario;
+	private Controlador_Modelo controlador_modelo;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -32,6 +40,7 @@ public class LoginActionSupportImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	protected LoginActionSupportImpl() {
 		super();
+		controlador_modelo = new Controlador_ModeloImpl();
 	}
 
 	/**
@@ -53,6 +62,35 @@ public class LoginActionSupportImpl extends MinimalEObjectImpl.Container impleme
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	
+	/**
+	 * @return the email_usuario
+	 */
+	public String getEmail_usuario() {
+		return email_usuario;
+	}
+
+	/**
+	 * @param email_usuario the email_usuario to set
+	 */
+	public void setEmail_usuario(String email_usuario) {
+		this.email_usuario = email_usuario;
+	}
+
+	/**
+	 * @return the contrasenya_usuario
+	 */
+	public String getContrasenya_usuario() {
+		return contrasenya_usuario;
+	}
+
+	/**
+	 * @param contrasenya_usuario the contrasenya_usuario to set
+	 */
+	public void setContrasenya_usuario(String contrasenya_usuario) {
+		this.contrasenya_usuario = contrasenya_usuario;
 	}
 
 	/**

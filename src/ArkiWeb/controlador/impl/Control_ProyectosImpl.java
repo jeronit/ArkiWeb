@@ -327,7 +327,7 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 		
 		Proyectos_En_Ejecucion contratacionProyecto = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_En_Ejecucion");
 		contratacionProyecto.setId_proyecto_ejecucion_proyecto(proyecto.getId_proyecto());
-		contratacionProyecto.setFecha_inicio_ejecucion_proyecto(LocalDateTime.now());
+		contratacionProyecto.setFecha_inicio_ejecucion_proyecto(new Date());
 		contratacionProyecto.setDuracion_prevista_ejecucion_proyecto(proyecto.getDuracion_prevista_proyecto());
 		
 		ArkiWeb.controlador.Borrar.db.contratarProyecto(contratacionProyecto);
