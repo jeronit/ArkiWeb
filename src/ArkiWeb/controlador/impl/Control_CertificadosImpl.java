@@ -268,7 +268,7 @@ public class Control_CertificadosImpl implements Control_Certificados {
 	@Override
 	public void editarCertificado(Certificado certificado) {
 		
-		ArkiWeb.controlador.Borrar.db.editarCertificado(certificado);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarCertificado(certificado);
 		
 	}
 
@@ -283,18 +283,18 @@ public class Control_CertificadosImpl implements Control_Certificados {
 	@Override
 	public void asignarCertificado(Certificado certificado, Integer id_arquitecto) {
 
-		Certificados_Asignados certificado_Asignado = (Certificados_Asignados) ArkiWeb.controlador.Borrar.factory.crearObjeto("Certificados_Asignados");
+		Certificados_Asignados certificado_Asignado = (Certificados_Asignados) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Certificados_Asignados");
 		
 		certificado_Asignado.setId_arquitecto_certificado_asignado(id_arquitecto);
 		certificado_Asignado.setId_certificado_certificado_asignado(certificado.getId_certificado());
 		
-		ArkiWeb.controlador.Borrar.db.asignarCertificado(certificado_Asignado);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.asignarCertificado(certificado_Asignado);
 		
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Edita la asignación de un arquitecto a un certificado
+	 * Edita la asignaciï¿½n de un arquitecto a un certificado
 	 * <!-- end-user-doc -->
 	 * @param 		certificado			Certificado			Certificado
 	 * @param		id_arquitecto		Integer				Id arquitecto
@@ -305,7 +305,7 @@ public class Control_CertificadosImpl implements Control_Certificados {
 
 		certificado_Asignado.setId_arquitecto_certificado_asignado(id_arquitecto);
 		
-		ArkiWeb.controlador.Borrar.db.editarAsignacionCertificado(certificado_Asignado);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarAsignacionCertificado(certificado_Asignado);
 		
 	}
 
@@ -319,7 +319,7 @@ public class Control_CertificadosImpl implements Control_Certificados {
 	@Override
 	public void crearCertificado(Certificado certificado) {
 		
-		ArkiWeb.controlador.Borrar.db.crearCertificado(certificado);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearCertificado(certificado);
 		
 	}
 

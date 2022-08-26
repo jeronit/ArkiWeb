@@ -9,6 +9,8 @@
 		<title><s:i18n name="title_i18n"><s:property value="portal.title"/></s:i18n></title>
 	</head>
 	<body>
+		success
 		
+		<s:property value="email_usuario"/>
 	</body>
 </html>

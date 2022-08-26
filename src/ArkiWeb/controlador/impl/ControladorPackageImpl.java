@@ -154,8 +154,6 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 		ArkiWebPackageImpl theArkiWebPackage = (ArkiWebPackageImpl)(registeredPackage instanceof ArkiWebPackageImpl ? registeredPackage : ArkiWebPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ModeloPackage.eNS_URI);
 		ModeloPackageImpl theModeloPackage = (ModeloPackageImpl)(registeredPackage instanceof ModeloPackageImpl ? registeredPackage : ModeloPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArkiWeb.vista.struts2mvc.modelo.ModeloPackage.eNS_URI);
-		ArkiWeb.vista.struts2mvc.modelo.impl.ModeloPackageImpl theModeloPackage_1 = (ArkiWeb.vista.struts2mvc.modelo.impl.ModeloPackageImpl)(registeredPackage instanceof ArkiWeb.vista.struts2mvc.modelo.impl.ModeloPackageImpl ? registeredPackage : ArkiWeb.vista.struts2mvc.modelo.ModeloPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(registeredPackage instanceof TypesPackageImpl ? registeredPackage : TypesPackage.eINSTANCE);
 
@@ -163,14 +161,12 @@ public class ControladorPackageImpl extends EPackageImpl implements ControladorP
 		theControladorPackage.createPackageContents();
 		theArkiWebPackage.createPackageContents();
 		theModeloPackage.createPackageContents();
-		theModeloPackage_1.createPackageContents();
 		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theControladorPackage.initializePackageContents();
 		theArkiWebPackage.initializePackageContents();
 		theModeloPackage.initializePackageContents();
-		theModeloPackage_1.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed

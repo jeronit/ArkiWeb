@@ -7,6 +7,9 @@
 package ArkiWeb.controlador;
 
 import ArkiWeb.modelo.Usuario;
+
+import java.sql.SQLException;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -49,5 +52,5 @@ public interface Control_Usuarios extends EObject {
 	 * @generated NOT
 	 */
 	void bajaUsuario(int id_Usuario);
-
+	
 } // Control_Usuarios

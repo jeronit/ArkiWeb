@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	Implementación de la Interface Generar_Tablas_BBDD
+ * 	@purpose:	Implementaciï¿½n de la Interface Generar_Tablas_BBDD
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17
@@ -7,7 +7,7 @@
 package ArkiWeb.controlador.impl;
 
 import ArkiWeb.controlador.BBDD_Generar_Tablas;
-import ArkiWeb.controlador.Borrar;
+import ArkiWeb.controlador.Arkiweb_Initialiazer;
 import ArkiWeb.modelo.ConcreteFactory;
 import ArkiWeb.modelo.HSQLDB;
 import ArkiWeb.modelo.Rol;
@@ -24,7 +24,7 @@ public class BBDD_Generar_TablasImpl implements BBDD_Generar_Tablas {
 
 //	HSQLDB db;
 //	ConcreteFactory factory;
-	Borrar principal;
+	Arkiweb_Initialiazer principal;
 	
 	/**
 	 * Instantiates a new generar tablas BBDD impl.
@@ -32,7 +32,7 @@ public class BBDD_Generar_TablasImpl implements BBDD_Generar_Tablas {
 	public BBDD_Generar_TablasImpl() {
 //		this.db = HSQLDBImpl.getInstance();
 //		this.factory = new ConcreteFactoryImpl();
-		principal = new Borrar();
+		principal = Arkiweb_Initialiazer.getInstance();
 	}
 
 	/**

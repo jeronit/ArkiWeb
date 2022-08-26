@@ -13,7 +13,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import ArkiWeb.controlador.BBDD_Generar_Datos_Demo;
-import ArkiWeb.controlador.Borrar;
+import ArkiWeb.controlador.Arkiweb_Initialiazer;
 import ArkiWeb.modelo.Categoria_Certificado;
 import ArkiWeb.modelo.Certificado;
 import ArkiWeb.modelo.Certificados_Asignados;
@@ -33,38 +33,38 @@ import ArkiWeb.modelo.Vivienda;
  */
 public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 
-//	Borrar principal;
+//	Arkiweb_Initialiazer principal;
 	
 	/**
 	 * 
 	 */
 	public BBDD_Generar_Datos_DemoImpl() {
-//		principal = new Borrar();
+//		principal = new Arkiweb_Initialiazer();
 	}
 
 	@Override
 	public void insertarRoles() {
-		Rol rol1 = (Rol) ArkiWeb.controlador.Borrar.factory.crearObjeto("Rol");
-		Rol rol2 = (Rol) ArkiWeb.controlador.Borrar.factory.crearObjeto("Rol");
-		Rol rol3 = (Rol) ArkiWeb.controlador.Borrar.factory.crearObjeto("Rol");
+		Rol rol1 = (Rol) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Rol");
+		Rol rol2 = (Rol) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Rol");
+		Rol rol3 = (Rol) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Rol");
 		
 		rol1.setDescripcion_rol("Cliente");
 		rol2.setDescripcion_rol("Arquitecto");
 		rol3.setDescripcion_rol("Administrador");
 		
-		ArkiWeb.controlador.Borrar.db.crearRol(rol1);
-		ArkiWeb.controlador.Borrar.db.crearRol(rol2);
-		ArkiWeb.controlador.Borrar.db.crearRol(rol3);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearRol(rol1);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearRol(rol2);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearRol(rol3);
 	}
 
 	@Override
 	public void insertarUsuarios() {
-		Usuario usuario1 = (Usuario) ArkiWeb.controlador.Borrar.factory.crearObjeto("Usuario");
-		Usuario usuario2 = (Usuario) ArkiWeb.controlador.Borrar.factory.crearObjeto("Usuario");
-		Usuario usuario3 = (Usuario) ArkiWeb.controlador.Borrar.factory.crearObjeto("Usuario");
-		Usuario usuario4 = (Usuario) ArkiWeb.controlador.Borrar.factory.crearObjeto("Usuario");
-		Usuario usuario5 = (Usuario) ArkiWeb.controlador.Borrar.factory.crearObjeto("Usuario");
-		Usuario usuario6 = (Usuario) ArkiWeb.controlador.Borrar.factory.crearObjeto("Usuario");
+		Usuario usuario1 = (Usuario) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Usuario");
+		Usuario usuario2 = (Usuario) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Usuario");
+		Usuario usuario3 = (Usuario) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Usuario");
+		Usuario usuario4 = (Usuario) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Usuario");
+		Usuario usuario5 = (Usuario) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Usuario");
+		Usuario usuario6 = (Usuario) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Usuario");
 		
 		usuario1.setNombre_usuario("Arquitecto Usuario 01");
 		usuario1.setApellidos_usuario("Apellidos Usuario 01");
@@ -120,12 +120,12 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		usuario6.setRol_usuario(1);
 		usuario6.setTelefono_usuario("876543210");
 		
-		ArkiWeb.controlador.Borrar.db.crearUsuario(usuario1);
-		ArkiWeb.controlador.Borrar.db.crearUsuario(usuario2);
-		ArkiWeb.controlador.Borrar.db.crearUsuario(usuario3);
-		ArkiWeb.controlador.Borrar.db.crearUsuario(usuario4);
-		ArkiWeb.controlador.Borrar.db.crearUsuario(usuario5);
-		ArkiWeb.controlador.Borrar.db.crearUsuario(usuario6);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearUsuario(usuario1);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearUsuario(usuario2);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearUsuario(usuario3);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearUsuario(usuario4);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearUsuario(usuario5);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearUsuario(usuario6);
 
 	}
 
@@ -137,9 +137,9 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 
 	@Override
 	public void insertarInmuebles() {
-		Inmueble inmueble1 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
-		Inmueble inmueble2 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
-		Inmueble inmueble3 = (Inmueble) ArkiWeb.controlador.Borrar.factory.crearObjeto("Inmueble");
+		Inmueble inmueble1 = (Inmueble) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Inmueble");
+		Inmueble inmueble2 = (Inmueble) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Inmueble");
+		Inmueble inmueble3 = (Inmueble) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Inmueble");
 		Calendar calendar1 = Calendar.getInstance();
 		Calendar calendar2 = Calendar.getInstance();
 		calendar1.setTime(new Date());
@@ -151,33 +151,33 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		Date fechaInmueble3 = new Date();
 		
 		inmueble1.setDescripcion_inmueble("inmueble1");
-		inmueble1.setDireccion_inmueble("Dirección inmueble1");
+		inmueble1.setDireccion_inmueble("Direcciï¿½n inmueble1");
 		inmueble1.setSuperficie_inmueble(537.5);
 		inmueble1.setSuperficie_terreno_inmueble(1537.25);
 		inmueble1.setFecha_construccion_inmueble(fechaInmueble1);
 		
 		inmueble2.setDescripcion_inmueble("inmueble2");
-		inmueble2.setDireccion_inmueble("Dirección inmueble2");
+		inmueble2.setDireccion_inmueble("Direcciï¿½n inmueble2");
 		inmueble2.setSuperficie_inmueble(137.5);
 		inmueble2.setSuperficie_terreno_inmueble(137.5);
 		inmueble2.setFecha_construccion_inmueble(fechaInmueble2);
 		
 		inmueble3.setDescripcion_inmueble("inmueble3");
-		inmueble3.setDireccion_inmueble("Dirección inmueble3");
+		inmueble3.setDireccion_inmueble("Direcciï¿½n inmueble3");
 		inmueble3.setSuperficie_inmueble(257.55);
 		inmueble3.setSuperficie_terreno_inmueble(257.55);
 		inmueble3.setFecha_construccion_inmueble(fechaInmueble3);
 		
-		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble1);
-		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble2);
-		ArkiWeb.controlador.Borrar.db.crearInmueble(inmueble3);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearInmueble(inmueble1);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearInmueble(inmueble2);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearInmueble(inmueble3);
 
 	}
 
 	@Override
 	public void insertarViviendas() {
-		Vivienda vivienda1 = (Vivienda) ArkiWeb.controlador.Borrar.factory.crearObjeto("Vivienda");
-		Vivienda vivienda2 = (Vivienda) ArkiWeb.controlador.Borrar.factory.crearObjeto("Vivienda");
+		Vivienda vivienda1 = (Vivienda) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Vivienda");
+		Vivienda vivienda2 = (Vivienda) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Vivienda");
 		
 		vivienda1.setDescripcion_vivienda("vivienda1");
 		vivienda1.setDescripcion_vivienda("Direccion vivienda1");
@@ -197,15 +197,15 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		vivienda2.setHabitaciones_vivienda(4);
 		vivienda2.setBanyos_vivienda(3);
 		
-		ArkiWeb.controlador.Borrar.db.crearVivienda(vivienda1);
-		ArkiWeb.controlador.Borrar.db.crearVivienda(vivienda2);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearVivienda(vivienda1);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearVivienda(vivienda2);
 
 	}
 
 	@Override
 	public void insertarCertificados() {
-		Certificado certificado1 = (Certificado) ArkiWeb.controlador.Borrar.factory.crearObjeto("Certificado");
-		Certificado certificado2 = (Certificado) ArkiWeb.controlador.Borrar.factory.crearObjeto("Certificado");
+		Certificado certificado1 = (Certificado) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Certificado");
+		Certificado certificado2 = (Certificado) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Certificado");
 		
 		certificado1.setDescripcion_certificado("certificado1");
 		certificado1.setId_cliente_certificado(3);
@@ -222,24 +222,24 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		certificado2.setTipo_certificado(Tipo_Certificado.ITE);
 		certificado2.setFecha_solicitud_certificado(new Date());
 		
-		ArkiWeb.controlador.Borrar.db.crearCertificado(certificado1);
-		ArkiWeb.controlador.Borrar.db.crearCertificado(certificado2);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearCertificado(certificado1);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearCertificado(certificado2);
 	}
 
 	@Override
 	public void insertarCertificados_Asignados() {
-		Certificados_Asignados certificado_Asignado = (Certificados_Asignados) ArkiWeb.controlador.Borrar.factory.crearObjeto("Certificados_Asignados");
+		Certificados_Asignados certificado_Asignado = (Certificados_Asignados) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Certificados_Asignados");
 		
 		certificado_Asignado.setId_arquitecto_certificado_asignado(0);
 		certificado_Asignado.setId_certificado_certificado_asignado(0);
 		
-		ArkiWeb.controlador.Borrar.db.asignarCertificado(certificado_Asignado);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.asignarCertificado(certificado_Asignado);
 
 	}
 
 	@Override
 	public void insertarProyectos() {
-		Proyecto proyecto = (Proyecto) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyecto");
+		Proyecto proyecto = (Proyecto) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Proyecto");
 		
 		proyecto.setId_cliente_proyecto(5);
 		proyecto.setDescripcion_proyecto("proyecto1");
@@ -250,28 +250,28 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		proyecto.setPresupuesto_ejecucion_proyecto(50000.00);
 		proyecto.setDuracion_prevista_proyecto(8);
 		
-		ArkiWeb.controlador.Borrar.db.crearProyecto(proyecto);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearProyecto(proyecto);
 
 	}
 
 	@Override
 	public void insertarProyectos_Asignados() {
-		Proyectos_Asignados proyecto_Asignado = (Proyectos_Asignados) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_Asignados");
+		Proyectos_Asignados proyecto_Asignado = (Proyectos_Asignados) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Proyectos_Asignados");
 
 		proyecto_Asignado.setId_arquitecto_proyecto_asignado(1);
 		proyecto_Asignado.setId_proyecto_proyecto_asignado(0);
 		
-		ArkiWeb.controlador.Borrar.db.asignarProyecto(proyecto_Asignado);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.asignarProyecto(proyecto_Asignado);
 	}
 
 	@Override
 	public void insertarProyectos_Contratados() {
-		Proyectos_En_Ejecucion proyecto_Contratado = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_En_Ejecucion");
+		Proyectos_En_Ejecucion proyecto_Contratado = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Proyectos_En_Ejecucion");
 
 		proyecto_Contratado.setId_proyecto_ejecucion_proyecto(1);
 		proyecto_Contratado.setFecha_inicio_ejecucion_proyecto(new Date());
 		proyecto_Contratado.setDuracion_prevista_ejecucion_proyecto(9);
-		ArkiWeb.controlador.Borrar.db.contratarProyecto(proyecto_Contratado);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.contratarProyecto(proyecto_Contratado);
 	}
 
 }

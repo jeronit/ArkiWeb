@@ -28,6 +28,7 @@ import ArkiWeb.ListPermiso;
 import ArkiWeb.ListProyecto;
 import ArkiWeb.ListUsuario;
 import ArkiWeb.ListVivienda;
+import ArkiWeb.controlador.Arkiweb_Initialiazer;
 import ArkiWeb.controlador.Control_Certificados;
 import ArkiWeb.controlador.Control_Inmuebles;
 import ArkiWeb.controlador.Control_Login;
@@ -57,7 +58,10 @@ import ArkiWeb.modelo.Vivienda;
  * @author JTE
  */
 public class Controlador_ModeloImpl implements Controlador_Modelo {
-
+	
+	/** The initializer. */
+	Arkiweb_Initialiazer initializer;
+	
 	/** The control certificados. */
 	Control_Certificados control_Certificados;
 	
@@ -86,6 +90,8 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	 * Instantiates a new controlador modelo impl.
 	 */
 	public Controlador_ModeloImpl() {
+		initializer = Arkiweb_Initialiazer.getInstance();
+		if(!Arkiweb_Initialiazer.isInitialized()) initializer.init();
 		control_Certificados = new Control_CertificadosImpl();
 		control_Inmuebles = new Control_InmueblesImpl(); 
 		control_Login = new Control_LoginImpl(); 
@@ -538,7 +544,7 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	@Override
 	public void asignarProyecto(Proyecto proyecto, int id_usuario) {
 		
-		Proyectos_Asignados proyecto_asignado = (Proyectos_Asignados) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_Asignados");
+		Proyectos_Asignados proyecto_asignado = (Proyectos_Asignados) this.initializer.factory.crearObjeto("Proyectos_Asignados");
 		control_Proyectos.asignarProyecto(proyecto_asignado);
 	}
 
@@ -603,7 +609,7 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	public void cambiarContrasenya(String email) {
 		Usuario usuario;
 		try {
-			usuario = control_Login.buscarUsuarioPorEmail(email);
+			usuario = gestor_Busquedas.buscarUsuarioPorEmail(email);
 			control_Login.cambiarContrasenya(usuario, email);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -690,6 +696,21 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 		return gestor_Busquedas.buscarUsuario(id_usuario);
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->.
+	 *
+	 * @param email_usuario the email usuario
+	 * @return the usuario
+	 * @throws SQLException 
+	 * @model required="true" ordered="false" email_usuarioDataType="org.eclipse.uml2.types.String" email_usuarioRequired="true" email_usuarioOrdered="false"
+	 */
+	@Override
+	public Usuario buscarUsuarioPorEmail(String email_usuario) throws SQLException {
+		
+		return gestor_Busquedas.buscarUsuarioPorEmail(email_usuario);
+	}
+	
 	/**
 	 * Buscar mis proyectos.
 	 *

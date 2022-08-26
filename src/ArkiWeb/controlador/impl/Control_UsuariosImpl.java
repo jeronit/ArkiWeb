@@ -7,6 +7,8 @@
 package ArkiWeb.controlador.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -20,6 +22,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
 import ArkiWeb.modelo.Usuario;
+import ArkiWeb.server.impl.Server_ConnectionImpl;
 
 /**
  * @author JTE
@@ -158,7 +161,7 @@ public class Control_UsuariosImpl implements ArkiWeb.controlador.Control_Usuario
 	@Override
 	public void crearUsuario(Usuario usuario) {
 		
-		ArkiWeb.controlador.Borrar.db.crearUsuario(usuario);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearUsuario(usuario);
 		
 	}
 
@@ -172,7 +175,7 @@ public class Control_UsuariosImpl implements ArkiWeb.controlador.Control_Usuario
 	@Override
 	public void editarUsuario(Usuario usuario) {
 		
-		ArkiWeb.controlador.Borrar.db.editarUsuario(usuario);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarUsuario(usuario);
 		
 	}
 	
@@ -186,9 +189,8 @@ public class Control_UsuariosImpl implements ArkiWeb.controlador.Control_Usuario
 	@Override
 	public void bajaUsuario(int id_Usuario) {
 		
-		ArkiWeb.controlador.Borrar.db.bajaUsuario(id_Usuario);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.bajaUsuario(id_Usuario);
 
 	}
-
 
 }

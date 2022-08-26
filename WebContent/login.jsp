@@ -12,17 +12,19 @@
 		</head>
 		<body>
 			
-		   <h1><s:text name="login.title"/></h1>
-			
-			
-			<h2><s:property value = "getText('login.title')" /></h2>
+			<h1><s:text name="login.title"/></h1>
 			
 			<s:form action="login">
-				<s:label for="email_usuario" name="email_usuario_label"><s:property value = "getText('login.label.email')" /></s:label>
-				<s:textfield key="email_usuario" label="getText(email_usuario_label)"></s:textfield>
-				<s:label></s:label>
-				<s:password key="contrasenya_usuario"></s:password>
-				<s:submit/>
+				<div id="usuario">
+					<s:label for="email_usuario" name="email_usuario_label"><s:property value = "getText('login.label.email')" /></s:label>
+					<s:textfield name="email_usuario"></s:textfield>
+				</div>
+				<div id="password">
+					<s:label for="contrasenya_usuario" name="contrasenya_usuario_label"><s:property value = "getText('login.label.contrasenya')" /></s:label>
+					<s:password name="contrasenya_usuario"></s:password>
+				</div>
+				
+				<s:submit name="submit_button_login"/>
 			</s:form>
 		</body>
 	</html>

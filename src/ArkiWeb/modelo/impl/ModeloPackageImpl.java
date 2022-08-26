@@ -210,8 +210,6 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArkiWebPackage.eNS_URI);
 		ArkiWebPackageImpl theArkiWebPackage = (ArkiWebPackageImpl)(registeredPackage instanceof ArkiWebPackageImpl ? registeredPackage : ArkiWebPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ArkiWeb.vista.struts2mvc.modelo.ModeloPackage.eNS_URI);
-		ArkiWeb.vista.struts2mvc.modelo.impl.ModeloPackageImpl theModeloPackage_1 = (ArkiWeb.vista.struts2mvc.modelo.impl.ModeloPackageImpl)(registeredPackage instanceof ArkiWeb.vista.struts2mvc.modelo.impl.ModeloPackageImpl ? registeredPackage : ArkiWeb.vista.struts2mvc.modelo.ModeloPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ControladorPackage.eNS_URI);
 		ControladorPackageImpl theControladorPackage = (ControladorPackageImpl)(registeredPackage instanceof ControladorPackageImpl ? registeredPackage : ControladorPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
@@ -220,14 +218,12 @@ public class ModeloPackageImpl extends EPackageImpl implements ModeloPackage {
 		// Create package meta-data objects
 		theModeloPackage.createPackageContents();
 		theArkiWebPackage.createPackageContents();
-		theModeloPackage_1.createPackageContents();
 		theControladorPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theModeloPackage.initializePackageContents();
 		theArkiWebPackage.initializePackageContents();
-		theModeloPackage_1.initializePackageContents();
 		theControladorPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 

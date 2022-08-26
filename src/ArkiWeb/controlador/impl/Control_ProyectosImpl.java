@@ -269,7 +269,7 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 	@Override
 	public void crearProyecto(Proyecto proyecto) {
 		
-		ArkiWeb.controlador.Borrar.db.crearProyecto(proyecto);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearProyecto(proyecto);
 		
 	}
 
@@ -283,68 +283,68 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 	@Override
 	public void editarProyecto(Proyecto proyecto) {
 		
-		ArkiWeb.controlador.Borrar.db.editarProyecto(proyecto);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarProyecto(proyecto);
 		
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Registra un nueva asignación de un proyecto
+	 * Registra un nueva asignaciï¿½n de un proyecto
 	 * <!-- end-user-doc -->
-	 * @param		asignacionProyecto			Proyectos_Asignados					Asignación de un proyecto
+	 * @param		asignacionProyecto			Proyectos_Asignados					Asignaciï¿½n de un proyecto
 	 * @model asignacionProyectoRequired="true" asignacionProyectoOrdered="false"
 	 */
 	@Override
 	public void asignarProyecto(Proyectos_Asignados asignacionProyecto) {
 		
-		ArkiWeb.controlador.Borrar.db.asignarProyecto(asignacionProyecto);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.asignarProyecto(asignacionProyecto);
 		
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Edita la asignación de un proyecto
+	 * Edita la asignaciï¿½n de un proyecto
 	 * <!-- end-user-doc -->
-	 * @param		asignacionProyecto			Proyectos_Asignados					Asignación de un proyecto
+	 * @param		asignacionProyecto			Proyectos_Asignados					Asignaciï¿½n de un proyecto
 	 * @model asignacionProyectoRequired="true" asignacionProyectoOrdered="false"
 	 */
 	@Override
 	public void editarAsignacionProyecto(Proyectos_Asignados asignacionProyecto) {
 
-		ArkiWeb.controlador.Borrar.db.editarAsignacionProyecto(asignacionProyecto);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarAsignacionProyecto(asignacionProyecto);
 		
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Registra un nueva contratación de un proyecto
+	 * Registra un nueva contrataciï¿½n de un proyecto
 	 * <!-- end-user-doc -->
-	 * @param		contratacionProyecto			Proyectos_En_Ejecucion			Contratación de un proyecto
+	 * @param		contratacionProyecto			Proyectos_En_Ejecucion			Contrataciï¿½n de un proyecto
 	 * @model contratacionProyectoRequired="true" contratacionProyectoOrdered="false"
 	 */
 	@Override
 	public void contratarProyecto(Proyecto proyecto) {
 		
-		Proyectos_En_Ejecucion contratacionProyecto = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Borrar.factory.crearObjeto("Proyectos_En_Ejecucion");
+		Proyectos_En_Ejecucion contratacionProyecto = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Proyectos_En_Ejecucion");
 		contratacionProyecto.setId_proyecto_ejecucion_proyecto(proyecto.getId_proyecto());
 		contratacionProyecto.setFecha_inicio_ejecucion_proyecto(new Date());
 		contratacionProyecto.setDuracion_prevista_ejecucion_proyecto(proyecto.getDuracion_prevista_proyecto());
 		
-		ArkiWeb.controlador.Borrar.db.contratarProyecto(contratacionProyecto);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.contratarProyecto(contratacionProyecto);
 		
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Edita la contratación de un proyecto
+	 * Edita la contrataciï¿½n de un proyecto
 	 * <!-- end-user-doc -->
-	 * @param		contratacionProyecto			Proyectos_En_Ejecucion			Contratación de un proyecto
+	 * @param		contratacionProyecto			Proyectos_En_Ejecucion			Contrataciï¿½n de un proyecto
 	 * @model contratacionProyectoRequired="true" contratacionProyectoOrdered="false"
 	 */
 	@Override
 	public void editarContratacionProyecto(Proyectos_En_Ejecucion contratacionProyecto) {
 
-		ArkiWeb.controlador.Borrar.db.editarContratacionProyecto(contratacionProyecto);
+		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarContratacionProyecto(contratacionProyecto);
 		
 	}
 

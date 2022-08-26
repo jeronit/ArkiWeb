@@ -23,6 +23,7 @@ import ArkiWeb.modelo.Proyectos_En_Ejecucion;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
@@ -129,6 +130,18 @@ public interface Gestor_Busquedas extends EObject {
 	 * @generated NOT
 	 */
 	Usuario buscarUsuario(int id_usuario);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Busca un usuario por email
+	 * <!-- end-user-doc -->
+	 * @param		email				String			Email
+	 * @return							Usuario			Usuario
+	 * @throws SQLException 
+	 * @model emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false"
+	 * @generated NOT
+	 */
+	Usuario buscarUsuarioPorEmail(String email) throws SQLException;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,11 +266,11 @@ public interface Gestor_Busquedas extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Busca la asignación de un arquitecto a un proyecto.
+	 * Busca la asignaciï¿½n de un arquitecto a un proyecto.
 	 * <!-- end-user-doc -->
 	 * @param	id_usuario		int					Id
 	 * @param	id_proyecto		int					Id
-	 * @return			Proyectos_Asignados			Asignación de un arquitecto a un proyecto
+	 * @return			Proyectos_Asignados			Asignaciï¿½n de un arquitecto a un proyecto
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
 	 * @generated NOT
 	 */
@@ -265,10 +278,10 @@ public interface Gestor_Busquedas extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Busca la contratación de un proyecto.
+	 * Busca la contrataciï¿½n de un proyecto.
 	 * <!-- end-user-doc -->
 	 * @param	id_proyecto		int					Id
-	 * @return			Proyectos_En_Ejecucion		Contratación de un proyecto
+	 * @return			Proyectos_En_Ejecucion		Contrataciï¿½n de un proyecto
 	 * @model required="true" ordered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
 	 * @generated NOT
 	 */
@@ -276,11 +289,11 @@ public interface Gestor_Busquedas extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Busca la asignación de un arquitecto a un certificado.
+	 * Busca la asignaciï¿½n de un arquitecto a un certificado.
 	 * <!-- end-user-doc -->
 	 * @param	id_usuario			int					Id
 	 * @param	id_certificado		int					Id
-	 * @return			List<Certificados_Asignados>		Asignación de un arquitecto a un certificado
+	 * @return			List<Certificados_Asignados>		Asignaciï¿½n de un arquitecto a un certificado
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
 	 * @generated NOT
 	 */

@@ -22,6 +22,7 @@ import ArkiWeb.modelo.Proyectos_En_Ejecucion;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
@@ -365,6 +366,18 @@ public interface Controlador_Modelo extends EObject {
 	 * @generated 
 	 */
 	Usuario buscarUsuario(int id_usuario);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->.
+	 *
+	 * @param email_usuario the email usuario
+	 * @return the usuario
+	 * @throws SQLException 
+	 * @model required="true" ordered="false" email_usuarioDataType="org.eclipse.uml2.types.String" email_usuarioRequired="true" email_usuarioOrdered="false"
+	 * @generated NOT
+	 */
+	Usuario buscarUsuarioPorEmail(String email_usuario) throws SQLException;
 
 	/**
 	 * <!-- begin-user-doc -->

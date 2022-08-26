@@ -6,12 +6,15 @@
  */
 package ArkiWeb.vista.struts2mvc.modelo;
 
+import java.sql.SQLException;
+
 import org.eclipse.emf.ecore.EObject;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 import ArkiWeb.controlador.Controlador_Modelo;
 import ArkiWeb.controlador.impl.Controlador_ModeloImpl;
+import ArkiWeb.modelo.Usuario;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +28,10 @@ import ArkiWeb.controlador.impl.Controlador_ModeloImpl;
  */
 public class LoginActionSupport extends ActionSupport {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8601040361717122903L;
 	private String email_usuario;
 	private String contrasenya_usuario;
 	private Controlador_Modelo controlador_modelo;
@@ -45,7 +52,7 @@ public class LoginActionSupport extends ActionSupport {
 	 */
 	@Override
 	public	String execute() {
-		return null;
+		return "success";
 		
 	};
 	
@@ -67,6 +74,20 @@ public class LoginActionSupport extends ActionSupport {
 			addFieldError("email_usuario", "Write a proper email.");
 		}
 		
+		if(!this.getContrasenya_usuario().isEmpty()) {
+			addFieldError("contrasenya_usuario", "Write a proper email.");
+		}
+		
+		Usuario usuario = null;
+		try {
+			usuario = this.controlador_modelo.buscarUsuarioPorEmail(this.getEmail_usuario());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(usuario == null) {
+			addFieldError("submit_button_login", "Email not in our Database");
+		}
 	}
 
 	/**

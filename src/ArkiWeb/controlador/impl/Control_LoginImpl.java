@@ -7,10 +7,8 @@
 package ArkiWeb.controlador.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.apache.struts2.convention.annotation.Results;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -23,9 +21,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
 import ArkiWeb.controlador.Control_Usuarios;
+import ArkiWeb.controlador.Gestor_Busquedas;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.util.Utils;
-import ArkiWeb.server.impl.Server_ConnectionImpl;
 
 /**
  * @author JTE
@@ -160,10 +158,10 @@ public class Control_LoginImpl implements ArkiWeb.controlador.Control_Login {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Comprueba si el usuario puede acceder a la aplicación
+	 * Comprueba si el usuario puede acceder a la aplicaciï¿½n
 	 * <!-- end-user-doc -->
 	 * @param		email				String			Email
-	 * @param		contrasenya			String			Contraseña
+	 * @param		contrasenya			String			Contraseï¿½a
 	 * @return							Boolean			Login success
 	 * @throws SQLException 
 	 * @model emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false" contrasenyaDataType="org.eclipse.uml2.types.String" contrasenyaRequired="true" contrasenyaOrdered="false"
@@ -171,9 +169,10 @@ public class Control_LoginImpl implements ArkiWeb.controlador.Control_Login {
 	@Override
 	public boolean login(String email, String contrasenya) throws SQLException {
 		
-		Usuario usuario = buscarUsuarioPorEmail(email);
+		Gestor_Busquedas gestor_Busquedas = new Gestor_BusquedasImpl();
+		Usuario usuario = gestor_Busquedas.buscarUsuarioPorEmail(email);
 		
-		if(usuario.getContrasenya_usuario().equals(this.utils.hashEncodedString(contrasenya))) {
+		if(usuario.getContrasenya_usuario().equals(String.valueOf(this.utils.hashEncodedString(contrasenya)))) {
 			return true;
 		} else {
 			return false;
@@ -182,10 +181,10 @@ public class Control_LoginImpl implements ArkiWeb.controlador.Control_Login {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Cambia la contraseña del usuario
+	 * Cambia la contraseï¿½a del usuario
 	 * <!-- end-user-doc -->
 	 * @param		usuario				Usuario 		Usuario
-	 * @param		contrasenya			String			Contraseña nueva
+	 * @param		contrasenya			String			Contraseï¿½a nueva
 	 * @model emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false"
 	 */
 	@Override
@@ -194,37 +193,6 @@ public class Control_LoginImpl implements ArkiWeb.controlador.Control_Login {
 		usuario.setContrasenya_usuario(String.valueOf(this.utils.hashEncodedString(contrasenya)));
 		controlUsuarios.editarUsuario(usuario);
 		
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * Busca un usuario por email
-	 * <!-- end-user-doc -->
-	 * @param		email				String			Email
-	 * @return							Usuario			Usuario
-	 * @throws SQLException 
-	 * @model emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false"
-	 */
-	@Override
-	public Usuario buscarUsuarioPorEmail(String email) throws SQLException {
-		
-		String tabla = "USUARIOS";
-		String where_clause = "email_usuario = " + email;
-		String queryString = ArkiWeb.controlador.Borrar.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Borrar.db.connect2Server(ArkiWeb.controlador.Borrar.db.getUrl(), ArkiWeb.controlador.Borrar.db.getUser(), ArkiWeb.controlador.Borrar.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Borrar.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Borrar.db.queryCerrar(server_connection);
-		
-		try {
-			if(results.isFirst() && results.isLast()) {
-				return (Usuario) results;
-				
-			} else {
-				throw new ArithmeticException("Se ha encontrado más de un usuario con el mismo email.");
-			}
-		} catch (SQLException e) {
-			throw new SQLException("El email no está en nuestra base de datos.");
-		}
 	}
 
 }
