@@ -4,10 +4,10 @@
     "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-	<package name="login" extends="struts-default">
-		<action name="login" class="ArkiWeb.vista.struts2mvc.modelo.impl.LoginActionSupportImpl">
+	<package name="portal" extends="struts-default">
+		<action name="portalAdministrador" class="ArkiWeb.vista.struts2mvc.modelo.PortalAdministradorActionSupport">
 			<result name="success">/portal.jsp</result>
-			<result name="login">/login.jsp</result>
+			<result name="failure">/portal.jsp</result>
 		</action>
 	</package>
 </struts>

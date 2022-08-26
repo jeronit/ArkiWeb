@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	
+ * 	@purpose:	Controla la JSP del Portal del Administrador
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17
@@ -7,6 +7,8 @@
 package ArkiWeb.vista.struts2mvc.modelo;
 
 import org.eclipse.emf.ecore.EObject;
+
+import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,15 +18,37 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see ArkiWeb.vista.struts2mvc.modelo.ModeloPackage#getPortalAdministradorActionSupport()
  * @model
- * @generated
+ * @generated NOT
  */
-public interface PortalAdministradorActionSupport extends EObject {
+public class PortalAdministradorActionSupport extends ActionSupport {
+	
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * 	Ejecuta la acción principal
+	 * <!-- end-user-doc -->.
+	 *
+	 * @return the string
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	String execute();
+	@Override
+	public	String execute() {
+		return null;
+		
+	};
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * 	Valida los datos recibidos
+	 * <!-- end-user-doc -->.
+	 *
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated NOT
+	 */
+	@Override
+	public void validate() {
+		
+		
+	};
 
 } // PortalAdministradorActionSupport
