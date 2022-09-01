@@ -269,7 +269,7 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 	@Override
 	public void crearProyecto(Proyecto proyecto) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearProyecto(proyecto);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.crearProyecto(proyecto);
 		
 	}
 
@@ -283,7 +283,7 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 	@Override
 	public void editarProyecto(Proyecto proyecto) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarProyecto(proyecto);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.editarProyecto(proyecto);
 		
 	}
 
@@ -297,7 +297,7 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 	@Override
 	public void asignarProyecto(Proyectos_Asignados asignacionProyecto) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.asignarProyecto(asignacionProyecto);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.asignarProyecto(asignacionProyecto);
 		
 	}
 
@@ -311,7 +311,7 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 	@Override
 	public void editarAsignacionProyecto(Proyectos_Asignados asignacionProyecto) {
 
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarAsignacionProyecto(asignacionProyecto);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.editarAsignacionProyecto(asignacionProyecto);
 		
 	}
 
@@ -325,12 +325,12 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 	@Override
 	public void contratarProyecto(Proyecto proyecto) {
 		
-		Proyectos_En_Ejecucion contratacionProyecto = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Proyectos_En_Ejecucion");
+		Proyectos_En_Ejecucion contratacionProyecto = (Proyectos_En_Ejecucion) ArkiWeb.controlador.Arkiweb_Initializer.factory.crearObjeto("Proyectos_En_Ejecucion");
 		contratacionProyecto.setId_proyecto_ejecucion_proyecto(proyecto.getId_proyecto());
 		contratacionProyecto.setFecha_inicio_ejecucion_proyecto(new Date());
 		contratacionProyecto.setDuracion_prevista_ejecucion_proyecto(proyecto.getDuracion_prevista_proyecto());
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.contratarProyecto(contratacionProyecto);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.contratarProyecto(contratacionProyecto);
 		
 	}
 
@@ -344,7 +344,7 @@ public class Control_ProyectosImpl implements ArkiWeb.controlador.Control_Proyec
 	@Override
 	public void editarContratacionProyecto(Proyectos_En_Ejecucion contratacionProyecto) {
 
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarContratacionProyecto(contratacionProyecto);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.editarContratacionProyecto(contratacionProyecto);
 		
 	}
 

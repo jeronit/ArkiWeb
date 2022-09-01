@@ -7,10 +7,11 @@
 package ArkiWeb.server.impl;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.Driver;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 
 import ArkiWeb.server.Server_Connection;
 
@@ -124,7 +125,18 @@ public class Server_ConnectionImpl implements Server_Connection {
 	public void serverConnect() {
 		
 		try {
-			this.setConnection(DriverManager.getConnection(url, user, password));
+			Driver driver = null;
+			try {
+				driver = (Driver) Class.forName("org.hsqldb.jdbc.JDBCDriver").newInstance();
+			} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			Properties props = new Properties();
+			props.setProperty("user", user);
+			props.setProperty("password", password);
+			
+			this.setConnection(driver.connect(url, props));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -41,6 +41,7 @@ import ArkiWeb.modelo.Vivienda;
 import ArkiWeb.modelo.impl.Certificados_AsignadosImpl;
 import ArkiWeb.modelo.impl.Proyectos_AsignadosImpl;
 import ArkiWeb.modelo.impl.Proyectos_En_EjecucionImpl;
+import ArkiWeb.modelo.impl.UsuarioImpl;
 import ArkiWeb.server.impl.Server_ConnectionImpl;
 
 /**
@@ -182,22 +183,44 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		List<Usuario> resultado = new ArrayList<Usuario>();
 		String tabla = "USUARIOS";
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, null);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, null);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+//		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
-				resultado.add((Usuario) results);
+				resultado.add(this.addResultData2Usuario(results));
+//				resultado.add((Usuario) results);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		return resultado;
 	}
 
+	
+	private Usuario addResultData2Usuario(ResultSet results) {
+		Usuario usuario = new UsuarioImpl();
+		try {
+			usuario.setId_usuario(results.getInt("id_usuario"));
+			usuario.setNombre_usuario(results.getString("nombre_usuario"));
+			usuario.setApellidos_usuario(results.getString("apellidos_usuario"));
+			usuario.setDni_usuario(results.getString("dni_usuario"));
+			usuario.setTelefono_usuario(results.getString("telefono_usuario"));
+			usuario.setEmail_usuario(results.getString("email_usuario"));
+			usuario.setDomicilio_usuario(results.getString("domicilio_usuario"));
+			usuario.setRol_usuario(results.getInt("rol_usuario"));
+			usuario.setContrasenya_usuario(results.getString("contrasenya_usuario"));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return usuario;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * Devuelve un inmueble.
@@ -208,7 +231,7 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	@Override
 	public Inmueble buscarInmueble(int id_inmueble) {
 		
-		return ArkiWeb.controlador.Arkiweb_Initialiazer.db.buscarInmueble(id_inmueble);
+		return ArkiWeb.controlador.Arkiweb_Initializer.db.buscarInmueble(id_inmueble);
 		
 	}
 
@@ -224,10 +247,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		List<Permiso> resultado = new ArrayList<Permiso>();
 		String tabla = "PERMISOS";
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, null);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, null);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -252,10 +275,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		List<Proyecto> resultado = new ArrayList<Proyecto>();
 		String tabla = "PROYECTOS";
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, null);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, null);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -280,10 +303,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		List<Certificado> resultado = new ArrayList<Certificado>();
 		String tabla = "CERTIFICADOS";
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, null);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, null);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -308,10 +331,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		List<Vivienda> resultado = new ArrayList<Vivienda>();
 		String tabla = "VIVIENDAS";
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, null);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, null);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -336,10 +359,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		List<Inmueble> resultado = new ArrayList<Inmueble>();
 		String tabla = "INMUEBLES";
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, null);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, null);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -369,10 +392,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "PERMISOS";
 		String where_clause = "id_rol_permiso = " + usuario.getRol_usuario();
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -399,10 +422,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		Usuario resultado = null;
 		String tabla = "USUARIOS";
 		String where_clause = "id_usuario = " + id_usuario;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -428,21 +451,43 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	public Usuario buscarUsuarioPorEmail(String email) throws SQLException {
 		
 		String tabla = "USUARIOS";
-		String where_clause = "email_usuario = " + email;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String where_clause = "email_usuario = '" + email +"'";
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
 		
 		try {
-			if(results.isFirst() && results.isLast()) {
-				return (Usuario) results;
+			results.next();						
+			if(results == null) {
+				Usuario usuario = null;
+				ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
+				return usuario;
+//				throw new ArithmeticException("El email no está en nuestra base de datos.");
+			} else if(results.isFirst() && results.isLast()) {
+/*				Usuario usuario = new UsuarioImpl();
+				usuario.setId_usuario(results.getInt("id_usuario"));
+				usuario.setNombre_usuario(results.getString("nombre_usuario"));
+				usuario.setApellidos_usuario(results.getString("apellidos_usuario"));
+				usuario.setDni_usuario(results.getString("dni_usuario"));
+				usuario.setTelefono_usuario(results.getString("telefono_usuario"));
+				usuario.setEmail_usuario(results.getString("email_usuario"));
+				usuario.setDomicilio_usuario(results.getString("domicilio_usuario"));
+				usuario.setRol_usuario(results.getInt("rol_usuario"));
+				usuario.setContrasenya_usuario(results.getString("contrasenya_usuario"));
+*/				
+				Usuario usuario = this.addResultData2Usuario(results);
 				
+				ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
+				return usuario;
 			} else {
-				throw new ArithmeticException("Se ha encontrado m�s de un usuario con el mismo email.");
+				Usuario usuario = null;
+				ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
+				return usuario;
+//				throw new ArithmeticException("Se ha encontrado más de un usuario con el mismo email.");
 			}
 		} catch (SQLException e) {
-			throw new SQLException("El email no est� en nuestra base de datos.");
+			e.printStackTrace();
+			throw new SQLException("El email no está en nuestra base de datos.");
 		}
 	}
 	
@@ -457,7 +502,7 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	@Override
 	public Vivienda buscarVivienda(int id_vivienda) {
 
-		return ArkiWeb.controlador.Arkiweb_Initialiazer.db.buscarVivienda(id_vivienda);
+		return ArkiWeb.controlador.Arkiweb_Initializer.db.buscarVivienda(id_vivienda);
 		
 	}
 
@@ -475,10 +520,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		Proyecto resultado = null;
 		String tabla = "PROYECTOS";
 		String where_clause = "id_proyecto = " + id_proyecto;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -502,7 +547,7 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	@Override
 	public Certificado buscarCertificado(int id_certificado) {
 		
-		return ArkiWeb.controlador.Arkiweb_Initialiazer.db.buscarCertificado(id_certificado);
+		return ArkiWeb.controlador.Arkiweb_Initializer.db.buscarCertificado(id_certificado);
 
 	}
 
@@ -535,10 +580,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "PROYECTOS";
 		String where_clause = "cliente_proyecto = " + id_usuario;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -580,10 +625,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "CERTIFICADOS";
 		String where_clause = "cliente_certificado = " + id_usuario;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -611,10 +656,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "CERTIFICADOS";
 		String where_clause = "vivienda_certificado = " + id_vivienda;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -642,10 +687,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "CERTIFICADOS";
 		String where_clause = "inmueble_certificado = " + id_inmueble;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -680,14 +725,14 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		List<String> columnasInnerQuery = new ArrayList<String>();
 		columnasInnerQuery.add("id_inmueble");
 		String where_clauseInnerQuery = "fecha_construccion_inmueble <= " + c;
-		String innerQueryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tablaInnerQuery, columnasInnerQuery, where_clauseInnerQuery);
+		String innerQueryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tablaInnerQuery, columnasInnerQuery, where_clauseInnerQuery);
 		
 		String tabla = "CERTIFICADOS";
 		String where_clause = "inmueble_certificado IN (" + innerQueryString + ")";
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -720,10 +765,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "CERTIFICADOS";
 		String where_clause = "tipo_certificado = " + Tipo_Certificado.HABITABILIDAD_VALUE + " AND fecha_emision_certificado <= " + edad;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -752,10 +797,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "ASIGNACION_PROYECTOS";
 		String where_clause = "id_proyecto_proyecto_asignado = " + id_proyecto + " AND arquitecto_proyecto_asignado = " + id_usuario;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -783,10 +828,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "PROYECTOS_CONTRATADOS";
 		String where_clause = "id_proyecto_ejecucion_proyecto = " + id_proyecto;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {
@@ -815,10 +860,10 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 		
 		String tabla = "ASIGNACION_CERTIFICADOS";
 		String where_clause = "id_certificado_certificado_asignado = " + id_certificado + " AND arquitecto_certificado_asignado = " + id_usuario;
-		String queryString = ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryBuscar(tabla, null, where_clause);
-		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initialiazer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initialiazer.db.getPassword());
-		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryEjecutar(server_connection, queryString);
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.queryCerrar(server_connection);
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
 		
 		try {
 			while(results.next()) {

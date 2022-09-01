@@ -7,7 +7,7 @@
 package ArkiWeb.controlador.impl;
 
 import ArkiWeb.controlador.BBDD_Generar_Tablas;
-import ArkiWeb.controlador.Arkiweb_Initialiazer;
+import ArkiWeb.controlador.Arkiweb_Initializer;
 import ArkiWeb.modelo.ConcreteFactory;
 import ArkiWeb.modelo.HSQLDB;
 import ArkiWeb.modelo.Rol;
@@ -24,7 +24,7 @@ public class BBDD_Generar_TablasImpl implements BBDD_Generar_Tablas {
 
 //	HSQLDB db;
 //	ConcreteFactory factory;
-	Arkiweb_Initialiazer principal;
+	Arkiweb_Initializer principal;
 	
 	/**
 	 * Instantiates a new generar tablas BBDD impl.
@@ -32,7 +32,7 @@ public class BBDD_Generar_TablasImpl implements BBDD_Generar_Tablas {
 	public BBDD_Generar_TablasImpl() {
 //		this.db = HSQLDBImpl.getInstance();
 //		this.factory = new ConcreteFactoryImpl();
-		principal = Arkiweb_Initialiazer.getInstance();
+		principal = Arkiweb_Initializer.getInstance();
 	}
 
 	/**

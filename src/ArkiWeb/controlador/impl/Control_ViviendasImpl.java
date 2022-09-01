@@ -158,7 +158,7 @@ public class Control_ViviendasImpl implements ArkiWeb.controlador.Control_Vivien
 	@Override
 	public void crearVivienda(Vivienda vivienda) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearVivienda(vivienda);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.crearVivienda(vivienda);
 		
 	}
 
@@ -172,7 +172,7 @@ public class Control_ViviendasImpl implements ArkiWeb.controlador.Control_Vivien
 	@Override
 	public void editarVivienda(Vivienda vivienda) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarVivienda(vivienda);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.editarVivienda(vivienda);
 		
 	}
 

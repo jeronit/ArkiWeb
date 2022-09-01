@@ -9,5 +9,9 @@
 			<result name="success">/portal.jsp</result>
 			<result name="failure">/portal.jsp</result>
 		</action>
+		<action name="getUsers" class="ArkiWeb.vista.struts2mvc.modelo.PortalAdministradorActionSupport" method="getUsers">
+			<result name="success">/portal.jsp</result>
+			<result name="failure">/portal.jsp</result>
+		</action>
 	</package>
 </struts>

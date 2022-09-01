@@ -37,7 +37,8 @@ public class Launch_Server {
 	public void launchWithCmd(String fileName) {		
 		
 		try {
-			Runtime.getRuntime().exec("cmd.exe /c start " + util.returnRootPath() + "\\hsqldb\\bin\\" + fileName);
+			Runtime.getRuntime().exec("cmd.exe /c start C:\\Users\\JTE\\eclipse-workspace\\ArkiWeb\\hsqldb\\bin\\run_hsqldb_BORRAR.bat");
+//			Runtime.getRuntime().exec("cmd.exe /c start " + util.returnRootPath() + "\\hsqldb\\bin\\" + fileName);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -25,6 +25,10 @@
 				</div>
 				
 				<s:submit name="submit_button_login"/>
+				
+				<div id="error" class="errors">
+					<s:if test="hasActionErrors()"><s:actionerror/> </s:if>
+				</div>
 			</s:form>
 		</body>
 	</html>

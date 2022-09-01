@@ -6,20 +6,23 @@
  */
 package ArkiWeb.controlador;
 
+import java.sql.ResultSet;
+
 import ArkiWeb.controlador.impl.BBDD_Generar_Datos_DemoImpl;
 import ArkiWeb.controlador.impl.BBDD_Generar_TablasImpl;
 import ArkiWeb.modelo.ConcreteFactory;
 import ArkiWeb.modelo.HSQLDB;
 import ArkiWeb.modelo.impl.ConcreteFactoryImpl;
 import ArkiWeb.modelo.impl.HSQLDBImpl;
+import ArkiWeb.server.impl.Server_ConnectionImpl;
 
 /**
  * @author JTE
  *
  */
-public class Arkiweb_Initialiazer {
+public class Arkiweb_Initializer {
 
-	private static Arkiweb_Initialiazer firstInstance = null;
+	private static Arkiweb_Initializer firstInstance = null;
 	private static boolean initialized;
 	public static HSQLDB db;
 	public static ConcreteFactory factory;
@@ -28,11 +31,11 @@ public class Arkiweb_Initialiazer {
 	/**
 	 * 
 	 */
-	private Arkiweb_Initialiazer() {
+	private Arkiweb_Initializer() {
 		db = HSQLDBImpl.getInstance();
 		factory = new ConcreteFactoryImpl();
 		launchServer = new Launch_Server("run_hsqldb.bat");
-		
+		this.setInitialized(false);
 	}
 
 	/**
@@ -40,9 +43,9 @@ public class Arkiweb_Initialiazer {
 	 *
 	 * @return single instance of HSQLDBImpl
 	 */
-	public static Arkiweb_Initialiazer getInstance() {
+	public static Arkiweb_Initializer getInstance() {
 		if(firstInstance == null) {
-			firstInstance = new Arkiweb_Initialiazer();
+			firstInstance = new Arkiweb_Initializer();
 		}
 		return firstInstance;
 	}
@@ -51,6 +54,13 @@ public class Arkiweb_Initialiazer {
 	 * @param args
 	 */
 	public void init() {
+		// Asegurando que la BBDD está vacía
+		HSQLDB hsqldb = HSQLDBImpl.getInstance();
+		String queryString = "DROP SCHEMA PUBLIC CASCADE";
+		Server_ConnectionImpl server_connection = hsqldb.connect2Server(hsqldb.getUrl(), hsqldb.getUser(), hsqldb.getPassword());
+		hsqldb.queryEjecutar(server_connection, queryString);
+		hsqldb.queryCerrar(server_connection);
+		
 		BBDD_Generar_Tablas generarTablas = new BBDD_Generar_TablasImpl();
 		BBDD_Generar_Datos_Demo generarDatos = new BBDD_Generar_Datos_DemoImpl();
 		generarTablas.crearTablaCertificado();
@@ -88,7 +98,7 @@ public class Arkiweb_Initialiazer {
 	 * @param initialized the initialized to set
 	 */
 	public static void setInitialized(boolean initialized) {
-		Arkiweb_Initialiazer.initialized = initialized;
+		Arkiweb_Initializer.initialized = initialized;
 	}
 
 	

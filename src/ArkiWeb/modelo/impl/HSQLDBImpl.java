@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	Implementación de la Interface HSQLDB
+ * 	@purpose:	Implementaciï¿½n de la Interface HSQLDB
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17
@@ -256,7 +256,7 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_usuario";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("nombre_usuario");
 		columnas.add("apellidos_usuario");
 		columnas.add("dni_usuario");
@@ -266,7 +266,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("rol_usuario");
 		columnas.add("contrasenya_usuario");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(usuario.getNombre_usuario());
 		valores_columnas.add(usuario.getApellidos_usuario());
 		valores_columnas.add(usuario.getDni_usuario());
@@ -285,7 +285,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -316,7 +316,7 @@ public class HSQLDBImpl implements HSQLDB {
 		String columna_ID = "id_usuario";
 		String where_clause = "";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("nombre_usuario");
 		columnas.add("apellidos_usuario");
 		columnas.add("dni_usuario");
@@ -326,7 +326,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("rol_usuario");
 		columnas.add("contrasenya_usuario");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(usuario.getNombre_usuario());
 		valores_columnas.add(usuario.getApellidos_usuario());
 		valores_columnas.add(usuario.getDni_usuario());
@@ -364,7 +364,7 @@ public class HSQLDBImpl implements HSQLDB {
 		String columna_ID = "id_usuario";
 		String where_clause = "";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("nombre_usuario");
 		columnas.add("apellidos_usuario");
 		columnas.add("dni_usuario");
@@ -374,7 +374,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("rol_usuario");
 		columnas.add("contrasenya_usuario");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(null);
 		valores_columnas.add(null);
 		valores_columnas.add(null);
@@ -405,10 +405,10 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_rol";
 	
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_rol");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(rol.getDescripcion_rol());
 		
 		// Creando query para obtener objeto
@@ -417,7 +417,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
 		try {
@@ -448,13 +448,13 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_permiso";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("id_rol_permiso");
 		columnas.add("objeto_permiso");
 		columnas.add("lectura_permiso");
 		columnas.add("escritura_permiso");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(String.valueOf(permiso.getId_rol()));
 		valores_columnas.add(permiso.getObjeto_permiso());
 		valores_columnas.add(String.valueOf(permiso.isLectura_permiso()));
@@ -466,7 +466,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -498,13 +498,13 @@ public class HSQLDBImpl implements HSQLDB {
 		String columna_ID = "id_permiso";
 		String where_clause = "";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("id_rol_permiso");
 		columnas.add("objeto_permiso");
 		columnas.add("lectura_permiso");
 		columnas.add("escritura_permiso");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(String.valueOf(permiso.getId_rol()));
 		valores_columnas.add(permiso.getObjeto_permiso());
 		valores_columnas.add(String.valueOf(permiso.isLectura_permiso()));
@@ -534,7 +534,7 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_certificado";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_certificado");
 		columnas.add("cliente_certificado");
 		columnas.add("vivienda_certificado");
@@ -547,7 +547,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("categoria_certificado");
 		columnas.add("coste_certificado");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(certificado.getDescripcion_certificado());
 		valores_columnas.add(String.valueOf(certificado.getId_cliente_certificado()));
 		valores_columnas.add(String.valueOf(certificado.getId_vivienda_certificado()));
@@ -594,7 +594,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -626,7 +626,7 @@ public class HSQLDBImpl implements HSQLDB {
 		String columna_ID = "id_certificado";
 		String where_clause = "";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_certificado");
 		columnas.add("cliente_certificado");
 		columnas.add("vivienda_certificado");
@@ -639,7 +639,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("categoria_certificado");
 		columnas.add("coste_certificado");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(certificado.getDescripcion_certificado());
 		valores_columnas.add(String.valueOf(certificado.getId_cliente_certificado()));
 		valores_columnas.add(String.valueOf(certificado.getId_vivienda_certificado()));
@@ -723,7 +723,7 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_proyecto";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_proyecto");
 		columnas.add("cliente_proyecto");
 		columnas.add("vivienda_proyecto");
@@ -736,7 +736,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("superficie_proyecto");
 		columnas.add("coste_proyecto");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(proyecto.getDescripcion_proyecto());
 		valores_columnas.add(String.valueOf(proyecto.getId_cliente_proyecto()));
 		valores_columnas.add(String.valueOf(proyecto.getId_vivienda_proyecto()));
@@ -770,7 +770,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -802,7 +802,7 @@ public class HSQLDBImpl implements HSQLDB {
 		String columna_ID = "id_proyecto";
 		String where_clause = "";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_proyecto");
 		columnas.add("cliente_proyecto");
 		columnas.add("vivienda_proyecto");
@@ -815,7 +815,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("superficie_proyecto");
 		columnas.add("coste_proyecto");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(proyecto.getDescripcion_proyecto());
 		valores_columnas.add(String.valueOf(proyecto.getId_cliente_proyecto()));
 		valores_columnas.add(String.valueOf(proyecto.getId_vivienda_proyecto()));
@@ -888,7 +888,7 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_vivienda";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_vivienda");
 		columnas.add("direccion_vivienda");
 		columnas.add("id_inmueble_vivienda");
@@ -898,7 +898,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("habitaciones_vivienda");
 		columnas.add("banyos_vivienda");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(vivienda.getDescripcion_vivienda());
 		valores_columnas.add(vivienda.getDireccion_vivienda());
 		valores_columnas.add(String.valueOf(vivienda.getId_inmueble_vivienda()));
@@ -914,7 +914,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -947,7 +947,7 @@ public class HSQLDBImpl implements HSQLDB {
 		String columna_ID = "id_vivienda";
 		String where_clause = "";
 		
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_vivienda");
 		columnas.add("direccion_vivienda");
 		columnas.add("id_inmueble_vivienda");
@@ -957,7 +957,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("habitaciones_vivienda");
 		columnas.add("banyos_vivienda");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(vivienda.getDescripcion_vivienda());
 		valores_columnas.add(vivienda.getDireccion_vivienda());
 		valores_columnas.add(String.valueOf(vivienda.getId_inmueble_vivienda()));
@@ -1011,14 +1011,14 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_inmueble";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_inmueble");
 		columnas.add("direccion_inmueble");
 		columnas.add("superficie_terreno_inmueble");
 		columnas.add("superficie_inmueble");
 		columnas.add("fecha_construccion_inmueble");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(inmueble.getDescripcion_inmueble());
 		valores_columnas.add(inmueble.getDireccion_inmueble());
 		valores_columnas.add(String.valueOf(inmueble.getSuperficie_terreno_inmueble()));
@@ -1039,7 +1039,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -1071,13 +1071,13 @@ public class HSQLDBImpl implements HSQLDB {
 		String columna_ID = "id_inmueble";
 		String where_clause = "";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("descripcion_inmueble");
 		columnas.add("direccion_inmueble");
 		columnas.add("superficie_terreno_inmueble");
 		columnas.add("superficie_inmueble");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(inmueble.getDescripcion_inmueble());
 		valores_columnas.add(inmueble.getDireccion_inmueble());
 		valores_columnas.add(String.valueOf(inmueble.getSuperficie_terreno_inmueble()));
@@ -1126,12 +1126,12 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_certificado_asignado";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("id_certificado_certificado_asignado");
 		columnas.add("arquitecto_certificado_asignado");
 
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(String.valueOf(asignacionCertificado.getId_certificado_certificado_asignado()));
 		valores_columnas.add(String.valueOf(asignacionCertificado.getId_arquitecto_certificado_asignado()));
 		
@@ -1141,7 +1141,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -1158,7 +1158,7 @@ public class HSQLDBImpl implements HSQLDB {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Edita la asignación de un arquitecto a un certificado.
+	 * Edita la asignaciï¿½n de un arquitecto a un certificado.
 	 * <!-- end-user-doc -->
 	 * @param	asignacionCertificado					Certificados_Asignados			Certificados_Asignados
 	 * @model id_certificado_asignadoDataType="org.eclipse.uml2.types.Integer" id_certificado_asignadoRequired="true" id_certificado_asignadoOrdered="false" id_certificado_certificado_asignadoDataType="org.eclipse.uml2.types.Integer" id_certificado_certificado_asignadoRequired="true" id_certificado_certificado_asignadoOrdered="false" arquitecto_certificado_asignadoDataType="org.eclipse.uml2.types.Integer" arquitecto_certificado_asignadoRequired="true" arquitecto_certificado_asignadoOrdered="false"
@@ -1173,12 +1173,12 @@ public class HSQLDBImpl implements HSQLDB {
 		String columna_ID = "id_certificado_asignado";
 		String where_clause = "";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("id_certificado_certificado_asignado");
 		columnas.add("arquitecto_certificado_asignado");
 
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(String.valueOf(asignacionCertificado.getId_certificado_certificado_asignado()));
 		valores_columnas.add(String.valueOf(asignacionCertificado.getId_arquitecto_certificado_asignado()));
 		
@@ -1206,12 +1206,12 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_proyecto_asignado";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("id_proyecto_proyecto_asignado");
 		columnas.add("arquitecto_proyecto_asignado");
 
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(String.valueOf(proyectoAsignado.getId_proyecto_proyecto_asignado()));
 		valores_columnas.add(String.valueOf(proyectoAsignado.getId_arquitecto_proyecto_asignado()));
 		
@@ -1221,7 +1221,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -1239,7 +1239,7 @@ public class HSQLDBImpl implements HSQLDB {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Edita la asignación de un arquitecto a un proyecto.
+	 * Edita la asignaciï¿½n de un arquitecto a un proyecto.
 	 * <!-- end-user-doc -->
 	 * @param	proyectoCertificado						Proyectos_Asignados				Proyectos_Asignados
 	 * @model id_proyecto_asignadoDataType="org.eclipse.uml2.types.Integer" id_proyecto_asignadoRequired="true" id_proyecto_asignadoOrdered="false" id_proyecto_proyecto_asignadoDataType="org.eclipse.uml2.types.Integer" id_proyecto_proyecto_asignadoRequired="true" id_proyecto_proyecto_asignadoOrdered="false" arquitecto_proyecto_asignadoDataType="org.eclipse.uml2.types.Integer" arquitecto_proyecto_asignadoRequired="true" arquitecto_proyecto_asignadoOrdered="false"
@@ -1254,12 +1254,12 @@ public class HSQLDBImpl implements HSQLDB {
 		String where_clause = "";
 		String columna_ID = "id_ejecucion_proyecto";
 		
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("id_proyecto_proyecto_asignado");
 		columnas.add("arquitecto_proyecto_asignado");
 
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(String.valueOf(proyectoAsignado.getId_proyecto_proyecto_asignado()));
 		valores_columnas.add(String.valueOf(proyectoAsignado.getId_arquitecto_proyecto_asignado()));
 		
@@ -1273,7 +1273,7 @@ public class HSQLDBImpl implements HSQLDB {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Gestiona la contratación de un proyecto.
+	 * Gestiona la contrataciï¿½n de un proyecto.
 	 * <!-- end-user-doc -->
 	 * @param	contratacionCertificado					Proyectos_En_Ejecucion				Proyectos_En_Ejecucion 
 	 * @model id_proyecto_ejecucion_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyecto_ejecucion_proyectoRequired="true" id_proyecto_ejecucion_proyectoOrdered="false" fecha_inicio_ejecucion_proyectoRequired="true" fecha_inicio_ejecucion_proyectoOrdered="false" duracion_prevista_ejecucion_proyectoDataType="org.eclipse.uml2.types.Integer" duracion_prevista_ejecucion_proyectoRequired="true" duracion_prevista_ejecucion_proyectoOrdered="false" fecha_fin_ejecucion_proyectoRequired="true" fecha_fin_ejecucion_proyectoOrdered="false"
@@ -1287,13 +1287,13 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> valores_columnas = new ArrayList<String>();
 		String columna_ID = "id_ejecucion_proyecto";
 
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("id_proyecto_ejecucion_proyecto");
 		columnas.add("fecha_inicio_ejecucion_proyecto");
 		columnas.add("duracion_prevista_ejecucion_proyecto");
 		columnas.add("fecha_fin_ejecucion_proyecto");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(String.valueOf(contratacionProyecto.getId_proyecto_ejecucion_proyecto()));
 		String pattern = "dd-MM-yyyy";
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
@@ -1320,7 +1320,7 @@ public class HSQLDBImpl implements HSQLDB {
 		
 		ResultSet resultsNewObject = (ResultSet) this.queryEjecutar(server_connection, queryString);
 		
-		// Obteniendo el id de objeto generado y añadiéndolo al objeto recibido
+		// Obteniendo el id de objeto generado y aï¿½adiï¿½ndolo al objeto recibido
 		String queryStringId = queryLastTableId(tabla, columna_ID);
 		try {
 			ResultSet resultsNewObjectId = (ResultSet) this.queryEjecutar(server_connection, queryStringId);
@@ -1337,7 +1337,7 @@ public class HSQLDBImpl implements HSQLDB {
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * Edita la gestión sobre la contratación de un proyecto.
+	 * Edita la gestiï¿½n sobre la contrataciï¿½n de un proyecto.
 	 * <!-- end-user-doc -->
 	 * @param	contratacionCertificado					Proyectos_En_Ejecucion				Proyectos_En_Ejecucion 
 	 * @model id_ejecucion_proyectoDataType="org.eclipse.uml2.types.Integer" id_ejecucion_proyectoRequired="true" id_ejecucion_proyectoOrdered="false" id_proyecto_ejecucion_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyecto_ejecucion_proyectoRequired="true" id_proyecto_ejecucion_proyectoOrdered="false" fecha_inicio_ejecucion_proyectoRequired="true" fecha_inicio_ejecucion_proyectoOrdered="false" duracion_prevista_ejecucion_proyectoDataType="org.eclipse.uml2.types.Integer" duracion_prevista_ejecucion_proyectoRequired="true" duracion_prevista_ejecucion_proyectoOrdered="false" fecha_fin_ejecucion_proyectoRequired="true" fecha_fin_ejecucion_proyectoOrdered="false"
@@ -1352,13 +1352,13 @@ public class HSQLDBImpl implements HSQLDB {
 		String where_clause = "";
 		String columna_ID = "id_ejecucion_proyecto";
 		
-		// Añadiendo columnas
+		// Aï¿½adiendo columnas
 		columnas.add("id_proyecto_ejecucion_proyecto");
 		columnas.add("fecha_inicio_ejecucion_proyecto");
 		columnas.add("duracion_prevista_ejecucion_proyecto");
 		columnas.add("fecha_fin_ejecucion_proyecto");
 		
-		// Añadiendo valores
+		// Aï¿½adiendo valores
 		valores_columnas.add(String.valueOf(contratacionProyecto.getId_proyecto_ejecucion_proyecto()));
 		String pattern = "dd-MM-yyyy";
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
@@ -1390,10 +1390,10 @@ public class HSQLDBImpl implements HSQLDB {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Devuelve un string con la query necesaria para realizar una creación SQL.
+	 * Devuelve un string con la query necesaria para realizar una creaciï¿½n SQL.
 	 * <!-- end-user-doc -->
-	 * @param	tabla					String				La tabla donde añadir datos
-	 * @param	columnas				List<String>		Lista de columnas/campos donde insertar la información
+	 * @param	tabla					String				La tabla donde aï¿½adir datos
+	 * @param	columnas				List<String>		Lista de columnas/campos donde insertar la informaciï¿½n
 	 * @param	valores_columnas		List<String>		Lista de los valores para las columnas/campos (en el mismo orden)
 	 * @return							String				Cadena con la query SQL
 	 * @model tablaDataType="org.eclipse.uml2.types.String" tablaRequired="true" tablaOrdered="false" columnasRequired="true" columnasOrdered="false" valores_columnasRequired="true" valores_columnasOrdered="false"
@@ -1416,10 +1416,10 @@ public class HSQLDBImpl implements HSQLDB {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Devuelve un string con la query necesaria para realizar una edición SQL.
+	 * Devuelve un string con la query necesaria para realizar una ediciï¿½n SQL.
 	 * <!-- end-user-doc -->
 	 * @param	tabla					String				La tabla donde editar datos
-	 * @param	columnas				List<String>		Lista de columnas/campos donde editar la información
+	 * @param	columnas				List<String>		Lista de columnas/campos donde editar la informaciï¿½n
 	 * @param	valores_columnas		List<String>		Lista de los valores para las columnas/campos (en el mismo orden)
 	 * @param	where_clause			String				Cadena con las condiciones de la query
 	 * @return							String				Cadena con la query SQL
@@ -1438,10 +1438,10 @@ public class HSQLDBImpl implements HSQLDB {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Devuelve un string con la query necesaria para realizar una búsqueda SQL.
+	 * Devuelve un string con la query necesaria para realizar una bï¿½squeda SQL.
 	 * <!-- end-user-doc -->
 	 * @param	tabla					String				La tabla donde editar datos
-	 * @param	columnas				List<String>		Lista de columnas/campos donde editar la información
+	 * @param	columnas				List<String>		Lista de columnas/campos donde editar la informaciï¿½n
 	 * @param	where_clause_01			String				Cadena con las condiciones de la query
 	 * @return							String				Cadena con la query SQL
 	 * @model tablaDataType="org.eclipse.uml2.types.String" tablaRequired="true" tablaOrdered="false" columnasRequired="true" columnasOrdered="false" where_clause_01DataType="org.eclipse.uml2.types.String" where_clause_01Required="true" where_clause_01Ordered="false"
@@ -1458,7 +1458,8 @@ public class HSQLDBImpl implements HSQLDB {
 			}
 		}
 		queryString += " FROM " + tabla;
-		if(where_clause != null || !where_clause.isEmpty()) {
+//		if(where_clause != null || !where_clause.isEmpty()) {
+		if(where_clause != null) {
 			queryString += " WHERE " + where_clause;
 		}
 		
@@ -1470,7 +1471,7 @@ public class HSQLDBImpl implements HSQLDB {
 	 * Devuelve un string con la query necesaria para crear una tabla SQL.
 	 * <!-- end-user-doc -->
 	 * @param	nombreTabla				String				El nombre de la tabla a crear
-	 * @param	columnas				List<String>		Lista de columnas/campos donde se insertará la información. Hay que especificar los tipos (p.ej.: varchar(255)...)
+	 * @param	columnas				List<String>		Lista de columnas/campos donde se insertarï¿½ la informaciï¿½n. Hay que especificar los tipos (p.ej.: varchar(255)...)
 	 * @return							String				Cadena con la query SQL
 	 */
 	@Override
@@ -1537,8 +1538,8 @@ public class HSQLDBImpl implements HSQLDB {
 	 *  Crea una tabla de PERMISOS.
 	 * <!-- end-user-doc -->
 	 * @param	id_rol_permiso			int			Id rol
-	 * @param	descripcion_permiso		String		Descripción
-	 * @param	objeto_permiso			String		Objeto/Página a la que acceder
+	 * @param	descripcion_permiso		String		Descripciï¿½n
+	 * @param	objeto_permiso			String		Objeto/Pï¿½gina a la que acceder
 	 * @param	lectura_permiso			Boolean		Concede permiso de lectura
 	 * @param	escritura_permiso		Boolean		Concede permiso de escritura
 	 * @return							String				Cadena con la query SQL
@@ -1750,10 +1751,10 @@ public class HSQLDBImpl implements HSQLDB {
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * Ejecuta la query que se le pasa como parámetro.
+	 * Ejecuta la query que se le pasa como parï¿½metro.
 	 * <!-- end-user-doc -->
 	 *
-	 * @param server_connection 	Server_Connection	Conexión al server
+	 * @param server_connection 	Server_Connection	Conexiï¿½n al server
 	 * @param queryString 			String				Cadena con la query SQL
 	 * @return 						Object				Objeto de retorno de la BBDD
 	 * @model required="true" ordered="false" queryStringDataType="org.eclipse.uml2.types.String" queryStringRequired="true" queryStringOrdered="false"
@@ -1779,7 +1780,7 @@ public class HSQLDBImpl implements HSQLDB {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Devuelva el último Id creado en la tabla correspondiente
+	 * Devuelva el ï¿½ltimo Id creado en la tabla correspondiente
 	 * <!-- end-user-doc -->
 	 * @param	tabla				String				Tabla
 	 * @param	columna_ID			String				El nombre del campo/columna

@@ -268,7 +268,7 @@ public class Control_CertificadosImpl implements Control_Certificados {
 	@Override
 	public void editarCertificado(Certificado certificado) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarCertificado(certificado);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.editarCertificado(certificado);
 		
 	}
 
@@ -283,12 +283,12 @@ public class Control_CertificadosImpl implements Control_Certificados {
 	@Override
 	public void asignarCertificado(Certificado certificado, Integer id_arquitecto) {
 
-		Certificados_Asignados certificado_Asignado = (Certificados_Asignados) ArkiWeb.controlador.Arkiweb_Initialiazer.factory.crearObjeto("Certificados_Asignados");
+		Certificados_Asignados certificado_Asignado = (Certificados_Asignados) ArkiWeb.controlador.Arkiweb_Initializer.factory.crearObjeto("Certificados_Asignados");
 		
 		certificado_Asignado.setId_arquitecto_certificado_asignado(id_arquitecto);
 		certificado_Asignado.setId_certificado_certificado_asignado(certificado.getId_certificado());
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.asignarCertificado(certificado_Asignado);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.asignarCertificado(certificado_Asignado);
 		
 	}
 
@@ -305,7 +305,7 @@ public class Control_CertificadosImpl implements Control_Certificados {
 
 		certificado_Asignado.setId_arquitecto_certificado_asignado(id_arquitecto);
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarAsignacionCertificado(certificado_Asignado);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.editarAsignacionCertificado(certificado_Asignado);
 		
 	}
 
@@ -319,7 +319,7 @@ public class Control_CertificadosImpl implements Control_Certificados {
 	@Override
 	public void crearCertificado(Certificado certificado) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearCertificado(certificado);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.crearCertificado(certificado);
 		
 	}
 

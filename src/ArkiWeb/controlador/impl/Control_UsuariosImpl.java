@@ -161,7 +161,7 @@ public class Control_UsuariosImpl implements ArkiWeb.controlador.Control_Usuario
 	@Override
 	public void crearUsuario(Usuario usuario) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearUsuario(usuario);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.crearUsuario(usuario);
 		
 	}
 
@@ -175,7 +175,7 @@ public class Control_UsuariosImpl implements ArkiWeb.controlador.Control_Usuario
 	@Override
 	public void editarUsuario(Usuario usuario) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarUsuario(usuario);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.editarUsuario(usuario);
 		
 	}
 	
@@ -189,7 +189,7 @@ public class Control_UsuariosImpl implements ArkiWeb.controlador.Control_Usuario
 	@Override
 	public void bajaUsuario(int id_Usuario) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.bajaUsuario(id_Usuario);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.bajaUsuario(id_Usuario);
 
 	}
 

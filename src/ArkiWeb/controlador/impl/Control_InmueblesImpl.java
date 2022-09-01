@@ -159,7 +159,7 @@ public class Control_InmueblesImpl implements Control_Inmuebles {
 	@Override
 	public void crearInmueble(Inmueble inmueble) {
 
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.crearInmueble(inmueble);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.crearInmueble(inmueble);
 		
 	}
 
@@ -173,7 +173,7 @@ public class Control_InmueblesImpl implements Control_Inmuebles {
 	@Override
 	public void editarInmueble(Inmueble inmueble) {
 		
-		ArkiWeb.controlador.Arkiweb_Initialiazer.db.editarInmueble(inmueble);
+		ArkiWeb.controlador.Arkiweb_Initializer.db.editarInmueble(inmueble);
 		
 	}
 

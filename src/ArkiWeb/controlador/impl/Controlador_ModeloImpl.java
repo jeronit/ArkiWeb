@@ -8,7 +8,6 @@ package ArkiWeb.controlador.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -22,13 +21,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
-import ArkiWeb.ListCertificado;
-import ArkiWeb.ListInmueble;
-import ArkiWeb.ListPermiso;
-import ArkiWeb.ListProyecto;
-import ArkiWeb.ListUsuario;
-import ArkiWeb.ListVivienda;
-import ArkiWeb.controlador.Arkiweb_Initialiazer;
+import ArkiWeb.controlador.Arkiweb_Initializer;
 import ArkiWeb.controlador.Control_Certificados;
 import ArkiWeb.controlador.Control_Inmuebles;
 import ArkiWeb.controlador.Control_Login;
@@ -38,7 +31,6 @@ import ArkiWeb.controlador.Control_Usuarios;
 import ArkiWeb.controlador.Control_Viviendas;
 import ArkiWeb.controlador.Controlador_Modelo;
 import ArkiWeb.controlador.Gestor_Busquedas;
-import ArkiWeb.modelo.Categoria_Certificado;
 import ArkiWeb.modelo.Certificado;
 import ArkiWeb.modelo.Certificados_Asignados;
 import ArkiWeb.modelo.Inmueble;
@@ -46,8 +38,6 @@ import ArkiWeb.modelo.Permiso;
 import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Proyectos_Asignados;
 import ArkiWeb.modelo.Proyectos_En_Ejecucion;
-import ArkiWeb.modelo.Tipo_Certificado;
-import ArkiWeb.modelo.Tipo_Proyecto;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
 
@@ -60,7 +50,7 @@ import ArkiWeb.modelo.Vivienda;
 public class Controlador_ModeloImpl implements Controlador_Modelo {
 	
 	/** The initializer. */
-	Arkiweb_Initialiazer initializer;
+	Arkiweb_Initializer initializer;
 	
 	/** The control certificados. */
 	Control_Certificados control_Certificados;
@@ -90,8 +80,8 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 	 * Instantiates a new controlador modelo impl.
 	 */
 	public Controlador_ModeloImpl() {
-		initializer = Arkiweb_Initialiazer.getInstance();
-		if(!Arkiweb_Initialiazer.isInitialized()) initializer.init();
+		initializer = Arkiweb_Initializer.getInstance();
+		if(!Arkiweb_Initializer.isInitialized()) initializer.init();
 		control_Certificados = new Control_CertificadosImpl();
 		control_Inmuebles = new Control_InmueblesImpl(); 
 		control_Login = new Control_LoginImpl(); 
