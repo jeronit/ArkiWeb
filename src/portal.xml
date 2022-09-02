@@ -13,5 +13,9 @@
 			<result name="success">/portal.jsp</result>
 			<result name="failure">/portal.jsp</result>
 		</action>
+		<action name="getCertificates" class="ArkiWeb.vista.struts2mvc.modelo.PortalAdministradorActionSupport" method="getCertificates">
+			<result name="success">/portal.jsp</result>
+			<result name="failure">/portal.jsp</result>
+		</action>
 	</package>
 </struts>

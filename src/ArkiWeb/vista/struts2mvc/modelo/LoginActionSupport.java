@@ -7,9 +7,11 @@
 package ArkiWeb.vista.struts2mvc.modelo;
 
 import java.sql.SQLException;
+import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import ArkiWeb.controlador.Controlador_Modelo;
@@ -57,6 +59,10 @@ public class LoginActionSupport extends ActionSupport {
 		Usuario user = this.getUsuario();
 		if(user != null) {
 			if(user.getContrasenya_usuario().equals(String.valueOf(this.getContrasenya_usuario().hashCode()))) {
+				Map<String, Object> session = ActionContext.getContext().getSession();
+				session.put("login","true");
+				session.put("id",user.getId_usuario());
+				session.put("userName",user.getNombre_usuario());
 				return SUCCESS;
 			} else {
 				addActionError("Wrong password.");

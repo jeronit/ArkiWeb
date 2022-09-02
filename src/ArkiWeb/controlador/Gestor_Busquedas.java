@@ -6,13 +6,6 @@
  */
 package ArkiWeb.controlador;
 
-import ArkiWeb.ListCertificado;
-import ArkiWeb.ListCertificados_Asignados;
-import ArkiWeb.ListInmueble;
-import ArkiWeb.ListPermiso;
-import ArkiWeb.ListProyecto;
-import ArkiWeb.ListUsuario;
-import ArkiWeb.ListVivienda;
 import ArkiWeb.modelo.Certificado;
 import ArkiWeb.modelo.Certificados_Asignados;
 import ArkiWeb.modelo.Inmueble;
@@ -20,6 +13,7 @@ import ArkiWeb.modelo.Permiso;
 import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Proyectos_Asignados;
 import ArkiWeb.modelo.Proyectos_En_Ejecucion;
+import ArkiWeb.modelo.Rol;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
 
@@ -298,5 +292,13 @@ public interface Gestor_Busquedas extends EObject {
 	 * @generated NOT
 	 */
 	Certificados_Asignados buscarAsignacionCertificado(int id_usuario, int id_certificado);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Devuelve un listado de Rol.
+	 * <!-- end-user-doc -->
+	 * @return			List<Rol>		Listado de Rol
+	 */
+	List<Rol> listarRoles();
 
 } // Gestor_Busquedas

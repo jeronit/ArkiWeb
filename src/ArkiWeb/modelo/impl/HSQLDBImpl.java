@@ -1549,7 +1549,7 @@ public class HSQLDBImpl implements HSQLDB {
 		List<String> columnas = new ArrayList<String>();
 		columnas.add("id_permiso IDENTITY PRIMARY KEY");
 		columnas.add("id_rol_permiso int");
-		columnas.add("descripcion_permiso varchar(20)");
+//		columnas.add("descripcion_permiso varchar(20)");
 		columnas.add("objeto_permiso varchar(20)");
 		columnas.add("lectura_permiso bit(1)");
 		columnas.add("escritura_permiso bit(1)");
@@ -1581,7 +1581,7 @@ public class HSQLDBImpl implements HSQLDB {
 		columnas.add("fecha_visita_certificado varchar(20)");
 		columnas.add("fecha_emision_certificado varchar(20)");
 		columnas.add("categoria_certificado varchar(20)");
-		columnas.add("arquitecto_certificado int");
+//		columnas.add("arquitecto_certificado int");
 		columnas.add("coste_certificado double");
 		
 		String queryString = queryCrearTabla("CERTIFICADOS", columnas);
