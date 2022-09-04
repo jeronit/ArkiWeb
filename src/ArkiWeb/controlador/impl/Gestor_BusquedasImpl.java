@@ -989,6 +989,67 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * Busca los certificados asignados a un usuario
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario			int						Id
+	 * @return			List<Proyectos_Asignados>			Listado asignaciones de un arquitecto a un proyecto
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
+	 */
+	@Override
+	public List<Proyectos_Asignados> buscarAsignacionProyectoAUsuario(int id_usuario) {
+		List<Proyectos_Asignados> resultado = new ArrayList<Proyectos_Asignados>();
+		
+		String tabla = "ASIGNACION_PROYECTOS";
+		String where_clause = "arquitecto_proyecto_asignado = " + id_usuario;
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add(this.addResultData2AsignarProyecto(results));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
+		return resultado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Busca los certificados asignados a un usuario
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario			int						Id
+	 * @return			List<Certificados_Asignados>		Listado de asignaciones de un arquitecto a un certificado
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
+	 */
+	@Override
+	public List<Certificados_Asignados> buscarAsignacionCertificadoAUsuario(int id_usuario) {
+		
+		List<Certificados_Asignados> resultado = new ArrayList<Certificados_Asignados>();
+		
+		String tabla = "ASIGNACION_CERTIFICADOS";
+		String where_clause = "arquitecto_certificado_asignado = " + id_usuario;
+		String queryString = ArkiWeb.controlador.Arkiweb_Initializer.db.queryBuscar(tabla, null, where_clause);
+		Server_ConnectionImpl server_connection = ArkiWeb.controlador.Arkiweb_Initializer.db.connect2Server(ArkiWeb.controlador.Arkiweb_Initializer.db.getUrl(), ArkiWeb.controlador.Arkiweb_Initializer.db.getUser(), ArkiWeb.controlador.Arkiweb_Initializer.db.getPassword());
+		ResultSet results = (ResultSet) ArkiWeb.controlador.Arkiweb_Initializer.db.queryEjecutar(server_connection, queryString);
+		
+		try {
+			while(results.next()) {
+				resultado.add(this.addResultData2AsignarCertificado(results));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ArkiWeb.controlador.Arkiweb_Initializer.db.queryCerrar(server_connection);
+		return resultado;
+	}
+
+	/**
 	 * Adds the result data 2 usuario.
 	 *
 	 * @param results the results
@@ -1116,7 +1177,7 @@ public class Gestor_BusquedasImpl implements Gestor_Busquedas {
 			proyecto.setId_cliente_proyecto(results.getInt("cliente_proyecto"));
 			proyecto.setId_vivienda_proyecto(results.getInt("vivienda_proyecto"));
 			proyecto.setId_inmueble_proyecto(results.getInt("inmueble_proyecto"));
-			proyecto.setTipo_proyecto(Tipo_Proyecto.get(results.getInt("tipo_proyecto")));
+			proyecto.setTipo_proyecto(Tipo_Proyecto.get(results.getString("tipo_proyecto")));
 			if(results.getString("fecha_solicitud_proyecto").equals("null")) {
 				proyecto.setFecha_solicitud_proyecto(null);
 			} else {

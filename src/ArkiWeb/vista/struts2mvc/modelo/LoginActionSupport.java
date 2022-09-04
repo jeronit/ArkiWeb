@@ -16,8 +16,11 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import ArkiWeb.controlador.Controlador_Modelo;
 import ArkiWeb.controlador.impl.Controlador_ModeloImpl;
+import ArkiWeb.modelo.Rol;
 import ArkiWeb.modelo.Usuario;
+import ArkiWeb.modelo.impl.RolImpl;
 
+// TODO: Auto-generated Javadoc
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Login Action Support</b></em>'.
@@ -30,15 +33,24 @@ import ArkiWeb.modelo.Usuario;
  */
 public class LoginActionSupport extends ActionSupport {
 	
-	/**
-	 * 
-	 */
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -8601040361717122903L;
+	
+	/** The email usuario. */
 	private String email_usuario;
+	
+	/** The contrasenya usuario. */
 	private String contrasenya_usuario;
+	
+	/** The controlador modelo. */
 	private Controlador_Modelo controlador_modelo;
+	
+	/** The usuario. */
 	private Usuario usuario;
 	
+	/**
+	 * Instantiates a new login action support.
+	 */
 	public LoginActionSupport() {
 		super();
 		this.controlador_modelo = new Controlador_ModeloImpl();
@@ -63,7 +75,9 @@ public class LoginActionSupport extends ActionSupport {
 				session.put("login","true");
 				session.put("id",user.getId_usuario());
 				session.put("userName",user.getNombre_usuario());
-				return SUCCESS;
+				
+				return this.grantAccess();
+				
 			} else {
 				addActionError("Wrong password.");
 				return LOGIN;
@@ -107,8 +121,35 @@ public class LoginActionSupport extends ActionSupport {
 			addActionError("Email not in our Database.");
 		}
 	}
+	
+	
+	/**
+	 * Grant access.
+	 *
+	 * @return the string
+	 */
+	private String grantAccess() {
+		String access = "failure";
+		Usuario user = this.getUsuario();
+		
+		int userRol = user.getRol_usuario();
+		switch(userRol) {
+		case 1:
+			access = "arquitecto";
+			break;
+		case 2:
+			access = "administrador";
+			break;
+		default:
+			access = "cliente";
+			break;
+		}
+		return access;
+	}
 
 	/**
+	 * Gets the email usuario.
+	 *
 	 * @return the email_usuario
 	 */
 	public String getEmail_usuario() {
@@ -116,6 +157,8 @@ public class LoginActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the email usuario.
+	 *
 	 * @param email_usuario the email_usuario to set
 	 */
 	public void setEmail_usuario(String email_usuario) {
@@ -123,6 +166,8 @@ public class LoginActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the contrasenya usuario.
+	 *
 	 * @return the contrasenya_usuario
 	 */
 	public String getContrasenya_usuario() {
@@ -130,6 +175,8 @@ public class LoginActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the contrasenya usuario.
+	 *
 	 * @param contrasenya_usuario the contrasenya_usuario to set
 	 */
 	public void setContrasenya_usuario(String contrasenya_usuario) {
@@ -137,6 +184,8 @@ public class LoginActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the usuario.
+	 *
 	 * @return the usuario
 	 */
 	public Usuario getUsuario() {
@@ -144,6 +193,8 @@ public class LoginActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the usuario.
+	 *
 	 * @param usuario the usuario to set
 	 */
 	public void setUsuario(Usuario usuario) {

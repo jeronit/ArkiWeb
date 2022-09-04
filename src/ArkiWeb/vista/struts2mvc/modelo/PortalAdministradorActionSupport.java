@@ -19,8 +19,12 @@ import ArkiWeb.controlador.Controlador_Modelo;
 import ArkiWeb.controlador.impl.Controlador_ModeloImpl;
 import ArkiWeb.modelo.Certificado;
 import ArkiWeb.modelo.Proyecto;
+import ArkiWeb.modelo.Rol;
 import ArkiWeb.modelo.Usuario;
+import ArkiWeb.vista.struts2mvc.modelo.util.Utils;
+import ArkiWeb.vista.struts2mvc.modelo.util.impl.UtilsImpl;
 
+// TODO: Auto-generated Javadoc
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Portal Administrador Action Support</b></em>'.
@@ -33,23 +37,43 @@ import ArkiWeb.modelo.Usuario;
  */
 public class PortalAdministradorActionSupport extends ActionSupport {
 	
-	/**
-	 * 
-	 */
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -1414659030161902545L;
+	
+	/** The usuarios. */
 	private List<Usuario> usuarios;
+	
+	/** The certificados. */
 	private List<Certificado> certificados;
+	
+	/** The proyectos. */
 	private List<Proyecto> proyectos;
+	
+	/** The roles. */
+	private List<Rol> roles;
+	
+	/** The controlador modelo. */
 	private Controlador_Modelo controlador_modelo;
+	
+	/** The user id. */
 	private int userId;
+	
+	/** The user name. */
 	private String userName;
+	
+	/** The session. */
 	private Map<String, Object> session;
 	
+	/** The utility class. */
+	private Utils util;
+
+	
 	/**
-	 * 
+	 * Instantiates a new portal administrador action support.
 	 */
 	public PortalAdministradorActionSupport() {
 		super();
+		this.util = UtilsImpl.getInstance();
 		this.controlador_modelo = new Controlador_ModeloImpl();
 		this.usuarios = new ArrayList<Usuario>();
 		this.certificados = new ArrayList<Certificado>();
@@ -68,7 +92,6 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	 */
 	@Override
 	public	String execute() {
-		
 		this.setUserId((int) this.getSession().get("id"));
 		this.setUserName((String) this.getSession().get("userName"));
 		System.out.println("id: " + this.getSession().get("id"));
@@ -77,7 +100,12 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 		
 	}
 	
-	public String getUsers() {
+	/**
+	 * Gets the users.
+	 *
+	 * @return the users
+	 */
+	public String getUsersPortalAdministrador() {
 		this.setUsuarios(this.controlador_modelo.listarUsuarios());
 		if(this.getUsuarios() != null) {
 			execute();
@@ -87,9 +115,14 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 		return LOGIN;
 	}
 	
-	
-	public String getCertificates() {
-		this.setCertificados(this.controlador_modelo.buscarMisCertificados((int) this.getSession().get("id")));
+	 
+	/**
+	 * Gets the certificates.
+	 *
+	 * @return the certificates
+	 */
+	public String getCertificatesPortalAdministrador() {
+		this.setCertificados(this.controlador_modelo.listarCertificados());
 		if(this.getCertificados() != null) {
 			execute();
 			return SUCCESS;
@@ -99,8 +132,13 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 	
 	
-	public String getProjects() {
-		this.setProyectos(this.controlador_modelo.buscarMisProyectos((int) this.getSession().get("id")));
+	/**
+	 * Gets the projects.
+	 *
+	 * @return the projects
+	 */
+	public String getProjectsPortalAdministrador() {
+		this.setProyectos(this.controlador_modelo.listarProyectos());
 		if(this.getProyectos() != null) {
 			execute();
 			return SUCCESS;
@@ -109,6 +147,21 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 		return LOGIN;
 	}
 	
+	/**
+	 * Gets the roles portal administrador.
+	 *
+	 * @return the roles portal administrador
+	 */
+	public String getRolesPortalAdministrador() {
+		this.setRoles(this.controlador_modelo.listarRoles());
+		if(this.getRoles() != null) {
+			execute();
+			return SUCCESS;
+		}
+		
+		return LOGIN;
+		
+	}
 	/**
 	 * <!-- begin-user-doc -->
 	 * 	Valida los datos recibidos
@@ -124,6 +177,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the usuarios.
+	 *
 	 * @return the usuarios
 	 */
 	public List<Usuario> getUsuarios() {
@@ -131,6 +186,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the usuarios.
+	 *
 	 * @param usuarios the usuarios to set
 	 */
 	public void setUsuarios(List<Usuario> usuarios) {
@@ -138,6 +195,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the certificados.
+	 *
 	 * @return the certificados
 	 */
 	public List<Certificado> getCertificados() {
@@ -145,6 +204,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the certificados.
+	 *
 	 * @param certificados the certificados to set
 	 */
 	public void setCertificados(List<Certificado> certificados) {
@@ -152,6 +213,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the proyectos.
+	 *
 	 * @return the proyectos
 	 */
 	public List<Proyecto> getProyectos() {
@@ -159,6 +222,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the proyectos.
+	 *
 	 * @param proyectos the proyectos to set
 	 */
 	public void setProyectos(List<Proyecto> proyectos) {
@@ -166,6 +231,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the user id.
+	 *
 	 * @return the userId
 	 */
 	public int getUserId() {
@@ -173,6 +240,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the user id.
+	 *
 	 * @param userId the userId to set
 	 */
 	public void setUserId(int userId) {
@@ -180,6 +249,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the user name.
+	 *
 	 * @return the userName
 	 */
 	public String getUserName() {
@@ -187,6 +258,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the user name.
+	 *
 	 * @param userName the userName to set
 	 */
 	public void setUserName(String userName) {
@@ -194,6 +267,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the session.
+	 *
 	 * @return the session
 	 */
 	public Map<String, Object> getSession() {
@@ -201,10 +276,26 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the session.
+	 *
 	 * @param session the session to set
 	 */
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
+	}
+
+	/**
+	 * @return the roles
+	 */
+	public List<Rol> getRoles() {
+		return roles;
+	}
+
+	/**
+	 * @param roles the roles to set
+	 */
+	public void setRoles(List<Rol> roles) {
+		this.roles = roles;
 	};
 
 } // PortalAdministradorActionSupport

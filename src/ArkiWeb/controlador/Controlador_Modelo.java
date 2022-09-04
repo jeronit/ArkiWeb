@@ -19,6 +19,7 @@ import ArkiWeb.modelo.Permiso;
 import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Proyectos_Asignados;
 import ArkiWeb.modelo.Proyectos_En_Ejecucion;
+import ArkiWeb.modelo.Rol;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
 
@@ -295,6 +296,16 @@ public interface Controlador_Modelo extends EObject {
 	 * @generated 
 	 */
 	void cambiarContrasenya(String email);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->.
+	 *
+	 * @return the list Rol
+	 * @model required="true" ordered="false"
+	 * @generated NOT
+	 */
+	List<Rol> listarRoles();
 
 	/**
 	 * <!-- begin-user-doc -->

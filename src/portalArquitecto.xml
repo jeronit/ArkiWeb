@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="portalArquitecto" extends="struts-default">
+		<action name="portalArquitecto" class="ArkiWeb.vista.struts2mvc.modelo.PortalArquitectoActionSupport">
+			<result name="success">/portalArquitecto.jsp</result>
+			<result name="failure">/portalArquitecto.jsp</result>
+		</action>
+		<action name="getUsersPortalArquitecto" class="ArkiWeb.vista.struts2mvc.modelo.PortalArquitectoActionSupport" method="getUsersPortalArquitecto">
+			<result name="success">/portalArquitecto.jsp</result>
+			<result name="failure">/portalArquitecto.jsp</result>
+		</action>
+		<action name="getCertificatesPortalArquitecto" class="ArkiWeb.vista.struts2mvc.modelo.PortalArquitectoActionSupport" method="getCertificatesPortalArquitecto">
+			<result name="success">/portalArquitecto.jsp</result>
+			<result name="failure">/portalArquitecto.jsp</result>
+		</action>
+		<action name="getProjectsPortalArquitecto" class="ArkiWeb.vista.struts2mvc.modelo.PortalArquitectoActionSupport" method="getProjectsPortalArquitecto">
+			<result name="success">/portalArquitecto.jsp</result>
+			<result name="failure">/portalArquitecto.jsp</result>
+		</action>
+	</package>
+</struts>

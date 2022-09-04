@@ -4,18 +4,8 @@
     "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-	<package name="portal" extends="struts-default">
-		<action name="portalAdministrador" class="ArkiWeb.vista.struts2mvc.modelo.PortalAdministradorActionSupport">
-			<result name="success">/portal.jsp</result>
-			<result name="failure">/portal.jsp</result>
-		</action>
-		<action name="getUsers" class="ArkiWeb.vista.struts2mvc.modelo.PortalAdministradorActionSupport" method="getUsers">
-			<result name="success">/portal.jsp</result>
-			<result name="failure">/portal.jsp</result>
-		</action>
-		<action name="getCertificates" class="ArkiWeb.vista.struts2mvc.modelo.PortalAdministradorActionSupport" method="getCertificates">
-			<result name="success">/portal.jsp</result>
-			<result name="failure">/portal.jsp</result>
-		</action>
-	</package>
+	<include file="portalAdministrador.xml"></include>
+	<include file="portalArquitecto.xml"></include>
+	<include file="portalCliente.xml"></include>
+	
 </struts>

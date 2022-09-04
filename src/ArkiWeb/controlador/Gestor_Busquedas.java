@@ -272,6 +272,17 @@ public interface Gestor_Busquedas extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Busca los certificados asignados a un usuario
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario			int						Id
+	 * @return			List<Proyectos_Asignados>			Listado asignaciones de un arquitecto a un proyecto
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_proyectoDataType="org.eclipse.uml2.types.Integer" id_proyectoRequired="true" id_proyectoOrdered="false"
+	 * @generated NOT
+	 */
+	List<Proyectos_Asignados> buscarAsignacionProyectoAUsuario(int id_usuario);
+	
+	/**
+	 * <!-- begin-user-doc -->
 	 * Busca la contrataci�n de un proyecto.
 	 * <!-- end-user-doc -->
 	 * @param	id_proyecto		int					Id
@@ -287,11 +298,22 @@ public interface Gestor_Busquedas extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param	id_usuario			int					Id
 	 * @param	id_certificado		int					Id
-	 * @return			List<Certificados_Asignados>		Asignaci�n de un arquitecto a un certificado
+	 * @return				Certificados_Asignados		Asignación de un arquitecto a un certificado
 	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false" id_certificadoDataType="org.eclipse.uml2.types.Integer" id_certificadoRequired="true" id_certificadoOrdered="false"
 	 * @generated NOT
 	 */
 	Certificados_Asignados buscarAsignacionCertificado(int id_usuario, int id_certificado);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Busca los certificados asignados a un usuario
+	 * <!-- end-user-doc -->
+	 * @param	id_usuario			int						Id
+	 * @return			List<Certificados_Asignados>		Listado de asignaciones de un arquitecto a un certificado
+	 * @model required="true" ordered="false" id_usuarioDataType="org.eclipse.uml2.types.Integer" id_usuarioRequired="true" id_usuarioOrdered="false"
+	 * @generated NOT
+	 */
+	List<Certificados_Asignados> buscarAsignacionCertificadoAUsuario(int id_usuario);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -5,8 +5,8 @@
 	<html>
 		<head>
 			<meta charset="UTF-8">
-			<link href="general.css" rel="stylesheet" type="text/css" />
-			<link href="login.css" rel="stylesheet" type="text/css" />
+			<link href="./css/general.css" rel="stylesheet" type="text/css" />
+			<link href="./css/login.css" rel="stylesheet" type="text/css" />
 			<title><s:text name="login.title"/></title>
 			
 		</head>
@@ -23,7 +23,7 @@
 					<s:label for="contrasenya_usuario" name="contrasenya_usuario_label"><s:property value = "getText('login.label.contrasenya')" /></s:label>
 					<s:password name="contrasenya_usuario"></s:password>
 				</div>
-				
+				Olvidé contraseña
 				<s:submit name="submit_button_login"/>
 				
 				<div id="error" class="errors">

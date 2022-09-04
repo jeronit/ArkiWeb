@@ -38,6 +38,7 @@ import ArkiWeb.modelo.Permiso;
 import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Proyectos_Asignados;
 import ArkiWeb.modelo.Proyectos_En_Ejecucion;
+import ArkiWeb.modelo.Rol;
 import ArkiWeb.modelo.Usuario;
 import ArkiWeb.modelo.Vivienda;
 
@@ -606,6 +607,19 @@ public class Controlador_ModeloImpl implements Controlador_Modelo {
 			e.printStackTrace();
 		}
 				
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * 	Lista los roles
+	 * <!-- end-user-doc -->.
+	 *
+	 * @return the list Rol
+	 * @model required="true" ordered="false"
+	 */
+	@Override
+	public List<Rol> listarRoles() {
+		return gestor_Busquedas.listarRoles();
 	}
 
 	/**

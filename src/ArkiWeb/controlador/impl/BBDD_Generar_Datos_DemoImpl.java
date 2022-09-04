@@ -72,7 +72,7 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		usuario1.setDni_usuario("DNI Usuario 01");
 		usuario1.setContrasenya_usuario("0123");
 		usuario1.setEmail_usuario("emailusuario01@usuario.com");
-		usuario1.setRol_usuario(2);
+		usuario1.setRol_usuario(1);
 		usuario1.setTelefono_usuario("012345678");
 		
 		usuario2.setNombre_usuario("Arquitecto Usuario 02");
@@ -81,7 +81,7 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		usuario2.setDni_usuario("DNI Usuario 02");
 		usuario2.setContrasenya_usuario("1234");
 		usuario2.setEmail_usuario("emailusuario02@usuario.com");
-		usuario2.setRol_usuario(2);
+		usuario2.setRol_usuario(1);
 		usuario2.setTelefono_usuario("123456789");
 		
 		usuario3.setNombre_usuario("Administrador Usuario 03");
@@ -90,7 +90,7 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		usuario3.setDni_usuario("DNI Usuario 03");
 		usuario3.setContrasenya_usuario("2345");
 		usuario3.setEmail_usuario("emailusuario03@usuario.com");
-		usuario3.setRol_usuario(3);
+		usuario3.setRol_usuario(2);
 		usuario3.setTelefono_usuario("234567890");
 		
 		usuario4.setNombre_usuario("Cliente Usuario 04");
@@ -99,7 +99,7 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		usuario4.setDni_usuario("DNI Usuario 04");
 		usuario4.setContrasenya_usuario("3456");
 		usuario4.setEmail_usuario("emailusuario04@usuario.com");
-		usuario4.setRol_usuario(1);
+		usuario4.setRol_usuario(0);
 		usuario4.setTelefono_usuario("345678901");
 		
 		usuario5.setNombre_usuario("Cliente Usuario 05");
@@ -108,7 +108,7 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		usuario5.setDni_usuario("DNI Usuario 05");
 		usuario5.setContrasenya_usuario("4567");
 		usuario5.setEmail_usuario("emailusuario05@usuario.com");
-		usuario5.setRol_usuario(1);
+		usuario5.setRol_usuario(0);
 		usuario5.setTelefono_usuario("987654321");
 		
 		usuario6.setNombre_usuario("Cliente Usuario 06");
@@ -117,7 +117,7 @@ public class BBDD_Generar_Datos_DemoImpl implements BBDD_Generar_Datos_Demo {
 		usuario6.setDni_usuario("DNI Usuario 06");
 		usuario6.setContrasenya_usuario("6789");
 		usuario6.setEmail_usuario("emailusuario06@usuario.com");
-		usuario6.setRol_usuario(1);
+		usuario6.setRol_usuario(0);
 		usuario6.setTelefono_usuario("876543210");
 		
 		ArkiWeb.controlador.Arkiweb_Initializer.db.crearUsuario(usuario1);
