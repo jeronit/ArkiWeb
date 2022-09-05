@@ -5,8 +5,24 @@
 
 <struts>
 	<constant name="struts.devMode" value="true" />  
-	
+	<package name="startApp" extends="struts-default">
+		<action name="initLogin" class="ArkiWeb.vista.struts2mvc.modelo.StartAppActionSupport" method="initLogin">
+			<result name="success">/login.jsp</result>
+	    </action>
+	    <action name="initRequestCertificate" class="ArkiWeb.vista.struts2mvc.modelo.StartAppActionSupport" method="initRequestCertificate">
+			<result name="success">/solicitudCertificado.jsp</result>
+	    </action>
+	    <action name="initRequestProject" class="ArkiWeb.vista.struts2mvc.modelo.StartAppActionSupport" method="initRequestProject">
+			<result name="success">/solicitudProyecto.jsp</result>
+	    </action>
+	</package>
+    
 	<include file="login.xml"></include>
 	<include file="portal.xml"></include>
+	<include file="recuperarContrasenya.xml"></include>
+	<include file="altaUsuario.xml"></include>
+	<include file="solicitudCertificado.xml"></include>
+	<include file="solicitudProyecto.xml"></include>
+	
 	
 </struts>

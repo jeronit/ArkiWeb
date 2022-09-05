@@ -10,20 +10,23 @@
 			<title><s:property value="portal.cliente.title"/></title>
 		</head>
 		<body>
-		
-			<object type="text/html" data="header.jsp"></object>
-		
+			<!-- HEADER -->
+			<s:include value="./header.jsp" />
+			
 			<h1><s:text name="portal.cliente.title" /></h1>
 			<h3><s:text name="portal.bienvenida" /><s:property value="userName"/></h3>
 			
 			<a href="getCertificatesPortalCliente" class="actionButtonLink"><button class="actionButton"><s:text name="portal.button.getCertificates"/></button></a>
-			<table id="portal.cliente.tabla.certificados" class="dataTable">
+			<a href="getProjectsPortalCliente" class="actionButtonLink"><button class="actionButton"><s:text name="portal.button.getProjects"/></button></a>
+			
+			<table id="tabla.portal.cliente.tabla.certificados" class="dataTable">
 				<caption><s:text name="portal.tabla.certificados.cabecera"/></caption>
 				<thead>
 					<tr>
 						<th scope="col"><s:text name="portal.tabla.certificados.id"/></th>
 						<th scope="col"><s:text name="portal.tabla.certificados.descripcion"/></th>
-						<th scope="col"><s:text name="portal.tabla.certificados.cliente"/></th>
+						<th scope="col"><s:text name="portal.tabla.certificados.usuario.nombre"/></th>
+						<th scope="col"><s:text name="portal.tabla.certificados.usuario.apellidos"/></th>
 						<th scope="col"><s:text name="portal.tabla.certificados.vivienda"/></th>
 						<th scope="col"><s:text name="portal.tabla.certificados.inmueble"/></th>
 						<th scope="col"><s:text name="portal.tabla.certificados.tipo"/></th>
@@ -40,9 +43,10 @@
 						<tr>
 							<th scope="row"><s:property value="id_certificado"/></th>
 							<td><s:property value="descripcion_certificado"/></td>
-							<td><s:property value="id_cliente_certificado"/></td>
-							<td><s:property value="id_vivienda_certificado"/></td>
-							<td><s:property value="id_inmueble_certificado"/></td>
+							<td><s:property value="usuarios[id_cliente_certificado].nombre_usuario"/></td>
+							<td><s:property value="usuarios[id_cliente_certificado].apellidos_usuario"/></td>
+							<td><s:property value="viviendas[id_vivienda_certificado].descripcion_vivienda"/></td>
+							<td><s:property value="inmuebles[id_inmueble_certificado].descripcion_inmueble"/></td>
 							<td><s:property value="tipo_certificado"/></td>
 							<td><s:property value="fecha_solicitud_certificado"/></td>
 							<td><s:property value="fecha_entrega_certificado"/></td>
@@ -50,14 +54,13 @@
 							<td><s:property value="fecha_emision_certificado"/></td>
 							<td><s:property value="categoria_certificado"/></td>
 							<td><s:property value="coste_certificado"/></td>
-							<!-- Taglib para select <\%@ taglib prefix="sj" uri="/struts2-jquery-tags"%> -->
+							
 						</tr>
 					</s:iterator>
 				</tbody>
 			</table>
-			
-			<a href="getProjectsPortalCliente" class="actionButtonLink"><button class="actionButton"><s:text name="portal.button.getProjects"/></button></a>
-			<table id="portal.cliente.tabla.proyectos" class="dataTable">
+						
+			<table id="tabla.portal.cliente.tabla.proyectos" class="dataTable">
 				<caption><s:text name="portal.tabla.proyectos.cabecera"/></caption>
 				<thead>
 					<tr>
@@ -90,13 +93,13 @@
 							<td><s:property value="presupuesto_ejecucion_proyecto"/></td>
 							<td><s:property value="superficie_proyecto"/></td>
 							<td><s:property value="coste_proyecto"/></td>
-							<!-- Taglib para select <\%@ taglib prefix="sj" uri="/struts2-jquery-tags"%> -->
 						</tr>
 					</s:iterator>
 				</tbody>
 			</table>
 			
-			<object type="text/html" data="footer.jsp"></object>
+			<!-- FOOTER -->
+			<s:include value="./footer.jsp"></s:include>
 		</body>
 	</html>
 </s:i18n>

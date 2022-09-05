@@ -1,5 +1,5 @@
 /**
- * 	@purpose:	Implementación de la Interface Vivienda
+ * 	@purpose:	Implementaciï¿½n de la Interface Vivienda
  *  @author:	Jero Torralba
  *  @version:	1.0
  *	@date:		2022/08/17
@@ -21,137 +21,259 @@ import org.eclipse.emf.ecore.resource.Resource;
 
 import ArkiWeb.modelo.Vivienda;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author JTE
+ * The Class ViviendaImpl.
  *
+ * @author JTE
  */
 public class ViviendaImpl implements Vivienda {
 
+	/** The id vivienda. */
 	private int id_vivienda;
+	
+	/** The descripcion vivienda. */
 	private String descripcion_vivienda;
+	
+	/** The direccion vivienda. */
 	private String direccion_vivienda;
+	
+	/** The id inmueble vivienda. */
 	private int id_inmueble_vivienda;
+	
+	/** The superficie vivienda. */
 	private double superficie_vivienda;
+	
+	/** The superficie terreno vivienda. */
 	private double superficie_terreno_vivienda;
+	
+	/** The plantas vivienda. */
 	private int plantas_vivienda;
+	
+	/** The habitaciones vivienda. */
 	private int habitaciones_vivienda;
+	
+	/** The banyos vivienda. */
 	private int banyos_vivienda;
 	
 	/**
-	 * 
+	 * Instantiates a new vivienda impl.
 	 */
 	public ViviendaImpl() {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * E all contents.
+	 *
+	 * @return the tree iterator
+	 */
 	@Override
 	public TreeIterator<EObject> eAllContents() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E class.
+	 *
+	 * @return the e class
+	 */
 	@Override
 	public EClass eClass() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E container.
+	 *
+	 * @return the e object
+	 */
 	@Override
 	public EObject eContainer() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E containing feature.
+	 *
+	 * @return the e structural feature
+	 */
 	@Override
 	public EStructuralFeature eContainingFeature() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E containment feature.
+	 *
+	 * @return the e reference
+	 */
 	@Override
 	public EReference eContainmentFeature() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E contents.
+	 *
+	 * @return the e list
+	 */
 	@Override
 	public EList<EObject> eContents() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E cross references.
+	 *
+	 * @return the e list
+	 */
 	@Override
 	public EList<EObject> eCrossReferences() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E get.
+	 *
+	 * @param arg0 the arg 0
+	 * @return the object
+	 */
 	@Override
 	public Object eGet(EStructuralFeature arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E get.
+	 *
+	 * @param arg0 the arg 0
+	 * @param arg1 the arg 1
+	 * @return the object
+	 */
 	@Override
 	public Object eGet(EStructuralFeature arg0, boolean arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E invoke.
+	 *
+	 * @param arg0 the arg 0
+	 * @param arg1 the arg 1
+	 * @return the object
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	@Override
 	public Object eInvoke(EOperation arg0, EList<?> arg1) throws InvocationTargetException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E is proxy.
+	 *
+	 * @return true, if successful
+	 */
 	@Override
 	public boolean eIsProxy() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/**
+	 * E is set.
+	 *
+	 * @param arg0 the arg 0
+	 * @return true, if successful
+	 */
 	@Override
 	public boolean eIsSet(EStructuralFeature arg0) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/**
+	 * E resource.
+	 *
+	 * @return the resource
+	 */
 	@Override
 	public Resource eResource() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E set.
+	 *
+	 * @param arg0 the arg 0
+	 * @param arg1 the arg 1
+	 */
 	@Override
 	public void eSet(EStructuralFeature arg0, Object arg1) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * E unset.
+	 *
+	 * @param arg0 the arg 0
+	 */
 	@Override
 	public void eUnset(EStructuralFeature arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * E adapters.
+	 *
+	 * @return the e list
+	 */
 	@Override
 	public EList<Adapter> eAdapters() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * E deliver.
+	 *
+	 * @return true, if successful
+	 */
 	@Override
 	public boolean eDeliver() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/**
+	 * E notify.
+	 *
+	 * @param arg0 the arg 0
+	 */
 	@Override
 	public void eNotify(Notification arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * E set deliver.
+	 *
+	 * @param arg0 the arg 0
+	 */
 	@Override
 	public void eSetDeliver(boolean arg0) {
 		// TODO Auto-generated method stub
@@ -159,6 +281,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the id vivienda.
+	 *
 	 * @return the id_vivienda
 	 */
 	@Override
@@ -167,6 +291,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the id vivienda.
+	 *
 	 * @param id_vivienda the id_vivienda to set
 	 */
 	@Override
@@ -175,6 +301,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the descripcion vivienda.
+	 *
 	 * @return the descripcion_vivienda
 	 */
 	@Override
@@ -183,6 +311,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the descripcion vivienda.
+	 *
 	 * @param descripcion_vivienda the descripcion_vivienda to set
 	 */
 	@Override
@@ -191,6 +321,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the direccion vivienda.
+	 *
 	 * @return the direccion_vivienda
 	 */
 	@Override
@@ -199,6 +331,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the direccion vivienda.
+	 *
 	 * @param direccion_vivienda the direccion_vivienda to set
 	 */
 	@Override
@@ -207,6 +341,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the id inmueble vivienda.
+	 *
 	 * @return the id_inmueble_vivienda
 	 */
 	@Override
@@ -215,6 +351,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the id inmueble vivienda.
+	 *
 	 * @param id_inmueble_vivienda the id_inmueble_vivienda to set
 	 */
 	@Override
@@ -223,6 +361,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the superficie vivienda.
+	 *
 	 * @return the superficie_vivienda
 	 */
 	@Override
@@ -231,6 +371,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the superficie vivienda.
+	 *
 	 * @param superficie_vivienda the superficie_vivienda to set
 	 */
 	@Override
@@ -239,6 +381,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the superficie terreno vivienda.
+	 *
 	 * @return the superficie_terreno_vivienda
 	 */
 	@Override
@@ -247,6 +391,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the superficie terreno vivienda.
+	 *
 	 * @param superficie_terreno_vivienda the superficie_terreno_vivienda to set
 	 */
 	@Override
@@ -255,6 +401,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the plantas vivienda.
+	 *
 	 * @return the plantas_vivienda
 	 */
 	@Override
@@ -263,6 +411,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the plantas vivienda.
+	 *
 	 * @param plantas_vivienda the plantas_vivienda to set
 	 */
 	@Override
@@ -271,6 +421,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the habitaciones vivienda.
+	 *
 	 * @return the habitaciones_vivienda
 	 */
 	@Override
@@ -279,6 +431,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the habitaciones vivienda.
+	 *
 	 * @param habitaciones_vivienda the habitaciones_vivienda to set
 	 */
 	@Override
@@ -287,6 +441,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Gets the banyos vivienda.
+	 *
 	 * @return the banyos_vivienda
 	 */
 	@Override
@@ -295,6 +451,8 @@ public class ViviendaImpl implements Vivienda {
 	}
 
 	/**
+	 * Sets the banyos vivienda.
+	 *
 	 * @param banyos_vivienda the banyos_vivienda to set
 	 */
 	@Override

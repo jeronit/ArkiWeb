@@ -15,9 +15,8 @@
 		<body>
 			<header class="header">
 				<div class="topnav" id="myTopnav">
-					<a href="#home" class="active"><s:property value = "getText('header.home')" /></a>
-					<a href="#services"><s:property value = "getText('header.services')" /></a>
-					<a href="#login"><s:property value = "getText('header.login')" /></a>
+					<a href="arkiweb.jsp" class="active"><s:property value = "getText('header.home')" /></a>
+					<a href="login.jsp"><s:property value = "getText('header.login')" /></a>
 					<a href="#signup"><s:property value = "getText('header.signup')" /></a>
 					<a href="#logout"><s:property value = "getText('header.logout')" /></a>
 					<a href="javascript:void(0);" class="icon" onclick="myFunction()">

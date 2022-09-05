@@ -25,5 +25,9 @@
 			<result name="success">/portalAdministrador.jsp</result>
 			<result name="failure">/portalAdministrador.jsp</result>
 		</action>
+		<action name="editUserPortalAdministrador" class="ArkiWeb.vista.struts2mvc.modelo.PortalAdministradorActionSupport" method="editUserPortalAdministrador">
+			<result name="success">/portalAdministrador.jsp</result>
+			<result name="failure">/portalAdministrador.jsp</result>
+		</action>
 	</package>
 </struts>

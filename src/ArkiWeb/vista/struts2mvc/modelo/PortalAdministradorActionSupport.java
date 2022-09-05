@@ -18,9 +18,11 @@ import com.opensymphony.xwork2.ActionSupport;
 import ArkiWeb.controlador.Controlador_Modelo;
 import ArkiWeb.controlador.impl.Controlador_ModeloImpl;
 import ArkiWeb.modelo.Certificado;
+import ArkiWeb.modelo.Inmueble;
 import ArkiWeb.modelo.Proyecto;
 import ArkiWeb.modelo.Rol;
 import ArkiWeb.modelo.Usuario;
+import ArkiWeb.modelo.Vivienda;
 import ArkiWeb.vista.struts2mvc.modelo.util.Utils;
 import ArkiWeb.vista.struts2mvc.modelo.util.impl.UtilsImpl;
 
@@ -52,6 +54,12 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	/** The roles. */
 	private List<Rol> roles;
 	
+	/** The inmuebles. */
+	private List<Inmueble> inmuebles;
+	
+	/** The viviendas. */
+	private List<Vivienda> viviendas;
+	
 	/** The controlador modelo. */
 	private Controlador_Modelo controlador_modelo;
 	
@@ -66,6 +74,9 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	
 	/** The utility class. */
 	private Utils util;
+	
+	/** The user id to edit. */
+	private String userIdToEdit;
 
 	
 	/**
@@ -78,7 +89,9 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 		this.usuarios = new ArrayList<Usuario>();
 		this.certificados = new ArrayList<Certificado>();
 		this.proyectos = new ArrayList<Proyecto>();
+		this.roles = new ArrayList<Rol>();
 		this.session = ActionContext.getContext().getSession();
+		getSessionData();
 	}
 
 	/**
@@ -92,12 +105,21 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	 */
 	@Override
 	public	String execute() {
+		
+		return SUCCESS;
+		
+	}
+	
+	/**
+	 * Gets the session data.
+	 *
+	 * @return the session data
+	 */
+	public void getSessionData() {
 		this.setUserId((int) this.getSession().get("id"));
 		this.setUserName((String) this.getSession().get("userName"));
 		System.out.println("id: " + this.getSession().get("id"));
 		System.out.println("userName: " + this.getSession().get("userName"));
-		return SUCCESS;
-		
 	}
 	
 	/**
@@ -108,7 +130,7 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	public String getUsersPortalAdministrador() {
 		this.setUsuarios(this.controlador_modelo.listarUsuarios());
 		if(this.getUsuarios() != null) {
-			execute();
+			this.getRolesPortalAdministrador();
 			return SUCCESS;
 		}
 		
@@ -124,7 +146,9 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	public String getCertificatesPortalAdministrador() {
 		this.setCertificados(this.controlador_modelo.listarCertificados());
 		if(this.getCertificados() != null) {
-			execute();
+			this.getUsersPortalAdministrador();
+			this.getViviendasPortalAdministrador();
+			this.getInmueblesPortalAdministrador();
 			return SUCCESS;
 		}
 		
@@ -140,7 +164,9 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	public String getProjectsPortalAdministrador() {
 		this.setProyectos(this.controlador_modelo.listarProyectos());
 		if(this.getProyectos() != null) {
-			execute();
+			this.getUsersPortalAdministrador();
+			this.getViviendasPortalAdministrador();
+			this.getInmueblesPortalAdministrador();
 			return SUCCESS;
 		}
 		
@@ -155,13 +181,50 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	public String getRolesPortalAdministrador() {
 		this.setRoles(this.controlador_modelo.listarRoles());
 		if(this.getRoles() != null) {
-			execute();
 			return SUCCESS;
 		}
 		
 		return LOGIN;
-		
 	}
+	
+	/**
+	 * Gets the inmuebles portal administrador.
+	 *
+	 * @return the inmuebles portal administrador
+	 */
+	public String getInmueblesPortalAdministrador() {
+		this.setInmuebles(this.controlador_modelo.listarInmuebles());
+		if(this.getInmuebles() != null) {
+			return SUCCESS;
+		}
+		
+		return LOGIN;
+	}
+	
+	/**
+	 * Gets the viviendas portal administrador.
+	 *
+	 * @return the viviendas portal administrador
+	 */
+	public String getViviendasPortalAdministrador() {
+		this.setViviendas(this.controlador_modelo.listarViviendas());
+		if(this.getViviendas() != null) {
+			return SUCCESS;
+		}
+		
+		return LOGIN;
+	}
+	
+	/**
+	 * Edits the user.
+	 *
+	 * @return the string
+	 */
+	public String editUserPortalAdministrador() {
+		System.out.println("Parámetro editUser: " + this.getUserIdToEdit());
+		return SUCCESS;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * 	Valida los datos recibidos
@@ -285,6 +348,8 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Gets the roles.
+	 *
 	 * @return the roles
 	 */
 	public List<Rol> getRoles() {
@@ -292,10 +357,66 @@ public class PortalAdministradorActionSupport extends ActionSupport {
 	}
 
 	/**
+	 * Sets the roles.
+	 *
 	 * @param roles the roles to set
 	 */
 	public void setRoles(List<Rol> roles) {
 		this.roles = roles;
-	};
+	}
+
+	/**
+	 * Gets the user id to edit.
+	 *
+	 * @return the userIdToEdit
+	 */
+	public String getUserIdToEdit() {
+		return userIdToEdit;
+	}
+
+	/**
+	 * Sets the user id to edit.
+	 *
+	 * @param userIdToEdit the userIdToEdit to set
+	 */
+	public void setUserIdToEdit(String userIdToEdit) {
+		this.userIdToEdit = userIdToEdit;
+	}
+
+	/**
+	 * Gets the inmuebles.
+	 *
+	 * @return the inmuebles
+	 */
+	public List<Inmueble> getInmuebles() {
+		return inmuebles;
+	}
+
+	/**
+	 * Sets the inmuebles.
+	 *
+	 * @param inmuebles the inmuebles to set
+	 */
+	public void setInmuebles(List<Inmueble> inmuebles) {
+		this.inmuebles = inmuebles;
+	}
+
+	/**
+	 * Gets the viviendas.
+	 *
+	 * @return the viviendas
+	 */
+	public List<Vivienda> getViviendas() {
+		return viviendas;
+	}
+
+	/**
+	 * Sets the viviendas.
+	 *
+	 * @param viviendas the viviendas to set
+	 */
+	public void setViviendas(List<Vivienda> viviendas) {
+		this.viviendas = viviendas;
+	}
 
 } // PortalAdministradorActionSupport

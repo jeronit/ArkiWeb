@@ -6,22 +6,23 @@
 		<head>
 			<meta charset="UTF-8">
 			<link href="./css/general.css" rel="stylesheet" type="text/css" />
-			<link href="./css/login.css" rel="stylesheet" type="text/css" />
-			<title><s:text name="login.title"/></title>
+			<link href="./css/recuperarContrasenya.css" rel="stylesheet" type="text/css" />
+			<title><s:text name="recuperarcontrasenya.title"/></title>
 			
 		</head>
 		<body>
 			<!-- HEADER -->
 			<s:include value="./header.jsp" />
 			
-			<h1><s:text name="login.title"/></h1>
+			<h1><s:text name="recuperarcontrasenya.title" /></h1>
+			<h3><s:text name="recuperarcontrasenya.instrucciones" /></h3>
 			
-			<s:form action="login">
+			<s:form action="recuperarContrasenya">
 				<div id="usuario">
-					<s:textfield key="login.label.email" labelposition="left" name="email_usuario"></s:textfield>
+					<s:textfield key="recuperarContrasenya.label.email" labelposition="left" name="email_usuario"></s:textfield>
 				</div>
 				<div id="password">
-					<s:password key="login.label.contrasenya" labelposition="left" name="contrasenya_usuario"></s:password>
+					<s:password key="recuperarContrasenya.label.contrasenya" labelposition="left" name="contrasenya_usuario"></s:password>
 				</div>
 				
 				<s:submit name="submit_button_login" key="login.button.submit"/>
@@ -30,8 +31,7 @@
 					<s:if test="hasActionErrors()"><s:actionerror/> </s:if>
 				</div>
 			</s:form>
-			<s:a href="recuperarContrasenya.jsp" ><s:text name="login.link.forgotpassword" /></s:a>
-			
+
 			<!-- FOOTER -->
 			<s:include value="./footer.jsp"></s:include>
 		</body>

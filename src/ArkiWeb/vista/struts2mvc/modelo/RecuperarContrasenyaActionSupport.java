@@ -31,7 +31,7 @@ import ArkiWeb.modelo.impl.RolImpl;
  * @model
  * @generated NOT
  */
-public class LoginActionSupport extends ActionSupport {
+public class RecuperarContrasenyaActionSupport extends ActionSupport {
 	
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -8601040361717122903L;
@@ -51,7 +51,7 @@ public class LoginActionSupport extends ActionSupport {
 	/**
 	 * Instantiates a new login action support.
 	 */
-	public LoginActionSupport() {
+	public RecuperarContrasenyaActionSupport() {
 		super();
 		this.controlador_modelo = new Controlador_ModeloImpl();
 		this.setUsuario(null);
@@ -70,18 +70,9 @@ public class LoginActionSupport extends ActionSupport {
 	public	String execute() {
 		Usuario user = this.getUsuario();
 		if(user != null) {
-			if(user.getContrasenya_usuario().equals(String.valueOf(this.getContrasenya_usuario().hashCode()))) {
-				Map<String, Object> session = ActionContext.getContext().getSession();
-				session.put("login","true");
-				session.put("id",user.getId_usuario());
-				session.put("userName",user.getNombre_usuario());
-				System.out.println("session id: " + session.get("id") + "|| session userName: " + session.get("userName"));
-				return this.grantAccess();
-				
-			} else {
-				addActionError("Wrong password.");
-				return LOGIN;
-			}
+			user.setContrasenya_usuario(contrasenya_usuario);
+			this.controlador_modelo.editarUsuario(user);
+			return SUCCESS;
 		} else {
 //			addActionError("Email not in our Database.");
 			return INPUT;
@@ -120,31 +111,6 @@ public class LoginActionSupport extends ActionSupport {
 		if(this.getUsuario() == null) {
 			addActionError("Email not in our Database.");
 		}
-	}
-	
-	
-	/**
-	 * Grant access.
-	 *
-	 * @return the string
-	 */
-	private String grantAccess() {
-		String access = "failure";
-		Usuario user = this.getUsuario();
-		
-		int userRol = user.getRol_usuario();
-		switch(userRol) {
-		case 1:
-			access = "arquitecto";
-			break;
-		case 2:
-			access = "administrador";
-			break;
-		default:
-			access = "cliente";
-			break;
-		}
-		return access;
 	}
 
 	/**
